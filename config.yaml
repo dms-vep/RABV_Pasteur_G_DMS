@@ -15,15 +15,16 @@ docs: docs  # typically will be `docs` for real pipelines
 # ----------------------------------------------------------------------------
 
 # Name of your main GitHub repo, eg https://github.com/<my_organization>/<my_repo>
-github_repo_url: https://github.com/dms-vep/HIV_Envelope_BF520_DMS_v3
+github_repo_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS
 # GitHub blob path to where results files are stored. Typically "{repo}/blob/{branch}",
 # the "test_example" below is specific to this test example being within the pipeline
 # and should not be needed for other pipelines.
-github_blob_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS
+github_blob_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main
 # Some descriptions and metadata about the analysis.
 description: Deep mutational scanning using Rabies glycoprotein (strain Pasteur). Analysis uses dms-vep-pipeline-3
 year: 2024
 authors: Arjun Aditham and Jesse Bloom
+
 
 # ----------------------------------------------------------------------------
 # Site numbering, mutation classification, and neut standards
@@ -44,7 +45,7 @@ site_numbering_map: data/site_numbering_map.csv
 # named "mutation_type", "amino_acid" or "mutant_aa", and either
 # "reference_site" or "sequential_site" as specified by `site_col` key.
 mutation_design_classification:
-  csv: data/mutation_design_classification.csv  # CSV with data
+  csv: data/designed_mutations.csv  # CSV with data
   site_col: sequential_site  # site column, should be reference_site or sequential_site
 
 # Neutralization standard barcodes. Should have columns "barcode" and "name"
@@ -63,8 +64,31 @@ neut_standard_barcodes: data/neutralization_standard_barcodes.csv
 # gene (codon) sequence (beginning with "http" or "ftp") or just path to file.
 # If these next two variables are "null" instead, then the variants are built
 # from scratch using parameters below.
-prebuilt_variants: https://gist.githubusercontent.com/caelanradford/be25dabe7e658430a980caa816462623/raw/488bda3ac3824dcd07f7f1c524aa942f5d36ae39/BF520_codon_variants_121120.csv
-prebuilt_geneseq: https://gist.githubusercontent.com/caelanradford/b28e0ff4207819537346e5589cec8ac4/raw/e2d1b637a0ac0ddad9b9f989ec19cd9fb22b7693/BF520_codon_sequence_121120.fasta
+prebuilt_variants: null
+prebuilt_geneseq: null
+
+# Parameters for building variants from PacBio sequencing, only needed if
+# not using pre-built variants.
+pacbio_runs: data/PacBio_runs.csv  # PacBio sequencing data
+pacbio_amplicon: data/PacBio_amplicon.gb  # Genbank file with PacBio amplicon
+pacbio_amplicon_specs: data/PacBio_feature_parse_specs.yaml  # alignparse feature parsing
+variant_tags:  # variant tags in PacBio amplicon, or "null" if no tags
+  variant_tag5:
+    variant_1: G
+    variant_2: C
+    wildtype: A
+  variant_tag3:
+    variant_1: G
+    variant_2: C
+    wildtype: A
+max_ccs_error_rate: 1.0e-4  # only keep CCS if gene/barcode error rate <= this
+consensus_params:  # parameters for building PacBio consensus sequences
+  max_sub_diffs: null
+  max_indel_diffs: null
+  max_minor_sub_frac: 0.2
+  max_minor_indel_frac: 0.2
+  #max_minor_greater_or_equal: True
+  min_support: 4
 
 # created files with sequences of parental protein
 gene_sequence_codon: results/gene_sequence/codon.fasta
@@ -72,6 +96,7 @@ gene_sequence_protein: results/gene_sequence/protein.fasta
 
 # created file with barcode-variant lookup table
 codon_variants: results/variants/codon_variants.csv
+
 # ----------------------------------------------------------------------------
 # Parameters related to counting the variants from barcode sequencing
 # ----------------------------------------------------------------------------
@@ -81,7 +106,7 @@ barcode_runs: data/barcode_runs.csv  # Illumina barcode runs, set to null if no 
 # keyword parameters for `dms_variants.illuminabarcodeparser.IlluminaBarcodeParser`
 # https://jbloomlab.github.io/dms_variants/dms_variants.illuminabarcodeparser.html#dms_variants.illuminabarcodeparser.IlluminaBarcodeParser
 illumina_barcode_parser_params:
-  upstream: AACTCCACTAGGAACATTTCTCTCTCGAATCTAGA
+  upstream: ACTCCACTAGGAACATTTCTCTCTCGAATCTAGA
   downstream: ''
   minq: 20
   upstream_mismatch: 2
@@ -95,3 +120,4 @@ illumina_barcode_parser_params:
 
 func_effects_config: data/func_effects_config.yml  # Functional effects of mutations
 antibody_escape_config: data/antibody_escape_config.yml  # Antibody/serum escape
+summaries_config: data/summaries_config.yml  # Summaries across assays
