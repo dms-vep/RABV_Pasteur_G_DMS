@@ -91,8 +91,8 @@ consensus_params:  # parameters for building PacBio consensus sequences
   min_support: 4
 
 # created files with sequences of parental protein
-gene_sequence_codon: results/gene_sequence/codon.fasta
-gene_sequence_protein: results/gene_sequence/protein.fasta
+gene_sequence_codon: data/gene_sequence/codon.fasta
+gene_sequence_protein: data/gene_sequence/protein.fasta
 
 # created file with barcode-variant lookup table
 codon_variants: results/variants/codon_variants.csv
