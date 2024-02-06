@@ -1,22 +1,12 @@
 LOCUS       PacBio_amplicon         1761 bp ds-DNA     linear       06-FEB-2024
-DEFINITION  V5 Landing Pad ForInd backbone with extended Gag (Humes) containing
-            pasteur vaccin strain rabies glycoprotein (Genscript optimization
-            #3). Briefly, p3921 was digested with AscI and MluI, and Twist
-            Fragment with for the glycoprotein was placed in by HiFi.
-            Cloned/Sequenced validated (Primordium) by Arjun Aditham.
+DEFINITION  RABV-G (Genscript optimization 3), Pasteur strain amplicon after PacBio PCRs
 FEATURES             Location/Qualifiers
-     misc_feature    1..47
-                     /label="termini5"
-     misc_feature    28..28
-                     /label="variant_tag5"
-     misc_feature    48..1622
-                     /label="gene"
-     misc_feature    1674..1689
-                     /label="barcode"
-     misc_feature    1690..1761
-                     /label="termini3"
-     misc_feature    1716..1716
-                     /label="variant_tag3"
+     termini5        1..47
+     variant_tag5    28..28
+     gene            48..1622
+     barcode         1674..1689
+     termini3        1690..1761
+     variant_tag3    1716..1716
 ORIGIN
         1 CTAGCCATTC AGAGgCAGCC GAGCCACsTC GCTCAacgcg tgccaccATG GTGCCTCAGG
        61 CCCTGCTCTT CGTGCCCCTG CTGGTCTTTC CACTGTGCTT CGGCAAGTTC CCCATCTACA
