@@ -7,33 +7,16 @@ DEFINITION  V5 Landing Pad ForInd backbone with extended Gag (Humes) containing
 FEATURES             Location/Qualifiers
      misc_feature    1..47
                      /label="termini5"
-                     /ApEinfo_revcolor="#f8d3a9"
-                     /ApEinfo_fwdcolor="#f8d3a9"
      misc_feature    28..28
                      /label="variant_tag5"
-                     /ApEinfo_revcolor="#b4abac"
-                     /ApEinfo_fwdcolor="#b4abac"
      misc_feature    48..1622
                      /label="gene"
-                     /ApEinfo_revcolor="#faac61"
-                     /ApEinfo_fwdcolor="#faac61"
-     CDS             48..1622
-                     /label="RABV-PV"
-                     /ApEinfo_revcolor="#84b0dc"
-                     /ApEinfo_fwdcolor="#84b0dc"
-                     /translation="MVPQALLFVPLLVFPLCFGKFPIYTIPDKLGPWSPIDIHHLSCPNNLVVEDEGCTNLSGFSYMELKVGYISAIKMNGFTCTGVVTEAETYTNFVGYVTTTFKRKHFRPTPDACRAAYNWKMAGDPRYEESLHNPYPDYHWLRTVKTTKESLVIISPSVADLDPYDRSLHSRVFPGGNCSGVAVSSTYCSTNHDYTIWMPENPRLGMSCDIFTNSRGKRASKGSETCGFVDERGLYKSLKGACKLKLCGVLGLRLMDGTWVAMQTSNETKWCPPGQLVNLHDFRSDEIEHLVVEELVKKREECLDALESIMTTKSVSFRRLSHLRKLVPGFGKAYTIFNKTLMEADAHYKSVRTWNEIIPSKGCLRVGGRCHPHVNGVFFNGIILGPDGNVLIPEMQSSLLQQHMELLVSSVIPLMHPLADPSTVFKNGDEAEDFVEVHLPDVHERISGVDLGLPNWGKYVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGKIISSWESYKSGGETGL*"
      misc_feature    1674..1689
                      /label="barcode"
-                     /ApEinfo_revcolor="#f8d3a9"
-                     /ApEinfo_fwdcolor="#f8d3a9"
      misc_feature    1690..1761
                      /label="termini3"
-                     /ApEinfo_revcolor="#75c6a9"
-                     /ApEinfo_fwdcolor="#75c6a9"
      misc_feature    1716..1716
                      /label="variant_tag3"
-                     /ApEinfo_revcolor="#c7b0e3"
-                     /ApEinfo_fwdcolor="#c7b0e3"
 ORIGIN
         1 CTAGCCATTC AGAGgCAGCC GAGCCACsTC GCTCAacgcg tgccaccATG GTGCCTCAGG
        61 CCCTGCTCTT CGTGCCCCTG CTGGTCTTTC CACTGTGCTT CGGCAAGTTC CCCATCTACA
