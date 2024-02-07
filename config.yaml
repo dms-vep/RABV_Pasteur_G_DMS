@@ -88,7 +88,7 @@ consensus_params:  # parameters for building PacBio consensus sequences
   max_minor_sub_frac: 0.2
   max_minor_indel_frac: 0.2
   #max_minor_greater_or_equal: True
-  min_support: 4
+  min_support: 3
 
 # created files with sequences of parental protein
 gene_sequence_codon: data/gene_sequence/codon.fasta
