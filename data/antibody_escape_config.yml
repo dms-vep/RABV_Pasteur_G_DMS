@@ -1,0 +1,307 @@
+# Configurations for determining effects of mutations on assays such as antibody
+# escape, receptor affinity from soluble receptor neutralization, etc.
+# Note that in the configuration for individual selections, "antibody" is used
+# as a synonym for any treatment (receptor, heat, etc), and "no-antibody" is
+# used as a synonym for the untreated conditions.
+
+# --------------------------------------------------------------------------------------
+# Define the selections
+# --------------------------------------------------------------------------------------
+
+# `assays` is keyed by assay (eg, "antibody_escape", "receptor_affinity", etc). Values are:
+#    - `title`: title used for selection in docs
+#    - `selections`: name of key used to define all selections for this assay
+#    - `averages`: name of key used to define averages across selections for this assay.
+#       Leave out this key if not taking averages.
+#    - `prob_escape_scale`: the scale used for the y-axis when plotting prob escape as
+#      a function of concentration. Typically symlog if all values close to zero, linear
+#      otherwise. Should be in the form of keyword arguments to `altair.Scale`.
+#    - `concentration_scale`: the scale used for the x-axis when plotting prob escape
+#      as a function of concentration. Is optional. Should be in the form of keyword
+#      arguments to `altair.Scale`.
+#    - `concentration_title`: the title used for the x-axis when plotting prob escape
+#      as a function of concentration. Is optional.
+#    - `scale_stat`: scale the statistic being estimated for mutation effects by this
+#      number. Typically is 1 (no scaling) unless you want negative values to indicate a
+#      favorable effect (as for soluble receptor selections), in which case use -1.
+#    - `stat_name`: name assigned to statistic, eg, "escape" or "receptor affinity".
+
+assays:
+  antibody_escape:
+    title: Antibody/serum escape
+    selections: antibody_selections
+    averages: avg_antibody_escape
+    prob_escape_scale:
+      type: symlog
+      constant: 0.04
+    scale_stat: 1
+    stat_name: escape
+  # receptor_affinity:
+  #   title: Receptor affinity
+  #   selections: receptor_selections
+  #   averages: avg_receptor_affinity
+  #   prob_escape_scale:
+  #     type: linear
+  #   concentration_scale:
+  #     type: linear
+  #   concentration_title: concentration of receptor
+  #   scale_stat: -1
+  #   stat_name: receptor affinity
+
+# --------------------------------------------------------------------------------------
+# Configuration for the selection experiments for each assay.
+# --------------------------------------------------------------------------------------
+
+# `<assay>_selections` is keyed by name of each selection experiment, which includes a
+# no-antibody control samples and one or more antibody samples. These should typically
+# be from the same library and run on same date. Selection experiments are recommended
+# to be named as <Library>-<date as YYMMDD>-<description (eg, antibody)>-<replicate>.
+# Each selection experiment should in turn provide the following keys:
+#  - `neut_standard_name`: name of neutralization standard in `neut_standard_barcodes`
+#  - `no_antibody_sample`: name of the no-antibody sample
+#  - `antibody_samples`: a dict keyed by sample name with values of:
+#    * `concentration`: the concentration of the antibody
+#    * `use_in_fit`: whether to use this sample in the `polyclonal` fit
+#  - `prob_escape_filters`: dict giving filters of prob_escape values to use for fitting
+#  - `polyclonal_params`: dict giving parameters for `polyclonal` model fitting.
+#  - `escape_plot_kwargs`: dict giving parameters for `polyclonal` escape plot
+#  - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
+# The `use_in_fit` option exists because you may decide that some samples are outside
+# the preferred neutralization range to include in the fit, so if `use_in_fit: false`
+# then functional scores are computed and plotted but it is not included in the fit.
+
+# default prob_escape filters
+prob_escape_filters_default: &prob_escape_filters_default
+  # error if sample used in fit doesn't have >= this many neut standard counts and
+  # >= this fraction of all counts from neut standard.
+  min_neut_standard_count: 1000
+  min_neut_standard_frac: 0.001
+  # Only retain for fitting variants with at least this many counts and this fraction
+  # of total counts in the no-antibody sample **OR** the indicated counts and fraction
+  # of total counts in the antibody sample.
+  min_no_antibody_count: 5  # make bigger for real experiments, say 20
+  min_no_antibody_frac: 0.00005  # make smaller for large libraries, say ~0.1 / (library size)
+  min_antibody_count: 10  # make bigger for real experiments, say 100
+  min_antibody_frac: 0.005  # make smaller for large libraries, say ~10 / (library size)
+  # For averaging and plotting the mean probability (fraction) escape across variants, use
+  # these cutoffs:
+  max_aa_subs: 3  # group variants with >= this many substitutions
+  clip_uncensored_prob_escape: 5  # clip uncensored prob escape values at this max
+
+# default parameters for `polyclonal` model fitting
+polyclonal_params_default: &polyclonal_params_default
+  n_epitopes: 1  # fit this many epitopes, also fit all numbers less than this and plot
+  spatial_distances: null  # CSV with residue distances for spatial regularization, or null
+  fit_kwargs:  # keyword arguments to `Polyclonal.fit`
+    reg_escape_weight: 0.1
+    reg_spread_weight: 0.25
+    reg_activity_weight: 1.0
+    logfreq: 200
+
+# keyword arguments to `Polyclonal.mut_escape_plot`
+escape_plot_kwargs_default: &escape_plot_kwargs_default
+  addtl_slider_stats:
+    times_seen: 3
+  heatmap_max_at_least: 2
+  heatmap_min_at_least: -2
+  init_floor_at_zero: false
+  init_site_statistic: sum
+  site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
+
+# Specify any statistics (usually functional effects) for which you want to enable
+# sliders that hide data. Keyed by statistic name, then next dict gives:
+#   - `csv`: CSV file with the data, should have columns "site" and "mutant"
+#   - `csv_col`: column in the CSV with the data
+#   - `init`: initial value of slider
+#   - `min_filters` (optional): dict keyed by other columns and only keep if value is >= this
+plot_hide_stats_default: &plot_hide_stats_default
+  functional effect:
+    csv: results/func_effects/averages/HEK293T_entry_func_effects.csv
+    csv_col: effect
+    init: -3
+    min_filters:
+      times_seen: 3
+
+# define the antibody selections
+antibody_selections:
+
+  A-240129-rescue_1-func-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240129-rescue_1-VSVG-1
+    antibody_samples:
+     A-240129-rescue_1-no_antibody-1:
+      concentration: 0.15
+      use_in_fit: true
+
+#   LibA-220210-REGN10933-2:
+#     neut_standard_name: neut_standard
+#     prob_escape_filters: *prob_escape_filters_default
+#     polyclonal_params: *polyclonal_params_default
+#     escape_plot_kwargs: *escape_plot_kwargs_default
+#     plot_hide_stats: *plot_hide_stats_default
+#     no_antibody_sample: LibA-220210-no_antibody-2
+#     antibody_samples:
+#      LibA-220210-REGN10933-0.15-2:
+#       concentration: 0.15
+#       use_in_fit: false
+#      LibA-220210-REGN10933-1.39-2:
+#       concentration: 1.39
+#       use_in_fit: true
+#      LibA-220210-REGN10933-5.58-2:
+#       concentration: 5.58
+#       use_in_fit: true
+
+#   LibB-220302-REGN10933-1:
+#     neut_standard_name: neut_standard
+#     prob_escape_filters: *prob_escape_filters_default
+#     polyclonal_params: *polyclonal_params_default
+#     escape_plot_kwargs: *escape_plot_kwargs_default
+#     plot_hide_stats: *plot_hide_stats_default
+#     no_antibody_sample: LibB-220302-no_antibody-1
+#     antibody_samples:
+#      LibB-220302-REGN10933-0.15-1:
+#       concentration: 0.15
+#       use_in_fit: true
+#      LibB-220302-REGN10933-1.39-1:
+#       concentration: 1.39
+#       use_in_fit: true
+#      LibB-220302-REGN10933-5.58-1:
+#       concentration: 5.58
+#       use_in_fit: true
+
+#   LibA-220302-S2M11-1:
+#     neut_standard_name: neut_standard
+#     prob_escape_filters: *prob_escape_filters_default
+#     polyclonal_params: *polyclonal_params_default
+#     escape_plot_kwargs: *escape_plot_kwargs_default
+#     plot_hide_stats: *plot_hide_stats_default
+#     no_antibody_sample: LibA-220302-no_antibody-1
+#     antibody_samples:
+#      LibA-220302-S2M11-0.3082-1:
+#       concentration: 0.3082
+#       use_in_fit: true
+#      LibA-220302-S2M11-1.2328-1:
+#       concentration: 1.2328
+#       use_in_fit: true
+#      LibA-220302-S2M11-4.9314-1:
+#       concentration: 4.9314
+#       use_in_fit: true
+
+#   LibA-220302-S2M11-2:
+#     neut_standard_name: neut_standard
+#     prob_escape_filters: *prob_escape_filters_default
+#     polyclonal_params: *polyclonal_params_default
+#     escape_plot_kwargs: *escape_plot_kwargs_default
+#     plot_hide_stats: *plot_hide_stats_default
+#     no_antibody_sample: LibA-220302-no_antibody-2
+#     antibody_samples:
+#      LibA-220302-S2M11-0.3082-2:
+#       concentration: 0.3082
+#       use_in_fit: true
+#      LibA-220302-S2M11-1.2328-2:
+#       concentration: 1.2328
+#       use_in_fit: true
+#      LibA-220302-S2M11-4.9314-2:
+#       concentration: 4.9314
+#       use_in_fit: true
+
+# define the soluble receptor selections
+receptor_selections:
+
+  A-240129-rescue_1-no_receptor-1:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240129-rescue_1-no_antibody-1
+    antibody_samples:
+     A-240129-rescue_1-no_antibody-1:
+      concentration: 0.15
+      use_in_fit: true
+
+#   LibA-220302-pretending_S2M11_is_receptor-2:
+#     neut_standard_name: neut_standard
+#     prob_escape_filters: *prob_escape_filters_default
+#     polyclonal_params: *polyclonal_params_default
+#     escape_plot_kwargs: *escape_plot_kwargs_default
+#     plot_hide_stats: *plot_hide_stats_default
+#     no_antibody_sample: LibA-220302-no_antibody-2
+#     antibody_samples:
+#      LibA-220302-S2M11-0.3082-2:
+#       concentration: 0.3082
+#       use_in_fit: true
+#      LibA-220302-S2M11-1.2328-2:
+#       concentration: 1.2328
+#       use_in_fit: false
+#      LibA-220302-S2M11-4.9314-2:
+#       concentration: 4.9314
+#       use_in_fit: true
+
+# --------------------------------------------------------------------------------------
+# Configuration for averaging/plotting selections for an assay
+# --------------------------------------------------------------------------------------
+
+# Average/plot escape values from different selections for an assay using `<assay>_escape`.
+# Each key is the name of the average being taken with the following values:
+#   - `selections`: list of antibody selections for which we average escape
+#   - `icXX`: for the plot showing fold-change in ICXX (eg, IC90), what is XX (eg, 90)
+#   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
+#   - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
+#   - `title`: title of plots
+#   - `legend`: legend added to plots
+
+avg_escape_plot_kwargs_default: &avg_escape_plot_kwargs_default
+  <<: *escape_plot_kwargs_default
+  addtl_slider_stats:
+    times_seen: 3
+    escape_std: 2
+  addtl_slider_stats_as_max: [escape_std]
+  avg_type: median
+  per_model_tooltip: true
+
+# Define defaults for each antibody/serum, used via the merge (<<) operator
+avg_antibody_escape_default: &avg_antibody_escape_default
+  icXX: 90  # IC90
+  show_icXX_in_docs: false  # Do we link ICXX plots/CSVs in docs? Missing equates to false.
+  escape_plot_kwargs:
+    <<: *avg_escape_plot_kwargs_default
+  plot_hide_stats: *plot_hide_stats_default
+  legend: |
+    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating a summary of the mutation effects at each site. The heat map shows effects for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
+
+    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
+
+    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
+
+    The *minimum max* slider is useful to select the sites where mutations have the largest effect.
+
+# Define the antibodies/sera escapes to average
+avg_antibody_escape:
+  placeholder:
+    <<: *avg_antibody_escape_default
+    title: placeholder to get pipeline to run
+    selections:
+      - A-240129-rescue_1-func-1
+#   S2M11:
+#     <<: *avg_antibody_escape_default
+#     title: Escape map for antibody S2M11
+#     selections:
+#       - LibA-220302-S2M11-1
+#       - LibA-220302-S2M11-2
+
+# Define the receptor affinity experiments to average
+avg_receptor_affinity_default: &avg_receptor_affinity_default
+  <<: *avg_antibody_escape_default
+  icXX: 50  # IC50
+
+avg_receptor_affinity:
+  no_receptor: 
+    <<: *avg_receptor_affinity_default
+    title: no receptor
+    selections:
+      - A-240129-rescue_1-no_receptor-1
