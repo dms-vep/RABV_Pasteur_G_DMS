@@ -120,4 +120,4 @@ illumina_barcode_parser_params:
 
 func_effects_config: data/func_effects_config.yml  # Functional effects of mutations
 antibody_escape_config: null  # Antibody/serum escape
-summaries_config: data/summaries_config.yml  # Summaries across assays
+summaries_config: null #data/summaries_config.yml  # Summaries across assays

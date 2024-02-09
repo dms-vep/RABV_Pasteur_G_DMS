@@ -3,6 +3,8 @@
 <p>See <a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS">https://github.com/dms-vep/RABV_Pasteur_G_DMS</a> for full code.</p>
 <div class="toc"><span class="toctitle">Contents</span><ul>
 <li><a href="#barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</a></li>
+<li><a href="#count-barcodes-for-variants">Count barcodes for variants</a></li>
+<li><a href="#functional-effects-of-mutations">Functional effects of mutations</a></li>
 </ul>
 </div>
 <h2 id="barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</h2>
@@ -17,4 +19,82 @@
 <li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/data/gene_sequence/codon.fasta">parental codon sequence</a></li>
 <li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/data/gene_sequence/protein.fasta">parental protein sequence</a></li>
 <li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/variants/codon_variants.csv">barcode to codon-variant lookup table</a></li>
+</ul>
+<h2 id="count-barcodes-for-variants">Count barcodes for variants</h2>
+<h4 id="analysis-notebooks_1">Analysis notebooks</h4>
+<ul>
+<li><a href="notebooks/analyze_variant_counts.html">Analysis of variant counts</a></li>
+</ul>
+<h4 id="data-files_1">Data files</h4>
+<ul>
+<li><details><summary>Barcode count CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-no_antibody-1_counts.csv">A-240129-rescue_1-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-no_antibody-2_counts.csv">A-240129-rescue_1-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-VSVG-1_counts.csv">A-240129-rescue_1-VSVG-1</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="functional-effects-of-mutations">Functional effects of mutations</h2>
+<h4 id="final-summary-plots">Final summary plots</h4>
+<ul>
+<li><details><summary>Interactive plots of average mutation functional effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/HEK293T_entry_func_effects.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Interactive plots of average mutation latent-phenotype effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/HEK293T_entry_latent_effects.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="analysis-notebooks_2">Analysis notebooks</h4>
+<ul>
+<li><a href="notebooks/analyze_func_scores.html">Analysis of functional scores</a></li>
+<li><details><summary>Notebooks with per-selection global epistasis fitting (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/func_effects_global_epistasis_A-240129-func-1.html">A-240129-func-1</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_A-240129-func-2.html">A-240129-func-2</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Notebooks averaging mutation functional effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/avg_func_effects_HEK293T_entry.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="data-files_2">Data files</h4>
+<ul>
+<li><details><summary>Per-variant functional score CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240129-func-1_func_scores.csv">A-240129-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240129-func-2_func_scores.csv">A-240129-func-2</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Per-selection mutation functional effect CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240129-func-1_func_effects.csv">A-240129-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240129-func-2_func_effects.csv">A-240129-func-2</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average mutation functional effects (CSV files) (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/averages/HEK293T_entry_func_effects.csv">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average mutation latent-phenotype effects (CSV files) (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/averages/HEK293T_entry_func_effects.csv">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
 </ul>
