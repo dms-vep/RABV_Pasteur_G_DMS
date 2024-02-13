@@ -31,17 +31,6 @@ You can also make changes to the [dms-vep-pipeline-3](https://github.com/dms-vep
 The [snakemake](https://snakemake.readthedocs.io/) pipeline itself is run by `dms-vep-pipeline-3/Snakefile` which reads its configuration from [config.yaml](config.yaml).
 The [conda](https://docs.conda.io/) environment used by the pipeline is that specified in the `environment.yml` file in [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3).
 
-## Running the pipeline
-To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `environment.yml` file of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), activate it, and run [snakemake](https://snakemake.readthedocs.io/), such as:
-
-    conda activate dms-vep-pipeline-3
-    snakemake -j 32 --use-conda -s dms-vep-pipeline-3/Snakefile
-
-To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
-
-    sbatch -c 32 run_Hutch_cluster.bash
-
-
 ### Data
 Input data utilized by the pipeline are located in [./data/](data). 
 
@@ -53,4 +42,16 @@ The pipeline builds HTML documentation for the pipeline in [./docs/](docs). Thes
 
 ### Non-pipeline analyses
 All other non-pipeline analyses are contained in [./scratch_notebook/](scratch_notebook). The notebooks in this directory are not part of the main pipeline but have been used to generate files used as input for the pipeline.
+
+## Running the pipeline
+To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `environment.yml` file of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), activate it, and run [snakemake](https://snakemake.readthedocs.io/), such as:
+
+    conda activate dms-vep-pipeline-3
+    snakemake -j 32 --use-conda -s dms-vep-pipeline-3/Snakefile
+
+To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
+
+    sbatch -c 32 run_Hutch_cluster.bash
+
+
 
