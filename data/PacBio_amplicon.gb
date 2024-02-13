@@ -1,9 +1,11 @@
-LOCUS       PacBio_amplicon         1761 bp ds-DNA     linear       06-FEB-2024
-DEFINITION  RABV-G (Genscript optimization 3), Pasteur strain amplicon after PacBio PCRs
+LOCUS       PacBio_amplicon         1761 bp ds-DNA     linear       09-FEB-2024
+DEFINITION  PacBio amplicon of pasteur vaccin strain rabies glycoprotein (Genscript optimization
+            #3). 
 FEATURES             Location/Qualifiers
      termini5        1..47
      variant_tag5    28..28
-     gene            48..1622
+     gene_flank5     48..98
+     gene            99..1622
      barcode         1674..1689
      termini3        1690..1761
      variant_tag3    1716..1716
