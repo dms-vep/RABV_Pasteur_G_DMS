@@ -10,6 +10,8 @@ The deep mutational scan only consists of the ectodomain of Rabies G and few sit
 
 For analysis and documentation, navigate to [https://dms-vep.org/RABV_Pasteur_G_DMS/](https://dms-vep.org/RABV_Pasteur_G_DMS/). 
 
+### Data
+Input data utilized by the pipeline are located in [./data/](data). 
 
 ### Non-pipeline analyses
 All other non-pipeline analyses are contained in [./scratch_notebook/](scratch_notebook). The notebooks in this directory are not part of the main pipeline but have been used to generate files used as input for the pipeline.
