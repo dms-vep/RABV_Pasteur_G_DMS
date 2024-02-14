@@ -27,7 +27,7 @@ This directory contains input data for multiple steps in the 'dms-vep-3' pipelin
  - `region`: domain of glycoprotein where position residues, eg. *signal peptide*, *cytoplasmic tail*. 
 
 ## Mutation-type classification
-[data/mutation_design_classification.csv](data/mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using [glycoprotein_positions.ipynb](/RABV_Pasteur_G_DMS/scratch_notebook/glycoprotein_positions.ipynb).
+[mutation_design_classification.csv](mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using `glycoprotein_positions.ipynb` in the scratch_notebook directory.
  - `sequential_site`: site within glycoprotein ORF
  - `amino_acid`: amino acid residue mutation at position
  - `mutation_type`: can be *designed_mutation*, *stop* for introduced stop codons, or *unintended_mutation*.
