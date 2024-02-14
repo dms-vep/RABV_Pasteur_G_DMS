@@ -46,7 +46,7 @@ This directory contains input data for multiple steps in the 'dms-vep-3' pipelin
 ## Visualization on known structures of glycoprotein
 The below structures were used to project functional effects onto structures for mechanistic rationalization
 
-[7u9g.pdb](7u9g.pdb): Cryo-EM structure of trimeric, pre-fusion Rabies glycoprotein (Pasteur strain) published in [Callaway, et al, *Sci Adv* 2022](10.1126/sciadv.abp9151). This structure contains the antibody RVA122 bound. 
+[7u9g.pdb](7u9g.pdb): Cryo-EM structure of trimeric, pre-fusion Rabies glycoprotein (Pasteur strain) published in [Callaway, et al, *Sci Adv* 2022](https://www.science.org/doi/10.1126/sciadv.abp9151). This structure contains the antibody RVA122 bound. 
 
-[6lgw.pdb](6lgw.pdb): Structure of extended intermediate state of Rabies glycoprotein during fusion process, as published in [Yang, et al, *Cell Host Microbe*, 2020](10.1016/j.chom.2019.12.012).
+[6lgw.pdb](6lgw.pdb): Structure of extended intermediate state of Rabies glycoprotein during fusion process, as published in [Yang, et al, *Cell Host Microbe*, 2020](https://www.sciencedirect.com/science/article/pii/S1931312819306419?via%3Dihub).
 
