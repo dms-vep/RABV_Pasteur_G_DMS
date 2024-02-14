@@ -18,19 +18,35 @@ This directory contains input data for multiple steps in the 'dms-vep-3' pipelin
   
 [neutralization_standard_barcodes.csv](neutralization_standard_barcodes.csv): These are a minimal set of barcodes *reserved* as sequencing standards in antibody selections. These are barcodes in a VSV-G pseudotyped lentiviral particles containing barcoded genomes encoding mCherry.  
   
-## Site numbering
-[site_numbering_map.csv](site_numbering_map.csv): Maps sequential (1, 2, ...n) numbering of positions to a "reference" numbering scheme for analysis. This file contains the following columns
- - `sequential_site`: site within glycoprotein ORF, numbered from 1 onwards.
+[site_numbering_map.csv](site_numbering_map.csv): Maps sequential (1, 2, ...n) numbering of positions to a "reference" numbering scheme for analysis. This file contains the following columns:
+ - `sequential_site`: site within mutagenized region of glycoprotein ORF, numbered from 1 onwards.
  - `sequential_wt`: wild type amino acid residue at this position
- - `reference_site`: numbering used (conventional in field).
+ - `reference_site`: numbering used (conventional in field) or within entire ORF in case only part of glycoprotein is subject to DMS. Here, the DMS is only for the ectodomain, so this starts at site 18.
  - `reference_wt`: wild type amino acid residue within reference strain
  - `region`: domain of glycoprotein where position residues, eg. *signal peptide*, *cytoplasmic tail*. 
 
-## Mutation-type classification
 [mutation_design_classification.csv](mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using `glycoprotein_positions.ipynb` in the scratch_notebook directory.
  - `sequential_site`: site within glycoprotein ORF
  - `amino_acid`: amino acid residue mutation at position
  - `mutation_type`: can be *designed_mutation*, *stop* for introduced stop codons, or *unintended_mutation*.
 
+## Illumina sequencing analysis of functional and antibody selections
 
+[barcode_runs.csv](barcode_runs.csv) contains the following columns:
+ - `sample`: sample name, must be unique among barcode runs. Sample name must begin with `<library>-<YYMMDD>` where `<library>` is the library (A or B, for example) and `<YYMMDD>` is the date of the selection. A recommended format is `<library>-<YYMMDD>-<description>-<replicate>`. `<description>` is a string description with underscores but no dashes (eg. *VSVG* is for VSV-G virus selections for barcode normalization, *no_antibody* means functional selection only). `<replicate>` is a number.
+ - `library`: name of library, must match a library in the barcode-variant table
+ - `date`: date of experimental run, specified in a format parseable to a date by `pandas`.
+ - `fastq_R1`: path to one more FASTQ R1 sequencing files. Multiple sequencing files should be delimited using a ';' character in between file paths.
+
+[func_effects_config.yml](func_effects_config.yml) has the configuration for analyzing functional effects of mutations.
+
+[antibody_escape_config.yml](antibody_escape_config.yml) has the configuration for analyzing effects of mutations on escape from antibodies or sera.
+
+
+## Visualization on known structures of glycoprotein
+The below structures were used to project functional effects onto structures for mechanistic rationalization
+
+[7u9g.pdb](7u9g.pdb): Cryo-EM structure of trimeric, pre-fusion Rabies glycoprotein (Pasteur strain) published in [Callaway, et al, *Sci Adv* 2022](10.1126/sciadv.abp9151). This structure contains the antibody RVA122 bound. 
+
+[6lgw.pdb](6lgw.pdb): Structure of extended intermediate state of Rabies glycoprotein during fusion process, as published in [Yang, et al, *Cell Host Microbe*, 2020](10.1016/j.chom.2019.12.012).
 
