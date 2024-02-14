@@ -5,8 +5,9 @@ FEATURES             Location/Qualifiers
      termini5        1..47
      variant_tag5    28..28
      gene_flank5     48..98
-     gene            99..1622
+     gene            99..1397
      barcode         1674..1689
+     gene_flank3     1398..1622
      termini3        1690..1761
      variant_tag3    1716..1716
 ORIGIN
