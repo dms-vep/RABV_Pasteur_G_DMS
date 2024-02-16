@@ -1,6 +1,6 @@
 # Data
 
-This directory contains input data for multiple steps in the 'dms-vep-3' pipeline. These files are detailed below, sorted by analytical step.
+This directory contains input data for multiple steps in the `dms-vep-3` pipeline. These files are detailed below, sorted by analytical step.
 
 ## PacBio sequencing analysis to link barcodes with glycoprotein variants
 
@@ -13,19 +13,20 @@ This directory contains input data for multiple steps in the 'dms-vep-3' pipelin
  - `run`: Library name with run date appended. For example, 
     + *A_240124*: Library A PacBio sequencing submitted on 24-Jan-2024.
     + *B_240124*: Library B PacBio sequencing submitted on 24-Jan-2024.
+    + *B_240212*: Library B PacBio re-sequencing submitted on 12-Feb-2024.
  - `fastq`: FASTQ file from running CCS
-    + We asked for genomics to convert bam files into fastq on our behalf, though 'samtools' is an alternative way to convert bam files to fastq for analysis.
+    + We asked for genomics to convert bam files into fastq on our behalf, though `samtools` is an alternative way to convert bam files to fastq for analysis.
   
 [neutralization_standard_barcodes.csv](neutralization_standard_barcodes.csv): These are a minimal set of barcodes *reserved* as sequencing standards in antibody selections. These are barcodes in a VSV-G pseudotyped lentiviral particles containing barcoded genomes encoding mCherry.  
   
-[site_numbering_map.csv](site_numbering_map.csv): Maps sequential (1, 2, ...n) numbering of positions to a "reference" numbering scheme for analysis. This file contains the following columns:
- - `sequential_site`: site within mutagenized region of glycoprotein ORF, numbered from 1 onwards.
+[site_numbering_map.csv](site_numbering_map.csv): Maps sequential (1, 2, ...n) numbering of positions to a "reference" numbering scheme for analysis. This file contains the following columns:`
+ - `sequential_site`: site within mutagenized region of glycoprotein, numbered from 1 onwards. While `reference_site` does not have to begin with 1, `sequential_site` must start at 1.
  - `sequential_wt`: wild type amino acid residue at this position
- - `reference_site`: numbering used (conventional in field) or within entire ORF in case only part of glycoprotein is subject to DMS. Here, the DMS is only for the ectodomain, so this starts at site 18.
+ - `reference_site`: numbering used (conventional in field) or within entire ORF in case only part of glycoprotein is subject to DMS.
  - `reference_wt`: wild type amino acid residue within reference strain
- - `region`: domain of glycoprotein where position residues, eg. *signal peptide*, *cytoplasmic tail*. 
+ - `region`: domain of glycoprotein where position residues, eg. *signal peptide*, *ectodomain*. 
 
-[mutation_design_classification.csv](mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using `glycoprotein_positions.ipynb` in the scratch_notebook directory.
+[mutation_design_classification.csv](mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using `glycoprotein_positions.ipynb` in the [./scratch_notebook](https://github.com/dms-vep/RABV_Pasteur_G_DMS/tree/main/scratch_notebook) directory.
  - `sequential_site`: site within glycoprotein ORF
  - `amino_acid`: amino acid residue mutation at position
  - `mutation_type`: can be *designed_mutation*, *stop* for introduced stop codons, or *unintended_mutation*.
@@ -46,7 +47,7 @@ This directory contains input data for multiple steps in the 'dms-vep-3' pipelin
 ## Visualization on known structures of glycoprotein
 The below structures were used to project functional effects onto structures for mechanistic rationalization
 
-[7u9g.pdb](7u9g.pdb): Cryo-EM structure of trimeric, pre-fusion Rabies glycoprotein (Pasteur strain) published in [Callaway, et al, *Sci Adv* 2022](https://www.science.org/doi/10.1126/sciadv.abp9151). This structure contains the antibody RVA122 bound. 
+[7u9g.pdb](7u9g.pdb): Cryo-EM structure of trimeric, pre-fusion Rabies glycoprotein (Pasteur strain) published in [Callaway, et al, *Sci Adv* 2022](https://www.science.org/doi/10.1126/sciadv.abp9151). This structure contains the Fab fragment of the antibody RVA122 bound. 
 
 [6lgw.pdb](6lgw.pdb): Structure of extended intermediate state of Rabies glycoprotein during fusion process, as published in [Yang, et al, *Cell Host Microbe*, 2020](https://www.sciencedirect.com/science/article/pii/S1931312819306419?via%3Dihub).
 

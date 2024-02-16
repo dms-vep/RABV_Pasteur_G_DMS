@@ -1,3 +1,4 @@
 ,library,run,fastq
-0,A,A_220124,/fh/fast/bloom_j/computational_notebooks/aaditham/2024/RABV_Pasteur_G_DMS/data/m64272e_240201_182146.hifi_reads.bc2083--bc2083.fastq
-1,B,B_220124,/fh/fast/bloom_j/computational_notebooks/aaditham/2024/RABV_Pasteur_G_DMS/data/m64272e_240203_003328.hifi_reads.bc2084--bc2084.fastq
+0,A,A_240124,/fh/fast/bloom_j/computational_notebooks/aaditham/2024/RABV_Pasteur_G_DMS/data/m64272e_240201_182146.hifi_reads.bc2083--bc2083.fastq
+1,B,B_240124,/fh/fast/bloom_j/computational_notebooks/aaditham/2024/RABV_Pasteur_G_DMS/data/m64272e_240203_003328.hifi_reads.bc2084--bc2084.fastq
+2,B,B_240212,/fh/fast/bloom_j/computational_notebooks/aaditham/2024/RABV_Pasteur_G_DMS/data/m64272e_240212_174839.hifi_reads.bc2084--bc2084.fastq
