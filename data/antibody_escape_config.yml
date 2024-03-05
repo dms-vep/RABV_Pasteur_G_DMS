@@ -26,16 +26,16 @@
 #      favorable effect (as for soluble receptor selections), in which case use -1.
 #    - `stat_name`: name assigned to statistic, eg, "escape" or "receptor affinity".
 
-assays: {}
-  #  antibody_escape:
-  #   title: Antibody/serum escape
-  #   selections: antibody_selections
-  #   averages: avg_antibody_escape
-  #   prob_escape_scale:
-  #     type: symlog
-  #     constant: 0.04
-  #   scale_stat: 1
-  #   stat_name: escape
+assays:
+  antibody_escape:
+    title: Antibody/serum escape
+    selections: antibody_selections
+    averages: avg_antibody_escape
+    prob_escape_scale:
+      type: symlog
+      constant: 0.04
+    scale_stat: 1
+    stat_name: escape
   # receptor_affinity:
   #   title: Receptor affinity
   #   selections: receptor_selections
@@ -80,9 +80,9 @@ prob_escape_filters_default: &prob_escape_filters_default
   # of total counts in the no-antibody sample **OR** the indicated counts and fraction
   # of total counts in the antibody sample.
   min_no_antibody_count: 5  # make bigger for real experiments, say 20
-  min_no_antibody_frac: 0.00005  # make smaller for large libraries, say ~0.1 / (library size)
+  min_no_antibody_frac: 0.000001  # make smaller for large libraries, say ~0.1 / (library size)
   min_antibody_count: 10  # make bigger for real experiments, say 100
-  min_antibody_frac: 0.005  # make smaller for large libraries, say ~10 / (library size)
+  min_antibody_frac: 0.00001  # make smaller for large libraries, say ~10 / (library size)
   # For averaging and plotting the mean probability (fraction) escape across variants, use
   # these cutoffs:
   max_aa_subs: 3  # group variants with >= this many substitutions
@@ -123,37 +123,94 @@ plot_hide_stats_default: &plot_hide_stats_default
       times_seen: 3
 
 # define the antibody selections
-antibody_selections: {}
+antibody_selections:
 
-  # A-240129-rescue_1-func-1:
+  # LibA-220222-RVC20:
   #   neut_standard_name: neut_standard
   #   prob_escape_filters: *prob_escape_filters_default
   #   polyclonal_params: *polyclonal_params_default
   #   escape_plot_kwargs: *escape_plot_kwargs_default
   #   plot_hide_stats: *plot_hide_stats_default
-  #   no_antibody_sample: A-240129-rescue_1-VSVG-1
+  #   no_antibody_sample: A-240222-rescue_2-no_antibody-1
   #   antibody_samples:
-  #    A-240129-rescue_1-no_antibody-1:
-  #     concentration: 0.15
+  #    A-240222-rescue_2-RVC20-290-1:
+  #     concentration: 290
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-58-1:
+  #     concentration: 58
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-11.6-1:
+  #     concentration: 11.6
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-2.32-1:
+  #     concentration: 2.32
   #     use_in_fit: true
 
-#   LibA-220210-REGN10933-2:
-#     neut_standard_name: neut_standard
-#     prob_escape_filters: *prob_escape_filters_default
-#     polyclonal_params: *polyclonal_params_default
-#     escape_plot_kwargs: *escape_plot_kwargs_default
-#     plot_hide_stats: *plot_hide_stats_default
-#     no_antibody_sample: LibA-220210-no_antibody-2
-#     antibody_samples:
-#      LibA-220210-REGN10933-0.15-2:
-#       concentration: 0.15
-#       use_in_fit: false
-#      LibA-220210-REGN10933-1.39-2:
-#       concentration: 1.39
-#       use_in_fit: true
-#      LibA-220210-REGN10933-5.58-2:
-#       concentration: 5.58
-#       use_in_fit: true
+  LibA-220222-RVA122:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240222-rescue_2-no_antibody-1
+    antibody_samples:
+     A-240222-rescue_2-RVA122-150-1:
+      concentration: 150
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-30-1:
+      concentration: 30
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-5-1:
+      concentration: 5
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-1-1:
+      concentration: 1
+      use_in_fit: true
+
+
+#delete block upon adding more samples
+  # LibA-220222-RVC20_duplicate:
+  #   neut_standard_name: neut_standard
+  #   prob_escape_filters: *prob_escape_filters_default
+  #   polyclonal_params: *polyclonal_params_default
+  #   escape_plot_kwargs: *escape_plot_kwargs_default
+  #   plot_hide_stats: *plot_hide_stats_default
+  #   no_antibody_sample: A-240222-rescue_2-no_antibody-1
+  #   antibody_samples:
+  #    A-240222-rescue_2-RVC20-290-1:
+  #     concentration: 290
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-58-1:
+  #     concentration: 58
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-11.6-1:
+  #     concentration: 11.6
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVC20-2.32-1:
+  #     concentration: 2.32
+  #     use_in_fit: true
+
+  LibA-220222-RVA122_duplicate:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240222-rescue_2-no_antibody-1
+    antibody_samples:
+     A-240222-rescue_2-RVA122-150-1:
+      concentration: 150
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-30-1:
+      concentration: 30
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-5-1:
+      concentration: 5
+      use_in_fit: true
+     A-240222-rescue_2-RVA122-1-1:
+      concentration: 1
+      use_in_fit: true
+
 
 #   LibB-220302-REGN10933-1:
 #     neut_standard_name: neut_standard
@@ -282,11 +339,19 @@ avg_antibody_escape_default: &avg_antibody_escape_default
 
 # Define the antibodies/sera escapes to average
 avg_antibody_escape:
-  placeholder:
+  # RVC20:
+  #   <<: *avg_antibody_escape_default
+  #   title: placeholder to get pipeline to run
+  #   selections:
+  #     - LibA-220222-RVC20
+  #     - LibA-220222-RVC20_duplicate
+  RVA122:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
-      - A-240129-rescue_1-func-1
+      - LibA-220222-RVA122
+      - LibA-220222-RVA122_duplicate
+      
 #   S2M11:
 #     <<: *avg_antibody_escape_default
 #     title: Escape map for antibody S2M11
@@ -295,13 +360,13 @@ avg_antibody_escape:
 #       - LibA-220302-S2M11-2
 
 # Define the receptor affinity experiments to average
-avg_receptor_affinity_default: &avg_receptor_affinity_default
-  <<: *avg_antibody_escape_default
-  icXX: 50  # IC50
+# avg_receptor_affinity_default: &avg_receptor_affinity_default
+#   <<: *avg_antibody_escape_default
+#   icXX: 50  # IC50
 
-avg_receptor_affinity:
-  no_receptor: 
-    <<: *avg_receptor_affinity_default
-    title: no receptor
-    selections:
-      - A-240129-rescue_1-no_receptor-1
+# avg_receptor_affinity:
+#   no_receptor: 
+#     <<: *avg_receptor_affinity_default
+#     title: no receptor
+#     selections:
+#       - A-240129-rescue_1-no_receptor-1

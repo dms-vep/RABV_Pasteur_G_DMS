@@ -17,7 +17,7 @@ func_scores_params_default: &func_scores_params_default
   # or frequencies that may not have sufficient statistics for good estimates.
   min_pre_selection_count: 10  # drop variants < this many pre-selection counts
   # !!! Make min_pre_selection_frac LARGER for larger libraries, such 0.1 / (library size) !!!
-  min_pre_selection_frac: 0.00001  # drop variants that are < this fraction of all counts
+  min_pre_selection_frac: 0.000001  # drop variants that are < this fraction of all counts
 
 # Define default parameters for fitting global epistasis models to each
 # individual selection to get mutationo effects.
@@ -51,8 +51,22 @@ func_scores:
     pre_selection_sample: A-240129-rescue_1-VSVG-1
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
-
-
+  A-240222-func-1:
+    post_selection_sample: A-240222-rescue_2-no_antibody-1
+    pre_selection_sample: A-240222-rescue_2-VSVG-1
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  A-240222-func-2:
+    post_selection_sample: A-240222-rescue_2-no_antibody-2
+    pre_selection_sample: A-240222-rescue_2-VSVG-1
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  A-240222-func-3:
+    post_selection_sample: A-240222-rescue_2-no_antibody-3
+    pre_selection_sample: A-240222-rescue_2-VSVG-1
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+    
 # --------------------------------------------------------------------------------------
 # Configuration for averaging mutation functional effects across selections and plotting
 # them.
@@ -114,6 +128,9 @@ avg_func_effects:
     selections:
       - A-240129-func-1
       - A-240129-func-2
+      - A-240222-func-1
+      - A-240222-func-2
+      - A-240222-func-3
 
 # --------------------------------------------------------------------------------------
 # Configuration for func effect shifts from `multidms` models comparing conditions.
