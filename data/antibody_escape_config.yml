@@ -26,16 +26,16 @@
 #      favorable effect (as for soluble receptor selections), in which case use -1.
 #    - `stat_name`: name assigned to statistic, eg, "escape" or "receptor affinity".
 
-assays:
-  antibody_escape:
-    title: Antibody/serum escape
-    selections: antibody_selections
-    averages: avg_antibody_escape
-    prob_escape_scale:
-      type: symlog
-      constant: 0.04
-    scale_stat: 1
-    stat_name: escape
+assays: {}
+  # antibody_escape:
+  #   title: Antibody/serum escape
+  #   selections: antibody_selections
+  #   averages: avg_antibody_escape
+  #   prob_escape_scale:
+  #     type: symlog
+  #     constant: 0.04
+  #   scale_stat: 1
+  #   stat_name: escape
   # receptor_affinity:
   #   title: Receptor affinity
   #   selections: receptor_selections
@@ -123,7 +123,7 @@ plot_hide_stats_default: &plot_hide_stats_default
       times_seen: 3
 
 # define the antibody selections
-antibody_selections:
+antibody_selections: {}
 
   # LibA-220222-RVC20:
   #   neut_standard_name: neut_standard
@@ -146,26 +146,26 @@ antibody_selections:
   #     concentration: 2.32
   #     use_in_fit: true
 
-  LibA-220222-RVA122:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240222-rescue_2-no_antibody-1
-    antibody_samples:
-     A-240222-rescue_2-RVA122-150-1:
-      concentration: 150
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-30-1:
-      concentration: 30
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-5-1:
-      concentration: 5
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-1-1:
-      concentration: 1
-      use_in_fit: true
+  # LibA-220222-RVA122:
+  #   neut_standard_name: neut_standard
+  #   prob_escape_filters: *prob_escape_filters_default
+  #   polyclonal_params: *polyclonal_params_default
+  #   escape_plot_kwargs: *escape_plot_kwargs_default
+  #   plot_hide_stats: *plot_hide_stats_default
+  #   no_antibody_sample: A-240222-rescue_2-no_antibody-1
+  #   antibody_samples:
+  #    A-240222-rescue_2-RVA122-150-1:
+  #     concentration: 150
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-30-1:
+  #     concentration: 30
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-5-1:
+  #     concentration: 5
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-1-1:
+  #     concentration: 1
+  #     use_in_fit: true
 
 
 #delete block upon adding more samples
@@ -190,26 +190,26 @@ antibody_selections:
   #     concentration: 2.32
   #     use_in_fit: true
 
-  LibA-220222-RVA122_duplicate:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240222-rescue_2-no_antibody-1
-    antibody_samples:
-     A-240222-rescue_2-RVA122-150-1:
-      concentration: 150
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-30-1:
-      concentration: 30
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-5-1:
-      concentration: 5
-      use_in_fit: true
-     A-240222-rescue_2-RVA122-1-1:
-      concentration: 1
-      use_in_fit: true
+  # LibA-220222-RVA122_duplicate:
+  #   neut_standard_name: neut_standard
+  #   prob_escape_filters: *prob_escape_filters_default
+  #   polyclonal_params: *polyclonal_params_default
+  #   escape_plot_kwargs: *escape_plot_kwargs_default
+  #   plot_hide_stats: *plot_hide_stats_default
+  #   no_antibody_sample: A-240222-rescue_2-no_antibody-1
+  #   antibody_samples:
+  #    A-240222-rescue_2-RVA122-150-1:
+  #     concentration: 150
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-30-1:
+  #     concentration: 30
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-5-1:
+  #     concentration: 5
+  #     use_in_fit: true
+  #    A-240222-rescue_2-RVA122-1-1:
+  #     concentration: 1
+  #     use_in_fit: true
 
 
 #   LibB-220302-REGN10933-1:
