@@ -119,5 +119,5 @@ illumina_barcode_parser_params:
 # of analysis. Otherwise provide path to configuration for that analysis.
 
 func_effects_config: data/func_effects_config.yml  # Functional effects of mutations
-antibody_escape_config: null #data/antibody_escape_config.yml  # Antibody/serum escape
-summaries_config: null #data/summaries_config.yml  # Summaries across assays
+antibody_escape_config: data/antibody_escape_config.yml  # Antibody/serum escape
+summaries_config: #data/summaries_config.yml  # Summaries across assays
