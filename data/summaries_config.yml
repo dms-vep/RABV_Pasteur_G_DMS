@@ -26,6 +26,7 @@ summary:
         17C7: 17C7
         RVC58: RVC58
         CR4098: CR4098
+        CR57: CR57
 
   func_effects:  # effects of mutations on function
     RABV-G mediated entry:  # name of functional selection
