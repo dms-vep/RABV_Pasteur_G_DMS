@@ -68,3 +68,8 @@ results/receptor_affinity/averages/*
 !results/dms_viz
 results/dms_viz/*
 !results/dms_viz/*.json
+
+!non-pipeline_analyses/RABV_nextstrain/Results/
+non-pipeline_analyses/RABV_nextstrain/Results/*
+!non-pipeline_analyses/RABV_nextstrain/Results/Auspice/
+!non-pipeline_analyses/RABV_nextstrain/Results/RABV_G_variation.csv

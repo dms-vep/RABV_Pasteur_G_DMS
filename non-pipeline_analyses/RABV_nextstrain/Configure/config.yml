@@ -1,0 +1,70 @@
+#################################################---START INPUT DATA---#######################################################
+
+# List of accessions file
+Accession_list: Configure/Input_Data/all_RABV_accessions_040224.txt
+
+# Reference genbanks
+Reference_genbank: Configure/Input_Data/RABV_reference_NC_001542.gb
+
+# Size threshold filters
+# RABV genome is ~12kb
+# RABV G is ~ 1500
+Genome_size_threshold_lower: 1500
+Genome_size_threshold_upper: 13000
+
+# Maximum fraction of ambiuous bases allowed
+max_frac_N: 0
+
+# Sequences to remove
+Accessions_to_exclude: 
+  - A01887 # this is an expression vector part of a patent application with little info
+  - A34690 # this is an expression vector part of a patent application with little info
+
+
+# Strains to drop during Augur processing
+Dropped_strains: Configure/Input_Data/dropped_strains.txt
+
+# Auspice configuration
+Auspice_config: Configure/Input_Data/auspice_config.json
+Colors: Configure/Input_Data/colors.tsv
+
+#################################################---END INPUT DATA---#########################################################
+
+#################################################---START OUTPUT DATA---######################################################
+
+# Metadata output
+Metadata: Results/RABV_metadata.tsv
+
+# Fasta nucelotide file ouput
+Nucleotide_unfiltered_sequences: Results/RABV_unfiltered_nucleotide.fasta
+Nucleotide_sequences: Results/RABV_nucleotide.fasta
+
+# Indexed files
+Nucleotide_sequences_indexed: Results/RABV_nucleotide_indexed.tsv 
+
+# Aligned sequences
+Nucleotide_alignment: Results/RABV_nucleotide_alignment.fasta
+
+# Raw tree files
+Nucleotide_raw_tree: Results/RABV_tree_raw.nwk
+
+# Tree files
+Nucleotide_tree: Results/RABV_tree.nwk
+Nucleotide_tree_nodes: Results/RABV_branch_lengths.json
+Nucleotide_tree_traits: Results/RABV_traits.json
+Nucleotide_tree_mutations: Results/RABV_muts.json
+Nucleotide_AA_mutations: Results/RABV_aa_muts.json
+
+# Gene translations
+Gene_AA_alignments: Results/Gene_AA_Alignements/RABV_Glycoprotein.fasta
+
+# Alignment
+Glycoprotein_alignment: Results/RABV_G_alignment.fasta
+
+# Entropy and effective amino acid varation
+Glycoprotein_variation: Results/RABV_G_variation.csv
+
+# Exported Aupsice file
+Auspice_tree: Results/Auspice/RABV.json
+
+#################################################---END OUTPUT DATA---########################################################

@@ -1,0 +1,14 @@
+name: nextstrain_analysis
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - jupyterlab
+  - pandas
+  - seaborn
+  - snakemake
+  - nextstrain-cli
+  - augur=24.3.0
+  - auspice=2.52.0

@@ -1,0 +1,58 @@
+{
+  "title": "Nextstrain build for Rabies virus",
+  "maintainers": [
+    {
+      "name": "the Bloom lab",
+      "url": "https://research.fredhutch.org/bloom/en.html"
+    }
+  ],
+  "colorings": [
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "date",
+      "title": "Date",
+      "type": "continuous"
+    },
+    {
+      "key": "author",
+      "title": "Author",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "location",
+      "title": "Location",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country"
+  ],
+  "panels": [
+     "tree",
+     "map",
+     "entropy"
+  ],
+  "display_defaults": {
+    "map_triplicate": true,
+    "distance_measure": "div"
+  },
+  "filters": [
+    "country",
+    "location",
+    "author"
+  ]
+}
