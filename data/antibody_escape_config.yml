@@ -79,7 +79,7 @@ prob_escape_filters_default: &prob_escape_filters_default
   # Only retain for fitting variants with at least this many counts and this fraction
   # of total counts in the no-antibody sample **OR** the indicated counts and fraction
   # of total counts in the antibody sample.
-  min_no_antibody_count: 5  # make bigger for real experiments, say 20
+  min_no_antibody_count: 20  # make bigger for real experiments, say 20
   min_no_antibody_frac: 0.000001  # make smaller for large libraries, say ~0.1 / (library size)
   min_antibody_count: 10  # make bigger for real experiments, say 100
   min_antibody_frac: 0.00001  # make smaller for large libraries, say ~10 / (library size)
@@ -134,20 +134,20 @@ antibody_selections:
     no_antibody_sample: A-240319-rescue_2-no_antibody-1
     antibody_samples:
      A-240319-rescue_2-RVA122-150-1:
-      concentration: 150
-      use_in_fit: False
+      concentration: 0.15
+      use_in_fit: True
      A-240319-rescue_2-RVA122-300-1:
-      concentration: 300
+      concentration: 0.3
       use_in_fit: False
      A-240319-rescue_2-RVA122-600-1:
-      concentration: 600
+      concentration: 0.6
       use_in_fit: true
      A-240319-rescue_2-RVA122-1500-1:
-      concentration: 1500
+      concentration: 1.5
       use_in_fit: true
      A-240319-rescue_2-RVA122-3000-1:
-      concentration: 3000
-      use_in_fit: True
+      concentration: 3
+      use_in_fit: False
 
 
   LibA-240319-RVA122_duplicate:
@@ -156,23 +156,23 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-2
+    no_antibody_sample: A-240319-rescue_2-no_antibody-3
     antibody_samples:
      A-240319-rescue_2-RVA122-150-1:
-      concentration: 150
-      use_in_fit: False
+      concentration: 0.15
+      use_in_fit: True
      A-240319-rescue_2-RVA122-300-1:
-      concentration: 300
+      concentration: 0.3
       use_in_fit: False
      A-240319-rescue_2-RVA122-600-1:
-      concentration: 600
+      concentration: 0.6
       use_in_fit: true
      A-240319-rescue_2-RVA122-1500-1:
-      concentration: 1500
+      concentration: 1.5
       use_in_fit: true
      A-240319-rescue_2-RVA122-3000-1:
-      concentration: 3000
-      use_in_fit: True
+      concentration: 3
+      use_in_fit: False
 
 
   LibA-240319-RVC20:
@@ -457,7 +457,7 @@ antibody_selections:
       use_in_fit: True
      A-240406-rescue_4-RVC68-10000-1:
       concentration: 10
-      use_in_fit: False
+      use_in_fit: True
      A-240406-rescue_4-RVC68-25000-1:
       concentration: 25
       use_in_fit: true
@@ -482,7 +482,7 @@ antibody_selections:
       use_in_fit: True
      A-240406-rescue_4-RVC68-10000-1:
       concentration: 10
-      use_in_fit: False
+      use_in_fit: True
      A-240406-rescue_4-RVC68-25000-1:
       concentration: 25
       use_in_fit: true
@@ -507,7 +507,7 @@ antibody_selections:
       use_in_fit: True
      A-240406-rescue_4-CTB012-6000-1:
       concentration: 6
-      use_in_fit: False
+      use_in_fit: True
      A-240406-rescue_4-CTB012-12000-1:
       concentration: 12
       use_in_fit: true
@@ -531,7 +531,7 @@ antibody_selections:
       use_in_fit: True
      A-240406-rescue_4-CTB012-6000-1:
       concentration: 6
-      use_in_fit: False
+      use_in_fit: True
      A-240406-rescue_4-CTB012-12000-1:
       concentration: 12
       use_in_fit: true
@@ -549,17 +549,17 @@ antibody_selections:
     no_antibody_sample: B-240501-rescue_2-no_antibody-1
     antibody_samples:
      B-240501-rescue_2-RVA122-300-1:
-      concentration: 300
-      use_in_fit: False
+      concentration: 0.3
+      use_in_fit: True
      B-240501-rescue_2-RVA122-600-1:
-      concentration: 600
+      concentration: 0.6
       use_in_fit: true
      B-240501-rescue_2-RVA122-1500-1:
-      concentration: 1500
+      concentration: 1.5
       use_in_fit: true
      B-240501-rescue_2-RVA122-3000-1:
-      concentration: 3000
-      use_in_fit: True
+      concentration: 3
+      use_in_fit: False
 
   LibB-240501-RVA122_duplicate:
     neut_standard_name: neut_standard
@@ -570,17 +570,17 @@ antibody_selections:
     no_antibody_sample: B-240501-rescue_2-no_antibody-3
     antibody_samples:
      B-240501-rescue_2-RVA122-300-1:
-      concentration: 300
-      use_in_fit: False
+      concentration: 0.3
+      use_in_fit: True
      B-240501-rescue_2-RVA122-600-1:
-      concentration: 600
+      concentration: 0.6
       use_in_fit: true
      B-240501-rescue_2-RVA122-1500-1:
-      concentration: 1500
+      concentration: 1.5
       use_in_fit: true
      B-240501-rescue_2-RVA122-3000-1:
-      concentration: 3000
-      use_in_fit: True
+      concentration: 3
+      use_in_fit: False
 
 #units in ug/mL not ng/mL
   LibB-240501-17C7:
