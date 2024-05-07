@@ -66,6 +66,21 @@ func_scores:
     pre_selection_sample: A-240222-rescue_2-VSVG-1
     func_score_params: *func_scores_params_default
     global_epistasis_params: *global_epistasis_params
+  B-240501-func-1:
+    post_selection_sample: B-240501-rescue_2-no_antibody-1
+    pre_selection_sample: B-240501-rescue_2-VSVG-1
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  B-240501-func-2:
+    post_selection_sample: B-240501-rescue_2-no_antibody-2
+    pre_selection_sample: B-240501-rescue_2-VSVG-2
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
+  B-240501-func-3:
+    post_selection_sample: B-240501-rescue_2-no_antibody-3
+    pre_selection_sample: B-240501-rescue_2-VSVG-1 
+    func_score_params: *func_scores_params_default
+    global_epistasis_params: *global_epistasis_params
     
 # --------------------------------------------------------------------------------------
 # Configuration for averaging mutation functional effects across selections and plotting
@@ -131,6 +146,9 @@ avg_func_effects:
       - A-240222-func-1
       - A-240222-func-2
       - A-240222-func-3
+      - B-240501-func-1
+      - B-240501-func-2
+      - B-240501-func-3
 
 # --------------------------------------------------------------------------------------
 # Configuration for func effect shifts from `multidms` models comparing conditions.
