@@ -205,7 +205,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-2
+    no_antibody_sample: A-240319-rescue_2-no_antibody-3
     antibody_samples:
      A-240319-rescue_2-RVC20-300-1:
       concentration: 300
@@ -243,7 +243,7 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: true
+      use_in_fit: True
      A-240319-rescue_2-17C7-25000-1:
       concentration: 25
       use_in_fit: False
@@ -256,7 +256,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-2
+    no_antibody_sample: A-240319-rescue_2-no_antibody-3
     antibody_samples:
      A-240319-rescue_2-17C7-800-1:
       concentration: 0.8
@@ -269,7 +269,7 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: true
+      use_in_fit: True
      A-240319-rescue_2-17C7-25000-1:
       concentration: 25
       use_in_fit: False
@@ -602,7 +602,7 @@ antibody_selections:
       use_in_fit: true
      B-240501-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: False
+      use_in_fit: True
 
   LibB-240501-17C7_duplicate:
     neut_standard_name: neut_standard
@@ -610,7 +610,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-2
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
     antibody_samples:
      B-240501-rescue_2-17C7-800-1:
       concentration: 0.8
@@ -623,7 +623,7 @@ antibody_selections:
       use_in_fit: true
      B-240501-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: False
+      use_in_fit: True
 
 
 #units in ng/mL
