@@ -120,7 +120,7 @@ plot_hide_stats_default: &plot_hide_stats_default
     csv_col: effect
     init: -3
     min_filters:
-      times_seen: 3
+      times_seen: 2
 
 # define the antibody selections
 antibody_selections:
@@ -331,59 +331,59 @@ antibody_selections:
       use_in_fit: true
 
     #units in ug/mL not ng/mL
-  # LibA-240331-CR4098:
-  #   neut_standard_name: neut_standard
-  #   prob_escape_filters: *prob_escape_filters_default
-  #   polyclonal_params: *polyclonal_params_default
-  #   escape_plot_kwargs: *escape_plot_kwargs_default
-  #   plot_hide_stats: *plot_hide_stats_default
-  #   no_antibody_sample: A-240331-rescue_4-no_antibody-2
-  #   antibody_samples:
-  #    A-240331-rescue_4-CR4098-400-1:
-  #     concentration: 0.4
-  #     use_in_fit: true
-  #    A-240331-rescue_4-CR4098-2000-1:
-  #     concentration: 2
-  #     use_in_fit: True
-  #    A-240331-rescue_4-CR4098-4000-1:
-  #     concentration: 4
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-8000-1:
-  #     concentration: 8
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-20000-1:
-  #     concentration: 20
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-40000-1:
-  #     concentration: 40
-  #     use_in_fit: False
+  LibA-240331-CR4098:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240331-rescue_4-no_antibody-3
+    antibody_samples:
+     A-240331-rescue_4-CR4098-400-1:
+      concentration: 0.4
+      use_in_fit: false
+     A-240331-rescue_4-CR4098-2000-1:
+      concentration: 2
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-4000-1:
+      concentration: 4
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-8000-1:
+      concentration: 8
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-20000-1:
+      concentration: 20
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-40000-1:
+      concentration: 40
+      use_in_fit: False
 
-  # LibA-240331-CR4098_duplicate:
-  #   neut_standard_name: neut_standard
-  #   prob_escape_filters: *prob_escape_filters_default
-  #   polyclonal_params: *polyclonal_params_default
-  #   escape_plot_kwargs: *escape_plot_kwargs_default
-  #   plot_hide_stats: *plot_hide_stats_default
-  #   no_antibody_sample: A-240331-rescue_4-no_antibody-1
-  #   antibody_samples:
-  #    A-240331-rescue_4-CR4098-400-1:
-  #     concentration: 0.4
-  #     use_in_fit: false
-  #    A-240331-rescue_4-CR4098-2000-1:
-  #     concentration: 2
-  #     use_in_fit: True
-  #    A-240331-rescue_4-CR4098-4000-1:
-  #     concentration: 4
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-8000-1:
-  #     concentration: 8
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-20000-1:
-  #     concentration: 20
-  #     use_in_fit: False
-  #    A-240331-rescue_4-CR4098-40000-1:
-  #     concentration: 40
-  #     use_in_fit: False
+  LibA-240331-CR4098_duplicate:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: A-240331-rescue_4-no_antibody-1
+    antibody_samples:
+     A-240331-rescue_4-CR4098-400-1:
+      concentration: 0.4
+      use_in_fit: false
+     A-240331-rescue_4-CR4098-2000-1:
+      concentration: 2
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-4000-1:
+      concentration: 4
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-8000-1:
+      concentration: 8
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-20000-1:
+      concentration: 20
+      use_in_fit: True
+     A-240331-rescue_4-CR4098-40000-1:
+      concentration: 40
+      use_in_fit: False
 
 #units in ng/mL
   # LibA-240331-CR57:
@@ -636,22 +636,22 @@ antibody_selections:
     no_antibody_sample: B-240501-rescue_2-no_antibody-1
     antibody_samples:
      B-240501-rescue_2-CR57-20-1:
-      concentration: 20
+      concentration: 0.02
       use_in_fit: False
      B-240501-rescue_2-CR57-100-1:
-      concentration: 100
+      concentration: 0.1
       use_in_fit: False
      B-240501-rescue_2-CR57-250-1:
-      concentration: 200
+      concentration: 0.25
       use_in_fit: False
      B-240501-rescue_2-CR57-500-1:
-      concentration: 400
+      concentration: 0.5
       use_in_fit: true
      B-240501-rescue_2-CR57-1000-1:
-      concentration: 1000
-      use_in_fit: False
+      concentration: 1
+      use_in_fit: true
      B-240501-rescue_2-CR57-5000-1:
-      concentration: 2000
+      concentration: 5
       use_in_fit: true
 
   LibB-240501-CR57_duplicate:
@@ -663,22 +663,22 @@ antibody_selections:
     no_antibody_sample: B-240501-rescue_2-no_antibody-2
     antibody_samples:
      B-240501-rescue_2-CR57-20-1:
-      concentration: 20
+      concentration: 0.02
       use_in_fit: False
      B-240501-rescue_2-CR57-100-1:
-      concentration: 100
+      concentration: 0.1
       use_in_fit: False
      B-240501-rescue_2-CR57-250-1:
-      concentration: 200
+      concentration: 0.25
       use_in_fit: False
      B-240501-rescue_2-CR57-500-1:
-      concentration: 400
+      concentration: 0.5
       use_in_fit: true
      B-240501-rescue_2-CR57-1000-1:
-      concentration: 1000
-      use_in_fit: False
+      concentration: 1
+      use_in_fit: true
      B-240501-rescue_2-CR57-5000-1:
-      concentration: 2000
+      concentration: 5
       use_in_fit: true
 
 
@@ -738,6 +738,7 @@ avg_escape_plot_kwargs_default: &avg_escape_plot_kwargs_default
   addtl_slider_stats_as_max: [escape_std]
   avg_type: median
   per_model_tooltip: true
+  alphabet: ['R','K','H','D','E','Q','N','S','T','Y','W','F','A','I','L','M','V','G','P','C',"'*'"]
 
 # Define defaults for each antibody/serum, used via the merge (<<) operator
 avg_antibody_escape_default: &avg_antibody_escape_default
@@ -746,6 +747,7 @@ avg_antibody_escape_default: &avg_antibody_escape_default
   escape_plot_kwargs:
     <<: *avg_escape_plot_kwargs_default
   plot_hide_stats: *plot_hide_stats_default
+  alphabet: ['R','K','H','D','E','Q','N','S','T','Y','W','F','A','I','L','M','V','G','P','C',"'*'"]
   legend: |
     Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating a summary of the mutation effects at each site. The heat map shows effects for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
 
