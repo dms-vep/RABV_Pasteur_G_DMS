@@ -188,7 +188,7 @@ antibody_selections:
       use_in_fit: False
      A-240319-rescue_2-RVC20-600-1:
       concentration: 600
-      use_in_fit: False
+      use_in_fit: true
      A-240319-rescue_2-RVC20-1200-1:
       concentration: 1200
       use_in_fit: true
@@ -212,7 +212,7 @@ antibody_selections:
       use_in_fit: False
      A-240319-rescue_2-RVC20-600-1:
       concentration: 600
-      use_in_fit: False
+      use_in_fit: true
      A-240319-rescue_2-RVC20-1200-1:
       concentration: 1200
       use_in_fit: true
@@ -235,7 +235,7 @@ antibody_selections:
     antibody_samples:
      B-240507-rescue_2-RVC20-600-1:
       concentration: 600
-      use_in_fit: False
+      use_in_fit: true
      B-240507-rescue_2-RVC20-1200-1:
       concentration: 1200
       use_in_fit: true
@@ -256,7 +256,7 @@ antibody_selections:
     antibody_samples:
      B-240507-rescue_2-RVC20-600-1:
       concentration: 600
-      use_in_fit: False
+      use_in_fit: true
      B-240507-rescue_2-RVC20-1200-1:
       concentration: 1200
       use_in_fit: true
@@ -386,13 +386,13 @@ antibody_selections:
     antibody_samples:
      B-240507-rescue_2-RVC58-500-1:
       concentration: 500
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-1000-1:
       concentration: 1000
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-2500-1:
       concentration: 2500
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-5000-1:
       concentration: 5000
       use_in_fit: true
@@ -407,13 +407,13 @@ antibody_selections:
     antibody_samples:
      B-240507-rescue_2-RVC58-500-1:
       concentration: 500
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-1000-1:
       concentration: 1000
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-2500-1:
       concentration: 2500
-      use_in_fit: False
+      use_in_fit: True
      B-240507-rescue_2-RVC58-5000-1:
       concentration: 5000
       use_in_fit: true
@@ -443,7 +443,7 @@ antibody_selections:
       use_in_fit: true
      B-240507-rescue_2-CR4098-20000-1:
       concentration: 20
-      use_in_fit: false
+      use_in_fit: true
 
   LibB-240507-CR4098_duplicate:
     neut_standard_name: neut_standard
@@ -467,7 +467,7 @@ antibody_selections:
       use_in_fit: true
      B-240507-rescue_2-CR4098-20000-1:
       concentration: 20
-      use_in_fit: false
+      use_in_fit: true
 
 
 #units in ng/mL
