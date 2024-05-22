@@ -337,7 +337,7 @@ antibody_selections:
       use_in_fit: False
      A-240331-rescue_4-RVC58-500-1:
       concentration: 500
-      use_in_fit: False
+      use_in_fit: true
      A-240331-rescue_4-RVC58-1000-1:
       concentration: 1000
       use_in_fit: true
@@ -365,7 +365,7 @@ antibody_selections:
       use_in_fit: False
      A-240331-rescue_4-RVC58-500-1:
       concentration: 500
-      use_in_fit: False
+      use_in_fit: true
      A-240331-rescue_4-RVC58-1000-1:
       concentration: 1000
       use_in_fit: true
