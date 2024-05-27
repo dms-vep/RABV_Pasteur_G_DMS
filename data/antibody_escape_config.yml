@@ -939,8 +939,8 @@ receptor_selections: {}
 avg_escape_plot_kwargs_default: &avg_escape_plot_kwargs_default
   <<: *escape_plot_kwargs_default
   addtl_slider_stats:
-    times_seen: 3
-    escape_std: 2
+    times_seen: 2
+    escape_std: 3
   addtl_slider_stats_as_max: [escape_std]
   avg_type: median
   per_model_tooltip: true
