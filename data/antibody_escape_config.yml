@@ -101,7 +101,7 @@ polyclonal_params_default: &polyclonal_params_default
 # keyword arguments to `Polyclonal.mut_escape_plot`
 escape_plot_kwargs_default: &escape_plot_kwargs_default
   addtl_slider_stats:
-    times_seen: 3
+    times_seen: 2
   heatmap_max_at_least: 2
   heatmap_min_at_least: -2
   init_floor_at_zero: false
@@ -147,7 +147,7 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-RVA122-3000-1:
       concentration: 3
-      use_in_fit: False
+      use_in_fit: true
 
 
   LibA-240319-RVA122_duplicate:
@@ -156,7 +156,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-3
+    no_antibody_sample: A-240319-rescue_2-no_antibody-1
     antibody_samples:
      A-240319-rescue_2-RVA122-150-1:
       concentration: 0.15
@@ -205,7 +205,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-3
+    no_antibody_sample: A-240319-rescue_2-no_antibody-1
     antibody_samples:
      A-240319-rescue_2-RVC20-300-1:
       concentration: 300
@@ -231,7 +231,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240507-rescue_2-no_antibody-3
+    no_antibody_sample: B-240507-rescue_2-no_antibody-1
     antibody_samples:
      B-240507-rescue_2-RVC20-600-1:
       concentration: 600
@@ -289,7 +289,7 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: true
+      use_in_fit: False
      A-240319-rescue_2-17C7-25000-1:
       concentration: 25
       use_in_fit: False
@@ -302,7 +302,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240319-rescue_2-no_antibody-3
+    no_antibody_sample: A-240319-rescue_2-no_antibody-1
     antibody_samples:
      A-240319-rescue_2-17C7-800-1:
       concentration: 0.8
@@ -315,10 +315,56 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-17C7-10000-1:
       concentration: 10
-      use_in_fit: true
+      use_in_fit: False
      A-240319-rescue_2-17C7-25000-1:
       concentration: 25
       use_in_fit: False
+
+
+
+#units in ug/mL not ng/mL
+  LibB-240501-17C7:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
+    antibody_samples:
+     B-240501-rescue_2-17C7-800-1:
+      concentration: 0.8
+      use_in_fit: True
+     B-240501-rescue_2-17C7-2000-1:
+      concentration: 2
+      use_in_fit: True
+     B-240501-rescue_2-17C7-4000-1:
+      concentration: 4
+      use_in_fit: true
+     B-240501-rescue_2-17C7-10000-1:
+      concentration: 10
+      use_in_fit: False
+
+  LibB-240501-17C7_duplicate:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
+    antibody_samples:
+     B-240501-rescue_2-17C7-800-1:
+      concentration: 0.8
+      use_in_fit: True
+     B-240501-rescue_2-17C7-2000-1:
+      concentration: 2
+      use_in_fit: True
+     B-240501-rescue_2-17C7-4000-1:
+      concentration: 4
+      use_in_fit: true
+     B-240501-rescue_2-17C7-10000-1:
+      concentration: 10
+      use_in_fit: False
+
 
 #units in ng/mL
   LibA-240331-RVC58:
@@ -355,7 +401,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240331-rescue_4-no_antibody-3
+    no_antibody_sample: A-240331-rescue_4-no_antibody-1
     antibody_samples:
      A-240331-rescue_4-RVC58-50-1:
       concentration: 50
@@ -382,7 +428,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240507-rescue_2-no_antibody-2
+    no_antibody_sample: B-240507-rescue_2-no_antibody-1
     antibody_samples:
      B-240507-rescue_2-RVC58-500-1:
       concentration: 500
@@ -403,7 +449,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240507-rescue_2-no_antibody-4
+    no_antibody_sample: B-240507-rescue_2-no_antibody-1
     antibody_samples:
      B-240507-rescue_2-RVC58-500-1:
       concentration: 500
@@ -421,53 +467,53 @@ antibody_selections:
       
       
     #units in ug/mL not ng/mL
-  LibB-240507-CR4098:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240507-rescue_2-no_antibody-4
-    antibody_samples:
-     B-240507-rescue_2-CR4098_400-1:
-      concentration: 0.4
-      use_in_fit: true
-     B-240507-rescue_2-CR4098_2000-1:
-      concentration: 2
-      use_in_fit: True
-     B-240507-rescue_2-CR4098_4000-1:
-      concentration: 4
-      use_in_fit: True
-     B-240507-rescue_2-CR4098_8000-1:
-      concentration: 8
-      use_in_fit: true
-     B-240507-rescue_2-CR4098-20000-1:
-      concentration: 20
-      use_in_fit: true
+  # LibB-240507-CR4098:
+  #   neut_standard_name: neut_standard
+  #   prob_escape_filters: *prob_escape_filters_default
+  #   polyclonal_params: *polyclonal_params_default
+  #   escape_plot_kwargs: *escape_plot_kwargs_default
+  #   plot_hide_stats: *plot_hide_stats_default
+  #   no_antibody_sample: B-240507-rescue_2-no_antibody-1
+  #   antibody_samples:
+  #    B-240507-rescue_2-CR4098_400-1:
+  #     concentration: 0.4
+  #     use_in_fit: true
+  #    B-240507-rescue_2-CR4098_2000-1:
+  #     concentration: 2
+  #     use_in_fit: True
+  #    B-240507-rescue_2-CR4098_4000-1:
+  #     concentration: 4
+  #     use_in_fit: True
+  #    B-240507-rescue_2-CR4098_8000-1:
+  #     concentration: 8
+  #     use_in_fit: true
+  #    B-240507-rescue_2-CR4098-20000-1:
+  #     concentration: 20
+  #     use_in_fit: true
 
-  LibB-240507-CR4098_duplicate:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240507-rescue_2-no_antibody-2
-    antibody_samples:
-     B-240507-rescue_2-CR4098_400-1:
-      concentration: 0.4
-      use_in_fit: true
-     B-240507-rescue_2-CR4098_2000-1:
-      concentration: 2
-      use_in_fit: True
-     B-240507-rescue_2-CR4098_4000-1:
-      concentration: 4
-      use_in_fit: True
-     B-240507-rescue_2-CR4098_8000-1:
-      concentration: 8
-      use_in_fit: true
-     B-240507-rescue_2-CR4098-20000-1:
-      concentration: 20
-      use_in_fit: true
+  # LibB-240507-CR4098_duplicate:
+  #   neut_standard_name: neut_standard
+  #   prob_escape_filters: *prob_escape_filters_default
+  #   polyclonal_params: *polyclonal_params_default
+  #   escape_plot_kwargs: *escape_plot_kwargs_default
+  #   plot_hide_stats: *plot_hide_stats_default
+  #   no_antibody_sample: B-240507-rescue_2-no_antibody-1
+  #   antibody_samples:
+  #    B-240507-rescue_2-CR4098_400-1:
+  #     concentration: 0.4
+  #     use_in_fit: true
+  #    B-240507-rescue_2-CR4098_2000-1:
+  #     concentration: 2
+  #     use_in_fit: True
+  #    B-240507-rescue_2-CR4098_4000-1:
+  #     concentration: 4
+  #     use_in_fit: True
+  #    B-240507-rescue_2-CR4098_8000-1:
+  #     concentration: 8
+  #     use_in_fit: true
+  #    B-240507-rescue_2-CR4098-20000-1:
+  #     concentration: 20
+  #     use_in_fit: true
 
 
 #units in ng/mL
@@ -505,7 +551,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240331-rescue_4-no_antibody-3
+    no_antibody_sample: A-240331-rescue_4-no_antibody-1
     antibody_samples:
      A-240331-rescue_4-CR4098-400-1:
       concentration: 0.4
@@ -534,7 +580,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240331-rescue_4-no_antibody-3
+    no_antibody_sample: A-240331-rescue_4-no_antibody-1
     antibody_samples:
      A-240331-rescue_4-CR57-20-1:
       concentration: 20
@@ -587,7 +633,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240406-rescue_4-no_antibody-2
+    no_antibody_sample: A-240406-rescue_4-no_antibody-1
     antibody_samples:
      A-240406-rescue_4-RVC68-500-1:
       concentration: 0.5
@@ -611,7 +657,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-2
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-RVC68_500-1:
       concentration: 0.5
@@ -632,7 +678,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-3
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-RVC68_500-1:
       concentration: 0.5
@@ -655,7 +701,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240406-rescue_4-no_antibody-3
+    no_antibody_sample: A-240406-rescue_4-no_antibody-1
     antibody_samples:
      A-240406-rescue_4-CTB012-600-1:
       concentration: 0.6
@@ -679,7 +725,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: A-240406-rescue_4-no_antibody-2
+    no_antibody_sample: A-240406-rescue_4-no_antibody-1
     antibody_samples:
      A-240406-rescue_4-CTB012-600-1:
       concentration: 0.6
@@ -703,7 +749,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-2
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-CTB012-200-1:
       concentration: 0.2
@@ -727,7 +773,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-3
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-CTB012-200-1:
       concentration: 0.2
@@ -768,7 +814,7 @@ antibody_selections:
       use_in_fit: true
      B-240501-rescue_2-RVA122-3000-1:
       concentration: 3
-      use_in_fit: False
+      use_in_fit: true
 
   LibB-240501-RVA122_duplicate:
     neut_standard_name: neut_standard
@@ -776,7 +822,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-3
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
     antibody_samples:
      B-240501-rescue_2-RVA122-300-1:
       concentration: 0.3
@@ -789,50 +835,8 @@ antibody_selections:
       use_in_fit: true
      B-240501-rescue_2-RVA122-3000-1:
       concentration: 3
-      use_in_fit: False
-
-#units in ug/mL not ng/mL
-  LibB-240501-17C7:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-3
-    antibody_samples:
-     B-240501-rescue_2-17C7-800-1:
-      concentration: 0.8
-      use_in_fit: True
-     B-240501-rescue_2-17C7-2000-1:
-      concentration: 2
-      use_in_fit: True
-     B-240501-rescue_2-17C7-4000-1:
-      concentration: 4
-      use_in_fit: true
-     B-240501-rescue_2-17C7-10000-1:
-      concentration: 10
       use_in_fit: true
 
-  LibB-240501-17C7_duplicate:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-1
-    antibody_samples:
-     B-240501-rescue_2-17C7-800-1:
-      concentration: 0.8
-      use_in_fit: True
-     B-240501-rescue_2-17C7-2000-1:
-      concentration: 2
-      use_in_fit: True
-     B-240501-rescue_2-17C7-4000-1:
-      concentration: 4
-      use_in_fit: true
-     B-240501-rescue_2-17C7-10000-1:
-      concentration: 10
-      use_in_fit: true
 
 
 #units in ug/mL
@@ -842,7 +846,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-2
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-CR57-1000-1:
       concentration: 1
@@ -866,7 +870,7 @@ antibody_selections:
     polyclonal_params: *polyclonal_params_default
     escape_plot_kwargs: *escape_plot_kwargs_default
     plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240510-rescue_2-no_antibody-3
+    no_antibody_sample: B-240510-rescue_2-no_antibody-1
     antibody_samples:
      B-240510-rescue_2-CR57-1000-1:
       concentration: 1
@@ -966,63 +970,49 @@ avg_antibody_escape:
     title: placeholder to get pipeline to run
     selections:
       - LibA-240319-RVC20
-      - LibA-240319-RVC20_duplicate
       - LibB-240507-RVC20
-      - LibB-240507-RVC20_duplicate
   RVA122:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibA-240319-RVA122
-      - LibA-240319-RVA122_duplicate
       - LibB-240501-RVA122
-      - LibB-240501-RVA122_duplicate
   17C7:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibA-240319-17C7
-      - LibA-240319-17C7_duplicate
       - LibB-240501-17C7
-      - LibB-240501-17C7_duplicate
   RVC58:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibA-240331-RVC58
-      - LibA-240331-RVC58_duplicate
       - LibB-240507-RVC58
-      - LibB-240507-RVC58_duplicate
-  CR4098:
-    <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
-    selections:
-      - LibB-240507-CR4098
-      - LibB-240507-CR4098_duplicate
+  # CR4098:
+  #   <<: *avg_antibody_escape_default
+  #   title: placeholder to get pipeline to run
+  #   selections:
+  #     - LibB-240507-CR4098
+  #     - LibB-240507-CR4098
   CR57:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibB-240510-CR57
-      - LibB-240510-CR57_duplicate
       - LibA-240331-CR4098
-      - LibA-240331-CR4098_duplicate
   CTB012:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibA-240406-CTB012
-      - LibA-240406-CTB012_duplicate
       - LibB-240510-CTB012
-      - LibB-240510-CTB012_duplicate
   RVC68:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
     selections:
       - LibA-240406-RVC68
-      - LibA-240406-RVC68_duplicate
       - LibB-240510-RVC68
-      - LibB-240510-RVC68_duplicate
 
 #   S2M11:
 #     <<: *avg_antibody_escape_default
