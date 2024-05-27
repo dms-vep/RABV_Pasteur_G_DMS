@@ -135,10 +135,10 @@ antibody_selections:
     antibody_samples:
      A-240319-rescue_2-RVA122-150-1:
       concentration: 0.15
-      use_in_fit: True
+      use_in_fit: false
      A-240319-rescue_2-RVA122-300-1:
       concentration: 0.3
-      use_in_fit: False
+      use_in_fit: true
      A-240319-rescue_2-RVA122-600-1:
       concentration: 0.6
       use_in_fit: true
@@ -174,6 +174,52 @@ antibody_selections:
       concentration: 3
       use_in_fit: False
 
+
+
+#units in ng/mL
+  LibB-240501-RVA122:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
+    antibody_samples:
+     B-240501-rescue_2-RVA122-300-1:
+      concentration: 0.3
+      use_in_fit: True
+     B-240501-rescue_2-RVA122-600-1:
+      concentration: 0.6
+      use_in_fit: true
+     B-240501-rescue_2-RVA122-1500-1:
+      concentration: 1.5
+      use_in_fit: true
+     B-240501-rescue_2-RVA122-3000-1:
+      concentration: 3
+      use_in_fit: true
+
+  LibB-240501-RVA122_duplicate:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
+    antibody_samples:
+     B-240501-rescue_2-RVA122-300-1:
+      concentration: 0.3
+      use_in_fit: True
+     B-240501-rescue_2-RVA122-600-1:
+      concentration: 0.6
+      use_in_fit: true
+     B-240501-rescue_2-RVA122-1500-1:
+      concentration: 1.5
+      use_in_fit: true
+     B-240501-rescue_2-RVA122-3000-1:
+      concentration: 3
+      use_in_fit: true
+
+      
 
   LibA-240319-RVC20:
     neut_standard_name: neut_standard
@@ -792,50 +838,6 @@ antibody_selections:
       use_in_fit: True
 
 
-
-
-#units in ng/mL
-  LibB-240501-RVA122:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-1
-    antibody_samples:
-     B-240501-rescue_2-RVA122-300-1:
-      concentration: 0.3
-      use_in_fit: True
-     B-240501-rescue_2-RVA122-600-1:
-      concentration: 0.6
-      use_in_fit: true
-     B-240501-rescue_2-RVA122-1500-1:
-      concentration: 1.5
-      use_in_fit: true
-     B-240501-rescue_2-RVA122-3000-1:
-      concentration: 3
-      use_in_fit: true
-
-  LibB-240501-RVA122_duplicate:
-    neut_standard_name: neut_standard
-    prob_escape_filters: *prob_escape_filters_default
-    polyclonal_params: *polyclonal_params_default
-    escape_plot_kwargs: *escape_plot_kwargs_default
-    plot_hide_stats: *plot_hide_stats_default
-    no_antibody_sample: B-240501-rescue_2-no_antibody-1
-    antibody_samples:
-     B-240501-rescue_2-RVA122-300-1:
-      concentration: 0.3
-      use_in_fit: True
-     B-240501-rescue_2-RVA122-600-1:
-      concentration: 0.6
-      use_in_fit: true
-     B-240501-rescue_2-RVA122-1500-1:
-      concentration: 1.5
-      use_in_fit: true
-     B-240501-rescue_2-RVA122-3000-1:
-      concentration: 3
-      use_in_fit: true
 
 
 
