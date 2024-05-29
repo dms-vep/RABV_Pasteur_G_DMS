@@ -166,7 +166,7 @@ antibody_selections:
       use_in_fit: true
      A-240319-rescue_2-RVA122-600-1:
       concentration: 0.6
-      use_in_fit: False
+      use_in_fit: true
      A-240319-rescue_2-RVA122-1500-1:
       concentration: 1.5
       use_in_fit: true
@@ -190,7 +190,7 @@ antibody_selections:
       use_in_fit: True
      B-240501-rescue_2-RVA122-600-1:
       concentration: 0.6
-      use_in_fit: False
+      use_in_fit: true
      B-240501-rescue_2-RVA122-1500-1:
       concentration: 1.5
       use_in_fit: true
