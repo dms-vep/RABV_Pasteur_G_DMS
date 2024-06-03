@@ -118,7 +118,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/HEK293T_entry_func_effects.csv
     csv_col: effect
-    init: -3
+    init: -5
     min_filters:
       times_seen: 2
 
@@ -942,7 +942,7 @@ avg_escape_plot_kwargs_default: &avg_escape_plot_kwargs_default
   <<: *escape_plot_kwargs_default
   addtl_slider_stats:
     times_seen: 2
-    escape_std: 3
+    escape_std: 4
   addtl_slider_stats_as_max: [escape_std]
   avg_type: median
   per_model_tooltip: true
