@@ -118,7 +118,7 @@ plot_hide_stats_default: &plot_hide_stats_default
   functional effect:
     csv: results/func_effects/averages/HEK293T_entry_func_effects.csv
     csv_col: effect
-    init: -5
+    init: -6
     min_filters:
       times_seen: 2
 
@@ -562,6 +562,9 @@ antibody_selections:
       use_in_fit: true
 
 
+
+
+
 #units in ng/mL
   LibA-240331-CR4098:
     neut_standard_name: neut_standard
@@ -646,6 +649,9 @@ antibody_selections:
      A-240331-rescue_4-CR57-2000-1:
       concentration: 2000
       use_in_fit: true
+
+
+
 
 #units in ug/mL
   LibA-240406-RVC68:
@@ -890,7 +896,23 @@ antibody_selections:
       concentration: 20
       use_in_fit: false
 
-
+  LibB-240501-CR57:
+    neut_standard_name: neut_standard
+    prob_escape_filters: *prob_escape_filters_default
+    polyclonal_params: *polyclonal_params_default
+    escape_plot_kwargs: *escape_plot_kwargs_default
+    plot_hide_stats: *plot_hide_stats_default
+    no_antibody_sample: B-240501-rescue_2-no_antibody-1
+    antibody_samples:
+     B-240501-rescue_2-CR57-500-1:
+      concentration: 0.5
+      use_in_fit: True
+     B-240501-rescue_2-CR57-1000-1:
+      concentration: 1
+      use_in_fit: true
+     B-240501-rescue_2-CR57-5000-1:
+      concentration: 5
+      use_in_fit: true
 
 # define the soluble receptor selections
 receptor_selections: {}
@@ -1003,6 +1025,7 @@ avg_antibody_escape:
     selections:
       - LibB-240510-CR57
       - LibA-240331-CR4098
+      - LibB-240501-CR57
   CTB012:
     <<: *avg_antibody_escape_default
     title: placeholder to get pipeline to run
