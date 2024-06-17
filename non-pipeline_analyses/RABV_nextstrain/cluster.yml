@@ -1,6 +1,6 @@
 __default__:
     partition: campus-new
-    cpus: 16
+    cpus: 8
     time: 0-2
     mem: 32000
     name: "{rule}"

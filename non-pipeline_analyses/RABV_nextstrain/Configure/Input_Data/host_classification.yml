@@ -1,0 +1,71 @@
+# Order
+Carnivora:
+    # Suborder
+    Caniformia:
+        # Family
+        Ailuridae
+        # red panda
+        Canidae:
+        # coyotes, dogs, foxes, jackals, and wolves
+            #  and common names
+            - atelocynus 
+            - short-eared dog
+            - canis
+            - dogs, jackals, and wolves
+            - cerdocyon
+            - crab-eating fox
+            - chrysocyon
+            - maned wolf
+            - cuon
+            - dhole
+            - dusicyon
+            - falkland island wolf
+            - lycalopex
+            - south american foxes
+            - lycaon
+            - african wild dog
+            - nyctereutes
+            - raccoon dog
+            - otocyon
+            - bat-eared fox
+            - pseudalopex
+            - south american foxes
+            - speothos
+            - bush dog
+            - urocyon
+            - gray foxes
+            - vulpes
+            - foxes
+       
+        Mephitidae:
+        # skunks and stink badgers
+            - conepatus
+            - hog-nosed skunks
+            - mephitis
+            - hooded skunk and striped skunk
+            - mydaus
+            - stink badgers
+            - spilogale
+            - spotted skunks
+       
+        Mustelidae:
+        # badgers, otters, weasels, and relatives
+       
+        Odobenidae:
+        # walruses
+       
+        Otariidae:
+        # fur seals and sea lions
+       
+        Phocidae:
+        # seals
+       
+        Procyonidae:
+        # coatis, raccoons, and relatives
+       
+        Ursidae:
+        # bears
+    # Suborder
+    Feliformia:
+# Order:
+Chiroptera: 

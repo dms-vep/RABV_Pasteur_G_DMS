@@ -17,10 +17,11 @@ rule download_and_process_accessions:
         genome_size_threshold_lower = config["Genome_size_threshold_lower"],
         genome_size_threshold_upper = config["Genome_size_threshold_upper"],
         max_frac_N = config["max_frac_N"],
-        desired_segment = "",
+        desired_segment = "G",
         accesstions_to_exclude = config["Accessions_to_exclude"],
+        remove_duplicates = config["Remove_duplicates"],
     output:
-        fasta_sequences = config["Nucleotide_unfiltered_sequences"],
+        fasta_sequences = config["Nucleotide_sequences"],
         metadata = config["Metadata"],
     conda:
         "../environment.yml",

@@ -1,0 +1,126 @@
+country	Israel	#5E1D9D
+country	Georgia	#571EA2
+country	Iraq	#511EA8
+country	Saudi Arabia	#4D21AD
+country	Iran	#4B26B1
+country	United Arab Emirates	#492AB5
+country	Oman	#462EB9
+country	Afghanistan	#4433BE
+country	Kazakhstan	#4137C2
+country	Pakistan	#403CC5
+country	Tajikistan	#4042C7
+country	Kyrgyzstan	#3F47C9
+country	India	#3F4DCB
+country	Sri Lanka	#3F52CD
+country	Nepal	#3E58CF
+country	Bangladesh	#3E5DD0
+country	Myanmar	#3F63CF
+country	Thailand	#4068CF
+country	Laos	#416DCE
+country	China	#4272CE
+country	Cambodia	#4377CD
+country	Vietnam	#447CCD
+country	Indonesia	#4580CA
+country	Taiwan	#4784C8
+country	Philippines	#4988C5
+country	South Korea	#4A8CC2
+country	Japan	#4C90C0
+country	Australia	#4E94BD
+country	Senegal	#5097BA
+country	Sierra Leone	#529AB6
+country	Guinea	#549DB2
+country	Liberia	#56A0AE
+country	Mauritania	#59A3AA
+country	Morocco	#5BA6A7
+country	Mali	#5DA8A3
+country	Burkina Faso	#60AA9E
+country	Ghana	#63AC9A
+country	Benin	#66AE96
+country	Algeria	#69B091
+country	Nigeria	#6BB28D
+country	Tunisia	#6EB389
+country	Niger	#72B485
+country	Gabon	#75B681
+country	Cameroon	#79B77D
+country	Namibia	#7CB879
+country	Chad	#80B974
+country	Central African Republic	#83BA70
+country	Democratic Republic of the Congo	#87BB6D
+country	Botswana	#8BBB6A
+country	South Africa	#8EBC66
+country	Zambia	#92BC63
+country	Zimbabwe	#96BD60
+country	Rwanda	#9ABE5C
+country	Egypt	#9EBE5A
+country	Mozambique	#A2BE57
+country	Tanzania	#A6BE55
+country	Kenya	#AABD52
+country	Ethiopia	#AEBD50
+country	Madagascar	#B2BD4D
+country	Somalia	#B6BD4C
+country	Spain	#B9BC4A
+country	United Kingdom	#BDBB48
+country	France	#C1BA47
+country	Belgium	#C4B945
+country	Netherlands	#C8B944
+country	Switzerland	#CBB742
+country	Norway	#CEB541
+country	Denmark	#D1B340
+country	Germany	#D4B13F
+country	Italy	#D7AF3E
+country	Slovenia	#D9AD3D
+country	Czech Republic	#DCAB3C
+country	Poland	#DEA73C
+country	Slovakia	#DFA43B
+country	Hungary	#E1A03A
+country	Serbia	#E29D39
+country	Romania	#E49938
+country	Estonia	#E59637
+country	Finland	#E69136
+country	Moldova	#E68B35
+country	Turkey	#E68634
+country	Azerbaijan	#E68133
+country	Russia	#E67C32
+country	Argentina	#E67631
+country	Chile	#E67030
+country	Brazil	#E56A2F
+country	Peru	#E4632E
+country	Ecuador	#E35D2C
+country	Guyana	#E2562B
+country	Costa Rica	#E1502A
+country	Grenada	#E04929
+country	Guatemala	#DF4327
+country	Dominican Republic	#DE3C26
+country	Mexico	#DD3525
+country	USA	#DC2F24
+country	Canada	#DB2823
+
+region	Asia	#447CCD
+region	Oceania	#5EA9A1
+region	Africa	#8ABB6A
+region	Europe	#BEBB48
+region	South America	#E29E39
+region	North America	#E2562B
+
+virus	Matlo bat lyssavirus	#5E1D9D
+virus	Ikoma lyssavirus	#4929B4
+virus	Lleida bat lyssavirus	#403FC6
+virus	Caucasicus lyssavirus	#3E59CF
+virus	Mokola lyssavirus	#4272CE
+virus	Lagos lyssavirus	#4887C6
+virus	Phala bat lyssavirus	#5199B8
+virus	Shimoni lyssavirus	#5BA7A6
+virus	Taiwan bat lyssavirus	#69B091
+virus	European bat lyssavirus 1	#78B67E
+virus	Irkut lyssavirus	#89BB6B
+virus	Ozernoe lyssavirus	#9BBE5B
+virus	Duvenhage lyssavirus	#AEBD50
+virus	Aravan lyssavirus	#C0BB47
+virus	Khujand lyssavirus	#D0B441
+virus	Kotalahti bat lyssavirus	#DDAA3C
+virus	Bokeloh lyssavirus	#E49938
+virus	European bat lyssavirus 2	#E68234
+virus	Australian lyssavirus	#E4672E
+virus	Gannoruwa bat lyssavirus	#DF4728
+virus	Rabies lyssavirus	#DB2823
+

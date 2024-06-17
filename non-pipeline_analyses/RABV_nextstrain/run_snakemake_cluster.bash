@@ -26,7 +26,8 @@ snakemake \
     --cluster-config cluster.yml \
     --cluster "sbatch -p {cluster.partition} -c {cluster.cpus} -t {cluster.time} --mem={cluster.mem} -J {cluster.name} -o {cluster.output} -e {cluster.output}" \
     --latency-wait 60 \
-    --rerun-triggers mtime 
+    --restart-times 3 \
+    --rerun-triggers mtime
 
 # Signal that snakemake has complete
 echo "Run of snakemake complete."

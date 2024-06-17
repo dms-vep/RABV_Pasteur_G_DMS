@@ -13,13 +13,8 @@
       "type": "categorical"
     },
     {
-      "key": "date",
-      "title": "Date",
-      "type": "continuous"
-    },
-    {
-      "key": "author",
-      "title": "Author",
+      "key": "region",
+      "title": "Region",
       "type": "categorical"
     },
     {
@@ -28,18 +23,24 @@
       "type": "categorical"
     },
     {
-      "key": "location",
-      "title": "Location",
+      "key": "host",
+      "title": "Host",
       "type": "categorical"
     },
     {
-      "key": "host",
-      "title": "Host",
+      "key": "virus",
+      "title": "Virus",
+      "type": "categorical"
+    },
+    {
+      "key": "phylogroup",
+      "title": "Phylogroup",
       "type": "categorical"
     }
   ],
   "geo_resolutions": [
-    "country"
+    "country",
+    "region"
   ],
   "panels": [
      "tree",
@@ -48,11 +49,14 @@
   ],
   "display_defaults": {
     "map_triplicate": true,
-    "distance_measure": "div"
+    "distance_measure": "div",
+    "color_by" : "phylogroup",
+    "transmission_lines": false
   },
   "filters": [
-    "country",
-    "location",
-    "author"
+    "phylogroup",
+    "virus",
+    "region",
+    "country"
   ]
 }

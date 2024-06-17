@@ -17,6 +17,8 @@ configfile: "Configure/config.yml"
 
 # Rules included from Rules/ directory 
 include: "Rules/download_and_process_accessions.smk"
+include: "Rules/extract_ORFs.smk"
+include: "Rules/align_sequences.smk"
 include: "Rules/augur_processing.smk"
 include: "Rules/calculate_sequence_variation.smk"
 
@@ -30,10 +32,15 @@ rule all:
         config["Metadata"],
         # Fasta sequences
         config["Nucleotide_sequences"],
-        # Indexed files
-        config["Nucleotide_sequences_indexed"],
+        # ORF files
+        config["Sequence_verification_log"],
+        config["Protein_sequences"],
+        config["Codon_sequences"],
         # Alignment files
-        config["Nucleotide_alignment"],
+        config["Protein_alignment"],
+        config["Codon_alignment"],
+        config["Ungapped_protein_alignment"],
+        config["Ungapped_codon_alignment"],
         # Raw tree files
         config["Nucleotide_raw_tree"],
         # Tree files
@@ -44,8 +51,6 @@ rule all:
         config["Nucleotide_AA_mutations"],
         # Exported Auspice file
         config["Auspice_tree"],
-        # Processed alignment
-        config["Glycoprotein_alignment"],
         # Natural variation
         config["Glycoprotein_variation"],
 

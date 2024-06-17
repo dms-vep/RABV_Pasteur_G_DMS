@@ -13,7 +13,7 @@ rule compare_func_effects_and_natural_variation:
     input:
         func_effects="results/func_effects/averages/HEK293T_entry_func_effects.csv",
         site_numbering_map="data/site_numbering_map.csv",
-        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/RABV_G_variation.csv",
+        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/G_variation.csv",
         nb="notebooks/func_effects_vs_natural_variation.ipynb",
     params:
         min_times_seen=3,
