@@ -1,0 +1,63 @@
+LOCUS       XX_XXXXXX              1572 bp ss-RNA     linear   VRL 13-AUG-2018
+DEFINITION  Rabies virus, complete genome.
+ACCESSION   XX_XXXXXX
+VERSION     XX_XXXXXX.1
+DBLINK      BioProject: PRJNA485481
+KEYWORDS    RefSeq.
+SOURCE      Lyssavirus rabies
+  ORGANISM  Lyssavirus rabies
+            Viruses; Riboviria; Orthornavirae; Negarnaviricota;
+            Haploviricotina; Monjiviricetes; Mononegavirales; Rhabdoviridae;
+            Alpharhabdovirinae; Lyssavirus.
+FEATURES             Location/Qualifiers
+     source          1..1572
+                     /organism="Lyssavirus rabies"
+                     /mol_type="genomic RNA"
+                     /db_xref="taxon:11292"
+     gene            1..1572
+                     /locus_tag="Glycoprotein"
+                     /gene="Glycoprotein"
+     CDS             1..1572
+                     /locus_tag="Glycoprotein"
+                     /codon_start=1
+                     /product="Glycoprotein"
+                     /translation="MVPQALLFVPLLVFPLCFGKFPIYTIPDKLGPWSPIDIHHLSCP
+                     NNLVVEDEGCTNLSGFSYMELKVGYISAIKMNGFTCTGVVTEAETYTNFVGYVTTTFK
+                     RKHFRPTPDACRAAYNWKMAGDPRYEESLHNPYPDYHWLRTVKTTKESLVIISPSVAD
+                     LDPYDRSLHSRVFPGGNCSGVAVSSTYCSTNHDYTIWMPENPRLGMSCDIFTNSRGKR
+                     ASKGSETCGFVDERGLYKSLKGACKLKLCGVLGLRLMDGTWVAMQTSNETKWCPPGQL
+                     VNLHDFRSDEIEHLVVEELVKKREECLDALESIMTTKSVSFRRLSHLRKLVPGFGKAY
+                     TIFNKTLMEADAHYKSVRTWNEIIPSKGCLRVGGRCHPHVNGVFFNGIILGPDGNVLI
+                     PEMQSSLLQQHMELLVSSVIPLMHPLADPSTVFKNGDEAEDFVEVHLPDVHERISGVD
+                     LGLPNWGKYVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGK
+                     IISSWESYKSGGETGL"
+ORIGIN      
+        1 atggttcctc aggctctcct gtttgtaccc cttctggttt ttccattgtg ttttgggaaa
+       61 ttccctattt acacgatacc agacaagctt ggtccctgga gcccgattga catacatcac
+      121 ctcagctgcc caaacaattt ggtagtggag gacgaaggat gcaccaacct gtcagggttc
+      181 tcctacatgg aacttaaagt tggatacatc tcagccataa aaatgaacgg gttcacttgc
+      241 acaggcgttg tgacggaggc tgaaacctac actaacttcg ttggttatgt cacaaccacg
+      301 ttcaaaagaa agcatttccg cccaacacca gatgcatgta gagccgcgta caactggaag
+      361 atggccggtg accccagata tgaagagtct ctacacaatc cgtaccctga ctaccactgg
+      421 cttcgaactg taaaaaccac caaggagtct ctcgttatca tatctccaag tgtggcagat
+      481 ttggacccat atgacagatc ccttcactcg agggtcttcc ctggcgggaa ttgctcagga
+      541 gtagcggtgt cttctaccta ctgctccact aaccacgatt acaccatttg gatgcccgag
+      601 aatccgagac tagggatgtc ttgtgacatt tttaccaata gtagagggaa gagagcatcc
+      661 aaagggagtg agacttgcgg ctttgtagat gaaagaggcc tatataagtc tttaaaagga
+      721 gcatgcaaac tcaagttatg tggagttcta ggacttagac ttatggatgg aacatgggtc
+      781 gcgatgcaaa catcaaatga aaccaaatgg tgccctcccg gtcagttggt gaatttgcac
+      841 gactttcgct cagacgaaat tgagcacctt gttgtagagg agttggtcaa gaagagagag
+      901 gagtgtctgg atgcactaga gtccatcatg accaccaagt cagtgagttt cagacgtctc
+      961 agtcatttaa gaaaacttgt ccctgggttt ggaaaagcat ataccatatt caacaagacc
+     1021 ttgatggaag ccgatgctca ctacaagtca gtcagaactt ggaatgagat catcccttca
+     1081 aaagggtgtt taagagttgg ggggaggtgt catcctcatg taaacggggt atttttcaat
+     1141 ggtataatat taggacctga cggcaatgtc ttaatcccag agatgcaatc atccctcctc
+     1201 cagcaacata tggagttgtt ggtatcctcg gttatccccc ttatgcaccc cctggcagac
+     1261 ccgtctaccg ttttcaagaa cggtgacgag gctgaggatt ttgttgaagt tcaccttccc
+     1321 gatgtgcacg aacggatctc aggagttgac ttgggtctcc cgaactgggg gaagtatgta
+     1381 ttactgagtg caggggccct gactgccttg atgttgataa ttttcctgat gacatgctgg
+     1441 agaagagtca atcgatcgga acctacacaa cacaatctca gagggacagg gagggaggtg
+     1501 tcagtcactc cccaaagcgg gaagatcata tcttcatggg aatcatacaa gagcgggggt
+     1561 gagaccggac tg
+//
+

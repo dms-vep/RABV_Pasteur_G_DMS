@@ -1,0 +1,89 @@
+#################################################---START INPUT DATA---#######################################################
+
+# List of accessions file
+Accession_list: Configure/Input_Data/all_Lyssa_accessions_060924.txt
+
+# Reference genbanks
+Reference_genbank: Configure/Input_Data/RABV_G_protein_reference_NC_001542.gb
+Reference_accession: NC_001542
+
+# Size threshold filters
+# RABV genome is ~12kb
+# RABV G is ~ 1500
+Genome_size_threshold_lower: 1500
+Genome_size_threshold_upper: 13000
+# Minimum size ORF when translating to protein
+# G is ~ 1.5kb
+Min_ORF_threshold: 1500 # 500 amino acids
+
+# Maximum fraction of ambiuous bases allowed
+max_frac_N: 0
+
+# Remove duplicates 'Yes' or 'No'
+Remove_duplicates: 'Yes'
+
+# Sequences to remove
+Accessions_to_exclude: 
+  - A01887 # this is an expression vector part of a patent application with little info
+  - A34690 # this is an expression vector part of a patent application with little info
+  - AB810256 # G protein is impossibly big so probably mislabeled
+  - KX148104 # Extra start codon
+  - KX148105 # Extra start codon
+  - KX148106 # Extra start codon
+  - KX148224 # Extra start codon
+  - MK540899 # Insertion near start codon messes up alignment
+  - MF197745 # Outlier rabies sequence
+
+
+# Strains to drop during Augur processing
+Dropped_strains: Configure/Input_Data/dropped_strains.txt
+
+# Auspice configuration
+Auspice_config: Configure/Input_Data/auspice_config.json
+Color_schemes: Configure/Input_Data/color_schemes.tsv
+Color_orderings: Configure/Input_Data/color_orderings.tsv
+
+#################################################---END INPUT DATA---#########################################################
+
+#################################################---START OUTPUT DATA---######################################################
+
+# Metadata output
+Metadata: Results/metadata.tsv
+
+# Fasta nucelotide file ouput
+Nucleotide_sequences: Results/G_nucleotide.fasta
+
+# Open reading frame sequences
+Protein_sequences_temp: Results/ORF_sequences/G_protein_temp.fasta
+Codon_sequences_temp: Results/ORF_sequences/G_nucleotide_temp.fasta
+Sequence_verification_log: Results/ORF_sequences/ORF_extraction_verification.txt
+Protein_sequences: Results/ORF_sequences/G_protein.fasta
+Codon_sequences: Results/ORF_sequences/G_nucleotide.fasta
+
+# Alignments
+Protein_alignment: Results/Alignments/G_protein_alignment.fasta
+Codon_alignment: Results/Alignments/G_codon_alignment.fasta
+Ungapped_protein_alignment: Results/Alignments/G_protein_alignment_ungapped.fasta
+Ungapped_codon_alignment: Results/Alignments/G_codon_alignment_ungapped.fasta
+
+# Raw tree files
+Nucleotide_raw_tree: Results/G_tree_raw.nwk
+
+# Tree files
+Nucleotide_tree: Results/G_tree.nwk
+Nucleotide_tree_nodes: Results/G_branch_lengths.json
+Nucleotide_tree_traits: Results/G_traits.json
+Nucleotide_tree_mutations: Results/G_muts.json
+Nucleotide_AA_mutations: Results/G_aa_muts.json
+
+# Gene translations
+Gene_AA_alignments: Results/Augur_AA_Alignements/Glycoprotein.fasta
+
+# Entropy and effective amino acid varation
+Glycoprotein_variation: Results/G_variation.csv
+
+# Exported Aupsice file
+Colors: Results/Auspice/colors.tsv
+Auspice_tree: Results/Auspice/G.json
+
+#################################################---END OUTPUT DATA---########################################################

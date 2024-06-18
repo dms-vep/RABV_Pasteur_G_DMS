@@ -1,0 +1,66 @@
+# Description:
+# Main snakemake file that contains the rules, the output files, and 
+# configures the order of rule execution.
+
+# Author:
+# Caleb Carr
+
+# Imports
+import pandas as pd 
+import os
+from snakemake.utils import min_version
+min_version("7.25.4")
+
+# Initialize config file global variable
+configfile: "Configure/config.yml"
+
+
+# Rules included from Rules/ directory 
+include: "Rules/download_and_process_accessions.smk"
+include: "Rules/extract_ORFs.smk"
+include: "Rules/align_sequences.smk"
+include: "Rules/augur_processing.smk"
+include: "Rules/calculate_sequence_variation.smk"
+
+# Output files
+rule all:
+    """ 
+    This rule controls all the output files expected from the workflow. 
+    """
+    input:
+        # Metadata
+        config["Metadata"],
+        # Fasta sequences
+        config["Nucleotide_sequences"],
+        # ORF files
+        config["Sequence_verification_log"],
+        config["Protein_sequences"],
+        config["Codon_sequences"],
+        # Alignment files
+        config["Protein_alignment"],
+        config["Codon_alignment"],
+        config["Ungapped_protein_alignment"],
+        config["Ungapped_codon_alignment"],
+        # Raw tree files
+        config["Nucleotide_raw_tree"],
+        # Tree files
+        config["Nucleotide_tree"],
+        config["Nucleotide_tree_nodes"],
+        config["Nucleotide_tree_traits"],
+        config["Nucleotide_tree_mutations"],
+        config["Nucleotide_AA_mutations"],
+        # Exported Auspice file
+        config["Auspice_tree"],
+        # Natural variation
+        config["Glycoprotein_variation"],
+
+# Make DAG of rule execution
+rule make_DAG:
+    """
+    This rule produces a DAG graph of rule execution order.
+    """
+    shell:
+        """
+        mkdir -p Results/DAG/
+        snakemake --rulegraph | dot -Tpdf > Results/DAG/dag.pdf
+        """
