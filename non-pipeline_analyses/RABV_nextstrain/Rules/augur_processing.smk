@@ -116,7 +116,7 @@ rule traits_tree_sequences:
         "--tree {input.tree} "
         "--metadata {input.metadata} "
         "--output-node-data {output.tree_traits} " 
-        "--columns country phylogroup "
+        "--columns country phylogroup region "
         "--confidence"    
         
 rule ancestral_tree_sequences:

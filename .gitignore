@@ -69,6 +69,10 @@ results/receptor_affinity/averages/*
 results/natural_diversity_comparison/*
 !results/natural_diversity_comparison/*.html
 
+!results/filtered_CSVs
+results/filtered_CSVs/*
+!results/filtered_CSVs/*.csv
+
 !results/dms_viz
 results/dms_viz/*
 !results/dms_viz/*.json
