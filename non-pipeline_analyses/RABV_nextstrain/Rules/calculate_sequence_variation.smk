@@ -15,5 +15,7 @@ rule calculate_variation:
         protein_alignment = config["Ungapped_protein_alignment"],
     output:
         config["Glycoprotein_variation"],
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/calculate_variation.py"

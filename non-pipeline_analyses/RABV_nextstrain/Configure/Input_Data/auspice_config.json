@@ -1,5 +1,5 @@
 {
-  "title": "Nextstrain build for Rabies virus and other lyssaviruses",
+  "title": "Nextstrain build for the glycoprotein of Rabies virus and other lyssaviruses",
   "maintainers": [
     {
       "name": "the Bloom lab",
@@ -36,6 +36,126 @@
       "key": "phylogroup",
       "title": "Phylogroup",
       "type": "categorical"
+    },
+    {
+      "key": "RVC20_filtered_mut_effects.csv",
+      "title": "antibody RVC20 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          4.1,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "RVA122_filtered_mut_effects.csv",
+      "title": "antibody RVA122 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          3.41,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "17C7_filtered_mut_effects.csv",
+      "title": "antibody 17C7 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          9.08,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "RVC58_filtered_mut_effects.csv",
+      "title": "antibody RVC58 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          3.14,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "CR4098_filtered_mut_effects.csv",
+      "title": "antibody CR4098 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          5.7,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "CR57_filtered_mut_effects.csv",
+      "title": "antibody CR57 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          8.99,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "CTB012_filtered_mut_effects.csv",
+      "title": "antibody CTB012 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          10.6,
+          "#D7191C"
+        ]
+      ]
+    },
+    {
+      "key": "RVC68_filtered_mut_effects.csv",
+      "title": "antibody RVC68 escape",
+      "type": "continuous",
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          16.1,
+          "#D7191C"
+        ]
+      ]
     }
   ],
   "geo_resolutions": [

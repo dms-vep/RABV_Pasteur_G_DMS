@@ -1,48 +1,49 @@
 country	Israel	#5E1D9D
-country	Georgia	#571EA2
+country	Georgia	#581EA2
 country	Iraq	#511EA8
-country	Saudi Arabia	#4D21AD
-country	Iran	#4B26B1
+country	Saudi Arabia	#4E21AC
+country	Iran	#4B25B1
 country	United Arab Emirates	#492AB5
 country	Oman	#462EB9
-country	Afghanistan	#4433BE
-country	Kazakhstan	#4137C2
-country	Pakistan	#403CC5
-country	Tajikistan	#4042C7
-country	Kyrgyzstan	#3F47C9
-country	India	#3F4DCB
-country	Sri Lanka	#3F52CD
-country	Nepal	#3E58CF
-country	Bangladesh	#3E5DD0
-country	Myanmar	#3F63CF
-country	Thailand	#4068CF
-country	Laos	#416DCE
-country	China	#4272CE
-country	Cambodia	#4377CD
-country	Vietnam	#447CCD
-country	Indonesia	#4580CA
-country	Taiwan	#4784C8
-country	Philippines	#4988C5
-country	South Korea	#4A8CC2
-country	Japan	#4C90C0
-country	Australia	#4E94BD
-country	Senegal	#5097BA
-country	Sierra Leone	#529AB6
-country	Guinea	#549DB2
-country	Liberia	#56A0AE
-country	Mauritania	#59A3AA
-country	Morocco	#5BA6A7
-country	Mali	#5DA8A3
-country	Burkina Faso	#60AA9E
-country	Ghana	#63AC9A
-country	Benin	#66AE96
-country	Algeria	#69B091
-country	Nigeria	#6BB28D
-country	Tunisia	#6EB389
-country	Niger	#72B485
-country	Gabon	#75B681
-country	Cameroon	#79B77D
-country	Namibia	#7CB879
+country	Afghanistan	#4432BD
+country	Kazakhstan	#4237C1
+country	Pakistan	#403BC5
+country	Tajikistan	#4041C7
+country	Kyrgyzstan	#3F46C8
+country	India	#3F4CCA
+country	Sri Lanka	#3F51CC
+country	Nepal	#3F56CE
+country	Bangladesh	#3E5CD0
+country	Myanmar	#3F61D0
+country	Thailand	#4066CF
+country	Laos	#416BCF
+country	China	#4270CE
+country	Cambodia	#4375CD
+country	Vietnam	#437ACD
+country	Indonesia	#457ECB
+country	Taiwan	#4682C9
+country	Philippines	#4886C6
+country	South Korea	#4A8AC4
+country	Japan	#4B8EC1
+country	Australia	#4D92BF
+country	Senegal	#4E96BC
+country	Sierra Leone	#5199B8
+country	Guinea	#539BB4
+country	Liberia	#559EB1
+country	Mauritania	#57A1AD
+country	Cote d'Ivoire	#59A4A9
+country	Morocco	#5BA7A5
+country	Mali	#5EA9A1
+country	Burkina Faso	#61AB9D
+country	Ghana	#64AC99
+country	Benin	#66AE95
+country	Algeria	#69B090
+country	Nigeria	#6CB28C
+country	Tunisia	#6FB388
+country	Niger	#72B584
+country	Gabon	#76B680
+country	Cameroon	#79B77C
+country	Namibia	#7CB878
 country	Chad	#80B974
 country	Central African Republic	#83BA70
 country	Democratic Republic of the Congo	#87BB6D
@@ -50,47 +51,48 @@ country	Botswana	#8BBB6A
 country	South Africa	#8EBC66
 country	Zambia	#92BC63
 country	Zimbabwe	#96BD60
-country	Rwanda	#9ABE5C
-country	Egypt	#9EBE5A
-country	Mozambique	#A2BE57
-country	Tanzania	#A6BE55
-country	Kenya	#AABD52
-country	Ethiopia	#AEBD50
-country	Madagascar	#B2BD4D
-country	Somalia	#B6BD4C
-country	Spain	#B9BC4A
-country	United Kingdom	#BDBB48
-country	France	#C1BA47
-country	Belgium	#C4B945
-country	Netherlands	#C8B944
-country	Switzerland	#CBB742
-country	Norway	#CEB541
-country	Denmark	#D1B340
-country	Germany	#D4B13F
-country	Italy	#D7AF3E
-country	Slovenia	#D9AD3D
-country	Czech Republic	#DCAB3C
-country	Poland	#DEA73C
-country	Slovakia	#DFA43B
-country	Hungary	#E1A03A
-country	Serbia	#E29D39
-country	Romania	#E49938
-country	Estonia	#E59637
-country	Finland	#E69136
-country	Moldova	#E68B35
-country	Turkey	#E68634
-country	Azerbaijan	#E68133
-country	Russia	#E67C32
-country	Argentina	#E67631
-country	Chile	#E67030
-country	Brazil	#E56A2F
-country	Peru	#E4632E
-country	Ecuador	#E35D2C
-country	Guyana	#E2562B
-country	Costa Rica	#E1502A
-country	Grenada	#E04929
-country	Guatemala	#DF4327
-country	Dominican Republic	#DE3C26
+country	Rwanda	#9ABD5D
+country	Egypt	#9DBE5A
+country	Mozambique	#A1BE58
+country	Tanzania	#A5BE55
+country	Kenya	#A9BD53
+country	Ethiopia	#ADBD50
+country	Madagascar	#B1BD4E
+country	Somalia	#B5BD4C
+country	Spain	#B8BC4A
+country	United Kingdom	#BCBB49
+country	France	#BFBB47
+country	Belgium	#C3BA46
+country	Netherlands	#C7B944
+country	Switzerland	#CAB843
+country	Norway	#CDB642
+country	Denmark	#D0B441
+country	Germany	#D3B240
+country	Italy	#D5B03F
+country	Slovenia	#D8AE3E
+country	Czech Republic	#DBAC3D
+country	Bosnia and Herzegovina	#DDA93C
+country	Poland	#DEA63B
+country	Slovakia	#E0A23A
+country	Hungary	#E19F3A
+country	Serbia	#E39B39
+country	Romania	#E49838
+country	Estonia	#E69437
+country	Finland	#E68F36
+country	Moldova	#E68A35
+country	Turkey	#E68534
+country	Azerbaijan	#E67F33
+country	Russia	#E67A32
+country	Argentina	#E67531
+country	Chile	#E56F30
+country	Brazil	#E5692F
+country	Peru	#E4622E
+country	Ecuador	#E35C2C
+country	Guyana	#E2552B
+country	Costa Rica	#E14F2A
+country	Grenada	#E04829
+country	Guatemala	#DF4227
+country	Dominican Republic	#DE3B26
 country	Mexico	#DD3525
 country	USA	#DC2F24
 country	Canada	#DB2823

@@ -4,61 +4,6 @@
 # Author:
 # Caleb Carr
 
-# rule index_sequences:
-#     """
-#     This rule indexes the sequences
-#     """
-#     input:
-#         sequences = config["Nucleotide_unfiltered_sequences"],
-#     output:
-#         sequence_index = config["Nucleotide_sequences_indexed"],
-#     conda:
-#         "../environment.yml",
-#     shell:
-#         "augur index "
-#         "--sequences {input.sequences} "
-#         "--output {output.sequence_index}"
-
-# rule filter_sequences:
-#     """
-#     This rule filters sequences
-#     """
-#     input:
-#         fasta_sequences = config["Nucleotide_unfiltered_sequences"],
-#         sequence_index = config["Nucleotide_sequences_indexed"],
-#         metadata = config["Metadata"],
-#         excluded_strains = config["Dropped_strains"],
-#     output:
-#         fasta_sequences = config["Nucleotide_sequences"],
-#     conda:
-#         "../environment.yml",
-#     shell:
-#         "augur filter "
-#         "--sequences {input.fasta_sequences} "
-#         "--sequence-index {input.sequence_index} "
-#         "--metadata {input.metadata} "
-#         "--exclude {input.excluded_strains} "
-#         "--output {output.fasta_sequences}"
-
-# rule align_sequences:
-#     """
-#     This rule aligns the sequences
-#     """
-#     input:
-#         sequences = config["Nucleotide_sequences"],
-#         reference = config["Reference_genbank"],
-#     output:
-#         alignment = config["Nucleotide_alignment"],
-#     conda:
-#         "../environment.yml",
-#     shell:
-#         "augur align "
-#         "--sequences {input.sequences} "
-#         "--reference-sequence {input.reference} "
-#         "--output {output.alignment} "
-#         "--remove-reference "
-#         "--fill-gaps"
-
 rule tree_sequences:
     """
     This rule creates a tree from sequences
@@ -86,7 +31,7 @@ rule refine_tree_sequences:
         tree = config["Nucleotide_tree"],
         tree_nodes = config["Nucleotide_tree_nodes"]
     conda:
-        "../environment.yml",
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "augur refine "
         "--tree {input.tree} "
@@ -110,7 +55,7 @@ rule traits_tree_sequences:
     output:
         tree_traits = config["Nucleotide_tree_traits"]
     conda:
-        "../environment.yml",
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "augur traits "
         "--tree {input.tree} "
@@ -129,7 +74,7 @@ rule ancestral_tree_sequences:
     output:
         tree_muts = config["Nucleotide_tree_mutations"]
     conda:
-        "../environment.yml",
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "augur ancestral "
         "--tree {input.tree} "
@@ -149,7 +94,7 @@ rule translate_tree_sequences:
         aa_muts = config["Nucleotide_AA_mutations"],
         gene_alignments = expand("Results/Augur_AA_Alignements/{gene}.fasta", gene=["Glycoprotein"]),
     conda:
-        "../environment.yml",
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "augur translate "
         "--tree {input.tree} "
@@ -168,12 +113,69 @@ rule colors:
         metadata = config["Metadata"],
     output:
         colors = config["Colors"],
+    conda:
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "python Scripts/assign_colors.py "
         "--color-schemes {input.color_schemes} "
         "--ordering {input.color_orderings} "
         "--metadata {input.metadata} "
         "--output {output.colors}"
+
+
+rule variant_escape_prediction:
+    """This rule calculates variant escape"""
+    input:
+        alignment = config["Gene_AA_alignments"],
+    output:
+        node_data = "Results/dmsa-phenotype/{collection}/{experiment}_escape_prediction.json",
+        pred_data = "Results/dmsa-phenotype/{collection}/{experiment}_escape_prediction.csv"
+    params:
+        basedir = lambda w: config["dmsa_phenotype_collections"].get(w.collection)['mut_effects_dir'],
+        dms_wt_seq_id = "NC_001542_2018-08-13",
+        mut_effect_col = lambda w: config["dmsa_phenotype_collections"].get(w.collection)['mut_effect_col'],
+        mutation_col = lambda w: config["dmsa_phenotype_collections"].get(w.collection)['mutation_col'],
+        mut_effects_df = lambda w: os.path.join(
+            config["dmsa_phenotype_collections"].get(w.collection)['mut_effects_dir'], 
+            w.experiment
+        ),
+    conda:
+        "../dmsa-pred/dmsa_env.yaml"
+    shell:
+        "python dmsa-pred/dmsa_pred.py phenotype-prediction "
+        "--model-type additive "
+        "--alignment {input.alignment} "
+        "--dms-wt-seq-id {params.dms_wt_seq_id} "
+        "--mask-seqs-with-disallowed-aa-subs False "
+        "--min-pred-pheno 0.0 "
+        "--mut-effects-df {params.mut_effects_df} "
+        "--mut-effect-col {params.mut_effect_col} "
+        "--mutation-col {params.mutation_col} "
+        "--experiment-label {wildcards.experiment} "
+        "--output-json {output.node_data} "
+        "--output-df {output.pred_data}"
+
+
+def _get_variant_escape_node_data(wildcards):
+    inputs=[]
+    wildcards_dict = dict(wildcards)
+
+    import glob
+    for collection_name, collection_dict in config['dmsa_phenotype_collections'].items():
+
+        # run the predictions using every csv in the glob
+        requested_files = expand(
+            rules.variant_escape_prediction.output.node_data,
+            collection=collection_name,
+            experiment=[
+                os.path.basename(fp) 
+                for fp in glob.glob(collection_dict['mut_effects_dir']+"/*.csv")
+            ],
+            **wildcards_dict
+        )
+        inputs.extend(requested_files)
+
+    return inputs
 
 
 rule export_tree:
@@ -189,16 +191,19 @@ rule export_tree:
         aa_muts = config["Nucleotide_AA_mutations"],
         auspice_config = config["Auspice_config"],
         colors = config["Colors"],
+        lat_longs = config["Lat_longs"],
+        escape_predictions = _get_variant_escape_node_data,
     output:
         auspice_tree = config["Auspice_tree"],
     conda:
-        "../environment.yml",
+        "../dmsa-pred/dmsa_env.yaml"
     shell:
         "augur export v2 "
         "--tree {input.tree} "
         "--metadata {input.metadata} "
-        "--node-data {input.tree_nodes} {input.tree_traits} {input.tree_muts} {input.aa_muts} "
+        "--node-data {input.tree_nodes} {input.tree_traits} {input.tree_muts} {input.aa_muts} {input.escape_predictions} "
         "--include-root-sequence "
         "--colors {input.colors} "
+        "--lat-longs {input.lat_longs} "
         "--auspice-config {input.auspice_config} "
         "--output {output.auspice_tree}"

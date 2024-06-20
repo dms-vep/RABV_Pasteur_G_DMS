@@ -17,6 +17,8 @@ rule get_protein_sequences:
         config["Min_ORF_threshold"],
     output:
         config["Protein_sequences_temp"],
+    conda:
+        "../environment.yml",
     shell:
         # The '-sequence' flag signals for the input file
         # while the '-outseq' file signals for the output 
@@ -39,6 +41,8 @@ rule get_codon_sequences:
         config["Min_ORF_threshold"],
     output:
         config["Codon_sequences_temp"],
+    conda:
+        "../environment.yml",
     shell:
         # The '-sequence' flag signals for the input file
         # while the '-outseq' file signals for the output 
@@ -63,6 +67,8 @@ rule check_number_ORFs_found:
         codon = config["Codon_sequences_temp"],
     output:
         config["Sequence_verification_log"]
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/extracted_sequence_verification.py"
 
@@ -77,6 +83,8 @@ rule edit_protein_fasta_headers:
         sequences = config["Protein_sequences_temp"],
     output:
         sequences = config["Protein_sequences"],
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/edit_fasta_headers.py"
 
@@ -91,5 +99,7 @@ rule edit_codon_fasta_headers:
         sequences = config["Codon_sequences_temp"],
     output:
         sequences = config["Codon_sequences"],
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/edit_fasta_headers.py"

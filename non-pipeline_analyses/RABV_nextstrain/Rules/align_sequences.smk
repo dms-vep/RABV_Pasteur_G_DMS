@@ -12,6 +12,8 @@ rule align_protein_sequences:
         fasta_sequences = config["Protein_sequences"],
     output:
         alignment = config["Protein_alignment"],
+    conda:
+        "../environment.yml",
     shell:
         # --auto        Automatically selects an appropriate strategy from L-INS-i, 
         #               FFT-NS-i and FFT-NS-2, according to data size. Default: off (always FFT-NS-2)
@@ -27,6 +29,8 @@ rule create_codon_alignment:
         codon_sequences = config["Codon_sequences"],
     output:
         config["Codon_alignment"]
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/create_codon_alignment.py"
 
@@ -42,6 +46,8 @@ rule strip_protein_alignment_gaps:
         config["Ungapped_protein_alignment"]
     params:
         reference = config["Reference_accession"],
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/remove_gaps_from_alignment.py"
 
@@ -57,5 +63,7 @@ rule strip_codon_alignment_gaps:
         config["Ungapped_codon_alignment"]
     params:
         reference = config["Reference_accession"],
+    conda:
+        "../environment.yml",
     script:
         "../Scripts/remove_gaps_from_alignment.py"

@@ -7560,18 +7560,20 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># this cell is tagged as `parameters` for papermill parameterization</span>
 <span class="n">func_effects</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">func_effects_config</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">site_numbering_map</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="n">antibody_escape_dir</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">antibody_escape_config</span> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="n">filtered_csv_dir</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">filtered_antibody_csv_dir</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">filtered_func_csv_dir</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">filtered_func_effects</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=2de364aa">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=ece0dc44">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7583,9 +7585,13 @@ a.anchor-link {
 <span class="n">func_effects</span> <span class="o">=</span> <span class="s2">"results/func_effects/averages/HEK293T_entry_func_effects.csv"</span>
 <span class="n">func_effects_config</span> <span class="o">=</span> <span class="s2">"data/func_effects_config.yml"</span>
 <span class="n">antibody_escape_config</span> <span class="o">=</span> <span class="s2">"data/antibody_escape_config.yml"</span>
+<span class="n">site_numbering_map</span> <span class="o">=</span> <span class="s2">"data/site_numbering_map.csv"</span>
 <span class="n">antibody_escape_dir</span> <span class="o">=</span> <span class="s2">"results/antibody_escape/averages/"</span>
-<span class="n">filtered_csv_dir</span> <span class="o">=</span> <span class="s2">"results/filtered_CSVs/"</span>
-<span class="n">filtered_func_effects</span> <span class="o">=</span> <span class="s2">"results/filtered_CSVs/HEK293T_filitered_entry_func_effects.csv"</span>
+<span class="n">filtered_antibody_csv_dir</span> <span class="o">=</span> <span class="s2">"results/filtered_antibody_escape_CSVs/"</span>
+<span class="n">filtered_func_csv_dir</span> <span class="o">=</span> <span class="s2">"results/filtered_func_effects_CSV/"</span>
+<span class="n">filtered_func_effects</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">"results/filtered_func_effects_CSV/HEK293T_filitered_entry_func_effects.csv"</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7602,12 +7608,14 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># # Uncomment for running interactive</span>
 <span class="c1"># func_effects = "../results/func_effects/averages/HEK293T_entry_func_effects.csv"</span>
 <span class="c1"># func_effects_config = "../data/func_effects_config.yml"</span>
+<span class="c1"># site_numbering_map = "../data/site_numbering_map.csv"</span>
 
 <span class="c1"># antibody_escape_dir = "../results/antibody_escape/averages/"</span>
 <span class="c1"># antibody_escape_config = "../data/antibody_escape_config.yml"</span>
 
-<span class="c1"># filtered_csv_dir = "../results/filtered_CSVs/"</span>
-<span class="c1"># filtered_func_effects = "../results/filtered_CSVs/HEK293T_filitered_entry_func_effects.csv"</span>
+<span class="c1"># filtered_antibody_csv_dir = "../results/filtered_antibody_escape_CSVs/"</span>
+<span class="c1"># filtered_func_csv_dir = "../results/filtered_func_effects_CSV/"</span>
+<span class="c1"># filtered_func_effects = "../results/filtered_func_effects_CSV/HEK293T_filitered_entry_func_effects.csv"</span>
 </pre></div>
 </div>
 </div>
@@ -7647,6 +7655,17 @@ a.anchor-link {
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Maximum STDEV: </span><span class="si">{</span><span class="n">std</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">escape_metric</span> <span class="o">=</span> <span class="n">antibody_config</span><span class="p">[</span><span class="s2">"avg_escape_plot_kwargs_default"</span><span class="p">][</span><span class="s2">"avg_type"</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Escape score metric: </span><span class="si">{</span><span class="n">escape_metric</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Load site map</span>
+<span class="n">site_map</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">site_numbering_map</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"Unnamed: 0"</span> <span class="p">:</span> <span class="s2">"natural_sequence_site"</span><span class="p">,</span>
+        <span class="s2">"reference_site"</span> <span class="p">:</span> <span class="s2">"site"</span><span class="p">,</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+<span class="c1"># Adjust sequencing to be 1 indexed</span>
+<span class="n">site_map</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span> <span class="o">=</span> <span class="n">site_map</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -7686,6 +7705,7 @@ Escape score metric: median
     <span class="n">min_models</span><span class="p">,</span>
     <span class="n">max_std</span><span class="p">,</span>
     <span class="n">escape_metric</span><span class="p">,</span>
+    <span class="n">site_map</span><span class="p">,</span>
     <span class="n">filtered_file_dir</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
@@ -7722,12 +7742,30 @@ Escape score metric: median
         <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="p">)</span>
 
+    <span class="c1"># Merge site map</span>
+    <span class="n">escape_df</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">escape_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+            <span class="n">site_map</span><span class="p">,</span>
+            <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
+            <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">"site"</span><span class="p">],</span>
+            <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Natural sequence mutation</span>
+    <span class="n">escape_df</span><span class="p">[</span><span class="s2">"natural_sequence_mutation"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="n">escape_df</span><span class="p">[</span><span class="s2">"wildtype"</span><span class="p">]</span> <span class="o">+</span> <span class="n">escape_df</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">escape_df</span><span class="p">[</span><span class="s2">"mutant"</span><span class="p">]</span>
+    <span class="p">)</span>
+
     <span class="c1"># Drop all but a few columns</span>
     <span class="n">escape_df</span> <span class="o">=</span> <span class="n">escape_df</span><span class="p">[[</span>
-            <span class="s2">"site"</span><span class="p">,</span> 
+            <span class="s2">"site"</span><span class="p">,</span>
+            <span class="s2">"natural_sequence_site"</span><span class="p">,</span>
+            <span class="s2">"sequential_site"</span><span class="p">,</span>
             <span class="s2">"wildtype"</span><span class="p">,</span> 
             <span class="s2">"mutant"</span><span class="p">,</span> 
             <span class="s2">"mutation"</span><span class="p">,</span> 
+            <span class="s2">"natural_sequence_mutation"</span><span class="p">,</span>
             <span class="s2">"escape"</span><span class="p">,</span>
     <span class="p">]]</span>
 
@@ -7773,8 +7811,8 @@ Escape score metric: median
 <span class="k">for</span> <span class="n">antibody</span> <span class="ow">in</span> <span class="n">antibodies</span><span class="p">:</span>
 
     <span class="c1"># Make output dir if doesn't exist</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filtered_csv_dir</span><span class="p">):</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">filtered_csv_dir</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filtered_antibody_csv_dir</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">filtered_antibody_csv_dir</span><span class="p">)</span>
     
     <span class="n">get_filtered_csv</span><span class="p">(</span>
         <span class="n">antibody</span><span class="p">,</span>
@@ -7784,7 +7822,8 @@ Escape score metric: median
         <span class="n">min_models</span><span class="p">,</span>
         <span class="n">std</span><span class="p">,</span>
         <span class="n">escape_metric</span><span class="p">,</span>
-        <span class="n">filtered_file_dir</span> <span class="o">=</span> <span class="n">filtered_csv_dir</span><span class="p">,</span>
+        <span class="n">site_map</span><span class="p">,</span>
+        <span class="n">filtered_file_dir</span> <span class="o">=</span> <span class="n">filtered_antibody_csv_dir</span><span class="p">,</span>
     <span class="p">)</span>
 </pre></div>
 </div>
@@ -7820,6 +7859,21 @@ Escape score metric: median
 <span class="c1"># Read CSV file</span>
 <span class="n">func_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">func_effects</span><span class="p">)</span>
 
+<span class="c1"># Merge site map</span>
+<span class="n">func_scores</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">func_scores</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+        <span class="n">site_map</span><span class="p">,</span>
+        <span class="n">how</span><span class="o">=</span><span class="s2">"left"</span><span class="p">,</span>
+        <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">"site"</span><span class="p">],</span>
+        <span class="n">validate</span><span class="o">=</span><span class="s2">"many_to_one"</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># Natural sequence mutation</span>
+<span class="n">func_scores</span><span class="p">[</span><span class="s2">"natural_sequence_mutation"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">func_scores</span><span class="p">[</span><span class="s2">"wildtype"</span><span class="p">]</span> <span class="o">+</span> <span class="n">func_scores</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">func_scores</span><span class="p">[</span><span class="s2">"mutant"</span><span class="p">]</span>
+<span class="p">)</span>
+
 <span class="c1"># Filter for minimum selections, times seen</span>
 <span class="n">func_scores</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">func_scores</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
@@ -7831,11 +7885,17 @@ Escape score metric: median
     <span class="p">]</span>
     <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span>
         <span class="s2">"effect_std"</span><span class="p">,</span>
+        <span class="s2">"sequential_wt"</span><span class="p">,</span>
+        <span class="s2">"reference_wt"</span><span class="p">,</span>
         <span class="s2">"times_seen"</span><span class="p">,</span>
         <span class="s2">"n_selections"</span><span class="p">,</span>
     <span class="p">])</span>
     <span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">)</span>
+
+<span class="c1"># Make output dir if doesn't exist</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">filtered_func_csv_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">filtered_func_csv_dir</span><span class="p">)</span>
 
 <span class="c1"># Save CSV file</span>
 <span class="n">func_scores</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filtered_func_effects</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>

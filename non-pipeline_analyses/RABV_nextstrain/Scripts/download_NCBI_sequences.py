@@ -42,7 +42,13 @@ def read_and_process_accession_list(
         elif location == "usa":
             extracted_country = "USA"
         elif location == "zaire":
-            extracted_country =  "Democratic Republic of the Congo"
+            extracted_country = "Democratic Republic of the Congo"
+        elif location == "democratic republic of the congo":
+            extracted_country = "Democratic Republic of the Congo"
+        elif location == "cote d'ivoire":
+            extracted_country = "Cote d'Ivoire"
+        elif location == "bosnia and herzegovina":
+            extracted_country = "Bosnia and Herzegovina"
         else:
             # Capitalize first char in string
             formatted_list = []
@@ -123,7 +129,7 @@ def read_and_process_accession_list(
             "Guinea",
             "Liberia",
             "Mauritania",
-            "CÃ´te d'Ivoire",
+            "Cote d'Ivoire",
             "Morocco",
             "Mali",
             "Burkina Faso",
@@ -257,7 +263,7 @@ def read_and_process_accession_list(
             "Belize",
             "Antigua and Barbuda",
             "Saint Kitts and Nevis",
-            "Saint BarthÃ©lemy",
+            "Saint Barthélemy",
             "Sint Maarten",
             "Saint Martin",
             "Jamaica",
@@ -270,6 +276,7 @@ def read_and_process_accession_list(
             "Bermuda",
             "USA",
             "Canada",
+            "Greenland",
         ]
 
         region = None
@@ -813,9 +820,7 @@ def read_and_process_accession_list(
                         phylogroup = phylo_and_virus[0]
                     if "/host" in line:
                         host = host_grouper(line.replace("\n", "").replace("\"", "").split("=")[1])
-                    # if "/segment" in line:
-                    #     segment = line.replace("\n", "").replace("\"", "").split("=")[1]
-                    if "/country" in line:
+                    if "/country" in line or "/geo_loc_name" in line:
                         # For now, just using a single location field
                         location = line.replace("\n", "").replace("\"", "").split("=")[1]
                         region_and_country = country_extraction(location)

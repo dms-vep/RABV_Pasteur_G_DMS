@@ -42,6 +42,20 @@ Dropped_strains: Configure/Input_Data/dropped_strains.txt
 Auspice_config: Configure/Input_Data/auspice_config.json
 Color_schemes: Configure/Input_Data/color_schemes.tsv
 Color_orderings: Configure/Input_Data/color_orderings.tsv
+Lat_longs: Configure/Input_Data/lat_longs.tsv
+
+# DMSA phenotype prediction
+# dictionary of phenotype collections
+# each collection has a name and a set of parameters
+# For a number of individual experiemnts.
+dmsa_phenotype_collections:
+  all-antibodies:
+    # directory containing escape csv's
+    mut_effects_dir: "../../results/filtered_antibody_escape_CSVs"
+    # name of the column containing the effect score
+    mut_effect_col: "floored_escape"
+    # name of the column containing the mutation
+    mutation_col: "natural_sequence_mutation"
 
 #################################################---END INPUT DATA---#########################################################
 
