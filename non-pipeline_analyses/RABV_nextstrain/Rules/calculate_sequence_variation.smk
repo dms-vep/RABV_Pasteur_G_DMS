@@ -12,7 +12,7 @@ rule calculate_variation:
     amino acids based on natural protein sequences.
     """
     input:
-        protein_alignment = config["Ungapped_protein_alignment"],
+        protein_alignment = config["Ungapped_protein_alignment_no_outgroup"],
     output:
         config["Glycoprotein_variation"],
     conda:

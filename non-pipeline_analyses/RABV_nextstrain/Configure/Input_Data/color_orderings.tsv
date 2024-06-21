@@ -177,7 +177,7 @@ country	Ecuador
 country	Colombia
 country	Suriname
 country	Guyana
-country French Guiana
+country	French Guiana
 country	Venezuela
 country	Trinidad and Tobago
 country	Bonaire
@@ -213,8 +213,7 @@ country	North America
 country	Bermuda
 country	USA
 country	Canada
-country Greenland
-	
+
 ################	
 	
 	

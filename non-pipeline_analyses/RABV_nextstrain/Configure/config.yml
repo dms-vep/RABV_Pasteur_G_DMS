@@ -1,11 +1,14 @@
 #################################################---START INPUT DATA---#######################################################
 
 # List of accessions file
-Accession_list: Configure/Input_Data/all_Lyssa_accessions_060924.txt
+Accession_list: Configure/Input_Data/all_RABV_accessions_062024.txt
 
 # Reference genbanks
 Reference_genbank: Configure/Input_Data/RABV_G_protein_reference_NC_001542.gb
 Reference_accession: NC_001542
+
+# Outgroup for rooting tree
+Outgroup: RV3266_NC_031988_2015-09-17
 
 # Size threshold filters
 # RABV genome is ~12kb
@@ -79,9 +82,12 @@ Protein_alignment: Results/Alignments/G_protein_alignment.fasta
 Codon_alignment: Results/Alignments/G_codon_alignment.fasta
 Ungapped_protein_alignment: Results/Alignments/G_protein_alignment_ungapped.fasta
 Ungapped_codon_alignment: Results/Alignments/G_codon_alignment_ungapped.fasta
+Ungapped_protein_alignment_no_outgroup: Results/Alignments/G_protein_alignment_ungapped_no_outgroup.fasta
+Ungapped_codon_alignment_no_outgroup: Results/Alignments/G_codon_alignment_ungapped_no_outgroup.fasta
 
 # Raw tree files
 Nucleotide_raw_tree: Results/G_tree_raw.nwk
+Nucleotide_raw_tree_without_outgroup: Results/G_tree_raw_no_outgroup.nwk
 
 # Tree files
 Nucleotide_tree: Results/G_tree.nwk

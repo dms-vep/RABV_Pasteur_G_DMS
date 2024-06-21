@@ -1,128 +1,104 @@
 country	Israel	#5E1D9D
-country	Georgia	#581EA2
+country	Georgia	#571EA3
 country	Iraq	#511EA8
-country	Saudi Arabia	#4E21AC
-country	Iran	#4B25B1
-country	United Arab Emirates	#492AB5
-country	Oman	#462EB9
-country	Afghanistan	#4432BD
-country	Kazakhstan	#4237C1
-country	Pakistan	#403BC5
-country	Tajikistan	#4041C7
-country	Kyrgyzstan	#3F46C8
-country	India	#3F4CCA
-country	Sri Lanka	#3F51CC
-country	Nepal	#3F56CE
-country	Bangladesh	#3E5CD0
-country	Myanmar	#3F61D0
-country	Thailand	#4066CF
-country	Laos	#416BCF
-country	China	#4270CE
-country	Cambodia	#4375CD
-country	Vietnam	#437ACD
+country	Saudi Arabia	#4D22AD
+country	Iran	#4B26B1
+country	United Arab Emirates	#482BB6
+country	Oman	#462FBA
+country	Afghanistan	#4334BE
+country	Kazakhstan	#4138C3
+country	Pakistan	#403DC5
+country	Tajikistan	#3F43C7
+country	India	#3F49C9
+country	Sri Lanka	#3F4ECB
+country	Nepal	#3F54CD
+country	Bangladesh	#3E5ACF
+country	Myanmar	#3F5FD0
+country	Thailand	#4064CF
+country	Laos	#416ACF
+country	China	#426FCE
+country	Cambodia	#4274CE
+country	Vietnam	#4379CD
 country	Indonesia	#457ECB
 country	Taiwan	#4682C9
 country	Philippines	#4886C6
 country	South Korea	#4A8AC4
 country	Japan	#4B8EC1
-country	Australia	#4D92BF
-country	Senegal	#4E96BC
-country	Sierra Leone	#5199B8
-country	Guinea	#539BB4
-country	Liberia	#559EB1
-country	Mauritania	#57A1AD
-country	Cote d'Ivoire	#59A4A9
-country	Morocco	#5BA7A5
-country	Mali	#5EA9A1
-country	Burkina Faso	#61AB9D
-country	Ghana	#64AC99
-country	Benin	#66AE95
-country	Algeria	#69B090
-country	Nigeria	#6CB28C
-country	Tunisia	#6FB388
-country	Niger	#72B584
-country	Gabon	#76B680
-country	Cameroon	#79B77C
-country	Namibia	#7CB878
-country	Chad	#80B974
-country	Central African Republic	#83BA70
+country	Senegal	#4D93BE
+country	Sierra Leone	#4F96BB
+country	Guinea	#5199B7
+country	Liberia	#539CB4
+country	Mauritania	#569FB0
+country	Cote d'Ivoire	#58A2AC
+country	Morocco	#5AA5A8
+country	Mali	#5DA8A4
+country	Burkina Faso	#5FAA9F
+country	Ghana	#62AB9B
+country	Benin	#65AD97
+country	Algeria	#68AF92
+country	Nigeria	#6BB18E
+country	Tunisia	#6EB389
+country	Niger	#71B485
+country	Gabon	#75B581
+country	Cameroon	#78B77D
+country	Namibia	#7CB879
+country	Chad	#7FB975
+country	Central African Republic	#83BA71
 country	Democratic Republic of the Congo	#87BB6D
 country	Botswana	#8BBB6A
-country	South Africa	#8EBC66
-country	Zambia	#92BC63
-country	Zimbabwe	#96BD60
-country	Rwanda	#9ABD5D
-country	Egypt	#9DBE5A
-country	Mozambique	#A1BE58
-country	Tanzania	#A5BE55
-country	Kenya	#A9BD53
-country	Ethiopia	#ADBD50
-country	Madagascar	#B1BD4E
-country	Somalia	#B5BD4C
-country	Spain	#B8BC4A
-country	United Kingdom	#BCBB49
-country	France	#BFBB47
-country	Belgium	#C3BA46
-country	Netherlands	#C7B944
-country	Switzerland	#CAB843
-country	Norway	#CDB642
-country	Denmark	#D0B441
-country	Germany	#D3B240
-country	Italy	#D5B03F
-country	Slovenia	#D8AE3E
-country	Czech Republic	#DBAC3D
-country	Bosnia and Herzegovina	#DDA93C
-country	Poland	#DEA63B
-country	Slovakia	#E0A23A
-country	Hungary	#E19F3A
-country	Serbia	#E39B39
-country	Romania	#E49838
-country	Estonia	#E69437
-country	Finland	#E68F36
-country	Moldova	#E68A35
-country	Turkey	#E68534
-country	Azerbaijan	#E67F33
-country	Russia	#E67A32
-country	Argentina	#E67531
-country	Chile	#E56F30
-country	Brazil	#E5692F
-country	Peru	#E4622E
-country	Ecuador	#E35C2C
-country	Guyana	#E2552B
-country	Costa Rica	#E14F2A
-country	Grenada	#E04829
-country	Guatemala	#DF4227
-country	Dominican Republic	#DE3B26
-country	Mexico	#DD3525
+country	South Africa	#8FBC66
+country	Zambia	#93BC63
+country	Zimbabwe	#96BD5F
+country	Rwanda	#9ABE5C
+country	Egypt	#9EBE59
+country	Mozambique	#A2BE57
+country	Tanzania	#A7BE54
+country	Kenya	#ABBD52
+country	Ethiopia	#AFBD4F
+country	Madagascar	#B3BD4D
+country	Somalia	#B7BD4B
+country	Spain	#BABC4A
+country	United Kingdom	#BEBB48
+country	France	#C2BA46
+country	Belgium	#C5B945
+country	Switzerland	#C9B843
+country	Germany	#CCB742
+country	Italy	#CFB541
+country	Slovenia	#D2B240
+country	Czech Republic	#D5B03F
+country	Bosnia and Herzegovina	#D8AE3E
+country	Poland	#DBAC3D
+country	Slovakia	#DDA93C
+country	Hungary	#DFA63B
+country	Serbia	#E0A23A
+country	Romania	#E29E39
+country	Estonia	#E39B39
+country	Finland	#E59738
+country	Moldova	#E69337
+country	Turkey	#E68D36
+country	Azerbaijan	#E68835
+country	Russia	#E68234
+country	Argentina	#E67D33
+country	Chile	#E67832
+country	Brazil	#E67231
+country	Peru	#E56B2F
+country	Ecuador	#E4652E
+country	Guyana	#E35E2D
+country	French Guiana	#E2572B
+country	Costa Rica	#E1512A
+country	Grenada	#E04A29
+country	Guatemala	#DF4328
+country	Dominican Republic	#DE3C26
+country	Mexico	#DD3625
 country	USA	#DC2F24
 country	Canada	#DB2823
 
-region	Asia	#447CCD
-region	Oceania	#5EA9A1
-region	Africa	#8ABB6A
-region	Europe	#BEBB48
-region	South America	#E29E39
-region	North America	#E2562B
+region	Asia	#4784C8
+region	Africa	#67AE95
+region	Europe	#98BD5E
+region	South America	#CDB642
+region	North America	#E68634
 
-virus	Matlo bat lyssavirus	#5E1D9D
-virus	Ikoma lyssavirus	#4929B4
-virus	Lleida bat lyssavirus	#403FC6
-virus	Caucasicus lyssavirus	#3E59CF
-virus	Mokola lyssavirus	#4272CE
-virus	Lagos lyssavirus	#4887C6
-virus	Phala bat lyssavirus	#5199B8
-virus	Shimoni lyssavirus	#5BA7A6
-virus	Taiwan bat lyssavirus	#69B091
-virus	European bat lyssavirus 1	#78B67E
-virus	Irkut lyssavirus	#89BB6B
-virus	Ozernoe lyssavirus	#9BBE5B
-virus	Duvenhage lyssavirus	#AEBD50
-virus	Aravan lyssavirus	#C0BB47
-virus	Khujand lyssavirus	#D0B441
-virus	Kotalahti bat lyssavirus	#DDAA3C
-virus	Bokeloh lyssavirus	#E49938
-virus	European bat lyssavirus 2	#E68234
-virus	Australian lyssavirus	#E4672E
-virus	Gannoruwa bat lyssavirus	#DF4728
-virus	Rabies lyssavirus	#DB2823
+virus	Gannoruwa bat lyssavirus	#529AB6
+virus	Rabies lyssavirus	#AABD52
 

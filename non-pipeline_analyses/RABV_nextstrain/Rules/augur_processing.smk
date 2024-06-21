@@ -19,13 +19,34 @@ rule tree_sequences:
         "--alignment {input.alignment} "
         "--output {output.tree}"
 
+
+rule root_and_remove_outgroup:
+    """
+    This rule roots the tree and remove the outgroup
+    """
+    input:
+        tree = config["Nucleotide_raw_tree"],
+        protein_alignment = config["Ungapped_protein_alignment"],
+        codon_alignment = config["Ungapped_codon_alignment"],
+    output:
+        tree = config["Nucleotide_raw_tree_without_outgroup"],
+        protein_alignment = config["Ungapped_protein_alignment_no_outgroup"],
+        codon_alignment = config["Ungapped_codon_alignment_no_outgroup"],
+    params:
+        outgroup = config["Outgroup"],
+    conda:
+        "../environment.yml",
+    script:
+        "../Scripts/root_and_remove_outgroup.py"
+
+
 rule refine_tree_sequences:
     """
     This rule refines the tree
     """
     input:
-        alignment = config["Ungapped_codon_alignment"],
-        tree = config["Nucleotide_raw_tree"],
+        alignment = config["Ungapped_codon_alignment_no_outgroup"],
+        tree = config["Nucleotide_raw_tree_without_outgroup"],
         metadata = config["Metadata"],
     output:
         tree = config["Nucleotide_tree"],
@@ -39,11 +60,8 @@ rule refine_tree_sequences:
         "--metadata {input.metadata} "
         "--output-tree {output.tree} "
         "--output-node-data {output.tree_nodes} "
-        "--timetree "
-        "--coalescent opt "
-        "--date-confidence "
-        "--date-inference marginal"
-        # "--clock-filter-iqd 4"
+        "--keep-root "
+        "--verbosity 2"
 
 rule traits_tree_sequences:
     """
@@ -70,7 +88,7 @@ rule ancestral_tree_sequences:
     """
     input:
         tree = config["Nucleotide_tree"],
-        alignment = config["Ungapped_codon_alignment"],
+        alignment = config["Ungapped_codon_alignment_no_outgroup"],
     output:
         tree_muts = config["Nucleotide_tree_mutations"]
     conda:
