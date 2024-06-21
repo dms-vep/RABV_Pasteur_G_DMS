@@ -12,11 +12,14 @@ rule tree_sequences:
         alignment = config["Ungapped_codon_alignment"],
     output:
         tree = config["Nucleotide_raw_tree"],
+    params:
+        outgroup = config["Outgroup"]
     conda:
         "../environment.yml",
     shell:
         "augur tree "
         "--alignment {input.alignment} "
+        "--tree-builder-args '\-o {params.outgroup}' "
         "--output {output.tree}"
 
 
