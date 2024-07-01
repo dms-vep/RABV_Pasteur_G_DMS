@@ -104,7 +104,7 @@ escape_plot_kwargs_default: &escape_plot_kwargs_default
     times_seen: 2
   heatmap_max_at_least: 2
   heatmap_min_at_least: -2
-  init_floor_at_zero: false
+  init_floor_at_zero: true
   init_site_statistic: sum
   site_zoom_bar_color_col: region  # supplied in `site_numbering_map`
 
