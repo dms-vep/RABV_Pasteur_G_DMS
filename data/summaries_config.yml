@@ -16,10 +16,10 @@ summary:
       stat: escape_median  # statistic to use for escape
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
-      max_at_least: 1  # make heatmap max at least
-      min_at_least: -1  # make heatmap min at least this
+      max_at_least: 2 # make heatmap max at least
+      min_at_least: -6  # make heatmap min at least this
       le_filters:  # only keep entries with indicated column is <= indicated value
-        escape_std: 2
+        escape_std: 4
       antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
         RVC20: RVC20
         RVA122: RVA122
@@ -38,9 +38,9 @@ summary:
       negative_color: "#F0E442"  # yellow
       fixed_max: 2  # specify either `max_at_least` or `fixed_max`
       min_at_least: 0
-      init_min_value: -3  # initial min value in slider
+      init_min_value: -6  # initial min value in slider
       le_filters:  # only keep entries with indicated column is <= indicated value
-        effect_std: 2
+        effect_std: 4
   other_assays: {} # other assays that we show, empty dict if no assays being shown
     # receptor_affinity:  # assay type
     #   mock receptor affinity:  # name of particular assay condition
