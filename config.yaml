@@ -102,6 +102,7 @@ codon_variants: results/variants/codon_variants.csv
 # ----------------------------------------------------------------------------
 
 barcode_runs: data/barcode_runs.csv  # Illumina barcode runs, set to null if no runs
+duplicate_fastq_R1: warn
 
 # keyword parameters for `dms_variants.illuminabarcodeparser.IlluminaBarcodeParser`
 # https://jbloomlab.github.io/dms_variants/dms_variants.illuminabarcodeparser.html#dms_variants.illuminabarcodeparser.IlluminaBarcodeParser
