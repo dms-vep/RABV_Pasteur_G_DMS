@@ -1,0 +1,123 @@
+country	Israel	#5E1D9D
+country	Georgia	#571EA2
+country	Iraq	#511EA8
+country	Saudi Arabia	#4D21AD
+country	Iran	#4B26B1
+country	United Arab Emirates	#482AB5
+country	Oman	#462FBA
+country	Afghanistan	#4333BE
+country	Kazakhstan	#4138C2
+country	Pakistan	#403DC5
+country	Tajikistan	#3F42C7
+country	India	#3F48C9
+country	Sri Lanka	#3F4ECB
+country	Nepal	#3F53CD
+country	Bangladesh	#3E59CF
+country	Myanmar	#3F5ED0
+country	Thailand	#4063CF
+country	Laos	#4069CF
+country	China	#416ECE
+country	Cambodia	#4273CE
+country	Vietnam	#4378CD
+country	Indonesia	#447DCC
+country	Taiwan	#4681C9
+country	Philippines	#4885C7
+country	South Korea	#4989C4
+country	Japan	#4B8DC2
+country	Senegal	#4C91BF
+country	Sierra Leone	#4E95BC
+country	Guinea	#5098B9
+country	Liberia	#539BB5
+country	Mauritania	#559EB1
+country	Cote d'Ivoire	#57A1AD
+country	Morocco	#59A4A9
+country	Mali	#5CA7A5
+country	Burkina Faso	#5EA9A1
+country	Ghana	#61AB9D
+country	Benin	#64AD98
+country	Algeria	#67AF94
+country	Nigeria	#6AB090
+country	Tunisia	#6DB28B
+country	Niger	#70B487
+country	Gabon	#73B583
+country	Cameroon	#77B67F
+country	Namibia	#7AB77B
+country	Chad	#7EB877
+country	Central African Republic	#81BA72
+country	Democratic Republic of the Congo	#85BA6F
+country	Botswana	#89BB6B
+country	South Africa	#8DBC68
+country	Zambia	#90BC65
+country	Zimbabwe	#94BD61
+country	Rwanda	#98BD5E
+country	Egypt	#9CBE5B
+country	Mozambique	#A0BE58
+country	Tanzania	#A4BE56
+country	Kenya	#A8BD53
+country	Ethiopia	#ACBD51
+country	Madagascar	#B0BD4E
+country	Somalia	#B4BD4C
+country	Spain	#B8BC4B
+country	United Kingdom	#BCBB49
+country	France	#BFBB47
+country	Belgium	#C3BA46
+country	Switzerland	#C7B944
+country	Germany	#CAB843
+country	Italy	#CDB642
+country	Slovenia	#D0B441
+country	Austria	#D3B240
+country	Czech Republic	#D6B03F
+country	Bosnia and Herzegovina	#D9AE3E
+country	Poland	#DBAC3D
+country	Slovakia	#DDA83C
+country	Hungary	#DFA53B
+country	Serbia	#E0A13A
+country	Romania	#E29D39
+country	Estonia	#E49A38
+country	Finland	#E59638
+country	Moldova	#E69237
+country	Turkey	#E68C36
+country	Azerbaijan	#E68735
+country	Russia	#E68234
+country	Argentina	#E67C33
+country	Chile	#E67732
+country	Brazil	#E67130
+country	Peru	#E56B2F
+country	Ecuador	#E4642E
+country	Guyana	#E35D2D
+country	French Guiana	#E2572B
+country	Costa Rica	#E1502A
+country	Grenada	#E04929
+country	Guatemala	#DF4328
+country	Dominican Republic	#DE3C26
+country	Mexico	#DD3525
+country	USA	#DC2F24
+country	Canada	#DB2823
+
+region	Asia	#4784C8
+region	Africa	#67AE95
+region	Europe	#98BD5E
+region	South America	#CDB642
+region	North America	#E68634
+
+virus	Gannoruwa bat lyssavirus	#529AB6
+virus	Rabies lyssavirus	#AABD52
+
+host	Canidae	#5E1D9D
+host	Felidae	#462EB9
+host	Hyaenidae	#3F4CCB
+host	Procyonidae	#416CCE
+host	Mustelidae	#4887C6
+host	Viverridae	#539CB3
+host	Mephitidae	#62AB9C
+host	Didelphimorphia	#74B582
+host	Artiodactyla	#89BB6B
+host	Equidae	#A0BE59
+host	Human	#B7BD4B
+host	Rodentia	#CCB742
+host	Lab based	#DDAA3C
+host	Non-human primates	#E69537
+host	Herpestidae	#E67631
+host	Ursidae	#E14F2A
+host	Chiroptera	#DB2823
+

@@ -46,9 +46,15 @@ def assert_num_orfs_match_sequences(
     orf_index = 0
     checked_sequences = []
     for i in range(0, len(segment_list)):
+
+        # Break loop if end of ORF list has been reached
+        if orf_index == len(protein_list):
+            break
+        
         segment_name = segment_list[segment_index]
         protein_name = protein_list[orf_index]
         codon_name = codon_list[orf_index]
+
         # Check if all have same name and set flag to false if not
         if segment_name == protein_name == codon_name:
             checked_sequences.append(segment_name)
@@ -68,7 +74,7 @@ def assert_num_orfs_match_sequences(
         else:
             verification_flag = False
             sequence_with_multiple_ORFs = segment_name
-            print("Unknown error occured!")
+            output_log_file.write("Unknown error occured!")
             break
 
     # Check if flag was triggered
@@ -80,7 +86,7 @@ def assert_num_orfs_match_sequences(
         # Close files
         output_log_file.close()
     else:
-        print(f"{sequence_with_multiple_ORFs} has more than one ORF in GPC!")
+        output_log_file.write(f"{sequence_with_multiple_ORFs} has more than one ORF!")
             
 
     # Close files

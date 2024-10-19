@@ -57,7 +57,7 @@ rule compare_func_effects_and_natural_variation:
     input:
         func_effects="results/filtered_func_effects_CSV/HEK293T_filitered_entry_func_effects.csv",
         func_effects_config="data/func_effects_config.yml",
-        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/G_variation.csv",
+        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/G/Alignments/G_natural_variation.fasta",
         nb="notebooks/func_effects_vs_natural_variation.ipynb",
     params:
         natural_diversity_outdir="results/natural_diversity_comparison/",
@@ -88,13 +88,14 @@ rule compare_antibody_escape_and_natural_variation:
     input:
         # dummy file to confirm its run in correct order
         filtered_func_effects="results/filtered_func_effects_CSV/HEK293T_filitered_entry_func_effects.csv",
-        sequence_metadata="non-pipeline_analyses/RABV_nextstrain/Results/metadata.tsv",
-        sequence_alignment="non-pipeline_analyses/RABV_nextstrain/Results/Alignments/G_protein_alignment_ungapped.fasta",
+        sequence_metadata="non-pipeline_analyses/RABV_nextstrain/Results/G/metadata.tsv",
+        sequence_alignment="non-pipeline_analyses/RABV_nextstrain/Results/G/Alignments/protein_ungapped_no_outgroup.fasta",
         nb="notebooks/natural_sequence_antibody_escape.ipynb",
     params:
         filtered_antibody_csv_dir="results/filtered_antibody_escape_CSVs/",
         natural_diversity_outdir="results/natural_diversity_comparison/",
     output:
+        mutation_count_csv="results/natural_diversity_comparison/mutation_counts.csv",
         antibody_escape_vs_nature_html="results/natural_diversity_comparison/antibody_escape_vs_natural_diversity.html",
         nb="results/notebooks/natural_sequence_antibody_escape.ipynb",
     conda:
@@ -108,6 +109,7 @@ rule compare_antibody_escape_and_natural_variation:
             -p sequence_alignment {input.sequence_alignment} \
             -p filtered_antibody_csv_dir {params.filtered_antibody_csv_dir} \
             -p natural_diversity_outdir {params.natural_diversity_outdir} \
+            -p mutation_count_csv {output.mutation_count_csv} \
             -p antibody_escape_vs_nature_html {output.antibody_escape_vs_nature_html} \
             &> {log}
         """

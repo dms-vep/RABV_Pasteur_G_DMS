@@ -9,11 +9,14 @@
 from Bio import SeqIO
 
 # Functions
-def create_codon_alignment(protein_alignment_file, codon_fasta_file, codon_alignemnt_file):
+def create_codon_alignment(protein_alignment_file, codon_fasta_file, codon_alignemnt_file, output_log_file):
 
     # Initialize dicts for sequences
     protein_alignment_dict = {}
     codon_alignment_dict = {}
+
+    # Initialize log file
+    log_file = open(output_log_file, "w")
 
     # Get protein alignment sequences
     for curr_seq in SeqIO.parse(protein_alignment_file, "fasta"):
@@ -41,8 +44,11 @@ def create_codon_alignment(protein_alignment_file, codon_fasta_file, codon_align
             codon_alignment.write(f">{header}\n")
             codon_alignment.write(f"{codon_alignment_seq}\n")
 
+    log_file.write("Success!")
+
     # Close files
     codon_alignment.close()
+    log_file.close()
 
 def main():
     """
@@ -55,8 +61,9 @@ def main():
 
     # Output files
     codon_alignemnt_file = str(snakemake.output)
+    output_log_file = str(snakemake.log)
 
-    create_codon_alignment(protein_alignment_file, codon_fasta_file, codon_alignemnt_file)
+    create_codon_alignment(protein_alignment_file, codon_fasta_file, codon_alignemnt_file, output_log_file)
 
 
 if __name__ == "__main__":

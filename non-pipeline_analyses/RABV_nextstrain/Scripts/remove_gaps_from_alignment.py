@@ -10,11 +10,14 @@
 from Bio import AlignIO
 
 # Functions
-def remove_gaps_from_alignment(alignment_file, reference, ungapped_alignment):
+def remove_gaps_from_alignment(alignment_file, reference, ungapped_alignment, output_log_file):
 
     # Initialize alignment and reference
     alignment = AlignIO.read(alignment_file, "fasta")
     reference_sequence = None
+
+    # Initialize log file
+    log_file = open(output_log_file, "w")
     
     # Get reference sequence
     for seq in alignment:
@@ -36,6 +39,11 @@ def remove_gaps_from_alignment(alignment_file, reference, ungapped_alignment):
     # Write new alignment file
     AlignIO.write(alignment, ungapped_alignment, "fasta")
 
+    log_file.write("Success!")
+
+    # Close files
+    log_file.close()
+
 
 
 
@@ -46,15 +54,16 @@ def main():
     """
 
     # Input files
-    codon_alignment_file = str(snakemake.input.codon_alignment)
+    alignment_file = str(snakemake.input.alignment)
 
     # Params
     reference = str(snakemake.params.reference)
 
     # Output files
     ungapped_alignment = str(snakemake.output)
+    output_log_file = str(snakemake.log)
 
-    remove_gaps_from_alignment(codon_alignment_file, reference, ungapped_alignment)
+    remove_gaps_from_alignment(alignment_file, reference, ungapped_alignment, output_log_file)
 
 
 if __name__ == "__main__":

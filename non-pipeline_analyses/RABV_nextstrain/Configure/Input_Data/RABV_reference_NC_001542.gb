@@ -43,14 +43,14 @@ FEATURES             Location/Qualifiers
                      /mol_type="genomic RNA"
                      /db_xref="taxon:11292"
      gene            59..1482
-                     /locus_tag="Nucleoprotein"
+                     /locus_tag="RABVgp1"
                      /db_xref="GeneID:1489853"
      mRNA            59..1482
-                     /locus_tag="Nucleoprotein"
+                     /locus_tag="RABVgp1"
                      /product="N mRNA"
                      /db_xref="GeneID:1489853"
      CDS             71..1423
-                     /locus_tag="Nucleoprotein"
+                     /locus_tag="RABVgp1"
                      /codon_start=1
                      /product="nucleoprotein N"
                      /protein_id="NP_056793.1"
@@ -65,14 +65,14 @@ FEATURES             Location/Qualifiers
                      DYFSGETRSPEAVYTRIIMNGGRLKRSHIRRYVSVSSNHQARPNSFAEFLNKTYSSDS
                      "
      gene            1485..2475
-                     /locus_tag="Phosphoprotein"
+                     /locus_tag="RABVgp2"
                      /db_xref="GeneID:1489854"
      mRNA            1485..2475
-                     /locus_tag="Phosphoprotein"
+                     /locus_tag="RABVgp2"
                      /product="M1 mRNA"
                      /db_xref="GeneID:1489854"
      CDS             1514..2407
-                     /locus_tag="Phosphoprotein"
+                     /locus_tag="RABVgp2"
                      /codon_start=1
                      /product="phosphoprotein M1"
                      /protein_id="NP_056794.1"
@@ -84,14 +84,14 @@ FEATURES             Location/Qualifiers
                      SSGILLYNFEQLKMNLDDIVKEAKNVPGVTRLARDGSKLPLRCVLGWVALANSKKFQL
                      LVESNKLSKIMQDDLNRYTSC"
      gene            2481..3285
-                     /locus_tag="Matrix"
+                     /locus_tag="RABVgp3"
                      /db_xref="GeneID:1489855"
      mRNA            2481..3285
-                     /locus_tag="Matrix"
+                     /locus_tag="RABVgp3"
                      /product="M2 mRNA"
                      /db_xref="GeneID:1489855"
      CDS             2496..3104
-                     /locus_tag="Matrix"
+                     /locus_tag="RABVgp3"
                      /codon_start=1
                      /product="M2 protein"
                      /protein_id="NP_056795.1"
@@ -101,14 +101,14 @@ FEATURES             Location/Qualifiers
                      GAPVPEGMNWVYKLRRTLIFQWADSRGPLEGEELEYSQEITWDDNTEFVGLQIRVSAK
                      QCHIRGRIWCINMNSRAGQLWSDMSLQTQRSEEDKDSSLLLE"
      gene            3291..4964
-                     /locus_tag="Glycoprotein"
+                     /locus_tag="RABVgp4"
                      /db_xref="GeneID:1489856"
      mRNA            3291..4964
-                     /locus_tag="Glycoprotein"
+                     /locus_tag="RABVgp4"
                      /product="G mRNA"
                      /db_xref="GeneID:1489856"
      CDS             3318..4892
-                     /locus_tag="Glycoprotein"
+                     /locus_tag="RABVgp4"
                      /codon_start=1
                      /product="transmembrane glycoprotein G"
                      /protein_id="NP_056796.1"
@@ -124,14 +124,14 @@ FEATURES             Location/Qualifiers
                      LGLPNWGKYVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGK
                      IISSWESYKSGGETGL"
      gene            5388..11863
-                     /locus_tag="Polymerase"
+                     /locus_tag="RABVgp5"
                      /db_xref="GeneID:1489857"
      mRNA            5388..11863
-                     /locus_tag="Polymerase"
+                     /locus_tag="RABVgp5"
                      /product="L mRNA"
                      /db_xref="GeneID:1489857"
      CDS             5418..11846
-                     /locus_tag="Polymerase"
+                     /locus_tag="RABVgp5"
                      /codon_start=1
                      /product="L protein"
                      /protein_id="NP_056797.1"

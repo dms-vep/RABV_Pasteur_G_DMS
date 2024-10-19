@@ -1,0 +1,3 @@
+Read in 2 features from reference sequence file
+Validating schema of 'Results/G/Trees/tree_muts.json'...
+amino acid mutations written to Results/G/Trees/tree_aa_muts.json

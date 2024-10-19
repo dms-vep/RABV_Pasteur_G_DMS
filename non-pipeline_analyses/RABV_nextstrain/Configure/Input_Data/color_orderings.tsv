@@ -213,7 +213,7 @@ country	North America
 country	Bermuda
 country	USA
 country	Canada
-
+	
 ################	
 	
 	
@@ -248,5 +248,26 @@ virus	European bat lyssavirus 2
 virus	Australian lyssavirus
 virus	Gannoruwa bat lyssavirus
 virus	Rabies lyssavirus
+	
+################	
+	
+	
+host	Canidae
+host	Felidae
+host	Hyaenidae
+host	Procyonidae
+host	Mustelidae
+host	Viverridae
+host	Mephitidae
+host	Didelphimorphia
+host	Artiodactyla
+host	Equidae
+host	Human
+host	Rodentia
+host	Lab based
+host	Non-human primates
+host	Herpestidae
+host	Ursidae
+host	Chiroptera
 	
 ################	

@@ -7,10 +7,10 @@
 # Caleb Carr
 
 # Imports
+import re
 import datetime
-import os
 import pandas as pd
-from Bio import Entrez, SeqIO, AlignIO
+from Bio import Entrez
 Entrez.email = "RABVexample@RABVexample.com"     # Always tell NCBI who you are
 
 # Functions
@@ -19,13 +19,25 @@ def read_and_process_accession_list(
     output_fasta_file_name, 
     output_metadata_file_name, 
     length_threshold, 
-    desired_segment,
     remove_duplicates,
+    desired_gene,
+    output_log_file,
     ):
     """
     Function to read in list of accessions, download genbank files,
     parse genbank files, and extract sequences/metadata
     """
+
+    def check_if_genbank_feature(feature):
+        """
+        Function to check if a feature is
+        a genbank feature
+        """
+
+        if feature in snakemake.params.genbank_features:
+            return True
+        else:
+            return False
 
     def country_extraction(location):
         """
@@ -34,7 +46,9 @@ def read_and_process_accession_list(
         # lower case location and extract before colon
         location = location.lower().split(":")[0]
 
+        # Intialize results
         extracted_country = None
+        region = None
 
         # Reformat specific countries
         if location == "viet nam":
@@ -49,6 +63,8 @@ def read_and_process_accession_list(
             extracted_country = "Cote d'Ivoire"
         elif location == "bosnia and herzegovina":
             extracted_country = "Bosnia and Herzegovina"
+        elif location == "ussr":
+            extracted_country = "Russia"
         else:
             # Capitalize first char in string
             formatted_list = []
@@ -57,312 +73,87 @@ def read_and_process_accession_list(
             
             extracted_country = " ".join(formatted_list)
 
-        asia = [
-            "Israel",
-            "Palestine",
-            "Lebanon",
-            "Jordan",
-            "Syria",
-            "Georgia",
-            "Iraq",
-            "Armenia",
-            "Saudi Arabia",
-            "Kuwait",
-            "Yemen",
-            "Bahrain",
-            "Qatar",
-            "Iran",
-            "United Arab Emirates",
-            "Oman",
-            "Uzbekistan",
-            "Afghanistan",
-            "Kazakhstan",
-            "Pakistan",
-            "Tajikistan",
-            "Maldives",
-            "Kyrgyzstan",
-            "India",
-            "Sri Lanka",
-            "Nepal",
-            "Asia",
-            "Bangladesh",
-            "Myanmar",
-            "Thailand",
-            "Malaysia",
-            "Mongolia",
-            "Laos",
-            "Singapore",
-            "China",
-            "Cambodia",
-            "Vietnam",
-            "Hong Kong",
-            "Indonesia",
-            "Brunei",
-            "Taiwan",
-            "Philippines",
-            "Timor-Leste",
-            "South Korea",
-            "Japan",
-        ]
-
-        oceania = [
-            "French Polynesia",
-            "Palau",
-            "Australia",
-            "Papua New Guinea",
-            "Oceania",
-            "Micronesia",
-            "Solomon Islands",
-            "Vanuatu",
-            "Marshall Islands",
-            "New Zealand",
-            "Kiribati",
-            "Fiji",
-        ]
-
-        africa = [
-            "Cabo Verde",
-            "Gambia",
-            "Guinea-Bissau",
-            "Senegal",
-            "Sierra Leone",
-            "Guinea",
-            "Liberia",
-            "Mauritania",
-            "Cote d'Ivoire",
-            "Morocco",
-            "Mali",
-            "Burkina Faso",
-            "Ghana",
-            "Togo",
-            "Benin",
-            "Algeria",
-            "Sao Tome and Principe",
-            "Nigeria",
-            "Tunisia",
-            "Niger",
-            "Equatorial Guinea",
-            "Gabon",
-            "Cameroon",
-            "Republic of the Congo",
-            "Libya",
-            "Namibia",
-            "Angola",
-            "Chad",
-            "Central African Republic",
-            "Democratic Republic of the Congo",
-            "Africa",
-            "Botswana",
-            "South Africa",
-            "Zambia",
-            "Lesotho",
-            "Sudan",
-            "South Sudan",
-            "Zimbabwe",
-            "Burundi",
-            "Rwanda",
-            "Egypt",
-            "Eswatini",
-            "Uganda",
-            "Malawi",
-            "Mozambique",
-            "Tanzania",
-            "Kenya",
-            "Ethiopia",
-            "Djibouti",
-            "Union of the Comoros",
-            "Madagascar",
-            "Somalia",
-            "Seychelles",
-            "Mauritius",
-        ]
-
-        europe = [
-            "Iceland",
-            "Portugal",
-            "Ireland",
-            "Spain",
-            "United Kingdom",
-            "Andorra",
-            "France",
-            "Belgium",
-            "Netherlands",
-            "Luxembourg",
-            "Monaco",
-            "Switzerland",
-            "Norway",
-            "Denmark",
-            "Liechtenstein",
-            "Germany",
-            "Europe",
-            "Italy",
-            "Malta",
-            "Slovenia",
-            "Sweden",
-            "Austria",
-            "Croatia",
-            "Czech Republic",
-            "Bosnia and Herzegovina",
-            "Poland",
-            "Slovakia",
-            "Montenegro",
-            "Albania",
-            "Hungary",
-            "Serbia",
-            "Kosovo",
-            "North Macedonia",
-            "Greece",
-            "Lithuania",
-            "Romania",
-            "Bulgaria",
-            "Latvia",
-            "Estonia",
-            "Finland",
-            "Belarus",
-            "Moldova",
-            "Ukraine",
-            "Cyprus",
-            "Turkey",
-            "Azerbaijan",
-            "Russia",
-        ]
-
-        south_america = [
-            "Argentina",
-            "Uruguay",
-            "Chile",
-            "Paraguay",
-            "Bolivia",
-            "South America",
-            "Brazil",
-            "Peru",
-            "Ecuador",
-            "Colombia",
-            "Suriname",
-            "Guyana",
-            "Venezuela",
-            "Trinidad and Tobago",
-            "Bonaire",
-            "Curacao",
-            "Aruba",
-        ]
-
-        north_america = [
-            "Panama",
-            "Costa Rica",
-            "Grenada",
-            "Nicaragua",
-            "Saint Vincent and the Grenadines",
-            "Barbados",
-            "El Salvador",
-            "Saint Lucia",
-            "Honduras",
-            "Dominica",
-            "Guatemala",
-            "Guadeloupe",
-            "Belize",
-            "Antigua and Barbuda",
-            "Saint Kitts and Nevis",
-            "Saint Barthélemy",
-            "Sint Maarten",
-            "Saint Martin",
-            "Jamaica",
-            "Dominican Republic",
-            "Haiti",
-            "Mexico",
-            "Cuba",
-            "Bahamas",
-            "North America",
-            "Bermuda",
-            "USA",
-            "Canada",
-            "Greenland",
-        ]
-
-        region = None
-        if extracted_country in asia:
+        # Group by region
+        if extracted_country in snakemake.params.asia:
             region = "Asia"
-        elif extracted_country in oceania:
+        elif extracted_country in snakemake.params.oceania:
             region = "Oceania"
-        elif extracted_country in africa:
+        elif extracted_country in snakemake.params.africa:
             region = "Africa"
-        elif extracted_country in europe:
+        elif extracted_country in snakemake.params.europe:
             region = "Europe"
-        elif extracted_country in south_america:
+        elif extracted_country in snakemake.params.south_america:
             region = "South America"
-        elif extracted_country in north_america:
+        elif extracted_country in snakemake.params.north_america:
             region = "North America"
         else:
             region = "?"
         
+        # Return results
         return (region, extracted_country)
     
-    def check_if_genbank_feature(feature):
+    
+    def host_grouper(host):
         """
-        Function to check if a feature is
-        a genbank feature
+        Function to group host species
         """
 
-        genbank_features = [
-            "assembly_gap",
-            "C_region",
-            # "CDS",
-            "centromere",
-            "D-loop",
-            "D_segment",
-            "exon",
-            "gap",
-            "gene",
-            "iDNA",
-            "intron"
-            "J_segment",
-            "mat_peptide",
-            "misc_binding",
-            "misc_difference",
-            "misc_feature",
-            "misc_recomb",
-            "misc_RNA",
-            "misc_structure",
-            "mobile_element",
-            "modified_base",
-            "mRNA",
-            "ncRNA",
-            "N_region",
-            "old_sequence",
-            "operon",
-            "oriT",
-            "polyA_site",
-            "precursor_RNA",
-            "prim_transcript",
-            "primer_bind",
-            "propeptide",
-            "protein_bind",
-            "regulatory",
-            "repeat_region",
-            "rep_origin",
-            "rRNA",
-            "S_region",
-            "sig_peptide",
-            "source",
-            "stem_loop",
-            "STS",
-            "telomere",
-            "tmRNA",
-            "transit_peptide",
-            "tRNA",
-            "unsure",
-            "V_region",
-            "V_segment",
-            "variation",
-            "3'UTR",
-            "5'UTR",
-        ]
+        # Initialize dict and results
+        host_dict = snakemake.params.host_grouper
+        result = "UNKNOWN"
 
-        if feature in genbank_features:
-            return True
+        # Iterate through host dict
+        for grouped_host, host_list in host_dict.items():
+            if host.lower() in host_list:
+                result = grouped_host
+                break
+
+        # Return results
+        return result
+    
+
+    def parse_CDS(raw_CDS_string, sequence):
+        """
+        Function to extract CDS
+        """
+
+        # Extract CDS coordinates
+        temp = re.findall(r"\d+", raw_CDS_string)
+        CDS_coordinates = list(map(int, temp))
+
+        # Check to make sure there is an even number of coordinates
+        assert len(CDS_coordinates) % 2 == 0, "Odd number of coordinates"
+
+        # Intialize CDS string
+        CDS_string = ""
+        n = len(sequence)
+
+        # Make reverse complement of sequence
+        sequence_RC = sequence[::-1] 
+        sequence_RC = sequence_RC.upper()
+        sequence_RC = (
+            sequence_RC
+            .replace("A", "t")
+            .replace("C", "g")
+            .replace("T", "a")
+            .replace("G", "c")
+            .replace("N", "n")
+        )
+
+        # Process each CDS coordinates
+        if "join" in raw_CDS_string and "complement" in raw_CDS_string:
+            for i in range(len(CDS_coordinates)-1, -1, -2):
+                CDS_string += sequence_RC[n - CDS_coordinates[i]:n - CDS_coordinates[i-1] + 1]
+        elif "join" in raw_CDS_string:
+            for i in range(0, len(CDS_coordinates)-1, 2):
+                CDS_string += sequence[CDS_coordinates[i]-1:CDS_coordinates[i+1]]
+        elif "complement" in raw_CDS_string:
+            CDS_string += sequence_RC[n - CDS_coordinates[1]:n - CDS_coordinates[0] + 1]
         else:
-            return False
+            CDS_string += sequence[CDS_coordinates[0]-1:CDS_coordinates[1]]
 
+        return CDS_string
+    
     def virus_grouper(virus):
         """
         Function to group virus
@@ -416,270 +207,11 @@ def read_and_process_accession_list(
             return virus
 
 
-    def host_grouper(host):
-        """
-        Function to group host
-        """
-
-        human_list = ["Homo", "rabies patient"]
-
-        canidae_list = [
-            "dog", 
-            "Dog",
-            "Nyctereutes", 
-            "fox", 
-            "Otocyon", 
-            "Pseudalopex", 
-            "wolf", 
-            "Dusicyon", 
-            "Canis", 
-            "canine", 
-            "jackel", 
-            "jaskal", 
-            "jackal",
-            "Jackal", 
-            "coyote", 
-            "Cerdocyon", 
-            "vulpes", 
-            "Urocyon",
-        ]
-
-        bat_list = [
-            "Myotis", 
-            "myotis",
-            "Nycticeinops", 
-            "Pipistrellus", 
-            "Pteropus", 
-            "Miniopterus", 
-            "Hipposideros", 
-            "Eidolon", 
-            "Eptesicus", 
-            "Artibeus",
-            "Tadarida", 
-            "Desmodus", 
-            "Epomophorus",
-            "Stenodermatinae", 
-            "Nyctinomops", 
-            "Lasiurus",
-            "Nycticeius", 
-            "Lasionycteris", 
-            "Parastrellus",
-            "bat",
-            "Bat",
-            "Corynorhinus", 
-            "Rousettus", 
-            "Histiotus",
-            "Antrozous", 
-            "Chiroptera", 
-            "Molossus",
-            "Eumops", 
-            "Saccolaimus",
-            "Nyctalus", 
-            "Aeorestes",
-            "Carollia",
-            "Dasypterus",
-        ]
-
-        feline_list = [
-            "feline",
-            "Felis",
-            # "cat" == host:
-            "cat;",
-            "Lynx",
-            "domestic cat",
-            "wild cat",
-            "tiger",
-            "Panthera",
-            "bobcat",
-            "bob cat"
-            "puma",
-            "Felidae"
-        ]
-
-        bovidae_list = [
-            "bovine", 
-            "goat", 
-            "cattle",
-            "calf",
-            "Calf",
-            "caprine",
-            "Tragelaphus",
-            "yak",
-            "sheep",
-            "taurus",
-            "cow",
-            "Bubalus",
-            "Ovis",
-            "buffalo",
-            "Buffalo",
-            "Bubaline",
-            "Capra",
-            "nilgai",
-            "ovine",
-            "bull"
-        ]
-
-        musteloidea_list = [
-            "Raccoon",
-            "raccon",
-            "raccoon",
-            "skunk",
-            "marten",
-            "Melogale",
-            "Meles",
-            "Procyon",
-            "Mephitis",
-            "kinkajou",
-            "Bassariscus",
-            "Nasua",
-            "Lontra",
-            "Mephitidae",
-            "Martes",
-            "badger",
-            "Mellivora",
-            "Potos",
-            "Ferret",
-        ]
-
-        rodent_list = [
-            "rodent",
-            "beaver",
-            "woodchuck",
-            "mice",
-            "Mus", 
-            "mouse",
-            "Marmota",
-            "squirrel",
-        ]
-
-        feliformia_list = [
-            "hyena",
-            "Hyena",
-            "mongoose",
-            "mongose",
-            "Galerella",
-            "Civettictis",
-            "Civet",
-            "civet",
-            "Paradoxurus",
-            "Genetta",
-            "Hyaena",
-            "Proteles",
-            "Suricata",
-            "Cynictis",
-            "Atilax",
-        ]
-
-        equidae_list = [
-            "Equus", 
-            "horse", 
-            "mule", 
-            "donkey", 
-            "zebra",
-            "equino", 
-            "equine"
-        ]
-
-        cervidae_list = [
-            "deer",
-            "Deer",
-            "Odocoileus",
-            "Axis",
-            "doe",
-            "elk",
-        ]
-
-        camelidae_list = [
-            "camel",
-            "dromedary"
-        ]
-
-        ursoidea_list = [
-            "bear",
-            "Melursus",
-            "Ursus"
-        ]
-
-        callitrichidae_list = [
-            "Callithrix"
-        ]
-
-        suidae_list = [
-            "Sus"
-        ]
-
-        tayassuidae_list = [
-            "Pecari"
-        ]
-
-        soricidae_list = [
-            "Crocidura"
-        ]
-
-        ameridelphia_list = [
-            "Didelphis"
-        ]
-
-        lab_based_list = [
-            "cell culture", 
-            "vaccine strain",
-        ]
-
-        def check_list(substring_list, word):
-            """
-            Function to check if a word has any
-            matching substrings in a list
-            """
-            for substring in substring_list:
-                if substring in word:
-                    return True
-            return False
-
-        if check_list(human_list, host):
-            return "Human"
-        elif check_list(canidae_list, host):
-            return "Canine"
-        elif check_list(bat_list, host):
-            return "Bat"
-        elif check_list(feline_list, host) or "cat" == host:
-            return "Feline"
-        elif check_list(bovidae_list, host):
-            return "Bovine"
-        elif check_list(feliformia_list, host):
-            return "Feliformia"
-        elif check_list(musteloidea_list, host):
-            return "Musteloidea"
-        elif check_list(rodent_list, host):
-            return "Rodent"
-        elif check_list(equidae_list, host):
-            return "Equine"
-        elif check_list(cervidae_list, host):
-            return "Cervine"
-        elif check_list(camelidae_list, host):
-            return "Camelidae"
-        elif check_list(ursoidea_list, host):
-            return "Ursoidea"
-        elif check_list(callitrichidae_list, host):
-            return "Callitrichidae" 
-        elif check_list(suidae_list, host):
-            return "Suidae" 
-        elif check_list(tayassuidae_list, host):
-            return "Tayassuidae" 
-        elif check_list(soricidae_list, host):
-            return "Soricidae" 
-        elif check_list(ameridelphia_list, host):
-            return "Ameridelphia" 
-        elif check_list(lab_based_list, host):
-            return "Lab based" 
-        else:
-            print(f"Unknown host: {host}")
-            return "?"
-    
-
 
      # Open output files
     output_fasta_file = open(output_fasta_file_name, "w")
     output_metadata_file = open(output_metadata_file_name, "w")
+    log_file = open(output_log_file, "w")
     total_accessions_count = 0
     removed_accessions_count = 0
     seen_sequences = []
@@ -693,11 +225,6 @@ def read_and_process_accession_list(
         "host",
         "accession",
         "date",
-        # For now, just using a single location field
-        # "region",
-        # "country",
-        # "division",
-        # "city",
         "location",
         "region",
         "country",
@@ -718,16 +245,11 @@ def read_and_process_accession_list(
             # Initialize results for metadata
             strain = "MISSING"
             virus = "?"
-            phylogroup = "?"
-            segment = "?"
+            phylogroup = "?",
+            gene = "?"
             host = "?"
             accession = "?"
             date = "?"
-            # For now, just using a single location field
-            # region = ""
-            # country = ""
-            # division = ""
-            # city = ""
             location = "?"
             region = "?"
             country = "?"
@@ -741,7 +263,7 @@ def read_and_process_accession_list(
             sequence_flag = False
             nucleotide_sequence = ""
             curr_CDS = False
-            CDS = (0,0)
+            CDS = ""
             reference_count = 0
             length = 0
             backup_date = ""
@@ -752,7 +274,7 @@ def read_and_process_accession_list(
 
             # Check if accession is to be excluded
             if accession_from_list[:-2] in snakemake.params.accesstions_to_exclude:
-                print(f"{accession_from_list} excluded based on config file!\n")
+                log_file.write(f"{accession_from_list} excluded based on config file!\n")
                 removed_accessions_count += 1
                 continue
 
@@ -763,8 +285,8 @@ def read_and_process_accession_list(
                 rettype="genbank", 
                 retmode="text"
                 )
-            print()
-            print(f"Processing {accession_from_list}")
+            log_file.write("\n")
+            log_file.write(f"Processing {accession_from_list}\n")
             # Parse genbank file line by line to retrieve all metadata
             for line in entrez_genbank:
 
@@ -779,32 +301,28 @@ def read_and_process_accession_list(
                 # Extract current CDS if segment not found and 
                 # CDS does not contain a complement sequence b/c rabies 
                 # should be all from 5' direction
-                if split_line[0] == "CDS" and segment != desired_segment and "complement" not in line:
-                    CDS = (
-                        int(line.split(" ")[1].split("..")[0].replace(">", "").replace("<", "")), 
-                        int(line.split(" ")[1].split("..")[1].replace(">", "").replace("<", ""))
-                    )
+                if split_line[0] == "CDS" and gene != desired_gene:
+                    CDS = line.split(" ")[1]
                     curr_CDS = True
 
                 # Extract CDS products and determine which segment they come from
-                if "/product" in line and curr_CDS and segment != desired_segment:
-                    curr_product = line.replace("\n", "").replace("\"", "").split("=")[1]
-                    if "glycoprotein" in curr_product:
-                        segment = "G"
-                    elif "Glycoprotein" in curr_product:
-                        segment = "G"
-                    elif "G protein" in curr_product:
-                        segment = "G"
-                    elif "g protein" in curr_product:
-                        segment = "G"
-                    elif "Protein G" in curr_product:
-                        segment = "G"
-                    elif "G" == curr_product:
-                        segment = "G"
+                if desired_gene != None and ("/product" in line or "/gene" in line) and curr_CDS and gene != desired_gene:
+                    gene = line.replace("\n", "").replace("\"", "").split("=")[1].upper()
+                    def check_list(string_list, word):
+                        """
+                        Function to check if a word has any
+                        matching strings in a list
+                        """
+                        for substring in string_list:
+                            if substring == word:
+                                return True
+                        return False
+
+                    if check_list(snakemake.params.gene_names, gene):
+                        log_file.write(f"{gene} is {desired_gene}!\n")
+                        gene = desired_gene
                     else:
-                        print(f"ERROR: {curr_product} product not known or not {desired_segment}")
-
-
+                        log_file.write(f"ERROR: {gene} product not known or not {desired_gene}\n")
 
                 # Extract feature information from genbank file
                 if features_flag == True:
@@ -818,9 +336,15 @@ def read_and_process_accession_list(
                         phylo_and_virus = virus_grouper(line.replace("\n", "").replace("\"", "").split("=")[1])
                         virus = phylo_and_virus[1]
                         phylogroup = phylo_and_virus[0]
-                    if "/host" in line:
-                        host = host_grouper(line.replace("\n", "").replace("\"", "").split("=")[1])
-                    if "/country" in line or "/geo_loc_name" in line:
+                    if "/host" in line or "/lab_host" in line:
+                        host = line.replace("\n", "").replace("\"", "").split("=")[1].split(";")[0]
+                        grouped_host = host_grouper(host)
+                        if grouped_host == "UNKNOWN":
+                            log_file.write(f"{host} not unknown!\n")
+                            host = "?"
+                        else:
+                            host = grouped_host
+                    if "/geo_loc_name" in line:
                         # For now, just using a single location field
                         location = line.replace("\n", "").replace("\"", "").split("=")[1]
                         region_and_country = country_extraction(location)
@@ -835,11 +359,10 @@ def read_and_process_accession_list(
                                 date = datetime.datetime.strptime(unformatted_date, "%Y").strftime("%Y") + "-XX-XX"
                         elif len(unformatted_date.split("-")) == 2:
                             for fmt in ["%b-%Y", "%Y-%m"]:
-                                test_res = True
                                 try:
                                     datetime.datetime.strptime(unformatted_date, fmt).strftime("%Y-%m") + "-XX"
                                 except:
-                                    print(f"ERROR! {unformatted_date} not recongized as {fmt}")
+                                    log_file.write(f"ERROR! {unformatted_date} not recongized as {fmt}\n")
                                     continue
                                 else:
                                     date = datetime.datetime.strptime(unformatted_date, fmt).strftime("%Y-%m") + "-XX"
@@ -849,13 +372,13 @@ def read_and_process_accession_list(
                                 try:
                                     datetime.datetime.strptime(unformatted_date, fmt).strftime("%Y-%m-%d")
                                 except:
-                                    print(f"ERROR! {unformatted_date} not recongized as {fmt}")
+                                    log_file.write(f"ERROR! {unformatted_date} not recongized as {fmt}\n")
                                     continue
                                 else:
                                     date = datetime.datetime.strptime(unformatted_date, fmt).strftime("%Y-%m-%d")
                                     break
                         else:
-                            print("Datetime not between 1 and 3")
+                            log_file.write("Datetime not between 1 and 3\n")
 
                 # Extract nucleotide sequence
                 if sequence_flag == True and split_line[0] != "//": 
@@ -873,13 +396,13 @@ def read_and_process_accession_list(
                             try:
                                 datetime.datetime.strptime(unformatted_backup_date, fmt).strftime("%Y-%m-%d")
                             except:
-                                print(f"ERROR! {unformatted_backup_date} not recongized as {fmt}")
+                                log_file.write(f"ERROR! {unformatted_backup_date} not recongized as {fmt}\n")
                                 continue
                             else:
                                 backup_date = datetime.datetime.strptime(unformatted_backup_date, fmt).strftime("%Y-%m-%d")
                                 break
                     else:
-                        print("Datetime not between 1 and 3")
+                        log_file.write("Datetime not between 1 and 3\n")
                     # Get sequence length
                     length = int(split_line[2])
                     continue
@@ -896,6 +419,7 @@ def read_and_process_accession_list(
                     continue
                 if split_line[0] == "AUTHORS" and reference_count == 1:
                     authors = split_line[1].split(",")[0] + " et al"
+                    authors = authors.replace("\n", "")
                     continue
                 if split_line[0] == "TITLE" and reference_count == 1:
                     title = " ".join(split_line[1:]).replace("\n", "")
@@ -913,32 +437,40 @@ def read_and_process_accession_list(
                 if split_line[0] == "ORIGIN":
                     sequence_flag = True # Set sequence flag to extract nucleotide sequence
                     continue
+
+            # Check if sequence is within the desired phylogroups
+            if phylogroup not in snakemake.params.phylogroups and accession_from_list[:-2] not in snakemake.params.accessions_to_include:
+                log_file.write(f"{accession_from_list} excluded because virus is in phylogroup {phylogroup}!\n")
+                removed_accessions_count += 1
+                continue
             
             # Check length of sequence and do not add if below threshold
             if length < length_threshold[0] or length > length_threshold[1]:
-                print(f"{accession_from_list} excluded because {length} not within length limits!\n")
+                log_file.write(f"{accession_from_list} excluded because {length} not within length limits!\n")
                 removed_accessions_count += 1
                 continue
 
-            # Check if only specific segments should be kept
-            if desired_segment != None and segment != desired_segment:
-                print(f"{accession_from_list} excluded because {segment} is not the desired segment ({desired_segment})!\n")
+            # Check if only specific genes should be kept
+            if desired_gene != None and gene != desired_gene:
+                log_file.write(f"{accession_from_list} excluded because {gene} is not the desired gene ({desired_gene})!\n")
                 removed_accessions_count += 1
                 continue
 
             # Check if CDS was found else extract CDS from full sequence
-            if segment == desired_segment and CDS == (0,0):
-                print(f"{accession_from_list} excluded because no CDS was found!\n")
+            if gene == desired_gene and CDS == "":
+                log_file.write(f"{accession_from_list} excluded because no CDS was found!\n")
                 removed_accessions_count += 1
                 continue
             else:
-                print(f"CDS found between {CDS}!")
-                nucleotide_sequence = nucleotide_sequence[CDS[0]-1 : CDS[1]]
-                # Remove duplicate sequences
+                # Extract CDS sequence
+                if desired_gene != None:
+                    log_file.write(f"CDS found: {CDS}\n")
+                    nucleotide_sequence = parse_CDS(CDS, nucleotide_sequence)
+
                 if remove_duplicates == "Yes":
                     # Check if nulceotide sequence is a duplicate
-                    if nucleotide_sequence in seen_sequences:
-                        print(f"{accession_from_list} excluded because duplicate sequence!\n")
+                    if nucleotide_sequence in seen_sequences and accession_from_list[:-2] not in snakemake.params.accessions_to_include:
+                        log_file.write(f"{accession_from_list} excluded because duplicate sequence!\n")
                         removed_accessions_count += 1
                         continue
                     else:
@@ -949,8 +481,8 @@ def read_and_process_accession_list(
                 date = backup_date
 
             # Check if sequence is below ambiguous base threshold
-            if nucleotide_sequence.upper().count("N")/length > snakemake.params.max_frac_N:
-                print(f"{accession_from_list} excluded because of high N count!\n")
+            if nucleotide_sequence.upper().count("N")/len(nucleotide_sequence) > snakemake.params.max_frac_N:
+                log_file.write(f"{accession_from_list} excluded because of high N count!\n")
                 removed_accessions_count += 1
                 continue
             
@@ -969,23 +501,15 @@ def read_and_process_accession_list(
             # Make sure every sequence has a fasta strain name
             assert strain != "MISSING", "Virus strain name is missing"
 
-            # Check if segment is labeled and label if products are known
-            assert segment != "?", "Segment is missing!"
-
             # Create new metadata line
             new_metadata_line = "\t".join([
                 strain,
                 virus,
                 phylogroup,
-                segment,
+                gene,
                 host,
                 accession,
                 date,
-                # For now, just using a single location field
-                # region,
-                # country,
-                # division,
-                # city,
                 location,
                 region,
                 country,
@@ -1005,13 +529,14 @@ def read_and_process_accession_list(
             output_fasta_file.write(f">{strain}\n")
             output_fasta_file.write(f"{nucleotide_sequence}\n")
 
-    print()
-    print(f"A total of {total_accessions_count} were processed and ")
-    print(f"{total_accessions_count-removed_accessions_count} were retained!\n")   
+    log_file.write("\n")
+    log_file.write(f"A total of {total_accessions_count} were processed and ")
+    log_file.write(f"{total_accessions_count-removed_accessions_count} were retained!\n")   
     # Close files
     input_file.close()
     output_fasta_file.close()
     output_metadata_file.close()
+    log_file.close()
 
 
 def main():
@@ -1028,20 +553,22 @@ def main():
     )
     # Empty String to None Conversion
     None_conversion = lambda i : i or None
-    desired_segment = None_conversion(str(snakemake.params.desired_segment))
+    desired_gene = None_conversion(str(snakemake.params.desired_gene))
     remove_duplicates = str(snakemake.params.remove_duplicates)
 
     # Output files
     fasta_output = str(snakemake.output.fasta_sequences) 
-    metadata_output = str(snakemake.output.metadata) 
+    metadata_output = str(snakemake.output.metadata)
+    output_log_file = str(snakemake.log)
 
     read_and_process_accession_list(
         list_of_accessions, 
         fasta_output, 
         metadata_output, 
         length_threshold, 
-        desired_segment,
         remove_duplicates,
+        desired_gene,
+        output_log_file,
         )
 
 

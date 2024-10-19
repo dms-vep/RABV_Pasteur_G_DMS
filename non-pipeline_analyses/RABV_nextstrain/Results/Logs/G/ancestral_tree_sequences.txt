@@ -1,0 +1,7 @@
+
+Inferred ancestral sequence states using TreeTime:
+	Sagulenko et al. TreeTime: Maximum-likelihood phylodynamic analysis
+	Virus Evolution, vol 4, https://academic.oup.com/ve/article/4/1/vex042/4794731
+
+augur ancestral is using TreeTime version 0.11.4
+ancestral mutations written to Results/G/Trees/tree_muts.json

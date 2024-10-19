@@ -64,10 +64,13 @@ def main():
     output_tree = str(snakemake.output.tree)
     output_protein_alignment = str(snakemake.output.protein_alignment)
     output_codon_alignment = str(snakemake.output.codon_alignment)
+    output_log_file = str(snakemake.log)
 
     # Params
     outgroup = str(snakemake.params.outgroup)
 
+    # Initialize log file
+    log_file = open(output_log_file, "w")
 
     # Root tree without group and remove outgroup
     root_and_remove_outgroup(input_tree, output_tree, outgroup)
@@ -75,6 +78,11 @@ def main():
     # Remove outgroup from alignments
     remove_sequence_from_alignment(input_protein_alignment, output_protein_alignment, outgroup)
     remove_sequence_from_alignment(input_codon_alignment, output_codon_alignment, outgroup)
+
+    log_file.write(f"Successfully rooted tree with {outgroup} and removed {outgroup} from alignments\n")
+
+    # Close files
+    log_file.close()
 
 
 if __name__ == "__main__":

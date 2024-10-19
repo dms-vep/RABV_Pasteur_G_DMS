@@ -9,16 +9,18 @@
 rule get_protein_sequences:
     """
     This rule runs EMBOSS getorf to extract 
-    amino acid sequences for GPC segment. 
+    amino acid sequences. 
     """
     input:
-        sequences = config["Nucleotide_sequences"],
+        sequences = "Results/{gene}/nucleotide.fasta",
     params:
-        config["Min_ORF_threshold"],
+        min_ORF_size = lambda wildcards: config["ORF_min_size"][wildcards.gene],
     output:
-        config["Protein_sequences_temp"],
+        "Results/{gene}/ORF_sequences/protein_temp.fasta",
     conda:
         "../environment.yml",
+    log:
+        "Results/Logs/{gene}/get_protein_sequences.txt",
     shell:
         # The '-sequence' flag signals for the input file
         # while the '-outseq' file signals for the output 
@@ -27,22 +29,24 @@ rule get_protein_sequences:
         # The '-minsize' flag means minimum nucleotide size of 
         # ORF to report. The '-reverse' flag signals if ORFs on 
         # the reverse strand should be found as well. 
-        "getorf -sequence {input.sequences} -outseq {output} -find 1 -minsize {params} -reverse No -verbose"
+        "getorf -sequence {input.sequences} -outseq {output} -find 1 -minsize {params.min_ORF_size} -reverse No -verbose &> {log}"
 
 
 rule get_codon_sequences:
     """
     This rule runs EMBOSS getorf to extract 
-    codon sequences for G. 
+    codon sequences. 
     """
     input:
-        sequences = config["Nucleotide_sequences"],
+        sequences = "Results/{gene}/nucleotide.fasta",
     params:
-        config["Min_ORF_threshold"],
+        min_ORF_size = lambda wildcards: config["ORF_min_size"][wildcards.gene],
     output:
-        config["Codon_sequences_temp"],
+        "Results/{gene}/ORF_sequences/codon_temp.fasta",
     conda:
         "../environment.yml",
+    log:
+        "Results/Logs/{gene}/get_codon_sequences.txt",
     shell:
         # The '-sequence' flag signals for the input file
         # while the '-outseq' file signals for the output 
@@ -51,22 +55,22 @@ rule get_codon_sequences:
         # The '-minsize' flag means minimum nucleotide size of 
         # ORF to report. The '-reverse' flag signals if ORFs on 
         # the reverse strand should be found as well. 
-        "getorf -sequence {input.sequences} -outseq {output} -find 3 -minsize {params} -reverse No -verbose"
+        "getorf -sequence {input.sequences} -outseq {output} -find 3 -minsize {params.min_ORF_size} -reverse No -verbose &> {log}"
 
 
 rule check_number_ORFs_found:
     """
     This rule checks both the amino acid
     and codon fastas to verify there is a 
-    one-to-one mapping from G nucleotide
+    one-to-one mapping from nucleotide
     seqeunce to protein and codon sequences. 
     """
     input:
-        nucleotide = config["Nucleotide_sequences"],
-        protein = config["Protein_sequences_temp"],
-        codon = config["Codon_sequences_temp"],
+        nucleotide = "Results/{gene}/nucleotide.fasta",
+        protein = "Results/{gene}/ORF_sequences/protein_temp.fasta",
+        codon = "Results/{gene}/ORF_sequences/codon_temp.fasta",
     output:
-        config["Sequence_verification_log"]
+        "Results/{gene}/ORF_sequences/ORF_extraction_verification.txt"
     conda:
         "../environment.yml",
     script:
@@ -80,11 +84,13 @@ rule edit_protein_fasta_headers:
     getorf.
     """
     input: 
-        sequences = config["Protein_sequences_temp"],
+        sequences = "Results/{gene}/ORF_sequences/protein_temp.fasta",
     output:
-        sequences = config["Protein_sequences"],
+        sequences = "Results/{gene}/ORF_sequences/protein.fasta",
     conda:
         "../environment.yml",
+    log:
+        "Results/Logs/{gene}/edit_protein_fasta_headers.txt",
     script:
         "../Scripts/edit_fasta_headers.py"
 
@@ -96,10 +102,12 @@ rule edit_codon_fasta_headers:
     getorf.
     """
     input: 
-        sequences = config["Codon_sequences_temp"],
+        sequences = "Results/{gene}/ORF_sequences/codon_temp.fasta",
     output:
-        sequences = config["Codon_sequences"],
+        sequences = "Results/{gene}/ORF_sequences/codon.fasta",
     conda:
         "../environment.yml",
+    log:
+        "Results/Logs/{gene}/edit_codon_fasta_headers.txt",
     script:
         "../Scripts/edit_fasta_headers.py"

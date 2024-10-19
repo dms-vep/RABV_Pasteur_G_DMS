@@ -22,37 +22,23 @@ include: "Rules/align_sequences.smk"
 include: "Rules/augur_processing.smk"
 include: "Rules/calculate_sequence_variation.smk"
 
+GENES = [
+    "G",
+]
+
 # Output files
 rule all:
     """ 
     This rule controls all the output files expected from the workflow. 
     """
     input:
-        # Metadata
-        config["Metadata"],
-        # Fasta sequences
-        config["Nucleotide_sequences"],
-        # ORF files
-        config["Sequence_verification_log"],
-        config["Protein_sequences"],
-        config["Codon_sequences"],
-        # Alignment files
-        config["Protein_alignment"],
-        config["Codon_alignment"],
-        config["Ungapped_protein_alignment"],
-        config["Ungapped_codon_alignment"],
-        # Raw tree files
-        config["Nucleotide_raw_tree"],
-        # Tree files
-        config["Nucleotide_tree"],
-        config["Nucleotide_tree_nodes"],
-        config["Nucleotide_tree_traits"],
-        config["Nucleotide_tree_mutations"],
-        config["Nucleotide_AA_mutations"],
-        # Exported Auspice file
-        config["Auspice_tree"],
+        # ORF extraction log
+        expand("Results/{gene}/ORF_sequences/ORF_extraction_verification.txt", gene=GENES),
+        # Auspice
+        expand("auspice/{gene}.json", gene=GENES),
         # Natural variation
-        config["Glycoprotein_variation"],
+        expand("Results/{gene}/Alignments/{gene}_natural_variation.fasta", gene=GENES)
+
 
 # Make DAG of rule execution
 rule make_DAG:

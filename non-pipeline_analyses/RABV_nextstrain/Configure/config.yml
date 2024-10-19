@@ -1,10 +1,10 @@
 #################################################---START INPUT DATA---#######################################################
 
 # List of accessions file
-Accession_list: Configure/Input_Data/all_RABV_accessions_062024.txt
+Accession_list: Configure/Input_Data/all_RABV_accessions_101824.txt
 
 # Reference genbanks
-Reference_genbank: Configure/Input_Data/RABV_G_protein_reference_NC_001542.gb
+Reference_genbank: Configure/Input_Data/RABV_reference_NC_001542.gb
 Reference_accession: NC_001542
 
 # Outgroup for rooting tree
@@ -17,13 +17,20 @@ Genome_size_threshold_lower: 1500
 Genome_size_threshold_upper: 13000
 # Minimum size ORF when translating to protein
 # G is ~ 1.5kb
-Min_ORF_threshold: 1500 # 500 amino acids
+# ORF minumum size
+ORF_min_size:
+  G: 1500 # 500 amino acids
 
 # Maximum fraction of ambiuous bases allowed
-max_frac_N: 0
+max_frac_N: 
+  genes: 0
 
 # Remove duplicates 'Yes' or 'No'
-Remove_duplicates: 'Yes'
+Remove_duplicates: 'No'
+
+# Which phylogroups to keep
+Phylogroups: 
+  - I
 
 # Sequences to remove
 Accessions_to_exclude: 
@@ -37,9 +44,26 @@ Accessions_to_exclude:
   - MK540899 # Insertion near start codon messes up alignment
   - MF197745 # Outlier rabies sequence
 
+# Sequences to make sure are included
+Accessions_to_include:
+  - NC_001542
+  - NC_031988
 
-# Strains to drop during Augur processing
-Dropped_strains: Configure/Input_Data/dropped_strains.txt
+# Gene name groupings
+Gene_groupings:
+  G:
+    - RABVgp4 # reference label
+    - GLYCOPROTEIN
+    - GLYCOPROTEIN G
+    - TRANSMEMBRANE GLYCOPROTEIN
+    - TRANSMEMBRANE GLYCOPROTEIN G
+    - GLYCOPROTEIN ECTODOMAIN
+    - GLYCOPROTEIN PRECURSOR
+    - ANTIGENIC GLYCOPROTEIN
+    - G
+    - G PROTEIN
+    - GLYCOPROTEIN-PRECURSOR
+
 
 # Auspice configuration
 Auspice_config: Configure/Input_Data/auspice_config.json
@@ -47,63 +71,1845 @@ Color_schemes: Configure/Input_Data/color_schemes.tsv
 Color_orderings: Configure/Input_Data/color_orderings.tsv
 Lat_longs: Configure/Input_Data/lat_longs.tsv
 
-# DMSA phenotype prediction
-# dictionary of phenotype collections
-# each collection has a name and a set of parameters
-# For a number of individual experiemnts.
-dmsa_phenotype_collections:
-  all-antibodies:
-    # directory containing escape csv's
-    mut_effects_dir: "../../results/filtered_antibody_escape_CSVs"
-    # name of the column containing the effect score
-    mut_effect_col: "floored_escape"
-    # name of the column containing the mutation
-    mutation_col: "natural_sequence_mutation"
+# Antibody escape data:
+Antibody_escape_files:
+  17C7: ../../results/filtered_antibody_escape_CSVs/17C7_filtered_mut_effects.csv
+  CR4098: ../../results/filtered_antibody_escape_CSVs/CR4098_filtered_mut_effects.csv
+  CR57: ../../results/filtered_antibody_escape_CSVs/CR57_filtered_mut_effects.csv
+  CTB012: ../../results/filtered_antibody_escape_CSVs/CTB012_filtered_mut_effects.csv
+  RVA122: ../../results/filtered_antibody_escape_CSVs/RVA122_filtered_mut_effects.csv
+  RVC20: ../../results/filtered_antibody_escape_CSVs/RVC20_filtered_mut_effects.csv
+  RVC58: ../../results/filtered_antibody_escape_CSVs/RVC58_filtered_mut_effects.csv
+  RVC68: ../../results/filtered_antibody_escape_CSVs/RVC68_filtered_mut_effects.csv
+# Antibody escape prediction parameters
+Antibody_escape_prediction_params:
+  Reference_DMS_strain: "NC_001542_2018-08-13" # name of reference DMS strain
+  Mut_effect_col: "floored_escape" # name of the column containing the effect score
+  Mutation_col: "natural_sequence_mutation" # name of the column containing the mutation
+  Antibody_escape_filter_params: 
+    phylogroup: "I"
+
+Auspice_tree_titles:
+  G: "'Natural diversity of the Rabies glycoprotein'"
 
 #################################################---END INPUT DATA---#########################################################
 
-#################################################---START OUTPUT DATA---######################################################
+#################################################---START DATA GROUPINGS---###################################################
 
-# Metadata output
-Metadata: Results/metadata.tsv
+Asia:
+  - Israel
+  - Palestine
+  - Lebanon
+  - Jordan
+  - Syria
+  - Georgia
+  - Iraq
+  - Armenia
+  - Saudi Arabia
+  - Kuwait
+  - Yemen
+  - Bahrain
+  - Qatar
+  - Iran
+  - United Arab Emirates
+  - Oman
+  - Uzbekistan
+  - Afghanistan
+  - Kazakhstan
+  - Pakistan
+  - Tajikistan
+  - Maldives
+  - Kyrgyzstan
+  - India
+  - Sri Lanka
+  - Nepal
+  - Asia
+  - Bangladesh
+  - Myanmar
+  - Thailand
+  - Malaysia
+  - Mongolia
+  - Laos
+  - Singapore
+  - China
+  - Cambodia
+  - Vietnam
+  - Hong Kong
+  - Indonesia
+  - Brunei
+  - Taiwan
+  - Philippines
+  - Timor-Leste
+  - South Korea
+  - Japan
 
-# Fasta nucelotide file ouput
-Nucleotide_sequences: Results/G_nucleotide.fasta
+Oceania:
+  - French Polynesia
+  - Palau
+  - Australia
+  - Papua New Guinea
+  - Oceania
+  - Micronesia
+  - Solomon Islands
+  - Vanuatu
+  - Marshall Islands
+  - New Zealand
+  - Kiribati
+  - Fiji
 
-# Open reading frame sequences
-Protein_sequences_temp: Results/ORF_sequences/G_protein_temp.fasta
-Codon_sequences_temp: Results/ORF_sequences/G_nucleotide_temp.fasta
-Sequence_verification_log: Results/ORF_sequences/ORF_extraction_verification.txt
-Protein_sequences: Results/ORF_sequences/G_protein.fasta
-Codon_sequences: Results/ORF_sequences/G_nucleotide.fasta
+Africa:
+  - Cabo Verde
+  - Gambia
+  - Guinea-Bissau
+  - Senegal
+  - Sierra Leone
+  - Guinea
+  - Liberia
+  - Mauritania
+  - CÃ´te d'Ivoire
+  - Morocco
+  - Mali
+  - Burkina Faso
+  - Ghana
+  - Togo
+  - Benin
+  - Algeria
+  - Sao Tome and Principe
+  - Nigeria
+  - Tunisia
+  - Niger
+  - Equatorial Guinea
+  - Gabon
+  - Cameroon
+  - Republic of the Congo
+  - Libya
+  - Namibia
+  - Angola
+  - Chad
+  - Central African Republic
+  - Democratic Republic of the Congo
+  - Africa
+  - Botswana
+  - South Africa
+  - Zambia
+  - Lesotho
+  - Sudan
+  - South Sudan
+  - Zimbabwe
+  - Burundi
+  - Rwanda
+  - Egypt
+  - Eswatini
+  - Uganda
+  - Malawi
+  - Mozambique
+  - Tanzania
+  - Kenya
+  - Ethiopia
+  - Djibouti
+  - Union of the Comoros
+  - Madagascar
+  - Somalia
+  - Seychelles
+  - Mauritius
 
-# Alignments
-Protein_alignment: Results/Alignments/G_protein_alignment.fasta
-Codon_alignment: Results/Alignments/G_codon_alignment.fasta
-Ungapped_protein_alignment: Results/Alignments/G_protein_alignment_ungapped.fasta
-Ungapped_codon_alignment: Results/Alignments/G_codon_alignment_ungapped.fasta
-Ungapped_protein_alignment_no_outgroup: Results/Alignments/G_protein_alignment_ungapped_no_outgroup.fasta
-Ungapped_codon_alignment_no_outgroup: Results/Alignments/G_codon_alignment_ungapped_no_outgroup.fasta
+Europe:
+  - Iceland
+  - Portugal
+  - Ireland
+  - Spain
+  - United Kingdom
+  - Andorra
+  - France
+  - Belgium
+  - Netherlands
+  - Luxembourg
+  - Monaco
+  - Switzerland
+  - Norway
+  - Denmark
+  - Liechtenstein
+  - Germany
+  - Europe
+  - Italy
+  - Malta
+  - Slovenia
+  - Sweden
+  - Austria
+  - Croatia
+  - Czech Republic
+  - Bosnia and Herzegovina
+  - Poland
+  - Slovakia
+  - Montenegro
+  - Albania
+  - Hungary
+  - Serbia
+  - Kosovo
+  - North Macedonia
+  - Greece
+  - Lithuania
+  - Romania
+  - Bulgaria
+  - Latvia
+  - Estonia
+  - Finland
+  - Belarus
+  - Moldova
+  - Ukraine
+  - Cyprus
+  - Turkey
+  - Azerbaijan
+  - Russia
 
-# Raw tree files
-Nucleotide_raw_tree: Results/G_tree_raw.nwk
-Nucleotide_raw_tree_without_outgroup: Results/G_tree_raw_no_outgroup.nwk
+South America:
+  - Argentina
+  - Uruguay
+  - Chile
+  - Paraguay
+  - Bolivia
+  - South America
+  - Brazil
+  - Peru
+  - Ecuador
+  - Colombia
+  - Suriname
+  - Guyana
+  - Venezuela
+  - Trinidad and Tobago
+  - Bonaire
+  - Curacao
+  - Aruba
 
-# Tree files
-Nucleotide_tree: Results/G_tree.nwk
-Nucleotide_tree_nodes: Results/G_branch_lengths.json
-Nucleotide_tree_traits: Results/G_traits.json
-Nucleotide_tree_mutations: Results/G_muts.json
-Nucleotide_AA_mutations: Results/G_aa_muts.json
+North America:
+  - Panama
+  - Costa Rica
+  - Grenada
+  - Nicaragua
+  - Saint Vincent and the Grenadines
+  - Barbados
+  - El Salvador
+  - Saint Lucia
+  - Honduras
+  - Dominica
+  - Guatemala
+  - Guadeloupe
+  - Belize
+  - Antigua and Barbuda
+  - Saint Kitts and Nevis
+  - Saint BarthÃ©lemy
+  - Sint Maarten
+  - Saint Martin
+  - Jamaica
+  - Dominican Republic
+  - Haiti
+  - Mexico
+  - Cuba
+  - Bahamas
+  - North America
+  - Bermuda
+  - USA
+  - Canada
 
-# Gene translations
-Gene_AA_alignments: Results/Augur_AA_Alignements/Glycoprotein.fasta
+#################################################---END DATA GROUPINGS---#####################################################
 
-# Entropy and effective amino acid varation
-Glycoprotein_variation: Results/G_variation.csv
+#################################################---START GENBANK FEATURES---#################################################
 
-# Exported Aupsice file
-Colors: Results/Auspice/colors.tsv
-Auspice_tree: Results/Auspice/G.json
+Genbank_features:
+  - assembly_gap
+  - C_region
+  - CDS
+  - centromere
+  - D-loop
+  - D_segment
+  - exon
+  - gap
+  - gene
+  - iDNA
+  - intron
+  - J_segment
+  - mat_peptide
+  - misc_binding
+  - misc_difference
+  - misc_feature
+  - misc_recomb
+  - misc_RNA
+  - misc_structure
+  - mobile_element
+  - modified_base
+  - mRNA
+  - ncRNA
+  - N_region
+  - old_sequence
+  - operon
+  - oriT
+  - polyA_site
+  - precursor_RNA
+  - prim_transcript
+  - primer_bind
+  - propeptide
+  - protein_bind
+  - regulatory
+  - repeat_region
+  - rep_origin
+  - rRNA
+  - S_region
+  - sig_peptide
+  - source
+  - stem_loop
+  - STS
+  - telomere
+  - tmRNA
+  - transit_peptide
+  - tRNA
+  - unsure
+  - V_region
+  - V_segment
+  - variation
+  - 3'UTR
+  - 5'UTR
 
-#################################################---END OUTPUT DATA---########################################################
+#################################################---END GENBANK FEATURES---###################################################
+#################################################---START HOST GROUPINGS---###################################################
+
+# Adapted from https://animaldiversity.org
+Host_grouper:
+  Human:
+    - homo sapiens
+    - humans
+    - human
+    - patient
+    - rabies patient
+    - homo sapiens 9 years old male 
+    - homo sapiens 66 years old male 
+    - homo sapiens 13 years old male 
+    - homo sapiens 60 years old female 
+    - homo sapiens 70 years old male 
+    - homo sapiens 10 years old male 
+    - homo sapiens 45 years old male 
+    - homo sapiens 10 years old male 
+    - homo sapiens 11 years old female 
+    - homo sapiens 3 years old male 
+    - homo sapiens 44 years old female 
+    - homo sapiens 73 years old female 
+    - homo sapiens 9 years old female 
+    - homo sapiens 42 years old male 
+    - homo sapiens 4 years old male 
+    - homo sapiens 35 years old male 
+    - homo sapiens 31 years old female 
+    - homo sapiens 59 years old male 
+    - homo sapiens 61 years old female 
+    - homo sapiens 71 years old male 
+    - homo sapiens 45 years old male 
+    - homo sapiens 24 years old male 
+    - homo sapiens 3 years old male 
+    - homo sapiens 14 years old male 
+    - homo sapiens 30 years old male 
+    - homo sapiens 74 years old male 
+    - homo sapiens 73 years old male 
+    - homo sapiens 32 years old male 
+    - homo sapiens 48 years old male 
+    - homo sapiens 62 years old female 
+    - homo sapiens 67 years old male 
+    - homo sapiens 65 years old female 
+    - homo sapiens 65 years old male 
+    - homo sapiens 16 years old male 
+    - homo sapiens 55 years old male 
+    - homo sapiens 52 years old male 
+    - homo sapiens 46 years old female 
+    - homo sapiens male 
+    - homo sapiens 45 years old male 
+    - homo sapiens 65 years old male 
+    - homo sapiens 78 years old female 
+    - homo sapiens 8 years old male 
+    - homo sapiens 30 years old female 
+    - homo sapiens 35 years old female 
+    - homo sapiens 32 years old male 
+    - homo sapiens 8 years old male 
+    - homo sapiens 42 years old male 
+
+  Lab based:
+    - cell culture
+    - vaccine strain
+    - attenuated rabies virus vaccine strain
+    - avirulent vaccine strain; maintained in BHK-21
+    - one-day-egg
+    - bhk21 cells
+    - bhk-21 cells
+    - bhk-21
+    - mus musculus mna cell
+    - chlorocebus aethiops vero cell
+    - c1300/bhk-21
+    - neuro-2a (na) cell
+    - chick embryo cell
+    - bsr
+    - mus musculus, mna cell line
+    - vero
+    - vero cell
+    - vero cells
+    - infected bhk-21 cells
+    - mna cells
+    - mouse neuroblastoma cells of a/j mouse origin
+
+  Non-human primates:
+    - chlorocebus aethiops
+    - callithrix sp. 
+    - simiiformes 
+    - primates 
+    - papio ursinus 
+    - callithrix jacchus 
+    - sapajus apella 
+    - marmosets 
+    - monkey
+    - primate
+
+
+  # # Order
+  # Carnivora:
+  # # Suborder
+  # Caniformia:
+  # Family
+  Ailuridae:
+  # red panda
+    - ailuridae
+    - ailurus
+    - red panda
+  Canidae:
+  # coyotes, dogs, foxes, jackals, and wolves
+  #  and common names
+    - canis lupus familiaris
+    - dog
+    - dogs
+    - canine (dog)
+    - domestic dog
+    - canis lupus familiaris (dog)
+    - canis familiaris
+    - canis
+    - canine
+    - canidae
+    - canis lupus familiaris brain
+    - south american dog
+    - nigerian dog
+    - african dog
+    - north african dog
+    - sri lankan dog
+    - african canid
+    - us coyote
+    - canis aureus
+    - canis lupus
+    - canis lupus pallipes
+    - canis sp.
+    - canis mesomelas
+    - canis adustus
+    - canis simensis
+    - atelocynus 
+    - short-eared dog
+    - canis
+    - canis latrans
+    - dogs, jackals, and wolves
+    - jackel
+    - jackal
+    - side-stripped jackal
+    - black backed jackal
+    - black-backed jackal
+    - golden jackal
+    - cerdocyon
+    - cerdocyon thous
+    - crab-eating fox
+    - c. thous
+    - chrysocyon
+    - chrysocyon brachyurus
+    - maned wolf
+    - cuon
+    - dhole
+    - dusicyon
+    - falkland island wolf
+    - wolf
+    - lycalopex
+    - lycalopex vetulus
+    - south american foxes
+    - lycaon
+    - lycaon pictus
+    - african wild dog
+    - nyctereutes
+    - nyctereutes procyonoides
+    - raccoon dog
+    - racoon dog
+    - raccoon_dog
+    - nyctereutes sp.
+    - otocyon
+    - otocyon megalotis
+    - bat-eared fox
+    - pseudalopex
+    - south american foxes
+    - speothos
+    - bush dog
+    - urocyon
+    - urocyon cinereoargenteus
+    - gray foxes
+    - red fox
+    - vulpes
+    - corsac fox
+    - polar fox
+    - vulpes vulpes
+    - vulpes corsac
+    - vulpes lagopus
+    - vulpes chama
+    - vulpes vulpes (red fox)
+    - foxes
+    - dog
+    - jackal
+    - fox
+    - coyote
+    - arctic fox
+    - gray fox
+  Mephitidae:
+  # skunks and stink badgers
+    - mephitidae
+    - conepatus
+    - hog-nosed skunks
+    - mephitis
+    - mephitis mephitis
+    - mephitis macroura
+    - hooded skunk and striped skunk
+    - mydaus
+    - stink badgers
+    - spilogale
+    - spilogale putorius
+    - spotted skunks 
+    - skunk
+    - spotted skunk
+    - skunk (species unknown)
+    - striped skunk
+    - western canada skunk
+  Mustelidae:
+  # badgers, otters, weasels, and relatives
+    - mustelidae
+    - amblonyx
+    - oriental small-clawed otter
+    - aonyx
+    - clawless otters
+    - enhydra
+    - sea otter
+    - hydrictis
+    - spotted-necked otter
+    - lontra
+    - lontra canadensis
+    - american river otters
+    - lutra
+    - old world river otters
+    - lutrogale
+    - smooth-coated otter
+    - pteronura
+    - giant otter
+    - lutrinae
+    - arctonyx
+    - hog badger
+    - eira
+    - tayra
+    - galictis
+    - grisons
+    - gulo
+    - wolverines
+    - ictonyx
+    - striped polecats
+    - lyncodon
+    - patagonian weasel
+    - martes
+    - martes foina
+    - martes flavigula
+    - martens
+    - meles
+    - meles meles
+    - meles leucurus
+    - eurasian badger
+    - mellivora
+    - mellivora capensis
+    - honey badger
+    - melogale
+    - melogale moschata
+    - ferret-badgers
+    - ferret badger
+    - mustela
+    - mustela putorius furo
+    - ermines, ferrets, minks, and weasels
+    - neovison
+    - american minks
+    - poecilogale
+    - african striped weasel
+    - taxidea
+    - american badger
+    - vormela
+    - marbled polecat
+    - badger
+    - martes flavigula chrysospila
+    - ferret
+    - marten
+    - taiwanese ferret-badger
+  Odobenidae:
+  # walruses
+    - odobenidae
+    - odobenus
+    - walruses
+  Otariidae:
+  # fur seals and sea lions
+    - otariidae
+    - arctocephalus
+    - southern fur seals
+    - callorhinus
+    - northern fur seal
+    - eumetopias
+    - steller sea lion
+    - neophoca
+    - australian sea lion
+    - otaria
+    - south american sea lion
+    - phocarctos
+    - new zealand sea lion
+    - zalophus
+    - california sea lion
+  Phocidae:
+  # seals
+    - phocidae
+    - cystophora
+    - hooded seal
+    - erignathus
+    - bearded seal
+    - halichoerus
+    - gray seal
+    - histriophoca
+    - ribbon seal
+    - hydrurga
+    - leopard seal
+    - leptonychotes
+    - weddell seal
+    - lobodon
+    - crabeater seal
+    - mirounga
+    - elephant seals
+    - monachus
+    - monk seals
+    - ommatophoca
+    - ross seal
+    - pagophilus
+    - harp seal
+    - phoca
+    - harbor seals
+    - pusa
+    - ringed, baikal, and caspian seals
+  Procyonidae:
+  # coatis, raccoons, and relatives
+    - procyonidae
+    - bassaricyon
+    - olingos
+    - bassariscus
+    - bassariscus astutus
+    - cacomistle and ringtail
+    - nasua
+    - nasua narica
+    - nasua nasua
+    - coatis
+    - nasuella
+    - mountain coati
+    - potos
+    - potos flavus
+    - kinkajou
+    - procyon
+    - procyon lotor
+    - procyon
+    - procyon cancrivorus
+    - raccoons
+    - raccoon
+    - wildlife raccoon
+    - north american raccoon
+  Ursidae:
+  # bears
+    - ursidae
+    - ailuropoda
+    - giant panda
+    - helarctos
+    - sun bear
+    - melursus
+    - melursus ursinus
+    - sloth bear
+    - tremarctos
+    - spectacled bear
+    - ursus
+    - black bears, brown bear, and polar bear
+    - ursus americanus
+    - ursus maritimus
+    - ursus thibetanus laniger
+    - ursus arctos
+    - ursus sp.
+    - black bear
+    - melursus ursinus (sloth bear)
+    - polar bear
+    - himalayan black bear
+
+  # Suborder
+  # Feliformia:
+  # Family
+  Eupleridae:
+  # Malagasy carnivores
+    - eupleridae
+    - feliformia
+    - cryptoprocta
+    - fossa
+    - eupleres
+    - falanouc
+    - fossa
+    - malagasy civet
+    - galidia
+    - ring-tailed mongoose
+    - galidictis
+    - broad-striped mongooses
+    - mungotictis
+    - narrow-striped mongoose
+    - salanoia
+    - brown-tailed mongoose
+  Felidae:
+  # cats
+    - felidae
+    - cat
+    - wild cat
+    - feline
+    - feline species
+    - felidae sp.
+    - felis catus (cat)
+    - domestic cat
+    - felis silvestris catus
+    - acinonyx
+    - cheetah
+    - caracal
+    - caracal caracal
+    - catopuma
+    - asiatic golden cat and bay cat
+    - felis
+    - felis sp.
+    - felis catus
+    - felis nigripes
+    - felis silvestris
+    - felis silvestris lybica
+    - small cats
+    - leopardus
+    - small american cats
+    - leptailurus
+    - serval
+    - lynx
+    - lynx lynx
+    - lynx rufus
+    - lynxes
+    - pardofelis
+    - marbled cat
+    - prionailurus
+    - asian small cats
+    - profelis
+    - african golden cat
+    - puma
+    - puma concolor
+    - puma and jaguarundi
+    - neofelis
+    - clouded leopard
+    - panthera
+    - panthera tigris
+    - panthera pardus
+    - roaring cats
+    - uncia
+    - snow leopard
+    - otocolobus manul
+    - bob cat
+    - bobcat
+    - tiger
+  Herpestidae:
+  # mongooses
+    - herpestidae
+    - atilax
+    - atilax paludinosus
+    - marsh mongoose
+    - bdeogale
+    - mongooses
+    - crossarchus
+    - cusimanses
+    - cynictis
+    - cynictis penicillata
+    - yellow mongoose
+    - dologale
+    - pousargues's mongoose
+    - galerella
+    - galerella sanguinea
+    - galerella pulverulenta
+    - slender mongooses
+    - helogale
+    - dwarf mongooses
+    - herpestes
+    - mongooses
+    - ichneumia
+    - ichneumia albicauda
+    - white-tailed mongoose
+    - liberiictis
+    - liberian mongoose
+    - mungos
+    - banded mongoose and gambian mongoose
+    - paracynictis
+    - selous's mongoose
+    - rhynchogale
+    - meller's mongoose
+    - suricata
+    - suricata suricatta
+    - meerkat
+    - mongoose
+  Hyaenidae:
+  # aardwolf and hyenas
+    - hyaenidae
+    - crocuta
+    - crocuta crocuta
+    - crocuta crocuta (hyena)
+    - spotted hyena
+    - hyaena
+    - hyaena hyaena
+    - brown hyena
+    - hyaeninae
+    - hyenas
+    - hyena
+    - parahyaena
+    - brown hyena
+    - proteles
+    - proteles cristata
+    - aardwolf
+  Nandiniidae:
+  # African palm civet
+    - nandiniidae
+    - nandinia
+    - african palm civet
+  Viverridae:
+  # civets, genets, linsangs, and relatives
+    - viverridae
+    - chrotogale
+    - owston's palm civet
+    - cynogale
+    - otter civet
+    - diplogale
+    - hose's palm civet
+    - hemigalus
+    - banded palm civet
+    - arctictis
+    - binturong
+    - arctogalidia
+    - small-toothed palm civet
+    - macrogalidia
+    - sulawesi palm civet
+    - paguma
+    - masked palm civet
+    - paradoxurus
+    - paradoxurus zeylonensis
+    - palm civets
+    - prionodon
+    - banded linsang and spotted linsang
+    - civettictis
+    - civettictis civetta
+    - african civet
+    - genetta
+    - genetta genetta
+    - aquatic genet
+    - osbornictis
+    - aquatic genet
+    - poiana
+    - african linsang
+    - viverra
+    - civets
+    - civet
+    - viverricula
+    - small indian civet
+    - formosan gem-faced civet
+
+
+
+  # Order
+  Artiodactyla:
+  # even-toed ungulates
+  # Family
+  # Antilocapridae:
+  # pronghorn antelope
+    - antilocapridae
+    - antilocapra
+    - pronghorn
+  # Family
+  # Bovidae:
+  # antelopes, cattle, gazelles, goats, sheep, and relatives
+    - bovidae
+    - aepyceros
+    - impala
+    - alcelaphus
+    - hartebeest
+    - beatragus
+    - hirola
+    - connochaetes
+    - connochaetes taurinus
+    - gnus and wildebeest
+    - damaliscus
+    - topi, blesbok, tsessebe
+    - ammodorcas
+    - dibatag
+    - antidorcas
+    - springbok
+    - antilope
+    - blackbuck
+    - dorcatragus
+    - beira
+    - eudorcas
+    - red gazelles
+    - gazella
+    - gazelles
+    - litocranius
+    - gerenuk
+    - madoqua
+    - dik-diks
+    - nanger
+    - gazelles
+    - neotragus
+    - antelopes
+    - oreotragus
+    - klipspringer
+    - ourebia
+    - oribi
+    - procapra
+    - mongolian gazelle, przewalski's gazelle, and tibetan gazelle
+    - raphicerus
+    - grysboks and steenbok
+    - saiga
+    - saiga
+    - bison
+    - bison
+    - buffalo
+    - bubaline
+    - cow
+    - bubalus arnee 
+    - calf
+    - yak
+    - yearling cattle
+    - bull
+    - bos
+    - bos taurus
+    - bos grunniens
+    - bos primigenius
+    - oxen and true cattle
+    - boselaphus
+    - boselaphus tragocamelus
+    - nilgai
+    - bubalus
+    - bubalus bubalis
+    - water buffalos
+    - pseudoryx
+    - saola
+    - syncerus
+    - african buffalo
+    - taurotragus
+    - elands
+    - tetracerus
+    - four-horned antelope
+    - tragelaphus
+    - tragelaphus strepsiceros
+    - tragelaphus oryx
+    - bongo, bushbuck, nyalas, and relatives
+    - ammotragus
+    - barbary sheep
+    - budorcas
+    - takin
+    - capra
+    - caprinae
+    - capra hircus
+    - capra sp.
+    - capra aegagrus
+    - goats and ibexes
+    - capricornis
+    - serows
+    - hemitragus
+    - tahrs
+    - naemorhedus
+    - gorals
+    - oreamnos
+    - mountain goats
+    - ovibos
+    - muskoxen
+    - ovis
+    - ovis aries
+    - sheep
+    - pantholops
+    - chiru
+    - pseudois
+    - bharals
+    - rupicapra
+    - chamois
+    - cephalophus
+    - cephalophinae
+    - duikers
+    - philantomba
+    - philantomba monticola
+    - maxwell's and blue duikers
+    - sylvicapra
+    - bush duiker
+    - addax
+    - addax
+    - hippotragus
+    - hippotragus antelopes
+    - oryx
+    - oryxes
+    - kobus
+    - kob, lechwes, puku, and waterbuck
+    - pelea
+    - rhebok
+    - redunca
+    - reedbucks
+    - cattle
+    - bovine
+    - goat
+    - caprine
+    - ovine 
+    - rabid cattle
+    - tragelaphus strepsiceros (namibian kudu)
+  # Family
+  # Camelidae:
+  # camels, llamas, and relatives
+    - camelidae
+    - camelus
+    - camel
+    - camelus dromedarius
+    - camelus bactrianus
+    - camels
+    - lama
+    - lama glama
+    - alpacas, guanacos, and llamas
+    - vicugna
+    - vicugna
+  # Family
+  # Cervidae:
+  # deer
+    - cervidae
+    - deer
+    - doe
+    - alces
+    - alces alces
+    - moose
+    - sika deer
+    - sambar deer
+    - spotted deer
+    - dama dama (fallow deer)
+    - blastocerus
+    - marsh deer
+    - capreolus
+    - roe deer
+    - hippocamelus
+    - guemals
+    - mazama
+    - brocket deer
+    - odocoileus
+    - odocoileus virginianus
+    - mule deer and white-tailed deer
+    - ozotoceros
+    - pampas deer
+    - pudu
+    - pudus
+    - rangifer
+    - rangifer tarandus
+    - caribou and reindeer
+    - axis
+    - axis axis
+    - axis deer
+    - cervus
+    - cervus nippon
+    - cervus elaphus
+    - elk, red deer, and sika deer
+    - elk
+    - red deer
+    - reindeer
+    - dama
+    - dama dama
+    - fallow deer
+    - elaphodus
+    - tufted deer
+    - elaphurus
+    - pere david's deer
+    - muntiacus
+    - muntjacs
+    - przewalskium
+    - white-lipped deer
+    - rucervus
+    - south asian deer
+    - rusa
+    - rusa unicolor
+    - sambar and rusa deer
+    - hydropotes
+    - water deer
+  # Family
+  # Giraffidae:
+  # giraffes and okapis
+    - giraffidae
+    - giraffa
+    - giraffes
+    - okapia
+    - okapi
+  # Family
+  # Hippopotamidae:
+  # hippopotamuses
+    - hippopotamidae
+    - hexaprotodon
+    - pygmy hippopotamuses
+    - hippopotamus
+    - hippopotamuses
+  # Family
+  # Moschidae:
+  # musk deer
+    - moschidae
+    - moschus
+    - musk deer
+  # Family
+  # Suidae:
+  # hogs and pigs
+    - suidae
+    - babyrousa
+    - babirusa
+    - phacochoerus
+    - warthogs
+    - hylochoerus
+    - forest hogs
+    - potamochoerus
+    - bushpig and red river hog
+    - sus
+    - sus scrofa
+    - sus scrofa domesticus
+    - pigs
+    - pig
+    - swine
+  # Family
+  # Tayassuidae:
+  # peccaries
+    - tayassuidae
+    - catagonus
+    - chacoan peccary
+    - pecari
+    - collared peccary
+    - tayassu
+    - white-lipped peccary
+    - dicotyles tajacu
+  # Family
+  # Tragulidae:
+  # chevrotains and mouse deer
+    - Tragulidae
+    - hyemoschus
+    - water chevrotains
+    - moschiola
+    - chevrotains
+    - tragulus
+    - mouse deer
+
+  # Order
+  # Perissodactyla:
+  # horses, rhinoceroses, and tapirs
+  # Family
+  Equidae:
+  # asses, horses, and zebras
+    - equidae
+    - equus
+    - equus sp.
+    - equus asinus
+    - equus caballus
+    - equus ferus
+    - equus asinus
+    - equus asinus x equus caballus
+    - equus ferus caballus
+    - ass
+    - equine
+    - equus burchellii
+    - burchell's zebra
+    - equus caballus
+    - horse
+    - equus grevyi
+    - grevy's zebra
+    - equus hemionus
+    - kulan
+    - equus kiang
+    - kiang
+    - equus quagga
+    - quagga
+    - equus zebra
+    - mountain zebra
+    - mule
+    - asinine
+    - donkey
+    - zebra
+    - equino
+    - equus mulus
+
+  # Order
+  Didelphimorphia:
+  # American marsupials
+  # Family
+  # Didelphidae: 
+  # American opossums and opossums
+    - didelphimorphia
+    - didelphidae
+    - caluromys
+    - woolly opossums
+    - caluromysiops
+    - black-shouldered opossum
+    - chacodelphys
+    - chironectes
+    - water opossum and yapok
+    - didelphis
+    - didelphis albiventris
+    - common opossums
+    - gracilinanus
+    - gracile mouse opossums
+    - lestodelphys
+    - patagonian opossum
+    - lutreolina
+    - lutrine opossum
+    - marmosa
+    - common mouse opossums
+    - marmosini
+    - marmosops
+    - slender mouse opossums
+    - metachirus
+    - brown four-eyed opossum
+    - micoureus
+    - woolly mouse opossums
+    - monodelphis
+    - short-tailed opossums
+    - philander
+    - four-eyed opossums
+    - thylamys
+    - fat-tailed mouse opossums
+    - tlacuatzin
+    - gray mouse opossum
+    - glironia
+    - bushy-tailed opossum
+    - hyladelphys
+    - mouse opossum
+
+
+  # Order:
+  Chiroptera: 
+    - chiroptera
+    - bat
+    # family
+    - craseonycteridae
+    # bumblee bat and hog-nosed bat
+    - craseonycteris
+    - hog-nosed bat
+
+    # family
+    - emballonuridae
+    # sac-winged bats, sheath-tailed bats, and relatives
+    - balantiopteryx
+    - sac-winged bats
+    - centronycteris
+    - shaggy bat
+    - coleura
+    - sheath-tailed bats
+    - cormura
+    - chestnut sac-winged bat
+    - cyttarops
+    - short-eared bat
+    - diclidurus
+    - ghost bats
+    - emballonura
+    - sheath-tailed bats
+    - mosia
+    - sheath-tailed bat
+    - peropteryx
+    - dog-like bats
+    - rhynchonycteris
+    - proboscis bat
+    - saccopteryx
+    - sac-winged bats
+    - saccolaimus
+    - pouched bats
+    - taphozous
+    - tomb bats
+
+    # family
+    - furipteridae
+    # smoky bats and thumbless bats
+    - amorphochilus
+    - smoky bat
+    - furipterus
+    - thumbless bat
+
+    # family
+    - hipposideridae
+    # leaf-nosed bats, roundleaf bats, and trident bats
+    - anthops
+    - flower-faced bat
+    - asellia
+    - trident leaf-nosed bats
+    - aselliscus
+    - trident bats
+    - cloeotis
+    - percival's trident bat
+    - coelops
+    - tailless leaf-nosed bats
+    - hipposideros
+    - roundleaf bats
+    - paracoelops
+    - orange leaf-nosed bat
+    - rhinonicteris
+    - orange leaf-nosed bat
+    - triaenops
+    - trident bats
+
+    # family
+    - megadermatidae
+    # false vampire bats
+    - cardioderma
+    - heart-nosed bat
+    - lavia
+    - yellow-winged bat
+    - macroderma
+    - australian false vampire bat and ghost bat
+    - megaderma
+    - false vampire bats
+
+    # family
+    - molossidae
+    # free-tailed bats
+    - molossidae
+    - chaerephon
+    - free-tailed bats
+    - cheiromeles
+    - hairless bat
+    - cynomops
+    - cynomops abrasus
+    - dog-faced bats
+    - eumops
+    - eumops bonariensis
+    - eumops auripendulus
+    - eumops patagonicus
+    - eumops glaucinus
+    - eumops perotis
+    - bonneted bats
+    - molossops
+    - molossops neglectus
+    - dog-faced bats
+    - molossus
+    - molossus sp.
+    - molossus rufus
+    - molossus molossus
+    - velvety free-tailed bats
+    - mops
+    - free-tailed bats
+    - mormopterus
+    - mastiff bats and relatives
+    - myopterus
+    - free-tailed bats
+    - nyctinomops
+    - nyctinomops laticaudatus
+    - nyctinomops macrotis
+    - free-tailed bats
+    - otomops
+    - mastiff bats
+    - platymops
+    - flat-headed bats
+    - promops
+    - mastiff bats
+    - sauromys
+    - flat-headed bats
+    - tadarida
+    - tadarida brasiliensis
+    - tadarida brasiliensis mexicana
+    - free-tailed bats and guano bats
+    - tomopeas
+    - blunt-eared bat
+
+    # family
+    - mormoopidae
+    # ghost-faced bats, moustached bats, and naked-backed bats
+    - mormoops
+    - ghost-faced bats
+    - pteronotus
+    - moustached bats and naked-backed bats
+
+    # family
+    - mystacinidae
+    # new zealand short-tailed bats
+    - mystacina
+    - new zealand short-tailed bats
+
+    # family
+    - myzopodidae
+    # old world sucker-footed bat
+    - myzopoda
+    - sucker-footed bat
+
+    # family
+    - natalidae
+    # funnel-eared bats
+    - chilonatalus
+    - lesser funnel-eared bats
+    - natalus
+    - greater funnel-eared bats
+    - nyctiellus
+    - gervais's funnel-eared bat
+
+    # family
+    - noctilionidae
+    # bulldog bats
+    - noctilio
+    - bulldog bats
+
+    # family
+    - nycteridae
+    # slit-faced bats
+    - nycteris
+    - slit-faced bats
+
+    # family
+    - phyllostomidae
+    # new world leaf-nosed bats
+    - brachyphylla
+    - antillean fruit-eating bats
+    - carollia
+    - carollia perspicillata
+    - short-tailed bats
+    - rhinophylla
+    - little fruit bats
+    - desmodus
+    - desmodus rotundus
+    - vampire bat
+    - diaemus
+    - white-winged vampire bat
+    - diphylla
+    - diphylla ecaudata
+    - hairy-legged vampire bat
+    - anoura
+    - tailless bats
+    - choeroniscus
+    - long-tailed bats
+    - choeronycteris
+    - long-tongued bat
+    - glossophaga
+    - glossophaga soricina
+    - long-tongued bats
+    - hylonycteris
+    - underwood's long-tongued bat
+    - leptonycteris
+    - mexican long-nosed bats
+    - lichonycteris
+    - dark long-tongued bat
+    - monophyllus
+    - antillean long-tongued bats
+    - musonycteris
+    - banana bat
+    - scleronycteris
+    - ega long-tongued bat
+    - lionycteris
+    - chestnut long-tongued bat
+    - lonchophylla
+    - nectar bats
+    - platalina
+    - long-snouted bat
+    - erophylla
+    - brown flower bats
+    - phyllonycteris
+    - antillean flower bats
+    - chrotopterus
+    - big-eared woolly bat
+    - glyphonycteris
+    - tricolored bat, graybeard bat, and relatives
+    - lampronycteris
+    - orange-throated bats
+    - lonchorhina
+    - sword-nosed bats
+    - lophostoma
+    - round-eared bats
+    - macrophyllum
+    - long-legged bat
+    - macrotus
+    - leaf-nosed bats
+    - micronycteris
+    - big-eared bats
+    - mimon
+    - golden bat and hairy-nosed bat
+    - neonycteris
+    - big-eared bats
+    - phylloderma
+    - pale-faced bat
+    - phyllostomus
+    - spear-nosed bats
+    - tonatia
+    - round-eared bats
+    - trachops
+    - fringe-lipped bat
+    - trinycteris
+    - niceforo's bats
+    - vampyrum
+    - spectral bat
+    - ametrida
+    - little white-shouldered bat
+    - ardops
+    - tree bat
+    - ariteus
+    - jamaican fig-eating bat
+    - artibeus
+    - artibeus lituratus
+    - artibeus jamaicensis
+    - artibeus fimbriatus
+    - artibeus planirostris
+    - fruit-eating bats
+    - centurio
+    - wrinkle-faced bat
+    - chiroderma
+    - big-eyed bats
+    - ectophylla
+    - white bat
+    - enchisthenes
+    - fruit-eating bats
+    - mesophylla
+    - macconnell's bat
+    - phyllops
+    - cuban fig-eating bat
+    - platyrrhinus
+    - broad-nosed bats
+    - pygoderma
+    - ipanema bat
+    - sphaeronycteris
+    - visored bat
+    - stenoderma
+    - red fruit bat
+    - uroderma
+    - tent-making bats
+    - vampyressa
+    - yellow-eared bats
+    - vampyrodes
+    - great stripe-faced bat
+    - sturnira
+    - yellow-shouldered bats
+
+    # family
+    - pteropodidae
+    # old world fruit bats
+    - acerodon
+    - fruit bats
+    - aethalops
+    - pygmy fruit bat
+    - alionycteris
+    - mindanao pygmy fruit bat
+    - aproteles
+    - bulmer's fruit bat
+    - balionycteris
+    - spotted-winged fruit bat
+    - casinycteris
+    - short-palated fruit bat
+    - chironax
+    - black-capped fruit bat
+    - cynopterus
+    - short-nosed fruit bats
+    - dobsonia
+    - naked-backed fruit bats
+    - dyacopterus
+    - dyak fruit bat
+    - eidolon
+    - fruit bats
+    - eonycteris
+    - dawn bats
+    - epomophorus
+    - epauletted fruit bats
+    - epomops
+    - epauletted bats
+    - haplonycteris
+    - philippine pygmy fruit bat
+    - harpyionycteris
+    - harpy fruit bats
+    - hypsignathus
+    - hammer-headed fruit bat
+    - latidens
+    - salim ali's fruit bat
+    - lissonycteris
+    - soft-furred fruit bats
+    - macroglossus
+    - long-tongued fruit bats
+    - megaerops
+    - tailless fruit bats
+    - megaloglossus
+    - woermann's bat
+    - melonycteris
+    - fruit bats
+    - micropteropus
+    - dwarf epauletted fruit bats
+    - myonycteris
+    - collared fruit bats
+    - nanonycteris
+    - veldkamp's bat
+    - neopteryx
+    - small-toothed fruit bat
+    - notopteris
+    - long-tailed fruit bats
+    - nyctimene
+    - tube-nosed fruit bats
+    - otopteropus
+    - luzon fruit bat
+    - paranyctimene
+    - unstriped tube-nosed bat
+    - penthetor
+    - lucas's short-nosed fruit bat
+    - plerotes
+    - d'anchieta's fruit bat
+    - ptenochirus
+    - musky fruit bats
+    - pteralopex
+    - monkey-faced bats
+    - subfamily
+    - pteropodinae
+    - old world fruit bats
+    - pteropus
+    - pteropus giganteus
+    - flying foxes
+    - rousettus
+    - manado fruit bat
+    - scotonycteris
+    - pohle's fruit bat and zenker's fruit bat
+    - sphaerias
+    - blanford's fruit bat
+    - styloctenium
+    - stripe-faced fruit bat
+    - syconycteris
+    - blossom bats
+    - thoopterus
+    - swift fruit bat
+
+    # family
+    - rhinolophidae
+    # horseshoe bats
+    - rhinolophus
+    - horseshoe bats
+
+    # family
+    - rhinopomatidae
+    # mouse-tailed bats
+    - rhinopoma
+    - mouse-tailed bats
+
+    # family
+    - thyropteridae
+    # disc-winged bats
+    - thyroptera
+    - disc-winged bats
+
+    # family
+    - vespertilionidae
+    # evening bats and vesper bats
+    - antrozous
+    - antrozous pallidus
+    - pallid bats
+    - bauerus
+    - van gelder's bats
+    - kerivoula
+    - painted bat, trumpet-eared bats, and woolly bats
+    - phoniscus
+    - trumpet-eared bats
+    - miniopterus
+    - bent-winged bats and long-fingered bats
+    - harpiocephalus
+    - hairy-winged bats
+    - murina
+    - tube-nosed bats
+    - cistugo
+    - wing-gland bats
+    - lasionycteris
+    - lasionycteris noctivagans
+    - silver-haired bats
+    - myotis
+    - myotis albescens
+    - myotis velifer
+    - myotis volans
+    - myotis sp.
+    - myotis thysanodes
+    - myotis levis
+    - myotis nigricans
+    - myotis lucifugus
+    - myotis evotis
+    - myotis septentrionalis
+    - myotis californicus
+    - myotis yumanensis
+    - myotis keenii
+    - myotis leibii
+    - myotis ciliolabrum
+    - myotis austroriparius
+    - myotis chiloensis
+    - myotis riparius
+    - myotis daubentonii
+    - mouse-eared bats
+    - arielulus
+    - sprites
+    - eptesicus
+    - eptesicus sp.
+    - eptesicus fuscus
+    - eptesicus serotinus
+    - eptesicus furinalis
+    - eptesicus diminutus
+    - eptesicus brasiliensis
+    - big brown bats, forest bats, serotines, and relatives
+    - hesperoptenus
+    - false serotines
+    - lasiurus
+    - lasiurus borealis
+    - lasiurus sp. (in: bats)
+    - lasiurus seminolus
+    - lasiurus blossevillii
+    - hairy-tailed bats
+    - nycticeinops
+    - twilight bats
+    - nycticeius
+    - nycticeius humeralis
+    - evening bats
+    - rhogeessa
+    - lesser yellow bats
+    - scoteanax
+    - broad-nosed bats
+    - scotoecus
+    - house bats
+    - scotomanes
+    - harlequin bats
+    - scotophilus
+    - yellow bats
+    - scotorepens
+    - broad-nosed bats
+    - nyctophilus
+    - long-eared bats
+    - pharotis
+    - new guinea big-eared bat
+    - glischropus
+    - thick-thumbed bats
+    - nyctalus
+    - noctules
+    - pipistrellus
+    - pipistrelles
+    - scotozous
+    - pipistrelles
+    - barbastella
+    - barbastelles
+    - corynorhinus
+    - corynorhinus townsendii
+    - north american big-eared bats
+    - euderma
+    - euderma maculatum
+    - spotted bat
+    - idionycteris
+    - allen's big-eared bat
+    - otonycteris
+    - desert long-eared bat
+    - plecotus
+    - plecotus auritus
+    - eurasian big-eared bats
+    - chalinolobus
+    - pied bats, wattled bats, and relatives
+    - eudiscopus
+    - disk-footed bat
+    - falsistrellus
+    - false pipistrelles
+    - glauconycteris
+    - butterfly bats
+    - histiotus
+    - histiotus montanus
+    - histiotus velatus
+    - histiotus macrotus
+    - histiotus sp.
+    - big-eared brown bats
+    - hypsugo
+    - asian pipistrelles
+    - great evening bat
+    - laephotis
+    - african long-eared bats
+    - mimetillus
+    - moloney's flat-headed bat
+    - neoromicia
+    - african serotines and pipistrelles
+    - parastrellus
+    - parastrellus hesperus
+    - perimyotis
+    - perimyotis subflavus
+    - philetor
+    - rohu's bat
+    - tylonycteris
+    - bamboo bats
+    - vespadelus
+    - forest bats and relatives
+    - vespertilio
+    - particolored bats
+
+    # Extra bats
+    - aeorestes cinereus 
+    - dasypterus intermedius 
+    - dasypterus ega 
+    - stenodermatinae 
+    - dasypterus xanthinus 
+    - pipistrellus abramus
+    - miniopterus schreibersii
+    - hipposideros commersoni
+    - myotis nattererii
+    - eidolon helvum
+    - myotis dinellii
+    - artibeus sp.
+    - nyctalus plancyi velutinus
+    - serotine bat
+    - big brown bat
+    - myotis dasycneme
+    - desmodus rotundus (vampire bat)
+    - lasiurus cinereus (hoary bat)
+    - lasiurus sp.
+    - lasiurus cinereus
+    - unidentified bat
+    - pipistrellus hesperus
+    - lasiurus ega
+    - nycticeinops schlieffeni (schlieffen's bat)
+    - eptesicus serotinus female
+    - epomophorus wahlbergi
+    - pteropus alecto
+    - saccolaimus flaviventris
+    - eptesicus fuscus (big brown bat)
+    - us big brown bat
+    - canadian myotis
+    - canadian silver-haired bat
+    - canadian hoary bat
+    - us red bat
+    - south american insectivorous bat
+    - us free-tailed bat
+    - south american vampire bat
+    - flying fox
+    - insectivorous bat
+    - lasiurus intermedius
+    - rousettus aegyptiacus
+    - nyctinomops sp. (insectivorous bat)
+    - miniopterus natalensis
+    - pteropus scapulatus
+    - pteropus poliocephalus
+    - pteropus conspicillatus
+    - myotis nattereri
+    - stenodermatinae sp.
+    - livestock infected by desmodus rotundus (common
+    - artibeus planirostris (bat)
+    - eptesicus isabellinus
+    - rousettus aegyptiacus
+    - murina leucogaster (bat)
+
+  # Order
+  Rodentia:
+  # rodents
+    - mus
+    - mus musculus
+    - marmota monax
+    - sciurida
+    - gliridae
+    - castoridae
+    - rattus
+    - marmotini
+    - urocitellus undulatus
+    - cuniculus paca
+    - mice
+    - rodent
+    - woodchuck
+    - mouse
+    - field mouse
+    - squirrel
+    - mouse (brain)
+
+#################################################---END HOST GROUPINGS---#####################################################

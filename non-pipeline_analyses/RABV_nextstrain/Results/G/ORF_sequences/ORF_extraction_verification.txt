@@ -1,0 +1,2 @@
+All sequences confirmed to have one-to-one ORF mappings!
+From 7201 sequences, 7123 ORFs found!
