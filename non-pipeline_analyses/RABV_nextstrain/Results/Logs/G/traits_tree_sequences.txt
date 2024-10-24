@@ -1,10 +1,5 @@
-WARNING: only one state found for discrete state reconstruction: ['Rabies lyssavirus']
 augur traits is using TreeTime version 0.11.4
-Assigned discrete traits to 6778 out of 7122 taxa.
-
 Assigned discrete traits to 6713 out of 7122 taxa.
-
-Assigned discrete traits to 6735 out of 7122 taxa.
 
 
 Inferred ancestral states of discrete character using TreeTime:

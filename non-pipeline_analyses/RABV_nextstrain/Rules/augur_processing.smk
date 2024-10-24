@@ -90,7 +90,7 @@ rule traits_tree_sequences:
         "--tree {input.tree} "
         "--metadata {input.metadata} "
         "--output-node-data {output.tree_traits} " 
-        "--columns country region virus host "
+        "--columns region "
         "--confidence &> {log}"    
         
 rule ancestral_tree_sequences:
