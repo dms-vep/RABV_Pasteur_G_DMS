@@ -36,17 +36,6 @@ assays:
       constant: 0.04
     scale_stat: 1
     stat_name: escape
-  # receptor_affinity:
-  #   title: Receptor affinity
-  #   selections: receptor_selections
-  #   averages: avg_receptor_affinity
-  #   prob_escape_scale:
-  #     type: linear
-  #   concentration_scale:
-  #     type: linear
-  #   concentration_title: concentration of receptor
-  #   scale_stat: -1
-  #   stat_name: receptor affinity
 
 # --------------------------------------------------------------------------------------
 # Configuration for the selection experiments for each assay.
@@ -174,8 +163,6 @@ antibody_selections:
   #     concentration: 3
   #     use_in_fit: False
 
-
-
 #units in ng/mL
   LibB-240501-RVA122:
     neut_standard_name: neut_standard
@@ -197,8 +184,6 @@ antibody_selections:
      B-240501-rescue_2-RVA122-3000-1:
       concentration: 3
       use_in_fit: true
-
-      
 
   LibA-240319-RVC20:
     neut_standard_name: neut_standard
@@ -224,8 +209,6 @@ antibody_selections:
       concentration: 6000
       use_in_fit: true
 
-
-
   LibB-240507-RVC20:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -247,9 +230,7 @@ antibody_selections:
       concentration: 6000
       use_in_fit: true
 
-
-
-          #units in ug/mL not ng/mL
+  #units in ug/mL not ng/mL
   LibA-240319-17C7:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -274,8 +255,6 @@ antibody_selections:
       concentration: 25
       use_in_fit: False
 
-    
-
 #units in ug/mL not ng/mL
   LibB-240501-17C7:
     neut_standard_name: neut_standard
@@ -298,7 +277,6 @@ antibody_selections:
       concentration: 10
       use_in_fit: true
 
-
   LibA-240603-RVC58:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -319,8 +297,6 @@ antibody_selections:
      A-240603-rescue_1-RVC58-5000-1:
       concentration: 5000
       use_in_fit: true
-
-
 
   LibB-240507-RVC58:
     neut_standard_name: neut_standard
@@ -363,11 +339,8 @@ antibody_selections:
   #    B-240507-rescue_2-RVC58-5000-1:
   #     concentration: 5000
   #     use_in_fit: true
-
       
-      
-    #units in ug/mL not ng/mL
-
+  #units in ug/mL not ng/mL
   LibA-240603-CR4098:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -391,8 +364,6 @@ antibody_selections:
      A-240603-rescue_1-CR4098_8000-1:
       concentration: 8
       use_in_fit: false
-
-
     
   LibB-240507-CR4098:
     neut_standard_name: neut_standard
@@ -418,8 +389,7 @@ antibody_selections:
       concentration: 20
       use_in_fit: False
 
-
-#units in ng/mL -- this was incidentally labeled as CR4098 during prep process but is CR57 sample
+  #units in ng/mL -- this was incidentally labeled as CR4098 during prep process but is CR57 sample
   LibA-240331-CR57:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -447,17 +417,7 @@ antibody_selections:
       concentration: 40
       use_in_fit: false
 
-
-
-
-
-
-
-
-
-
-
-#units in ug/mL
+  #units in ug/mL
   LibA-240406-RVC68:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -481,7 +441,6 @@ antibody_selections:
      A-240406-rescue_4-RVC68-100000-1:
       concentration: 100
       use_in_fit: False
-
 
   LibA-240406-RVC68_duplicate:
     neut_standard_name: neut_standard
@@ -549,8 +508,7 @@ antibody_selections:
       concentration: 10
       use_in_fit: true
 
-
-#units in ug/mL
+  #units in ug/mL
   LibA-240406-CTB012:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -574,8 +532,6 @@ antibody_selections:
      A-240406-rescue_4-CTB012-30000-1:
       concentration: 30
       use_in_fit: False
-
-
 
   LibB-240510-CTB012:
     neut_standard_name: neut_standard
@@ -601,12 +557,7 @@ antibody_selections:
       concentration: 12
       use_in_fit: True
 
-
-
-
-
-
-#units in ug/mL
+  #units in ug/mL
   LibB-240510-CR57:
     neut_standard_name: neut_standard
     prob_escape_filters: *prob_escape_filters_default
@@ -631,40 +582,8 @@ antibody_selections:
       concentration: 20
       use_in_fit: false
 
-
-
 # define the soluble receptor selections
 receptor_selections: {}
-
-  # A-240129-rescue_1-no_receptor-1:
-  #   neut_standard_name: neut_standard
-  #   prob_escape_filters: *prob_escape_filters_default
-  #   polyclonal_params: *polyclonal_params_default
-  #   escape_plot_kwargs: *escape_plot_kwargs_default
-  #   plot_hide_stats: *plot_hide_stats_default
-  #   no_antibody_sample: A-240129-rescue_1-no_antibody-1
-  #   antibody_samples:
-  #    A-240129-rescue_1-no_antibody-1:
-  #     concentration: 0.15
-  #     use_in_fit: true
-
-#   LibA-220302-pretending_S2M11_is_receptor-2:
-#     neut_standard_name: neut_standard
-#     prob_escape_filters: *prob_escape_filters_default
-#     polyclonal_params: *polyclonal_params_default
-#     escape_plot_kwargs: *escape_plot_kwargs_default
-#     plot_hide_stats: *plot_hide_stats_default
-#     no_antibody_sample: LibA-220302-no_antibody-2
-#     antibody_samples:
-#      LibA-220302-S2M11-0.3082-2:
-#       concentration: 0.3082
-#       use_in_fit: true
-#      LibA-220302-S2M11-1.2328-2:
-#       concentration: 1.2328
-#       use_in_fit: false
-#      LibA-220302-S2M11-4.9314-2:
-#       concentration: 4.9314
-#       use_in_fit: true
 
 # --------------------------------------------------------------------------------------
 # Configuration for averaging/plotting selections for an assay
@@ -677,7 +596,6 @@ receptor_selections: {}
 #   - `escape_plot_kwargs`: keyword arguments for `PolyclonalAverage.mut_escape_plot`
 #   - `plot_hide_stats`: dict giving data frames with stats for slider to hide mutations
 #   - `title`: title of plots
-#   - `legend`: legend added to plots
 
 avg_escape_plot_kwargs_default: &avg_escape_plot_kwargs_default
   <<: *escape_plot_kwargs_default
@@ -697,81 +615,46 @@ avg_antibody_escape_default: &avg_antibody_escape_default
     <<: *avg_escape_plot_kwargs_default
   plot_hide_stats: *plot_hide_stats_default
   alphabet: ['R','K','H','D','E','Q','N','S','T','Y','W','F','A','I','L','M','V','G','P','C']
-  legend: |
-    Use the site zoom bar at the top to zoom in on specific sites. The line plot shows a summary statistic indicating a summary of the mutation effects at each site. The heat map shows effects for individual mutations, with parental amino-acid identities indicated by x and gray indicating non-measured mutations. Mouse over points for details.
-
-    Options at the bottom of the plot let you modify the display, such as by selecting how many different variants a mutation must be seen in to be shown (*minimum times_seen*), how many different experimental selections the mutation was measured in (*minimum n_models*), what site summary statistic to show, etc.
-
-    You can filter by the functional effects of mutations. Mutations removed by this filter are shown as dark gray squares in the heat map to distinguish unmeasured mutations from ones measured to be deleterious.
-
-    The *minimum max* slider is useful to select the sites where mutations have the largest effect.
 
 # Define the antibodies/sera escapes to average
 avg_antibody_escape:
   RVC20:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibA-240319-RVC20
       - LibB-240507-RVC20
   RVA122:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibA-240319-RVA122
       - LibB-240501-RVA122
   17C7:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibA-240319-17C7
       - LibB-240501-17C7
   RVC58:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibB-240507-RVC58
       - LibA-240603-RVC58
   CR4098:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibB-240507-CR4098
       - LibA-240603-CR4098
   CR57:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibB-240510-CR57
       - LibA-240331-CR57
   CTB012:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibA-240406-CTB012
       - LibB-240510-CTB012
   RVC68:
     <<: *avg_antibody_escape_default
-    title: placeholder to get pipeline to run
     selections:
       - LibA-240406-RVC68
       - LibB-240510-RVC68
-
-#   S2M11:
-#     <<: *avg_antibody_escape_default
-#     title: Escape map for antibody S2M11
-#     selections:
-#       - LibA-220302-S2M11-1
-#       - LibA-220302-S2M11-2
-
-# Define the receptor affinity experiments to average
-# avg_receptor_affinity_default: &avg_receptor_affinity_default
-#   <<: *avg_antibody_escape_default
-#   icXX: 50  # IC50
-
-# avg_receptor_affinity:
-#   no_receptor: 
-#     <<: *avg_receptor_affinity_default
-#     title: no receptor
-#     selections:
-#       - A-240129-rescue_1-no_receptor-1
