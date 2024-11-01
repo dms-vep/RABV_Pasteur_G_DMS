@@ -37,7 +37,7 @@ rule all:
         # Auspice
         expand("auspice/{gene}.json", gene=GENES),
         # Natural variation
-        expand("Results/{gene}/Alignments/{gene}_natural_variation.fasta", gene=GENES)
+        expand("Results/{gene}/Alignments/{gene}_natural_variation.csv", gene=GENES)
 
 
 # Make DAG of rule execution

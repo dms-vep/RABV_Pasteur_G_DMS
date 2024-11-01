@@ -14,7 +14,7 @@ rule calculate_variation:
     input:
         protein_alignment = "Results/{gene}/Alignments/protein_ungapped_no_outgroup.fasta",
     output:
-        "Results/{gene}/Alignments/{gene}_natural_variation.fasta",
+        "Results/{gene}/Alignments/{gene}_natural_variation.csv",
     conda:
         "../environment.yml",
     script:

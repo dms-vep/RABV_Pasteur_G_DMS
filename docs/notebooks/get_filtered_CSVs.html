@@ -7573,7 +7573,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=471ffbed">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs celltag_injected-parameters" id="cell-id=df5cbc92">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7660,12 +7660,9 @@ a.anchor-link {
 <span class="n">site_map</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">site_numbering_map</span><span class="p">)</span>
     <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">"Unnamed: 0"</span> <span class="p">:</span> <span class="s2">"natural_sequence_site"</span><span class="p">,</span>
         <span class="s2">"reference_site"</span> <span class="p">:</span> <span class="s2">"site"</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="p">)</span>
-<span class="c1"># Adjust sequencing to be 1 indexed</span>
-<span class="n">site_map</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span> <span class="o">=</span> <span class="n">site_map</span><span class="p">[</span><span class="s2">"natural_sequence_site"</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>

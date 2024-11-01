@@ -57,7 +57,7 @@ rule compare_func_effects_and_natural_variation:
     input:
         func_effects="results/filtered_func_effects_CSV/HEK293T_filitered_entry_func_effects.csv",
         func_effects_config="data/func_effects_config.yml",
-        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/G/Alignments/G_natural_variation.fasta",
+        natural_variation="non-pipeline_analyses/RABV_nextstrain/Results/G/Alignments/G_natural_variation.csv",
         nb="notebooks/func_effects_vs_natural_variation.ipynb",
     params:
         natural_diversity_outdir="results/natural_diversity_comparison/",
