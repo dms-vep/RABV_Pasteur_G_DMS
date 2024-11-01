@@ -42,23 +42,3 @@ summary:
       le_filters:  # only keep entries with indicated column is <= indicated value
         effect_std: 4
   other_assays: {} # other assays that we show, empty dict if no assays being shown
-    # receptor_affinity:  # assay type
-    #   mock receptor affinity:  # name of particular assay condition
-    #     condition: no_receptor  # condition specified in `avg_escape`
-    #     stat: receptor affinity_median  # statisti used for mutation effects
-    #     positive_color: "#0072B2"  # dark blue
-    #     negative_color: "#D55E00"  # red
-    #     max_at_least: 1
-    #     fixed_min: -3  # specify either `min_at_least` or `fixed_min`
-    #     init_min_value: -10  # initial min value in slider
-    #     le_filters:  # only keep entries with indicated column is <= indicated value
-    #       receptor affinity_std: 2
-  title: Mutation effects across assays
-  legend: |
-    This is is an interactive chart. Mouseover points on the top line plots that
-    summarize the per-site escape averaged across all sera and for individual sera.
-    You can use the top zoom-bar or the line plots to zoom in on specific sites to
-    show in the heatmaps that give per-mutation effects on serum escape or protein
-    function. The options at the bottom let you only show escape for sites with some
-    minimal functional effect (more deleterious mutations are grayed out in heatmap),
-    choose the site summary metric, or floor the escape at zero.
