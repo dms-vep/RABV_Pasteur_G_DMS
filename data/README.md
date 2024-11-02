@@ -26,10 +26,7 @@ This directory contains input data for multiple steps in the `dms-vep-3` pipelin
  - `reference_wt`: wild type amino acid residue within reference strain
  - `region`: domain of glycoprotein where position residues, eg. *signal peptide*, *ectodomain*. 
 
-[mutation_design_classification.csv](mutation_design_classification.csv) classifies mutations into the different categories of designed mutations. This was generated using `glycoprotein_positions.ipynb` in the [./scratch_notebook](https://github.com/dms-vep/RABV_Pasteur_G_DMS/tree/main/scratch_notebook) directory.
- - `sequential_site`: site within glycoprotein ORF
- - `amino_acid`: amino acid residue mutation at position
- - `mutation_type`: can be *designed_mutation*, *stop* for introduced stop codons, or *unintended_mutation*.
+[designed_mutations.csv](designed_mutations.csv) lists the designed amino-acid mutations and stop-codon mutations, using sequential numbering of the mutagenized region.
 
 [./gene_sequence/](gene_sequence): This directory contains files which contain the protein and nucleic acid sequence of the glycoprotein. Note that these files only include the mutagenized ectodomain region of the glycoprotein. 
 
