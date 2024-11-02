@@ -5,40 +5,36 @@
 # antibody escape alongside other assays (eg, functional effects of mutations).
 # --------------------------------------------------------------------------------------
 
-summary:
+all_antibodies_and_cell_entry:
   min_times_seen: 2  # only include mutations with times_seen >= this
   min_frac_models: 1  # only include mutations in >= this fraction of models
-  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y, -]  # amino acids to include
+  alphabet: [A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y]  # amino acids to include
   init_floor_escape_at_zero: true  # initially floor site escape to be >= 0?
-  init_site_escape_stat: mean  # initially show site escape as this statistic
+  init_site_escape_stat: sum  # initially show site escape as this statistic
   antibody_escape:  # show effects on antibody escape, empty dict if no antibodies being shown
     monoclonal antibodies:  # name each set of antibodies
       stat: escape_median  # statistic to use for escape
       positive_color: "#56B4E9"  # light blue, positive heatmap color
       negative_color: "#E69F00"  # orange, negative heatmap color
       max_at_least: 2 # make heatmap max at least
-      min_at_least: -5  # make heatmap min at least this
+      min_at_least: -2  # make heatmap min at least this
       le_filters:  # only keep entries with indicated column is <= indicated value
-        escape_std: 4
-      antibody_list:  # antibodies to include: keys name used for `avg_escape`, values name for plot
-        RVC20: RVC20
-        RVA122: RVA122
-        17C7: 17C7
-        RVC58: RVC58
-        CR4098: CR4098
-        CR57: CR57
-        CTB012: CTB012
-        RVC68: RVC68
-
-  func_effects:  # effects of mutations on function
-    RABV-G mediated entry:  # name of functional selection
-      condition: HEK293T_entry  # condition specified in `avg_func_effects`
-      effect_type: func_effects  # "func_effects" or "latent_effects"
+        escape_std: 6
+      antibody_list:
+        17C7: results/antibody_escape/averages/17C7_mut_effect.csv
+        CR4098: results/antibody_escape/averages/CR4098_mut_effect.csv
+        RVA122: results/antibody_escape/averages/RVA122_mut_effect.csv
+        RVC58: results/antibody_escape/averages/RVC58_mut_effect.csv
+        CTB012: results/antibody_escape/averages/CTB012_mut_effect.csv
+        RVC68: results/antibody_escape/averages/RVC68_mut_effect.csv
+        RVC20: results/antibody_escape/averages/RVC20_mut_effect.csv
+        CR57: results/antibody_escape/averages/CR57_mut_effect.csv
+  other_phenotypes:
+    cell entry:
+      csv: results/func_effects/averages/HEK293T_entry_func_effects.csv
+      stat: effect
       positive_color: "#009E73"  # green
       negative_color: "#F0E442"  # yellow
-      fixed_max: 2  # specify either `max_at_least` or `fixed_max`
-      min_at_least: 0
-      init_min_value: -5  # initial min value in slider
-      le_filters:  # only keep entries with indicated column is <= indicated value
-        effect_std: 4
-  other_assays: {} # other assays that we show, empty dict if no assays being shown
+      max_at_least: 2
+      fixed_min: -5
+      init_min_value: -5
