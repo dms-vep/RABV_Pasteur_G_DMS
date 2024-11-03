@@ -5,6 +5,56 @@ This file is included by the pipeline ``Snakefile``.
 """
 
 
+with open(config["dms_viz_config"]) as f:
+    dms_viz_config = yaml.safe_load(f)
+
+rule configure_dms_viz:
+    """Configure a JSON file for `dms-viz`."""
+    input:
+        unpack(
+            lambda wc: (
+                {"per_antibody_escape_csv": 
+                    "results/summaries/all_antibodies_and_cell_entry_per_antibody_escape.csv"
+                }
+                if dms_viz_config[wc.struct]["escape_or_phenotype"] == "escape"
+                else {}
+            )
+        ),
+        phenotypes_csv="results/summaries/all_antibodies_and_cell_entry.csv",
+    output:
+        json="results/dms-viz/{struct}.json",
+        json_no_description=temp("results/dms-viz/{struct}_no_description.json"),
+        sitemap=temp("results/dms-viz/{struct}_sitemap.csv"),
+        phenotypes=temp("results/dms-viz/{struct}_phenotypes.csv"),
+        description_md=temp("results/dms-viz/{struct}_description.md"),
+        pdb_file=temp("results/dms-viz/{struct}.pdb"),
+    params:
+        config=lambda wc: dms_viz_config[wc.struct],
+        description_suffix=(
+            f"Study by {config['authors']} ({config['year']}).\n"
+            f"See [{config['github_repo_url']}]({config['github_repo_url']}) for code."
+        ),
+    log:
+        notebook="results/notebooks/configure_dms_viz_{struct}.ipynb",
+    conda:
+        "envs/dms-viz.yml"
+    notebook:
+        "notebooks/configure_dms_viz.py.ipynb"
+
+docs["Visualizations of DMS data on protein structure"] = {
+    "dms-viz JSONs": {
+        "JSON files for dms-viz": {
+            struct: rules.configure_dms_viz.output.json.format(struct=struct)
+            for struct in dms_viz_config
+        },
+        "Notebooks generating JSONs": {
+            struct: rules.configure_dms_viz.log.notebook.format(struct=struct)
+            for struct in dms_viz_config
+        },
+    },
+}
+
+
 rule get_filtered_CSVs:
     """
     Get filtered DMS data CSVs.

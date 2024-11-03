@@ -1,0 +1,126 @@
+# Configuration for `dms-viz`, keyed by names given to output JSONs
+
+prefusion_cell_entry:
+  pdb_id: 7u9g
+  escape_or_phenotype: phenotype  # are we showing escape or some other phenotype?
+  phenotypes: [cell entry]  # list of phenotypes if showing those
+  antibodies: null  # list of antibodies if showing escape, if null then show all
+  # the following arguments are optional, and have the same
+  # meaning as to `configure-dms-viz`
+  # (https://dms-viz.github.io/dms-viz-docs/preparing-data/command-line-api/)
+  included-chains: [A, B, C]
+  excluded-chains: [D, E, F, G, H, I]
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: false
+  summary-stat: mean
+  tooltip-cols: {}
+  filter-cols: {}
+  filter-limits: {}
+  heatmap-limits: [-5, 0, 2]
+  title: Effects of mutations to rabies G on cell entry on prefusion structure
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    into 293T cells shown on prefusion structure (7u9g).
+
+extended_intermediate_cell_entry:
+  pdb_id: 6lgw
+  escape_or_phenotype: phenotype
+  phenotypes: [cell entry]
+  antibodies: null
+  included-chains: [E]
+  excluded-chains: [A]  # antibody 523-11 scFv
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: false
+  summary-stat: mean
+  tooltip-cols: {}
+  filter-cols: {}
+  filter-limits: {}
+  heatmap-limits: [-5, 0, 2]
+  title: Effects of mutations to rabies G on cell entry on extended intermediate
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    into 293T cells shown on low pH extended intermediate structure (6lgw).
+
+
+prefusion_ab_escape:
+  pdb_id: 7u9g
+  escape_or_phenotype: escape  # are we showing escape or some other phenotype?
+  phenotypes: null  # list of phenotypes if showing those
+  antibodies: null  # list of antibodies if showing escape, if null then show all
+  # the following arguments are optional, and have the same
+  # meaning as to `configure-dms-viz`
+  # (https://dms-viz.github.io/dms-viz-docs/preparing-data/command-line-api/)
+  included-chains: [A, B, C]
+  excluded-chains: [D, E, F, G, H, I]
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from monoclonal antibodies
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by monoclonal antibodies shown on prefusion structure (7u9g).
+
+prefusion_RVA122_escape:
+  pdb_id: 7u9g
+  escape_or_phenotype: escape  # are we showing escape or some other phenotype?
+  phenotypes: null  # list of phenotypes if showing those
+  antibodies: [RVA122]  # list of antibodies if showing escape, if null then show all
+  # the following arguments are optional, and have the same
+  # meaning as to `configure-dms-viz`
+  # (https://dms-viz.github.io/dms-viz-docs/preparing-data/command-line-api/)
+  included-chains: [A, B, C]
+  excluded-chains: []
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from antibody RVA122
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by antibody RVA122 shown on prefusion structure with antibody (7u9g).
+
+prefusion_17C7_escape:
+  pdb_id: 8a1e
+  escape_or_phenotype: escape
+  phenotypes: null
+  antibodies: [17C7]
+  included-chains: [A]
+  excluded-chains: [C, B]  # these are antibody 1112-1, and D and E are 17C7
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from antibody 17C7 
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by antibody 17C7 shown on prefusion structure with antibody (8a1e).
+
+ph_domain_RVC20_escape:
+  pdb_id: 6tou
+  escape_or_phenotype: escape
+  phenotypes: null
+  antibodies: [RVC20]
+  included-chains: [G]
+  excluded-chains: []
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from antibody RVC20 
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by antibody RVC20 shown on pH domain (6tou).
+
