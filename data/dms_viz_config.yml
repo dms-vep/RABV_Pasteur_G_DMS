@@ -43,3 +43,25 @@ prefusion_ab_escape:
   description: |
     Pseudovirus deep mutational scanning of how mutations to rabies G affect
     neutralization by a panel of monoclonal antibodies.
+
+prefusion_RVA122_escape:
+  pdb_id: 7u9g
+  escape_or_phenotype: escape  # are we showing escape or some other phenotype?
+  phenotypes: null  # list of phenotypes if showing those
+  antibodies: [RVA122]  # list of antibodies if showing escape, if null then show all
+  # the following arguments are optional, and have the same
+  # meaning as to `configure-dms-viz`
+  # (https://dms-viz.github.io/dms-viz-docs/preparing-data/command-line-api/)
+  included-chains: [A, B, C]
+  excluded-chains: []
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from antibody RVA122
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by antibody RVA122.
