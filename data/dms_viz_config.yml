@@ -1,0 +1,21 @@
+# Configuration for `dms-viz`, keyed by names given to output JSONs
+
+prefusion_cell_entry:
+  pdb_id: 7u9g
+  escape_or_phenotype: phenotype  # are we showing escape or some other phenotype?
+  phenotypes: [cell entry]  # list of phenotypes if showing those
+  antibodies: null  # list of antibodies if showing escape, if null then show all
+  # the following arguments are optional, and have the same
+  # meaning as to `configure-dms-viz`
+  # (https://dms-viz.github.io/dms-viz-docs/preparing-data/command-line-api/)
+  included-chains: [A, B, C]
+  excluded-chains: [D, E, F, G, H, I]
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: false
+  summary-stat: mean
+  tooltip-cols: {}
+  filter-cols: {}
+  filter-limits: {}
+  heatmap-limits: [-5, 0, 2]
+  title: Effects of mutations to rabies G on cell entry
+  description: null

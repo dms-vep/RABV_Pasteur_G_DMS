@@ -57,3 +57,4 @@ The below structures were used to project functional effects onto structures for
 
 6tou.pdb: Structure of pH domain of rabies glycoprotein (fragment) bound to RVC20, as published in [Hellert, et al., *Nat Comms*, 2020](https://doi.org/10.1038/s41467-020-14398-7).
 
+A configuration YAML that helps with viewing these structures with `dms-viz` is in [dms_viz_config.yml](dms_viz_config.yml).

@@ -1,0 +1,16 @@
+name: dms-viz
+
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - biopython=1.83
+  - jupyterlab
+  - pandas=2.2
+  - papermill=2.6
+  - pip
+  - pyarrow
+  - python=3.11
+  - pip:
+      - configure-dms-viz==1.5.0
