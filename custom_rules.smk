@@ -41,9 +41,17 @@ rule configure_dms_viz:
     notebook:
         "notebooks/configure_dms_viz.py.ipynb"
 
-docs["dms-viz JSONs"] = {
-    struct: rules.configure_dms_viz.output.json.format(struct=struct)
-    for struct in dms_viz_config
+docs["Visualizations of DMS data on protein structure"] = {
+    "dms-viz JSONs": {
+        "JSON files for dms-viz": {
+            struct: rules.configure_dms_viz.output.json.format(struct=struct)
+            for struct in dms_viz_config
+        },
+        "Notebooks generating JSONs": {
+            struct: rules.configure_dms_viz.log.notebook.format(struct=struct)
+            for struct in dms_viz_config
+        },
+    },
 }
 
 
