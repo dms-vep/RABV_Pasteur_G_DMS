@@ -23,9 +23,11 @@ rule configure_dms_viz:
         phenotypes_csv="results/summaries/all_antibodies_and_cell_entry.csv",
     output:
         json="results/dms-viz/{struct}.json",
-        sitemap="results/dms-viz/{struct}_sitemap.csv",
-        phenotypes="results/dms-viz/{struct}_phenotypes.csv",
-        pdb_file="results/dms-viz/{struct}.pdb",
+        json_no_description=temp("results/dms-viz/{struct}_no_description.json"),
+        sitemap=temp("results/dms-viz/{struct}_sitemap.csv"),
+        phenotypes=temp("results/dms-viz/{struct}_phenotypes.csv"),
+        description_md=temp("results/dms-viz/{struct}_description.md"),
+        pdb_file=temp("results/dms-viz/{struct}.pdb"),
     params:
         config=lambda wc: dms_viz_config[wc.struct],
         description_suffix=(

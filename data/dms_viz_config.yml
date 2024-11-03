@@ -18,7 +18,9 @@ prefusion_cell_entry:
   filter-limits: {}
   heatmap-limits: [-5, 0, 2]
   title: Effects of mutations to rabies G on cell entry
-  description: null
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    into 293T cells.
 
 prefusion_ab_escape:
   pdb_id: 7u9g
@@ -38,4 +40,6 @@ prefusion_ab_escape:
   filter-limits: {cell entry: [-8, -5, 0]}
   heatmap-limits: [0]
   title: Effects of mutations to rabies G on escape from monoclonal antibodies
-  description: null
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by a panel of monoclonal antibodies.
