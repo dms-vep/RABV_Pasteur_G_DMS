@@ -85,3 +85,7 @@ results/filtered_func_effects_CSV/*
 !results/dms-viz
 results/dms-viz/*
 !results/dms-viz/*.json
+
+!results/escape_logos
+results/escape_logos/*
+!results/escape_logos/*.svg
