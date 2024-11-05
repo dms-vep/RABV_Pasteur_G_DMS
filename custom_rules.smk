@@ -55,6 +55,26 @@ docs["Visualizations of DMS data on protein structure"] = {
 }
 
 
+rule escape_logos:
+    """Make antibody-escape logo plots."""
+    input:
+        escape_csv="results/summaries/all_antibodies_and_cell_entry_per_antibody_escape.csv",
+        phenotypes_csv="results/summaries/all_antibodies_and_cell_entry.csv",
+    output:
+        logoplot_subdir=directory("results/escape_logos"),
+    log:
+        notebook="results/notebooks/escape_logos.ipynb",
+    conda:
+        os.path.join(config["pipeline_path"], "environment.yml")
+    notebook:
+        "notebooks/escape_logos.py.ipynb"
+
+docs["Logo plots showing antibody escape"] = {
+    "Notebook making logo plots": rules.escape_logos.log.notebook
+}
+other_target_files.append(rules.escape_logos.output.logoplot_subdir)
+
+
 rule get_filtered_CSVs:
     """
     Get filtered DMS data CSVs.
