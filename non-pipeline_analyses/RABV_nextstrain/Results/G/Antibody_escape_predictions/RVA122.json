@@ -20,7 +20,7 @@
       "predicted RVA122 escape": 0.60991
     },
     "01016VNM_EU086159_2001-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.28727
     },
     "01016VNM_KX148254_2001-XX-XX": {
       "predicted RVA122 escape": 0.28727
@@ -50,7 +50,7 @@
       "predicted RVA122 escape": 1.4691400000000001
     },
     "02036CHI_EU086137_1997-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.29372
     },
     "02039CHI_EU086138_1992-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -62,10 +62,10 @@
       "predicted RVA122 escape": 1.2185000000000001
     },
     "02043CHI_EU086141_1989-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.30769
     },
     "02044CHI_EU086142_1989-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "02045CHI_EU086143_1989-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -158,7 +158,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "05009CHI_EU086150_2005-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.8918699999999999
     },
     "07128RCA_2003_016_KT119634_2003-01-06": {
       "predicted RVA122 escape": 0.245674
@@ -932,7 +932,7 @@
       "predicted RVA122 escape": 0.413022
     },
     "13R18_KF437653_2013-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.358682
     },
     "13R19_KF437654_2013-XX-XX": {
       "predicted RVA122 escape": 0.396902
@@ -1085,7 +1085,7 @@
       "predicted RVA122 escape": 0.36060000000000003
     },
     "17HN27_MH141797_2017-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.305049
     },
     "17HN68_MH141798_2017-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -2981,7 +2981,7 @@
       "predicted RVA122 escape": 0.9151
     },
     "3645DR_JQ685953_2009-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.94284
     },
     "364_96_FJ465397_1996-XX-XX": {
       "predicted RVA122 escape": 0.6593610000000001
@@ -3053,7 +3053,7 @@
       "predicted RVA122 escape": 0.5681710000000001
     },
     "38_20_OR067379_2020-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29387
     },
     "3944_KT006769_2013-10-29": {
       "predicted RVA122 escape": 0.27780000000000005
@@ -3179,7 +3179,7 @@
       "predicted RVA122 escape": 1.3935100000000002
     },
     "4850_05_Art_SP_JF682431_2005-06-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.0379
     },
     "48551_OP007157_2019-XX-XX": {
       "predicted RVA122 escape": 0.9151
@@ -3191,7 +3191,7 @@
       "predicted RVA122 escape": 1.03542
     },
     "4932_05_Art_SP_JF682432_2005-06-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.0379
     },
     "4980-17_MN418183_2017-08-08": {
       "predicted RVA122 escape": 0.622677
@@ -3371,10 +3371,10 @@
       "predicted RVA122 escape": 0.9151
     },
     "6956_05_Art_SP_JF682435_2005-08-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.0379
     },
     "7045_05_Art_SP_JF682436_2005-08-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.0379
     },
     "718_98_FJ465403_1998-XX-XX": {
       "predicted RVA122 escape": 0.48641100000000004
@@ -3707,7 +3707,7 @@
       "predicted RVA122 escape": 0.19296200000000002
     },
     "8921_05_Art_SP_JF682439_2005-10-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.0379
     },
     "893_MK598346_2010-XX-XX": {
       "predicted RVA122 escape": 0.30641
@@ -3869,7 +3869,7 @@
       "predicted RVA122 escape": 0.28872000000000003
     },
     "9107MAR_AF401287_2002-08-02": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.31832
     },
     "9141RUS_KU899138_1991-XX-XX": {
       "predicted RVA122 escape": 0.67134
@@ -4451,7 +4451,7 @@
       "predicted RVA122 escape": 0.7304799999999999
     },
     "9811CHI_EU086135_1998-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "9811CHI_KU888643_1998-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -4568,7 +4568,7 @@
       "predicted RVA122 escape": 0.9151
     },
     "A04002_1993-12-02": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.65351
     },
     "A08-0500_JQ685993_2008-XX-XX": {
       "predicted RVA122 escape": 0.781033
@@ -4721,7 +4721,7 @@
       "predicted RVA122 escape": 0.22261000000000003
     },
     "A10-0512_JQ685968_2009-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.902203
     },
     "A10-0514_JQ685938_2009-XX-XX": {
       "predicted RVA122 escape": 0.835033
@@ -4751,7 +4751,7 @@
       "predicted RVA122 escape": 0.18424000000000001
     },
     "A10-3023_JX871844_2010-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.92023
     },
     "A10-3633_JX871845_2010-XX-XX": {
       "predicted RVA122 escape": 0.92023
@@ -4823,7 +4823,7 @@
       "predicted RVA122 escape": 0.18424000000000001
     },
     "A10_6918_KC791856_2010-01-01": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.9401799999999999
     },
     "A10_6920_KC791857_2010-01-01": {
       "predicted RVA122 escape": 2.64948
@@ -5471,7 +5471,7 @@
       "predicted RVA122 escape": 0.22261000000000003
     },
     "A11_6286_KC792034_2011-01-01": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.622677
     },
     "A11_6287_KC792035_2011-01-01": {
       "predicted RVA122 escape": 0.622677
@@ -5525,7 +5525,7 @@
       "predicted RVA122 escape": 0.9973418000000001
     },
     "A12-0293_KJ174633_2012-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.43965
     },
     "A12-1003_KJ174635_2012-XX-XX": {
       "predicted RVA122 escape": 2.43965
@@ -6824,22 +6824,22 @@
       "predicted RVA122 escape": 0.48225
     },
     "BDR2_AB699208_2010-11-03": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "BDR3_AB699209_2010-11-30": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "BDR4_AB699210_2010-12-01": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "BDR5_AB699220_2010-12-12": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "BDR6_AB699212_2010-12-03": {
       "predicted RVA122 escape": 0.25035
     },
     "BDR7_AB699213_2010-12-04": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "BJ12-515_KM093868_2012-05-XX": {
       "predicted RVA122 escape": 0.25769000000000003
@@ -6857,7 +6857,7 @@
       "predicted RVA122 escape": 0.22781
     },
     "BKK-TH-104_LC071955_2013-06-29": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.41337
     },
     "BKK-TH-105_LC071960_2013-06-30": {
       "predicted RVA122 escape": 0.35391
@@ -7151,7 +7151,7 @@
       "predicted RVA122 escape": 0.24464000000000002
     },
     "BR11_LC360764_2016-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.6183700000000001
     },
     "BR12_LC360765_2016-XX-XX": {
       "predicted RVA122 escape": 0.41337
@@ -7169,7 +7169,7 @@
       "predicted RVA122 escape": 0.51887
     },
     "BRA1-BV_AF325491_2001-08-20": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.13256
     },
     "BRbv1359_AB905545_2014-01-28": {
       "predicted RVA122 escape": 0.9151
@@ -7187,7 +7187,7 @@
       "predicted RVA122 escape": 0.9151
     },
     "BRbv50_AB110669_2009-01-16": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.22551
     },
     "BRct112_AB276309_2006-10-06": {
       "predicted RVA122 escape": 0.275552
@@ -7235,7 +7235,7 @@
       "predicted RVA122 escape": 0.25725200000000004
     },
     "BRdg322_AB247414_2009-01-30": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.376241
     },
     "BRdg322_AB449214_2016-07-26": {
       "predicted RVA122 escape": 0.269241
@@ -7385,7 +7385,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "CAM1-UN_AF325481_2001-08-20": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.5906
     },
     "CAN_1991_brain_LT993240_2018-06-15": {
       "predicted RVA122 escape": 0.13441
@@ -7940,10 +7940,10 @@
       "predicted RVA122 escape": 0.25436200000000003
     },
     "CQHy2014W_China_2014_KY952219_2014-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.34343199999999996
     },
     "CQHy2014Y_China_2014_KY912036_2014-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.34343199999999996
     },
     "CQJJD17_MK124746_2017-05-04": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -8243,13 +8243,13 @@
       "predicted RVA122 escape": 1.86226
     },
     "CTN181_EF564174_1956-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.8609
     },
     "CTNCEC25_KJ466147_2014-05-26": {
       "predicted RVA122 escape": 1.583
     },
     "CTN_AY009100_2000-12-03": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.3026800000000005
     },
     "CVS-11_12-10_KF733452_2013-XX-XX": {
       "predicted RVA122 escape": 1.1558499999999998
@@ -8327,7 +8327,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "CYN0818D_JQ040572_2008-07-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.48595000000000005
     },
     "CYN0919D_JQ040578_2009-06-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -8537,7 +8537,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "CYN14110D_KP202416_2014-08-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "CYN14111D_KT861558_2014-08-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -8957,7 +8957,7 @@
       "predicted RVA122 escape": 0.07799
     },
     "DQ103705_2005-07-30": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.0912800000000002
     },
     "DR1017_MW177595_2014-XX-XX": {
       "predicted RVA122 escape": 0.33276
@@ -9008,7 +9008,7 @@
       "predicted RVA122 escape": 0.26804
     },
     "DRV-AH08_HQ450385_2008-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.30616000000000004
     },
     "DRV-Mexico_HQ450386_2012-09-12": {
       "predicted RVA122 escape": 0.36274
@@ -9065,7 +9065,7 @@
       "predicted RVA122 escape": 0.9973418000000001
     },
     "EPHVAC_JQ944709_2008-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.01179
     },
     "ERA-KK_EU119869_2007-09-15": {
       "predicted RVA122 escape": 0.13441
@@ -9119,7 +9119,7 @@
       "predicted RVA122 escape": 0.13441
     },
     "ERA_strain_M38452_1993-08-03": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.65351
     },
     "EfV1_JQ824893_2000-XX-XX": {
       "predicted RVA122 escape": 0.9303518
@@ -9146,7 +9146,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "FJ008_FJ866835_2008-11-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "FJ009_FJ866836_2008-11-XX": {
       "predicted RVA122 escape": 0.48225
@@ -9218,7 +9218,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "FY16_DQ849058_2005-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "FY1_DQ849044_2004-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -9341,7 +9341,7 @@
       "predicted RVA122 escape": 0.29522
     },
     "GN07_EU828654_2007-05-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25954000000000005
     },
     "GOA_A_01-01-2017_MW055012_2017-01-01": {
       "predicted RVA122 escape": 0.257421
@@ -9647,19 +9647,19 @@
       "predicted RVA122 escape": 0.29983
     },
     "GSQY-Dog-China-2013_MK567666_2013-03-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29983
     },
     "GUI1-DG_AF325484_2001-08-20": {
       "predicted RVA122 escape": 0.42145
     },
     "GUY1-BV_AF325490_2001-08-20": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.9151
     },
     "GX014_GQ472538_2003-04-XX": {
       "predicted RVA122 escape": 0.22554000000000002
     },
     "GX01_GQ472535_2004-03-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.55614
     },
     "GX074_GQ472539_2003-02-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -9677,7 +9677,7 @@
       "predicted RVA122 escape": 0.22554000000000002
     },
     "GX195_GQ472541_2004-10-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.22554000000000002
     },
     "GX219_GQ472542_2003-06-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -9704,7 +9704,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "GXBS092010_MG201897_2010-11-16": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "GXBS132010_MG201906_2010-11-16": {
       "predicted RVA122 escape": 0.22554000000000002
@@ -9713,7 +9713,7 @@
       "predicted RVA122 escape": 0.22554000000000002
     },
     "GXBS892010_MG201904_2010-11-16": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "GXHCHJ_MG201903_2012-03-09": {
       "predicted RVA122 escape": 0.32439
@@ -9737,7 +9737,7 @@
       "predicted RVA122 escape": 0.37204000000000004
     },
     "GXLB2010_MG201902_2010-09-08": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "GXLB_GQ472550_2007-08-XX": {
       "predicted RVA122 escape": 0.22554000000000002
@@ -9785,7 +9785,7 @@
       "predicted RVA122 escape": 0.22554000000000002
     },
     "GXRXD01_KT221130_2010-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.5861419999999999
     },
     "GXSL2018_MN186249_2018-XX-XX": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -9806,7 +9806,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "GXYZD_GQ472560_2007-04-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.46445000000000003
     },
     "G_117-1996_KU739036_1996-XX-XX": {
       "predicted RVA122 escape": 0.27805
@@ -9899,7 +9899,7 @@
       "predicted RVA122 escape": 0.35975
     },
     "Gra_03-09-7-F_LM645042_2009-03-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.47915
     },
     "Gra_03-10-2-F_LM645019_2010-06-XX": {
       "predicted RVA122 escape": 0.35975
@@ -10001,7 +10001,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "Guangxi_Cx25_EU267743_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.39715
     },
     "Guangxi_Yl66_EU267744_2009-01-05": {
       "predicted RVA122 escape": 0.33099100000000004
@@ -10019,16 +10019,16 @@
       "predicted RVA122 escape": 0.22554000000000002
     },
     "Guizhou_Al03_EU267747_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.38978
     },
     "Guizhou_Al0H_EU267745_2009-01-05": {
       "predicted RVA122 escape": 0.141481
     },
     "Guizhou_Al48_EU267748_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.41289000000000003
     },
     "Guizhou_Qx1_EU267749_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "Guizhou_Qx2_EU267750_2009-01-05": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -10289,7 +10289,7 @@
       "predicted RVA122 escape": 0.35342
     },
     "Henan_Sq35_EU267758_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.44755
     },
     "Henan_Sq59_EU267759_2009-01-05": {
       "predicted RVA122 escape": 0.30873
@@ -10313,7 +10313,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "HuNDB02_GU186379_2005-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.2489
     },
     "HuNDB03_GU186380_2006-XX-XX": {
       "predicted RVA122 escape": 0.15238000000000002
@@ -10352,7 +10352,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "Hunan_Wg12_EU267763_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.31008
     },
     "Hunan_Wg13_EU267764_2009-01-05": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -10364,7 +10364,7 @@
       "predicted RVA122 escape": 0.39509800000000006
     },
     "Hunan_Wg430_EU267767_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.35501000000000005
     },
     "Hunan_Wg432_EU267768_2009-01-05": {
       "predicted RVA122 escape": 0.5457700000000001
@@ -10373,7 +10373,7 @@
       "predicted RVA122 escape": 0.32405
     },
     "Hunan_Xx34_EU267770_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.41835000000000006
     },
     "Hunan_Xx35_EU267771_2009-01-05": {
       "predicted RVA122 escape": 0.37877000000000005
@@ -10721,7 +10721,7 @@
       "predicted RVA122 escape": 0.37002
     },
     "IRN1-HM_AF325472_2001-08-20": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.18424000000000001
     },
     "IRV1-RD_KM492746_2001-XX-XX": {
       "predicted RVA122 escape": 0.37095
@@ -11051,10 +11051,10 @@
       "predicted RVA122 escape": 0.18424000000000001
     },
     "Jiangsu_Wx0H_EU267772_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.06761
     },
     "Jiangsu_Wx1_EU267773_2009-01-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.2684
     },
     "Jiangsu_Wx32_EU267774_2009-01-05": {
       "predicted RVA122 escape": 0.33096000000000003
@@ -11078,7 +11078,7 @@
       "predicted RVA122 escape": 0.382322
     },
     "KRVB0907_GU937030_2009-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.679422
     },
     "KRVB0910_KJ476819_2009-XX-XX": {
       "predicted RVA122 escape": 0.348322
@@ -11132,7 +11132,7 @@
       "predicted RVA122 escape": 0.533702
     },
     "KRVR0901_GU937025_2009-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.348322
     },
     "KRVR0906_GU937024_2009-XX-XX": {
       "predicted RVA122 escape": 0.348322
@@ -11366,7 +11366,7 @@
       "predicted RVA122 escape": 0.23133200000000004
     },
     "M512_LC717421_1965-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.889258
     },
     "MA-2003-5142_MG562518_2003-XX-XX": {
       "predicted RVA122 escape": 0.622677
@@ -11615,7 +11615,7 @@
       "predicted RVA122 escape": 0.622677
     },
     "MEX1-DG_AF325477_2001-08-20": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.38795
     },
     "MEX2-VP_AF325492_2001-08-20": {
       "predicted RVA122 escape": 1.13372
@@ -11639,7 +11639,7 @@
       "predicted RVA122 escape": 0.18424000000000001
     },
     "MK754400_2015-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.22781
     },
     "MK754401_2015-XX-XX": {
       "predicted RVA122 escape": 0.11108
@@ -15038,7 +15038,7 @@
       "predicted RVA122 escape": 1.01315
     },
     "Pk_19_HE801606_2008-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.5052
     },
     "Pk_20_HE801607_2009-XX-XX": {
       "predicted RVA122 escape": 0.39862000000000003
@@ -15047,7 +15047,7 @@
       "predicted RVA122 escape": 0.3154
     },
     "Pk_22_HE801609_2006-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.36449000000000004
     },
     "Pk_23_HE802675_2010-XX-XX": {
       "predicted RVA122 escape": 0.37095
@@ -15074,7 +15074,7 @@
       "predicted RVA122 escape": 0.3154
     },
     "Pk_58_HE801616_2007-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.25035
     },
     "Pk_59_HE801617_2008-XX-XX": {
       "predicted RVA122 escape": 0.27805
@@ -15164,7 +15164,7 @@
       "predicted RVA122 escape": 0.622677
     },
     "QC-2007-2892_MF143347_2007-06-13": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.661217
     },
     "QC-2007-2893_MF143348_2007-06-13": {
       "predicted RVA122 escape": 0.622677
@@ -16709,7 +16709,7 @@
       "predicted RVA122 escape": 0.38761100000000004
     },
     "RVD_AY237121_2003-04-02": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.2846
     },
     "RVHK_KC792243_1998-01-01": {
       "predicted RVA122 escape": 0.35975
@@ -16778,7 +16778,7 @@
       "predicted RVA122 escape": 0.24370000000000003
     },
     "RV_NCR-PHL_2005_Z-05-373_AB563812_2005-07-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.24370000000000003
     },
     "RV_NCR-PHL_2005_Z-05-396_AB563813_2005-07-XX": {
       "predicted RVA122 escape": 0.25193
@@ -16874,7 +16874,7 @@
       "predicted RVA122 escape": 0.24370000000000003
     },
     "RV_R1-PHL_2010_TRa-286_AB733971_2010-01-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.43022800000000005
     },
     "RV_R1-PHL_2010_TRa-299_AB733972_2010-01-XX": {
       "predicted RVA122 escape": 0.24370000000000003
@@ -16940,7 +16940,7 @@
       "predicted RVA122 escape": 0.24370000000000003
     },
     "RV_R10-PHL_2008_TRa-024_AB563852_2008-07-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.7037
     },
     "RV_R10-PHL_2008_TRa-025_AB563853_2008-07-XX": {
       "predicted RVA122 escape": 0.24370000000000003
@@ -17597,7 +17597,7 @@
       "predicted RVA122 escape": 0.24370000000000003
     },
     "RV_R4B-PHL_2013_TRa-486_LC018584_2013-06-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.34185
     },
     "RV_R4B-PHL_2013_TRa-487_LC018585_2013-06-XX": {
       "predicted RVA122 escape": 0.26506
@@ -18125,16 +18125,16 @@
       "predicted RVA122 escape": 0.28727
     },
     "SA194858SEN_2008_MH514972_2008-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.8983500000000001
     },
     "SA204014SEN_2010_MH514976_2010-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.807439
     },
     "SA206776SEN_2010_MH514971_2010-XX-XX": {
       "predicted RVA122 escape": 0.6809499999999999
     },
     "SA212203SEN_2011_MH514973_2011-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.8255600000000001
     },
     "SA217694SEN_2011_MH514970_2011-XX-XX": {
       "predicted RVA122 escape": 0.42885
@@ -18146,7 +18146,7 @@
       "predicted RVA122 escape": 0.6809499999999999
     },
     "SA252888SEN_2013_MH514981_2013-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.2073619999999998
     },
     "SA252913SEN_2013_MH514975_2013-XX-XX": {
       "predicted RVA122 escape": 0.72086
@@ -18161,7 +18161,7 @@
       "predicted RVA122 escape": 0.6809499999999999
     },
     "SA267115SEN_2014_MH514980_2014-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.5793400000000006
     },
     "SA272282SEN_2015_MH514985_2015-XX-XX": {
       "predicted RVA122 escape": 0.6809499999999999
@@ -18716,7 +18716,7 @@
       "predicted RVA122 escape": 0.30036199999999996
     },
     "SKRRD9902PJ_DQ076102_1999-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.30036199999999996
     },
     "SKRRD9903YG_DQ076099_1999-XX-XX": {
       "predicted RVA122 escape": 0.385522
@@ -18818,7 +18818,7 @@
       "predicted RVA122 escape": 0.6958359999999999
     },
     "SMK-TH-154_LC071979_2013-10-09": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.2280078
     },
     "SMP-TH-19_LC071953_2014-03-02": {
       "predicted RVA122 escape": 0.41337
@@ -18851,7 +18851,7 @@
       "predicted RVA122 escape": 0.22824640000000002
     },
     "SR40_LC360793_2016-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.22781
     },
     "SR43_LC360796_2016-XX-XX": {
       "predicted RVA122 escape": 0.28727
@@ -18923,7 +18923,7 @@
       "predicted RVA122 escape": 0.9151
     },
     "SV255_16_KY824684_2016-06-08": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 1.3595
     },
     "SV257_12_KY824685_2012-06-04": {
       "predicted RVA122 escape": 0.9151
@@ -19133,7 +19133,7 @@
       "predicted RVA122 escape": 0.35104
     },
     "ShaanxiRab005_KF663534_2011-05-30": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29983
     },
     "ShaanxiRab007_KF663535_2011-04-28": {
       "predicted RVA122 escape": 0.29983
@@ -19148,13 +19148,13 @@
       "predicted RVA122 escape": 0.29983
     },
     "ShaanxiRab013_KF663539_2009-11-19": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.49870000000000003
     },
     "ShaanxiRab014_KF663540_2010-02-09": {
       "predicted RVA122 escape": 0.31465000000000004
     },
     "ShaanxiRab015_KF663541_2009-08-12": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "ShaanxiRab016_KF663542_2011-12-15": {
       "predicted RVA122 escape": 0.31673
@@ -19166,7 +19166,7 @@
       "predicted RVA122 escape": 0.35104
     },
     "ShaanxiRab020_KF663545_2012-04-08": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29983
     },
     "ShaanxiRab023_KF663546_2011-09-16": {
       "predicted RVA122 escape": 0.29983
@@ -19226,13 +19226,13 @@
       "predicted RVA122 escape": 0.18424000000000001
     },
     "TR-Rabies-G-Cattle-2020-D3_MZ391119_2020-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.73543
     },
     "TR-Rabies-G-Cattle-2020-D4_MZ391120_2020-XX-XX": {
       "predicted RVA122 escape": 0.18424000000000001
     },
     "TR-Rabies-G-Dog-2014-2K_MZ391128_2014-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.5545800000000001
     },
     "TR-Rabies-G-Donkey-2020-B1_MZ391127_2020-XX-XX": {
       "predicted RVA122 escape": 0.20422
@@ -19241,7 +19241,7 @@
       "predicted RVA122 escape": 0.26018
     },
     "TR-Rabies-G-Marten-2013-8B_MZ391126_2013-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.61336
     },
     "TR-Rabies-G-PV_MZ391133_2020-XX-XX": {
       "predicted RVA122 escape": 0.107
@@ -19415,19 +19415,19 @@
       "predicted RVA122 escape": 0.28727
     },
     "UB03_LC360756_2016-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.28727
     },
     "UB05_LC360758_2016-XX-XX": {
       "predicted RVA122 escape": 0.28727
     },
     "UB06_LC360755_2016-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.28727
     },
     "UB23_LC360776_2016-XX-XX": {
       "predicted RVA122 escape": 0.28727
     },
     "UB24_LC360777_2016-XX-XX": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.3159678
     },
     "UB25_LC360778_2016-XX-XX": {
       "predicted RVA122 escape": 0.28727
@@ -19469,7 +19469,7 @@
       "predicted RVA122 escape": 0.482708
     },
     "USA7-BT_AF298141_2002-08-05": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 2.67032
     },
     "USA8-BT_AF325494_2001-08-20": {
       "predicted RVA122 escape": 1.8862700000000001
@@ -19490,7 +19490,7 @@
       "predicted RVA122 escape": 0.26804
     },
     "VMC-5_MT862689_2012-03-01": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.31466700000000003
     },
     "VMC_1519_PP441993_2021-03-03": {
       "predicted RVA122 escape": 0.25035
@@ -19517,7 +19517,7 @@
       "predicted RVA122 escape": 0.257421
     },
     "VMC_1918_PP442001_2021-10-15": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.496381
     },
     "VMC_1919_PP442002_2021-09-25": {
       "predicted RVA122 escape": 0.257421
@@ -19901,7 +19901,7 @@
       "predicted RVA122 escape": 0.622677
     },
     "Vnukovo-32_X71879_1997-03-19": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.2301
     },
     "W106_OP515226_2012-05-08": {
       "predicted RVA122 escape": 0.28727
@@ -20336,7 +20336,7 @@
       "predicted RVA122 escape": 0.29555000000000003
     },
     "Yunnan_Md06_EU253477_2007-12-13": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.29555000000000003
     },
     "Yunnan_Qj07_EU275240_2007-03-07": {
       "predicted RVA122 escape": 0.29555000000000003
@@ -20345,7 +20345,7 @@
       "predicted RVA122 escape": 0.33761
     },
     "Yunnan_Zt07_EU275241_2007-07-12": {
-      "predicted RVA122 escape": NaN
+      "predicted RVA122 escape": 0.48605000000000004
     },
     "Z-12-001_MN726845_2012-XX-XX": {
       "predicted RVA122 escape": 0.24370000000000003

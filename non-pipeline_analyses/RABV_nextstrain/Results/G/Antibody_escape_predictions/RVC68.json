@@ -20,7 +20,7 @@
       "predicted RVC68 escape": 1.6464152
     },
     "01016VNM_EU086159_2001-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3295952
     },
     "01016VNM_KX148254_2001-XX-XX": {
       "predicted RVC68 escape": 1.3295952
@@ -50,7 +50,7 @@
       "predicted RVC68 escape": 1.8369132
     },
     "02036CHI_EU086137_1997-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2359932
     },
     "02039CHI_EU086138_1992-XX-XX": {
       "predicted RVC68 escape": 1.1158702
@@ -62,10 +62,10 @@
       "predicted RVC68 escape": 1.6749932
     },
     "02043CHI_EU086141_1989-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3388342
     },
     "02044CHI_EU086142_1989-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2730842
     },
     "02045CHI_EU086143_1989-XX-XX": {
       "predicted RVC68 escape": 1.1838432
@@ -158,7 +158,7 @@
       "predicted RVC68 escape": 1.1838432
     },
     "05009CHI_EU086150_2005-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3365432000000002
     },
     "07128RCA_2003_016_KT119634_2003-01-06": {
       "predicted RVC68 escape": 1.6163602000000001
@@ -932,7 +932,7 @@
       "predicted RVC68 escape": 1.3831052000000001
     },
     "13R18_KF437653_2013-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3941052
     },
     "13R19_KF437654_2013-XX-XX": {
       "predicted RVC68 escape": 1.4573352
@@ -1085,7 +1085,7 @@
       "predicted RVC68 escape": 1.2491732
     },
     "17HN27_MH141797_2017-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.1530431999999995
     },
     "17HN68_MH141798_2017-XX-XX": {
       "predicted RVC68 escape": 1.1838432
@@ -2981,7 +2981,7 @@
       "predicted RVC68 escape": 0.5796181999999999
     },
     "3645DR_JQ685953_2009-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 0.7290082
     },
     "364_96_FJ465397_1996-XX-XX": {
       "predicted RVC68 escape": 1.2994052
@@ -3053,7 +3053,7 @@
       "predicted RVC68 escape": 1.4278922
     },
     "38_20_OR067379_2020-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4449652000000002
     },
     "3944_KT006769_2013-10-29": {
       "predicted RVC68 escape": 1.2958052000000002
@@ -3179,7 +3179,7 @@
       "predicted RVC68 escape": 2.1228682
     },
     "4850_05_Art_SP_JF682431_2005-06-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2663182
     },
     "48551_OP007157_2019-XX-XX": {
       "predicted RVC68 escape": 0.5796181999999999
@@ -3191,7 +3191,7 @@
       "predicted RVC68 escape": 0.8478822
     },
     "4932_05_Art_SP_JF682432_2005-06-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2663182
     },
     "4980-17_MN418183_2017-08-08": {
       "predicted RVC68 escape": 1.8419472000000001
@@ -3371,10 +3371,10 @@
       "predicted RVC68 escape": 0.5796181999999999
     },
     "6956_05_Art_SP_JF682435_2005-08-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2663182
     },
     "7045_05_Art_SP_JF682436_2005-08-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2663182
     },
     "718_98_FJ465403_1998-XX-XX": {
       "predicted RVC68 escape": 1.4220292
@@ -3707,7 +3707,7 @@
       "predicted RVC68 escape": 1.2343202
     },
     "8921_05_Art_SP_JF682439_2005-10-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2663182
     },
     "893_MK598346_2010-XX-XX": {
       "predicted RVC68 escape": 1.5315852
@@ -3869,7 +3869,7 @@
       "predicted RVC68 escape": 1.4256852
     },
     "9107MAR_AF401287_2002-08-02": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2674352000000002
     },
     "9141RUS_KU899138_1991-XX-XX": {
       "predicted RVC68 escape": 1.4256852
@@ -4451,7 +4451,7 @@
       "predicted RVC68 escape": 1.0555372
     },
     "9811CHI_EU086135_1998-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2086932000000001
     },
     "9811CHI_KU888643_1998-XX-XX": {
       "predicted RVC68 escape": 1.1838432
@@ -4721,7 +4721,7 @@
       "predicted RVC68 escape": 1.4690452
     },
     "A10-0512_JQ685968_2009-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.3480641999999996
     },
     "A10-0514_JQ685938_2009-XX-XX": {
       "predicted RVC68 escape": 2.4765641999999994
@@ -4823,7 +4823,7 @@
       "predicted RVC68 escape": 1.0163352
     },
     "A10_6918_KC791856_2010-01-01": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1560782
     },
     "A10_6920_KC791857_2010-01-01": {
       "predicted RVC68 escape": 1.9161762
@@ -5285,7 +5285,7 @@
       "predicted RVC68 escape": 3.3029522
     },
     "A11_4560_KC791972_2004-01-01": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2322352
     },
     "A11_4561_KC791973_2005-01-01": {
       "predicted RVC68 escape": 1.3600152
@@ -5471,7 +5471,7 @@
       "predicted RVC68 escape": 1.4690452
     },
     "A11_6286_KC792034_2011-01-01": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.9231272000000001
     },
     "A11_6287_KC792035_2011-01-01": {
       "predicted RVC68 escape": 1.8419472000000001
@@ -5525,7 +5525,7 @@
       "predicted RVC68 escape": 1.5743482
     },
     "A12-0293_KJ174633_2012-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 5.650952200000001
     },
     "A12-1003_KJ174635_2012-XX-XX": {
       "predicted RVC68 escape": 3.3029522
@@ -6824,22 +6824,22 @@
       "predicted RVC68 escape": 1.4041432
     },
     "BDR2_AB699208_2010-11-03": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3731152000000002
     },
     "BDR3_AB699209_2010-11-30": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3731152000000002
     },
     "BDR4_AB699210_2010-12-01": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3731152000000002
     },
     "BDR5_AB699220_2010-12-12": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3731152000000002
     },
     "BDR6_AB699212_2010-12-03": {
       "predicted RVC68 escape": 1.3818752
     },
     "BDR7_AB699213_2010-12-04": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3731152000000002
     },
     "BJ12-515_KM093868_2012-05-XX": {
       "predicted RVC68 escape": 1.1838432
@@ -6869,7 +6869,7 @@
       "predicted RVC68 escape": 1.3295952
     },
     "BKK-TH-117_LC071971_2014-07-31": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 3.5455951999999997
     },
     "BKK-TH-118_LC071941_2014-08-01": {
       "predicted RVC68 escape": 1.5180951999999999
@@ -6902,7 +6902,7 @@
       "predicted RVC68 escape": 1.5889351999999999
     },
     "BKK-TH-171_LC071961_2014-11-06": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.6207951999999999
     },
     "BKK-TH-227_LC071980_2013-12-23": {
       "predicted RVC68 escape": 1.3295952
@@ -7169,7 +7169,7 @@
       "predicted RVC68 escape": 1.5267532
     },
     "BRA1-BV_AF325491_2001-08-20": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 0.9123882
     },
     "BRbv1359_AB905545_2014-01-28": {
       "predicted RVC68 escape": 0.5796181999999999
@@ -7337,7 +7337,7 @@
       "predicted RVC68 escape": 0.5864341999999999
     },
     "BRpg28_AB110661_2009-01-16": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2316452000000002
     },
     "BRsp35_AB110665_2009-01-16": {
       "predicted RVC68 escape": 0.5932981999999999
@@ -7385,7 +7385,7 @@
       "predicted RVC68 escape": 1.1838432
     },
     "CAM1-UN_AF325481_2001-08-20": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.8783552000000001
     },
     "CAN_1991_brain_LT993240_2018-06-15": {
       "predicted RVC68 escape": 0.35636519999999994
@@ -7940,10 +7940,10 @@
       "predicted RVC68 escape": 1.4468252
     },
     "CQHy2014W_China_2014_KY952219_2014-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 6.0138252
     },
     "CQHy2014Y_China_2014_KY912036_2014-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 6.0138252
     },
     "CQJJD17_MK124746_2017-05-04": {
       "predicted RVC68 escape": 1.0927732000000001
@@ -8249,7 +8249,7 @@
       "predicted RVC68 escape": 1.6820952000000002
     },
     "CTN_AY009100_2000-12-03": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.6909122
     },
     "CVS-11_12-10_KF733452_2013-XX-XX": {
       "predicted RVC68 escape": 1.87915
@@ -8297,7 +8297,7 @@
       "predicted RVC68 escape": 0.35636519999999994
     },
     "CVS_AJ506997_2002-08-29": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.6821251999999993
     },
     "CVS_FJ979833_2008-12-28": {
       "predicted RVC68 escape": 1.87915
@@ -8537,7 +8537,7 @@
       "predicted RVC68 escape": 1.0927732000000001
     },
     "CYN14110D_KP202416_2014-08-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.0927732000000001
     },
     "CYN14111D_KT861558_2014-08-XX": {
       "predicted RVC68 escape": 1.0927732000000001
@@ -8684,7 +8684,7 @@
       "predicted RVC68 escape": 1.0927732000000001
     },
     "CYN15157D_MT818468_2015-11-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1330002000000001
     },
     "CYN15158D_MT818469_2015-12-XX": {
       "predicted RVC68 escape": 1.0927732000000001
@@ -8957,7 +8957,7 @@
       "predicted RVC68 escape": 0.0
     },
     "DQ103705_2005-07-30": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.8678452
     },
     "DR1017_MW177595_2014-XX-XX": {
       "predicted RVC68 escape": 1.5173252
@@ -9065,7 +9065,7 @@
       "predicted RVC68 escape": 1.5743482
     },
     "EPHVAC_JQ944709_2008-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.5636352000000002
     },
     "ERA-KK_EU119869_2007-09-15": {
       "predicted RVC68 escape": 0.35636519999999994
@@ -9146,7 +9146,7 @@
       "predicted RVC68 escape": 1.1919042
     },
     "FJ008_FJ866835_2008-11-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1838432
     },
     "FJ009_FJ866836_2008-11-XX": {
       "predicted RVC68 escape": 1.4041432
@@ -9341,7 +9341,7 @@
       "predicted RVC68 escape": 0.45506519999999995
     },
     "GN07_EU828654_2007-05-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.0757552000000001
     },
     "GOA_A_01-01-2017_MW055012_2017-01-01": {
       "predicted RVC68 escape": 1.3329662
@@ -9653,13 +9653,13 @@
       "predicted RVC68 escape": 1.6681452
     },
     "GUY1-BV_AF325490_2001-08-20": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 0.6217981999999999
     },
     "GX014_GQ472538_2003-04-XX": {
       "predicted RVC68 escape": 1.0757552000000001
     },
     "GX01_GQ472535_2004-03-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1907552000000001
     },
     "GX074_GQ472539_2003-02-XX": {
       "predicted RVC68 escape": 1.1838432
@@ -9677,7 +9677,7 @@
       "predicted RVC68 escape": 1.0757552000000001
     },
     "GX195_GQ472541_2004-10-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.0757552000000001
     },
     "GX219_GQ472542_2003-06-XX": {
       "predicted RVC68 escape": 1.2584832
@@ -9704,7 +9704,7 @@
       "predicted RVC68 escape": 1.4082432
     },
     "GXBS092010_MG201897_2010-11-16": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3997431999999999
     },
     "GXBS132010_MG201906_2010-11-16": {
       "predicted RVC68 escape": 1.0757552000000001
@@ -9713,7 +9713,7 @@
       "predicted RVC68 escape": 1.0757552000000001
     },
     "GXBS892010_MG201904_2010-11-16": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3997431999999999
     },
     "GXHCHJ_MG201903_2012-03-09": {
       "predicted RVC68 escape": 1.1838432
@@ -9737,7 +9737,7 @@
       "predicted RVC68 escape": 1.082871
     },
     "GXLB2010_MG201902_2010-09-08": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.9639432000000001
     },
     "GXLB_GQ472550_2007-08-XX": {
       "predicted RVC68 escape": 1.3715552000000002
@@ -9785,7 +9785,7 @@
       "predicted RVC68 escape": 1.0757552000000001
     },
     "GXRXD01_KT221130_2010-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.8111032
     },
     "GXSL2018_MN186249_2018-XX-XX": {
       "predicted RVC68 escape": 1.4082432
@@ -9806,7 +9806,7 @@
       "predicted RVC68 escape": 1.4082432
     },
     "GXYZD_GQ472560_2007-04-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.0221731999999997
     },
     "G_117-1996_KU739036_1996-XX-XX": {
       "predicted RVC68 escape": 1.3076452
@@ -9899,7 +9899,7 @@
       "predicted RVC68 escape": 1.3331612
     },
     "Gra_03-09-7-F_LM645042_2009-03-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.0179612
     },
     "Gra_03-10-2-F_LM645019_2010-06-XX": {
       "predicted RVC68 escape": 1.3331612
@@ -10001,7 +10001,7 @@
       "predicted RVC68 escape": 1.0927732000000001
     },
     "Guangxi_Cx25_EU267743_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3350352
     },
     "Guangxi_Yl66_EU267744_2009-01-05": {
       "predicted RVC68 escape": 1.2416732
@@ -10025,10 +10025,10 @@
       "predicted RVC68 escape": 0.4291051999999999
     },
     "Guizhou_Al48_EU267748_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1838432
     },
     "Guizhou_Qx1_EU267749_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1838432
     },
     "Guizhou_Qx2_EU267750_2009-01-05": {
       "predicted RVC68 escape": 1.3637832
@@ -10280,7 +10280,7 @@
       "predicted RVC68 escape": 1.2389032
     },
     "Henan_Hb10_EU267753_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.0927732000000001
     },
     "Henan_Sq10_EU267756_2009-01-05": {
       "predicted RVC68 escape": 1.2808232000000002
@@ -10289,7 +10289,7 @@
       "predicted RVC68 escape": 1.1008342
     },
     "Henan_Sq35_EU267758_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.6048532
     },
     "Henan_Sq59_EU267759_2009-01-05": {
       "predicted RVC68 escape": 1.0927732000000001
@@ -10313,7 +10313,7 @@
       "predicted RVC68 escape": 1.1838432
     },
     "HuNDB02_GU186379_2005-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1171652
     },
     "HuNDB03_GU186380_2006-XX-XX": {
       "predicted RVC68 escape": 1.2308552
@@ -10364,7 +10364,7 @@
       "predicted RVC68 escape": 1.3452432
     },
     "Hunan_Wg430_EU267767_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1404832
     },
     "Hunan_Wg432_EU267768_2009-01-05": {
       "predicted RVC68 escape": 0.496768
@@ -10373,7 +10373,7 @@
       "predicted RVC68 escape": 1.4050432
     },
     "Hunan_Xx34_EU267770_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.8849432000000002
     },
     "Hunan_Xx35_EU267771_2009-01-05": {
       "predicted RVC68 escape": 1.2276232
@@ -11054,13 +11054,13 @@
       "predicted RVC68 escape": 0.35636519999999994
     },
     "Jiangsu_Wx1_EU267773_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.0002232
     },
     "Jiangsu_Wx32_EU267774_2009-01-05": {
       "predicted RVC68 escape": 1.3013572
     },
     "Jiangsu_Yc37_EU267775_2009-01-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4473432
     },
     "Jiangsu_Yc58_EU267776_2009-01-05": {
       "predicted RVC68 escape": 1.3997431999999999
@@ -11069,7 +11069,7 @@
       "predicted RVC68 escape": 1.3831052000000001
     },
     "KRVB0903_GU937033_2009-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4785052
     },
     "KRVB0904_GU937032_2009-XX-XX": {
       "predicted RVC68 escape": 1.3831052000000001
@@ -11132,7 +11132,7 @@
       "predicted RVC68 escape": 1.4309052000000002
     },
     "KRVR0901_GU937025_2009-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.0071451999999996
     },
     "KRVR0906_GU937024_2009-XX-XX": {
       "predicted RVC68 escape": 1.3831052000000001
@@ -11366,7 +11366,7 @@
       "predicted RVC68 escape": 1.2679902
     },
     "M512_LC717421_1965-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.0437662
     },
     "MA-2003-5142_MG562518_2003-XX-XX": {
       "predicted RVC68 escape": 1.8419472000000001
@@ -11669,7 +11669,7 @@
       "predicted RVC68 escape": 1.7060452
     },
     "MK754411_2014-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2864852
     },
     "MK754412_2014-XX-XX": {
       "predicted RVC68 escape": 1.2322352
@@ -11738,7 +11738,7 @@
       "predicted RVC68 escape": 1.4977015700000003
     },
     "MRV_DQ875050_2008-11-25": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.500025199999999
     },
     "MSV-Bio_87_SAD_OQ068400_2023-05-30": {
       "predicted RVC68 escape": 0.45506519999999995
@@ -15038,7 +15038,7 @@
       "predicted RVC68 escape": 1.6318952000000002
     },
     "Pk_19_HE801606_2008-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4827451999999999
     },
     "Pk_20_HE801607_2009-XX-XX": {
       "predicted RVC68 escape": 1.5121252
@@ -15047,7 +15047,7 @@
       "predicted RVC68 escape": 1.4827451999999999
     },
     "Pk_22_HE801609_2006-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4827451999999999
     },
     "Pk_23_HE802675_2010-XX-XX": {
       "predicted RVC68 escape": 1.3076452
@@ -15164,7 +15164,7 @@
       "predicted RVC68 escape": 1.8419472000000001
     },
     "QC-2007-2892_MF143347_2007-06-13": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.8419472000000001
     },
     "QC-2007-2893_MF143348_2007-06-13": {
       "predicted RVC68 escape": 1.8419472000000001
@@ -16709,7 +16709,7 @@
       "predicted RVC68 escape": 1.5206952000000002
     },
     "RVD_AY237121_2003-04-02": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.98651
     },
     "RVHK_KC792243_1998-01-01": {
       "predicted RVC68 escape": 1.3331612
@@ -16874,7 +16874,7 @@
       "predicted RVC68 escape": 1.3520352
     },
     "RV_R1-PHL_2010_TRa-286_AB733971_2010-01-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3520352
     },
     "RV_R1-PHL_2010_TRa-299_AB733972_2010-01-XX": {
       "predicted RVC68 escape": 1.3520352
@@ -17597,7 +17597,7 @@
       "predicted RVC68 escape": 1.3520352
     },
     "RV_R4B-PHL_2013_TRa-486_LC018584_2013-06-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.6470851999999998
     },
     "RV_R4B-PHL_2013_TRa-487_LC018585_2013-06-XX": {
       "predicted RVC68 escape": 1.5557052
@@ -18125,16 +18125,16 @@
       "predicted RVC68 escape": 1.3295952
     },
     "SA194858SEN_2008_MH514972_2008-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.5818652
     },
     "SA204014SEN_2010_MH514976_2010-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.6033652
     },
     "SA206776SEN_2010_MH514971_2010-XX-XX": {
       "predicted RVC68 escape": 1.5818652
     },
     "SA212203SEN_2011_MH514973_2011-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.1327151999999994
     },
     "SA217694SEN_2011_MH514970_2011-XX-XX": {
       "predicted RVC68 escape": 1.9017552
@@ -18146,7 +18146,7 @@
       "predicted RVC68 escape": 1.5818652
     },
     "SA252888SEN_2013_MH514981_2013-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 2.1729352
     },
     "SA252913SEN_2013_MH514975_2013-XX-XX": {
       "predicted RVC68 escape": 1.9048652000000001
@@ -18161,7 +18161,7 @@
       "predicted RVC68 escape": 1.5818652
     },
     "SA267115SEN_2014_MH514980_2014-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.9290972000000002
     },
     "SA272282SEN_2015_MH514985_2015-XX-XX": {
       "predicted RVC68 escape": 1.5818652
@@ -18512,7 +18512,7 @@
       "predicted RVC68 escape": 1.5818652
     },
     "SHBRV-18_AY705373_2004-11-16": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.8398862000000002
     },
     "SHBRV_U52946_1996-04-25": {
       "predicted RVC68 escape": 1.6030372000000002
@@ -18716,7 +18716,7 @@
       "predicted RVC68 escape": 1.3070552
     },
     "SKRRD9902PJ_DQ076102_1999-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3070552
     },
     "SKRRD9903YG_DQ076099_1999-XX-XX": {
       "predicted RVC68 escape": 1.3070552
@@ -18818,7 +18818,7 @@
       "predicted RVC68 escape": 0.8879651999999999
     },
     "SMK-TH-154_LC071979_2013-10-09": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3295952
     },
     "SMP-TH-19_LC071953_2014-03-02": {
       "predicted RVC68 escape": 1.5180951999999999
@@ -18851,7 +18851,7 @@
       "predicted RVC68 escape": 1.3740252
     },
     "SR40_LC360793_2016-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3295952
     },
     "SR43_LC360796_2016-XX-XX": {
       "predicted RVC68 escape": 1.3295952
@@ -19154,7 +19154,7 @@
       "predicted RVC68 escape": 1.1838432
     },
     "ShaanxiRab015_KF663541_2009-08-12": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.1838432
     },
     "ShaanxiRab016_KF663542_2011-12-15": {
       "predicted RVC68 escape": 1.4490732000000002
@@ -19226,13 +19226,13 @@
       "predicted RVC68 escape": 1.3173152000000001
     },
     "TR-Rabies-G-Cattle-2020-D3_MZ391119_2020-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.9053521999999998
     },
     "TR-Rabies-G-Cattle-2020-D4_MZ391120_2020-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.2400122
     },
     "TR-Rabies-G-Dog-2014-2K_MZ391128_2014-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.9685442
     },
     "TR-Rabies-G-Donkey-2020-B1_MZ391127_2020-XX-XX": {
       "predicted RVC68 escape": 1.3713582
@@ -19421,13 +19421,13 @@
       "predicted RVC68 escape": 1.3295952
     },
     "UB06_LC360755_2016-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.3295952
     },
     "UB23_LC360776_2016-XX-XX": {
       "predicted RVC68 escape": 1.3295952
     },
     "UB24_LC360777_2016-XX-XX": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.5363952
     },
     "UB25_LC360778_2016-XX-XX": {
       "predicted RVC68 escape": 1.3295952
@@ -19469,7 +19469,7 @@
       "predicted RVC68 escape": 1.5834252
     },
     "USA7-BT_AF298141_2002-08-05": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.612955
     },
     "USA8-BT_AF325494_2001-08-20": {
       "predicted RVC68 escape": 1.4221672
@@ -19490,7 +19490,7 @@
       "predicted RVC68 escape": 1.5173252
     },
     "VMC-5_MT862689_2012-03-01": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 3.4104392000000003
     },
     "VMC_1519_PP441993_2021-03-03": {
       "predicted RVC68 escape": 1.4733552
@@ -20336,7 +20336,7 @@
       "predicted RVC68 escape": 1.2705432
     },
     "Yunnan_Md06_EU253477_2007-12-13": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.4832432
     },
     "Yunnan_Qj07_EU275240_2007-03-07": {
       "predicted RVC68 escape": 1.2796232
@@ -20345,7 +20345,7 @@
       "predicted RVC68 escape": 1.3295952
     },
     "Yunnan_Zt07_EU275241_2007-07-12": {
-      "predicted RVC68 escape": NaN
+      "predicted RVC68 escape": 1.0927732000000001
     },
     "Z-12-001_MN726845_2012-XX-XX": {
       "predicted RVC68 escape": 1.3520352
