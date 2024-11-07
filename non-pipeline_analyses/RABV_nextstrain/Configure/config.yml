@@ -72,15 +72,17 @@ Color_orderings: Configure/Input_Data/color_orderings.tsv
 Lat_longs: Configure/Input_Data/lat_longs.tsv
 
 # Antibody escape data:
-Antibody_escape_files:
-  17C7: ../../results/filtered_antibody_escape_CSVs/17C7_filtered_mut_effects.csv
-  CR4098: ../../results/filtered_antibody_escape_CSVs/CR4098_filtered_mut_effects.csv
-  CR57: ../../results/filtered_antibody_escape_CSVs/CR57_filtered_mut_effects.csv
-  CTB012: ../../results/filtered_antibody_escape_CSVs/CTB012_filtered_mut_effects.csv
-  RVA122: ../../results/filtered_antibody_escape_CSVs/RVA122_filtered_mut_effects.csv
-  RVC20: ../../results/filtered_antibody_escape_CSVs/RVC20_filtered_mut_effects.csv
-  RVC58: ../../results/filtered_antibody_escape_CSVs/RVC58_filtered_mut_effects.csv
-  RVC68: ../../results/filtered_antibody_escape_CSVs/RVC68_filtered_mut_effects.csv
+Antibody_escape_file: ../../results/summaries/all_antibodies_and_cell_entry_per_antibody_escape.csv
+Antibody_names:
+  17C7: 17C7
+  CR4098: CR4098
+  CR57: CR57
+  CTB012: CTB012
+  RVA122: RVA122
+  RVC20: RVC20
+  RVC58: RVC58
+  RVC68: RVC68
+Site_map: ../../data/site_numbering_map.csv
 # Antibody escape prediction parameters
 Antibody_escape_prediction_params:
   Reference_DMS_strain: "NC_001542_2018-08-13" # name of reference DMS strain

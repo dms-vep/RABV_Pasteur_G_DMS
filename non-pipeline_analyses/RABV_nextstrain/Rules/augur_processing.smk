@@ -159,11 +159,12 @@ rule colors:
 rule variant_escape_prediction:
     """This rule calculates variant escape"""
     input:
-        escape_data = lambda wildcards: config["Antibody_escape_files"][wildcards.antibody],
+        escape_data = config["Antibody_escape_file"],
         alignment = "Results/{gene}/Alignments/protein_ungapped_no_outgroup.fasta",
         metadata = "Results/{gene}/metadata.tsv",
     params:
-        antibody_name = lambda wildcards: wildcards.antibody,
+        antibody_name = lambda wildcards: config["Antibody_names"][wildcards.antibody],
+        site_map = config["Site_map"],
         filter_params = config["Antibody_escape_prediction_params"]["Antibody_escape_filter_params"],
         reference_strain = config["Antibody_escape_prediction_params"]["Reference_DMS_strain"],
         site_column = config["Antibody_escape_prediction_params"]["Mutation_col"],
@@ -176,6 +177,7 @@ rule variant_escape_prediction:
         "Results/Logs/{gene}/{antibody}_variant_escape_prediction.txt",
     script:
         "../Scripts/assign_DMS_escape.py"
+        
 
 antibody_list = [
     "17C7",

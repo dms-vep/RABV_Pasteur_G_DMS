@@ -20,7 +20,7 @@
       "predicted CR57 escape": 2.310529
     },
     "01016VNM_EU086159_2001-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.585502
     },
     "01016VNM_KX148254_2001-XX-XX": {
       "predicted CR57 escape": 2.574262
@@ -50,7 +50,7 @@
       "predicted CR57 escape": 3.1285502999999997
     },
     "02036CHI_EU086137_1997-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6403342999999997
     },
     "02039CHI_EU086138_1992-XX-XX": {
       "predicted CR57 escape": 2.5798743
@@ -59,13 +59,13 @@
       "predicted CR57 escape": 3.0935742999999998
     },
     "02041CHI_EU086140_1987-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.0046812999999997
     },
     "02043CHI_EU086141_1989-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.6922653000000003
     },
     "02044CHI_EU086142_1989-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.9376542999999997
     },
     "02045CHI_EU086143_1989-XX-XX": {
       "predicted CR57 escape": 2.5798743
@@ -158,7 +158,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "05009CHI_EU086150_2005-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5633343
     },
     "07128RCA_2003_016_KT119634_2003-01-06": {
       "predicted CR57 escape": 2.673472
@@ -629,7 +629,7 @@
       "predicted CR57 escape": 2.605782
     },
     "10509_05_Art_SP_JF682440_2005-11-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "1060_JQ685908_2009-XX-XX": {
       "predicted CR57 escape": 3.36566
@@ -728,7 +728,7 @@
       "predicted CR57 escape": 1.917236
     },
     "11206_05_Art_SP_JF682444_2005-12-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "113_91_FJ465390_1991-XX-XX": {
       "predicted CR57 escape": 2.371283
@@ -740,7 +740,7 @@
       "predicted CR57 escape": 3.5647429999999996
     },
     "11817_04_Bov_SP_JF682458_2004-12-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "11818_04_Bov_SP_JF682459_2004-12-XX": {
       "predicted CR57 escape": 1.869224
@@ -932,7 +932,7 @@
       "predicted CR57 escape": 3.474619
     },
     "13R18_KF437653_2013-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.236369
     },
     "13R19_KF437654_2013-XX-XX": {
       "predicted CR57 escape": 3.288289
@@ -1085,7 +1085,7 @@
       "predicted CR57 escape": 2.5946243
     },
     "17HN27_MH141797_2017-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.9534742999999994
     },
     "17HN68_MH141798_2017-XX-XX": {
       "predicted CR57 escape": 2.5798743
@@ -2639,7 +2639,7 @@
       "predicted CR57 escape": 1.881214
     },
     "2196_04_Bov_SP_JF682448_2004-09-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "219_2022_aqp14_PP965347_2022-XX-XX": {
       "predicted CR57 escape": 2.907636
@@ -2816,7 +2816,7 @@
       "predicted CR57 escape": 2.605782
     },
     "2579_05_Bov_SP_JF682452_2005-04-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "259-17_MN418178_2017-01-23": {
       "predicted CR57 escape": 2.8201349999999996
@@ -2981,7 +2981,7 @@
       "predicted CR57 escape": 1.869224
     },
     "3645DR_JQ685953_2009-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.540604
     },
     "364_96_FJ465397_1996-XX-XX": {
       "predicted CR57 escape": 2.949551
@@ -3053,7 +3053,7 @@
       "predicted CR57 escape": 3.333983
     },
     "38_20_OR067379_2020-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.656452
     },
     "3944_KT006769_2013-10-29": {
       "predicted CR57 escape": 2.018922
@@ -3146,7 +3146,7 @@
       "predicted CR57 escape": 2.593482
     },
     "4698_04_Bov_SP_JF682455_2004-05-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "471_15_MT454634_2015-XX-XX": {
       "predicted CR57 escape": 2.578932
@@ -3179,7 +3179,7 @@
       "predicted CR57 escape": 4.473307
     },
     "4850_05_Art_SP_JF682431_2005-06-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.886884
     },
     "48551_OP007157_2019-XX-XX": {
       "predicted CR57 escape": 1.869224
@@ -3191,7 +3191,7 @@
       "predicted CR57 escape": 1.9534460000000002
     },
     "4932_05_Art_SP_JF682432_2005-06-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.886884
     },
     "4980-17_MN418183_2017-08-08": {
       "predicted CR57 escape": 2.787495
@@ -3242,7 +3242,7 @@
       "predicted CR57 escape": 2.9121949999999996
     },
     "5459_05_Art_SP_JF682433_2005-06-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "5559MxChisdog12_KX708502_2012-XX-XX": {
       "predicted CR57 escape": 2.426021
@@ -3368,13 +3368,13 @@
       "predicted CR57 escape": 2.605782
     },
     "6930_05_Bov_SP_JF682456_2004-07-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "6956_05_Art_SP_JF682435_2005-08-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.886884
     },
     "7045_05_Art_SP_JF682436_2005-08-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.886884
     },
     "718_98_FJ465403_1998-XX-XX": {
       "predicted CR57 escape": 3.1084129999999996
@@ -3401,7 +3401,7 @@
       "predicted CR57 escape": 2.8307649999999995
     },
     "7436_04_Art_SP_JF682437_2005-08-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "743a_KC791794_1988-01-01": {
       "predicted CR57 escape": 2.618172
@@ -3443,7 +3443,7 @@
       "predicted CR57 escape": 2.787495
     },
     "7848_05_Art_SP_JF682445_2005-09-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "7869-17_MN418153_2017-08-18": {
       "predicted CR57 escape": 2.787495
@@ -3467,7 +3467,7 @@
       "predicted CR57 escape": 2.787495
     },
     "8456_05_Art_SP_JF682443_2005-09-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "846_2019_PA_cat_OP221413_2019-06-XX": {
       "predicted CR57 escape": 2.787495
@@ -3548,7 +3548,7 @@
       "predicted CR57 escape": 2.5031719999999997
     },
     "8639_05_Art_SP_JF682446_2005-10-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "8656_MK598348_2017-XX-XX": {
       "predicted CR57 escape": 2.605782
@@ -3707,7 +3707,7 @@
       "predicted CR57 escape": 2.6255219999999997
     },
     "8921_05_Art_SP_JF682439_2005-10-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.886884
     },
     "893_MK598346_2010-XX-XX": {
       "predicted CR57 escape": 2.619522
@@ -3716,7 +3716,7 @@
       "predicted CR57 escape": 2.787495
     },
     "8967_04_Bov_SP_JF682450_2004-09-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.8765040000000002
     },
     "8994-17_MN418184_2017-12-15": {
       "predicted CR57 escape": 2.8428649999999998
@@ -3869,7 +3869,7 @@
       "predicted CR57 escape": 2.618172
     },
     "9107MAR_AF401287_2002-08-02": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.8266519999999997
     },
     "9141RUS_KU899138_1991-XX-XX": {
       "predicted CR57 escape": 2.618172
@@ -4451,7 +4451,7 @@
       "predicted CR57 escape": 3.50337
     },
     "9811CHI_EU086135_1998-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 4.885509300000002
     },
     "9811CHI_KU888643_1998-XX-XX": {
       "predicted CR57 escape": 2.5798743
@@ -4721,7 +4721,7 @@
       "predicted CR57 escape": 2.2800730000000002
     },
     "A10-0512_JQ685968_2009-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.241992
     },
     "A10-0514_JQ685938_2009-XX-XX": {
       "predicted CR57 escape": 3.6858899999999997
@@ -4736,7 +4736,7 @@
       "predicted CR57 escape": 3.4733606000000012
     },
     "A10-2054_JX871842_2010-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 4.320277000000001
     },
     "A10-2056_KC791851_2010-XX-XX": {
       "predicted CR57 escape": 4.2777080000000005
@@ -4823,7 +4823,7 @@
       "predicted CR57 escape": 2.556362
     },
     "A10_6918_KC791856_2010-01-01": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.4022206
     },
     "A10_6920_KC791857_2010-01-01": {
       "predicted CR57 escape": 3.476456600000001
@@ -5471,7 +5471,7 @@
       "predicted CR57 escape": 2.2800730000000002
     },
     "A11_6286_KC792034_2011-01-01": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.879495
     },
     "A11_6287_KC792035_2011-01-01": {
       "predicted CR57 escape": 2.787495
@@ -5525,7 +5525,7 @@
       "predicted CR57 escape": 4.336058
     },
     "A12-0293_KJ174633_2012-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.507840600000001
     },
     "A12-1003_KJ174635_2012-XX-XX": {
       "predicted CR57 escape": 3.4733606000000012
@@ -6686,7 +6686,7 @@
       "predicted CR57 escape": 3.50337
     },
     "ARSK090056_JX856083_2009-01-22": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.1819735000000002
     },
     "ARSK090057_JX856084_2009-02-19": {
       "predicted CR57 escape": 3.1849235
@@ -6824,22 +6824,22 @@
       "predicted CR57 escape": 2.6854642999999996
     },
     "BDR2_AB699208_2010-11-03": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.664672
     },
     "BDR3_AB699209_2010-11-30": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.610992
     },
     "BDR4_AB699210_2010-12-01": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.610992
     },
     "BDR5_AB699220_2010-12-12": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.610992
     },
     "BDR6_AB699212_2010-12-03": {
       "predicted CR57 escape": 2.593482
     },
     "BDR7_AB699213_2010-12-04": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.610992
     },
     "BJ12-515_KM093868_2012-05-XX": {
       "predicted CR57 escape": 2.5439243
@@ -6902,7 +6902,7 @@
       "predicted CR57 escape": 2.6933219999999998
     },
     "BKK-TH-171_LC071961_2014-11-06": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.708802
     },
     "BKK-TH-227_LC071980_2013-12-23": {
       "predicted CR57 escape": 2.592352
@@ -7169,7 +7169,7 @@
       "predicted CR57 escape": 2.782282
     },
     "BRA1-BV_AF325491_2001-08-20": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.4386740000000005
     },
     "BRbv1359_AB905545_2014-01-28": {
       "predicted CR57 escape": 1.869224
@@ -7940,10 +7940,10 @@
       "predicted CR57 escape": 2.550964
     },
     "CQHy2014W_China_2014_KY952219_2014-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.512874
     },
     "CQHy2014Y_China_2014_KY912036_2014-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.512874
     },
     "CQJJD17_MK124746_2017-05-04": {
       "predicted CR57 escape": 2.5798743
@@ -7991,7 +7991,7 @@
       "predicted CR57 escape": 2.5797345
     },
     "CQWS01_GU186397_2005-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.426367
     },
     "CQWSD01_KT221113_2005-XX-XX": {
       "predicted CR57 escape": 2.580917
@@ -8249,7 +8249,7 @@
       "predicted CR57 escape": 3.25090117
     },
     "CTN_AY009100_2000-12-03": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.700074
     },
     "CVS-11_12-10_KF733452_2013-XX-XX": {
       "predicted CR57 escape": 2.25595017
@@ -8537,7 +8537,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "CYN14110D_KP202416_2014-08-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5971843
     },
     "CYN14111D_KT861558_2014-08-XX": {
       "predicted CR57 escape": 2.5798743
@@ -8684,7 +8684,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "CYN15157D_MT818468_2015-11-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5853463
     },
     "CYN15158D_MT818469_2015-12-XX": {
       "predicted CR57 escape": 2.5798743
@@ -8957,7 +8957,7 @@
       "predicted CR57 escape": 0.4397
     },
     "DQ103705_2005-07-30": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.187423
     },
     "DR1017_MW177595_2014-XX-XX": {
       "predicted CR57 escape": 2.6668019999999997
@@ -9065,7 +9065,7 @@
       "predicted CR57 escape": 4.258818000000001
     },
     "EPHVAC_JQ944709_2008-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.203072
     },
     "ERA-KK_EU119869_2007-09-15": {
       "predicted CR57 escape": 1.138642
@@ -9146,7 +9146,7 @@
       "predicted CR57 escape": 2.5989143
     },
     "FJ008_FJ866835_2008-11-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6049843000000004
     },
     "FJ009_FJ866836_2008-11-XX": {
       "predicted CR57 escape": 2.6854642999999996
@@ -9341,7 +9341,7 @@
       "predicted CR57 escape": 1.412992
     },
     "GN07_EU828654_2007-05-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.828662
     },
     "GOA_A_01-01-2017_MW055012_2017-01-01": {
       "predicted CR57 escape": 2.612522
@@ -9653,7 +9653,7 @@
       "predicted CR57 escape": 3.051312
     },
     "GUY1-BV_AF325490_2001-08-20": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.9094840000000002
     },
     "GX014_GQ472538_2003-04-XX": {
       "predicted CR57 escape": 2.7751539999999997
@@ -9704,7 +9704,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "GXBS092010_MG201897_2010-11-16": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.0646842999999997
     },
     "GXBS132010_MG201906_2010-11-16": {
       "predicted CR57 escape": 2.7751539999999997
@@ -9713,7 +9713,7 @@
       "predicted CR57 escape": 2.7751539999999997
     },
     "GXBS892010_MG201904_2010-11-16": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.0646842999999997
     },
     "GXHCHJ_MG201903_2012-03-09": {
       "predicted CR57 escape": 2.9613742999999997
@@ -9737,7 +9737,7 @@
       "predicted CR57 escape": 2.794194
     },
     "GXLB2010_MG201902_2010-09-08": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5845293000000003
     },
     "GXLB_GQ472550_2007-08-XX": {
       "predicted CR57 escape": 2.7751539999999997
@@ -9785,7 +9785,7 @@
       "predicted CR57 escape": 2.7751539999999997
     },
     "GXRXD01_KT221130_2010-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.9073602999999997
     },
     "GXSL2018_MN186249_2018-XX-XX": {
       "predicted CR57 escape": 2.5798743
@@ -9806,7 +9806,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "GXYZD_GQ472560_2007-04-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.3822442999999995
     },
     "G_117-1996_KU739036_1996-XX-XX": {
       "predicted CR57 escape": 2.573572
@@ -9899,7 +9899,7 @@
       "predicted CR57 escape": 2.620895
     },
     "Gra_03-09-7-F_LM645042_2009-03-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.666115
     },
     "Gra_03-10-2-F_LM645019_2010-06-XX": {
       "predicted CR57 escape": 2.620895
@@ -10001,7 +10001,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "Guangxi_Cx25_EU267743_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.4588843
     },
     "Guangxi_Yl66_EU267744_2009-01-05": {
       "predicted CR57 escape": 3.7448742999999998
@@ -10025,10 +10025,10 @@
       "predicted CR57 escape": 1.181912
     },
     "Guizhou_Al48_EU267748_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.3622743
     },
     "Guizhou_Qx1_EU267749_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5798743
     },
     "Guizhou_Qx2_EU267750_2009-01-05": {
       "predicted CR57 escape": 2.6172943
@@ -10277,10 +10277,10 @@
       "predicted CR57 escape": 2.5989143
     },
     "Hebei0H_EU267752_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6046243000000002
     },
     "Henan_Hb10_EU267753_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 5.427874300000001
     },
     "Henan_Sq10_EU267756_2009-01-05": {
       "predicted CR57 escape": 2.5894833
@@ -10289,7 +10289,7 @@
       "predicted CR57 escape": 2.6795942999999993
     },
     "Henan_Sq35_EU267758_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.9797411999999994
     },
     "Henan_Sq59_EU267759_2009-01-05": {
       "predicted CR57 escape": 2.5900143
@@ -10298,7 +10298,7 @@
       "predicted CR57 escape": 4.070295300000001
     },
     "Henan_Sq9_EU267755_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.760194
     },
     "Histiotus_KC792200_2006-01-01": {
       "predicted CR57 escape": 2.939358
@@ -10313,7 +10313,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "HuNDB02_GU186379_2005-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.055854
     },
     "HuNDB03_GU186380_2006-XX-XX": {
       "predicted CR57 escape": 3.441954
@@ -10352,7 +10352,7 @@
       "predicted CR57 escape": 2.5798743
     },
     "Hunan_Wg12_EU267763_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6581642999999997
     },
     "Hunan_Wg13_EU267764_2009-01-05": {
       "predicted CR57 escape": 2.6159543000000003
@@ -10364,7 +10364,7 @@
       "predicted CR57 escape": 2.8013942999999997
     },
     "Hunan_Wg430_EU267767_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6110243
     },
     "Hunan_Wg432_EU267768_2009-01-05": {
       "predicted CR57 escape": 2.6123743
@@ -10373,7 +10373,7 @@
       "predicted CR57 escape": 2.7175742999999994
     },
     "Hunan_Xx34_EU267770_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5975343
     },
     "Hunan_Xx35_EU267771_2009-01-05": {
       "predicted CR57 escape": 2.5798743
@@ -10721,7 +10721,7 @@
       "predicted CR57 escape": 2.942742
     },
     "IRN1-HM_AF325472_2001-08-20": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.609712
     },
     "IRV1-RD_KM492746_2001-XX-XX": {
       "predicted CR57 escape": 3.438182
@@ -11051,10 +11051,10 @@
       "predicted CR57 escape": 2.579582
     },
     "Jiangsu_Wx0H_EU267772_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.138642
     },
     "Jiangsu_Wx1_EU267773_2009-01-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.1355423
     },
     "Jiangsu_Wx32_EU267774_2009-01-05": {
       "predicted CR57 escape": 2.6016643000000004
@@ -11132,7 +11132,7 @@
       "predicted CR57 escape": 3.214619
     },
     "KRVR0901_GU937025_2009-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.47653
     },
     "KRVR0906_GU937024_2009-XX-XX": {
       "predicted CR57 escape": 3.214619
@@ -11366,7 +11366,7 @@
       "predicted CR57 escape": 2.024762
     },
     "M512_LC717421_1965-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.7431469999999996
     },
     "MA-2003-5142_MG562518_2003-XX-XX": {
       "predicted CR57 escape": 2.787495
@@ -11615,7 +11615,7 @@
       "predicted CR57 escape": 2.8428649999999998
     },
     "MEX1-DG_AF325477_2001-08-20": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5782770000000004
     },
     "MEX2-VP_AF325492_2001-08-20": {
       "predicted CR57 escape": 1.880864
@@ -11639,7 +11639,7 @@
       "predicted CR57 escape": 2.5480145
     },
     "MK754400_2015-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.984082
     },
     "MK754401_2015-XX-XX": {
       "predicted CR57 escape": 3.0617145
@@ -11660,7 +11660,7 @@
       "predicted CR57 escape": 2.547862
     },
     "MK754408_2010-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.605082
     },
     "MK754409_2007-XX-XX": {
       "predicted CR57 escape": 2.56113593
@@ -15038,7 +15038,7 @@
       "predicted CR57 escape": 2.1950281700000005
     },
     "Pk_19_HE801606_2008-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5919339999999997
     },
     "Pk_20_HE801607_2009-XX-XX": {
       "predicted CR57 escape": 2.588322
@@ -15047,7 +15047,7 @@
       "predicted CR57 escape": 2.6375119999999996
     },
     "Pk_22_HE801609_2006-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.604002
     },
     "Pk_23_HE802675_2010-XX-XX": {
       "predicted CR57 escape": 3.438182
@@ -15164,7 +15164,7 @@
       "predicted CR57 escape": 2.787495
     },
     "QC-2007-2892_MF143347_2007-06-13": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.8518449999999995
     },
     "QC-2007-2893_MF143348_2007-06-13": {
       "predicted CR57 escape": 2.787495
@@ -16709,7 +16709,7 @@
       "predicted CR57 escape": 1.9412000000000003
     },
     "RVD_AY237121_2003-04-02": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 4.924660000000001
     },
     "RVHK_KC792243_1998-01-01": {
       "predicted CR57 escape": 2.620895
@@ -16874,7 +16874,7 @@
       "predicted CR57 escape": 2.549682
     },
     "RV_R1-PHL_2010_TRa-286_AB733971_2010-01-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.095982
     },
     "RV_R1-PHL_2010_TRa-299_AB733972_2010-01-XX": {
       "predicted CR57 escape": 1.9297819999999999
@@ -17597,7 +17597,7 @@
       "predicted CR57 escape": 2.549682
     },
     "RV_R4B-PHL_2013_TRa-486_LC018584_2013-06-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.609722
     },
     "RV_R4B-PHL_2013_TRa-487_LC018585_2013-06-XX": {
       "predicted CR57 escape": 2.590172
@@ -18125,16 +18125,16 @@
       "predicted CR57 escape": 2.594172
     },
     "SA194858SEN_2008_MH514972_2008-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.7069989999999997
     },
     "SA204014SEN_2010_MH514976_2010-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.725028499999999
     },
     "SA206776SEN_2010_MH514971_2010-XX-XX": {
       "predicted CR57 escape": 2.310529
     },
     "SA212203SEN_2011_MH514973_2011-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 5.3364178
     },
     "SA217694SEN_2011_MH514970_2011-XX-XX": {
       "predicted CR57 escape": 2.383902
@@ -18146,7 +18146,7 @@
       "predicted CR57 escape": 2.310529
     },
     "SA252888SEN_2013_MH514981_2013-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 8.360557
     },
     "SA252913SEN_2013_MH514975_2013-XX-XX": {
       "predicted CR57 escape": 2.329859
@@ -18161,7 +18161,7 @@
       "predicted CR57 escape": 2.310529
     },
     "SA267115SEN_2014_MH514980_2014-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 5.2036915
     },
     "SA272282SEN_2015_MH514985_2015-XX-XX": {
       "predicted CR57 escape": 2.310529
@@ -18512,7 +18512,7 @@
       "predicted CR57 escape": 2.310529
     },
     "SHBRV-18_AY705373_2004-11-16": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.504735
     },
     "SHBRV_U52946_1996-04-25": {
       "predicted CR57 escape": 4.500833000000001
@@ -18716,7 +18716,7 @@
       "predicted CR57 escape": 2.510369
     },
     "SKRRD9902PJ_DQ076102_1999-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.541009
     },
     "SKRRD9903YG_DQ076099_1999-XX-XX": {
       "predicted CR57 escape": 2.510369
@@ -18818,7 +18818,7 @@
       "predicted CR57 escape": 3.36566
     },
     "SMK-TH-154_LC071979_2013-10-09": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.592352
     },
     "SMP-TH-19_LC071953_2014-03-02": {
       "predicted CR57 escape": 2.678782
@@ -18851,7 +18851,7 @@
       "predicted CR57 escape": 2.592352
     },
     "SR40_LC360793_2016-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.592352
     },
     "SR43_LC360796_2016-XX-XX": {
       "predicted CR57 escape": 2.574262
@@ -18923,7 +18923,7 @@
       "predicted CR57 escape": 1.869224
     },
     "SV255_16_KY824684_2016-06-08": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 1.881394
     },
     "SV257_12_KY824685_2012-06-04": {
       "predicted CR57 escape": 1.869224
@@ -19133,7 +19133,7 @@
       "predicted CR57 escape": 2.5439243
     },
     "ShaanxiRab005_KF663534_2011-05-30": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.7556242999999996
     },
     "ShaanxiRab007_KF663535_2011-04-28": {
       "predicted CR57 escape": 2.5439243
@@ -19148,13 +19148,13 @@
       "predicted CR57 escape": 2.5541643
     },
     "ShaanxiRab013_KF663539_2009-11-19": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.9980442999999997
     },
     "ShaanxiRab014_KF663540_2010-02-09": {
       "predicted CR57 escape": 2.8101142999999995
     },
     "ShaanxiRab015_KF663541_2009-08-12": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5798743
     },
     "ShaanxiRab016_KF663542_2011-12-15": {
       "predicted CR57 escape": 2.8133042999999995
@@ -19166,7 +19166,7 @@
       "predicted CR57 escape": 2.5439243
     },
     "ShaanxiRab020_KF663545_2012-04-08": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5439243
     },
     "ShaanxiRab023_KF663546_2011-09-16": {
       "predicted CR57 escape": 2.5439243
@@ -19226,13 +19226,13 @@
       "predicted CR57 escape": 2.561182
     },
     "TR-Rabies-G-Cattle-2020-D3_MZ391119_2020-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6461285
     },
     "TR-Rabies-G-Cattle-2020-D4_MZ391120_2020-XX-XX": {
       "predicted CR57 escape": 2.5974445
     },
     "TR-Rabies-G-Dog-2014-2K_MZ391128_2014-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.6995930000000006
     },
     "TR-Rabies-G-Donkey-2020-B1_MZ391127_2020-XX-XX": {
       "predicted CR57 escape": 2.6134105
@@ -19241,7 +19241,7 @@
       "predicted CR57 escape": 2.560032
     },
     "TR-Rabies-G-Marten-2013-8B_MZ391126_2013-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.6758625
     },
     "TR-Rabies-G-PV_MZ391133_2020-XX-XX": {
       "predicted CR57 escape": 0.060042
@@ -19415,19 +19415,19 @@
       "predicted CR57 escape": 2.574262
     },
     "UB03_LC360756_2016-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 8.913262000000001
     },
     "UB05_LC360758_2016-XX-XX": {
       "predicted CR57 escape": 2.574262
     },
     "UB06_LC360755_2016-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.637812
     },
     "UB23_LC360776_2016-XX-XX": {
       "predicted CR57 escape": 2.574262
     },
     "UB24_LC360777_2016-XX-XX": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.711962
     },
     "UB25_LC360778_2016-XX-XX": {
       "predicted CR57 escape": 2.574262
@@ -19469,7 +19469,7 @@
       "predicted CR57 escape": 2.696312
     },
     "USA7-BT_AF298141_2002-08-05": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.5982866000000016
     },
     "USA8-BT_AF325494_2001-08-20": {
       "predicted CR57 escape": 3.043163
@@ -19490,7 +19490,7 @@
       "predicted CR57 escape": 2.605782
     },
     "VMC-5_MT862689_2012-03-01": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 3.302212
     },
     "VMC_1519_PP441993_2021-03-03": {
       "predicted CR57 escape": 2.5940326
@@ -20336,7 +20336,7 @@
       "predicted CR57 escape": 2.6034143000000003
     },
     "Yunnan_Md06_EU253477_2007-12-13": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.5798743
     },
     "Yunnan_Qj07_EU275240_2007-03-07": {
       "predicted CR57 escape": 2.5846863
@@ -20345,7 +20345,7 @@
       "predicted CR57 escape": 2.574262
     },
     "Yunnan_Zt07_EU275241_2007-07-12": {
-      "predicted CR57 escape": NaN
+      "predicted CR57 escape": 2.7120743
     },
     "Z-12-001_MN726845_2012-XX-XX": {
       "predicted CR57 escape": 2.549682

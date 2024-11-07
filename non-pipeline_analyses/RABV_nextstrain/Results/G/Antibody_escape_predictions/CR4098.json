@@ -20,7 +20,7 @@
       "predicted CR4098 escape": 0.68463
     },
     "01016VNM_EU086159_2001-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.36539999999999995
     },
     "01016VNM_KX148254_2001-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995
@@ -47,7 +47,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "02035CHI_EU086136_1997-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 2.05925
     },
     "02036CHI_EU086137_1997-XX-XX": {
       "predicted CR4098 escape": 1.4737799999999999
@@ -62,10 +62,10 @@
       "predicted CR4098 escape": 1.4385599999999998
     },
     "02043CHI_EU086141_1989-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9221299999999999
     },
     "02044CHI_EU086142_1989-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.1791399999999999
     },
     "02045CHI_EU086143_1989-XX-XX": {
       "predicted CR4098 escape": 0.9132499999999999
@@ -158,7 +158,7 @@
       "predicted CR4098 escape": 0.9132499999999999
     },
     "05009CHI_EU086150_2005-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.09747
     },
     "07128RCA_2003_016_KT119634_2003-01-06": {
       "predicted CR4098 escape": 1.0400599999999998
@@ -629,7 +629,7 @@
       "predicted CR4098 escape": 0.8542179
     },
     "10509_05_Art_SP_JF682440_2005-11-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "1060_JQ685908_2009-XX-XX": {
       "predicted CR4098 escape": 1.6073499999999996
@@ -728,7 +728,7 @@
       "predicted CR4098 escape": 1.8843599999999998
     },
     "11206_05_Art_SP_JF682444_2005-12-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "113_91_FJ465390_1991-XX-XX": {
       "predicted CR4098 escape": 0.8804099999999999
@@ -740,7 +740,7 @@
       "predicted CR4098 escape": 1.6878759999999997
     },
     "11817_04_Bov_SP_JF682458_2004-12-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "11818_04_Bov_SP_JF682459_2004-12-XX": {
       "predicted CR4098 escape": 1.58625
@@ -932,7 +932,7 @@
       "predicted CR4098 escape": 0.76275
     },
     "13R18_KF437653_2013-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.73103
     },
     "13R19_KF437654_2013-XX-XX": {
       "predicted CR4098 escape": 0.93163
@@ -2639,7 +2639,7 @@
       "predicted CR4098 escape": 1.587464
     },
     "2196_04_Bov_SP_JF682448_2004-09-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "219_2022_aqp14_PP965347_2022-XX-XX": {
       "predicted CR4098 escape": 0.63498
@@ -2816,7 +2816,7 @@
       "predicted CR4098 escape": 0.8542179
     },
     "2579_05_Bov_SP_JF682452_2005-04-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "259-17_MN418178_2017-01-23": {
       "predicted CR4098 escape": 1.4451699999999998
@@ -2981,7 +2981,7 @@
       "predicted CR4098 escape": 1.58625
     },
     "3645DR_JQ685953_2009-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.8978599999999999
     },
     "364_96_FJ465397_1996-XX-XX": {
       "predicted CR4098 escape": 1.6824999999999999
@@ -3053,7 +3053,7 @@
       "predicted CR4098 escape": 1.12833
     },
     "38_20_OR067379_2020-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.8236199999999999
     },
     "3944_KT006769_2013-10-29": {
       "predicted CR4098 escape": 0.21183
@@ -3146,7 +3146,7 @@
       "predicted CR4098 escape": 0.47806
     },
     "4698_04_Bov_SP_JF682455_2004-05-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "471_15_MT454634_2015-XX-XX": {
       "predicted CR4098 escape": 0.95192
@@ -3242,7 +3242,7 @@
       "predicted CR4098 escape": 1.4728599999999998
     },
     "5459_05_Art_SP_JF682433_2005-06-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "5559MxChisdog12_KX708502_2012-XX-XX": {
       "predicted CR4098 escape": 0.17762999999999998
@@ -3368,7 +3368,7 @@
       "predicted CR4098 escape": 0.8542179
     },
     "6930_05_Bov_SP_JF682456_2004-07-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "6956_05_Art_SP_JF682435_2005-08-XX": {
       "predicted CR4098 escape": 1.58625
@@ -3401,7 +3401,7 @@
       "predicted CR4098 escape": 1.4451699999999998
     },
     "7436_04_Art_SP_JF682437_2005-08-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "743a_KC791794_1988-01-01": {
       "predicted CR4098 escape": 0.74474
@@ -3443,7 +3443,7 @@
       "predicted CR4098 escape": 1.4451699999999998
     },
     "7848_05_Art_SP_JF682445_2005-09-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "7869-17_MN418153_2017-08-18": {
       "predicted CR4098 escape": 1.4734599999999998
@@ -3467,7 +3467,7 @@
       "predicted CR4098 escape": 1.4451699999999998
     },
     "8456_05_Art_SP_JF682443_2005-09-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "846_2019_PA_cat_OP221413_2019-06-XX": {
       "predicted CR4098 escape": 1.4451699999999998
@@ -3548,7 +3548,7 @@
       "predicted CR4098 escape": 0.5912400000000001
     },
     "8639_05_Art_SP_JF682446_2005-10-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "8656_MK598348_2017-XX-XX": {
       "predicted CR4098 escape": 0.8542179
@@ -3716,7 +3716,7 @@
       "predicted CR4098 escape": 1.4451699999999998
     },
     "8967_04_Bov_SP_JF682450_2004-09-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "8994-17_MN418184_2017-12-15": {
       "predicted CR4098 escape": 1.4451699999999998
@@ -3869,7 +3869,7 @@
       "predicted CR4098 escape": 0.74474
     },
     "9107MAR_AF401287_2002-08-02": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.60498
     },
     "9141RUS_KU899138_1991-XX-XX": {
       "predicted CR4098 escape": 2.45954
@@ -4451,7 +4451,7 @@
       "predicted CR4098 escape": 1.3748099999999999
     },
     "9811CHI_EU086135_1998-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.01955
     },
     "9811CHI_KU888643_1998-XX-XX": {
       "predicted CR4098 escape": 0.9132499999999999
@@ -4721,7 +4721,7 @@
       "predicted CR4098 escape": 0.53051
     },
     "A10-0512_JQ685968_2009-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 2.043697
     },
     "A10-0514_JQ685938_2009-XX-XX": {
       "predicted CR4098 escape": 1.613487
@@ -4736,7 +4736,7 @@
       "predicted CR4098 escape": 3.098029999999999
     },
     "A10-2054_JX871842_2010-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.11997
     },
     "A10-2056_KC791851_2010-XX-XX": {
       "predicted CR4098 escape": 1.11997
@@ -4823,7 +4823,7 @@
       "predicted CR4098 escape": 0.33743999999999996
     },
     "A10_6918_KC791856_2010-01-01": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.35472
     },
     "A10_6920_KC791857_2010-01-01": {
       "predicted CR4098 escape": 3.1968500000000004
@@ -5471,7 +5471,7 @@
       "predicted CR4098 escape": 0.53051
     },
     "A11_6286_KC792034_2011-01-01": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.616267
     },
     "A11_6287_KC792035_2011-01-01": {
       "predicted CR4098 escape": 1.436567
@@ -6824,22 +6824,22 @@
       "predicted CR4098 escape": 1.32815
     },
     "BDR2_AB699208_2010-11-03": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.47806
     },
     "BDR3_AB699209_2010-11-30": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.47806
     },
     "BDR4_AB699210_2010-12-01": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.47806
     },
     "BDR5_AB699220_2010-12-12": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.47806
     },
     "BDR6_AB699212_2010-12-03": {
       "predicted CR4098 escape": 0.67866
     },
     "BDR7_AB699213_2010-12-04": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.47806
     },
     "BJ12-515_KM093868_2012-05-XX": {
       "predicted CR4098 escape": 0.8558699999999999
@@ -6902,7 +6902,7 @@
       "predicted CR4098 escape": 0.6864199999999999
     },
     "BKK-TH-171_LC071961_2014-11-06": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.7956199999999999
     },
     "BKK-TH-227_LC071980_2013-12-23": {
       "predicted CR4098 escape": 0.42172
@@ -7169,7 +7169,7 @@
       "predicted CR4098 escape": 0.690873
     },
     "BRA1-BV_AF325491_2001-08-20": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.8736999999999997
     },
     "BRbv1359_AB905545_2014-01-28": {
       "predicted CR4098 escape": 1.58625
@@ -7940,10 +7940,10 @@
       "predicted CR4098 escape": 0.7259899999999999
     },
     "CQHy2014W_China_2014_KY952219_2014-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.49179
     },
     "CQHy2014Y_China_2014_KY912036_2014-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.49179
     },
     "CQJJD17_MK124746_2017-05-04": {
       "predicted CR4098 escape": 0.75655
@@ -8249,7 +8249,7 @@
       "predicted CR4098 escape": 0.911096
     },
     "CTN_AY009100_2000-12-03": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.186993
     },
     "CVS-11_12-10_KF733452_2013-XX-XX": {
       "predicted CR4098 escape": 0.6488839999999999
@@ -8537,7 +8537,7 @@
       "predicted CR4098 escape": 0.75655
     },
     "CYN14110D_KP202416_2014-08-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.75655
     },
     "CYN14111D_KT861558_2014-08-XX": {
       "predicted CR4098 escape": 0.75655
@@ -8957,7 +8957,7 @@
       "predicted CR4098 escape": 0.177603
     },
     "DQ103705_2005-07-30": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 2.20745
     },
     "DR1017_MW177595_2014-XX-XX": {
       "predicted CR4098 escape": 0.6585979000000001
@@ -9065,7 +9065,7 @@
       "predicted CR4098 escape": 1.1204999999999998
     },
     "EPHVAC_JQ944709_2008-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.565484
     },
     "ERA-KK_EU119869_2007-09-15": {
       "predicted CR4098 escape": 0.374003
@@ -9146,7 +9146,7 @@
       "predicted CR4098 escape": 0.9132499999999999
     },
     "FJ008_FJ866835_2008-11-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9132499999999999
     },
     "FJ009_FJ866836_2008-11-XX": {
       "predicted CR4098 escape": 1.32815
@@ -9263,10 +9263,10 @@
       "predicted CR4098 escape": 1.1257199999999998
     },
     "Flury_X69122_1992-12-03": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.1298099999999998
     },
     "Flury_strain_X69061_1992-11-11": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.1298099999999998
     },
     "Fox-8007_JQ685995_2008-XX-XX": {
       "predicted CR4098 escape": 0.6749329999999999
@@ -9653,7 +9653,7 @@
       "predicted CR4098 escape": 0.44603000000000004
     },
     "GUY1-BV_AF325490_2001-08-20": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.58625
     },
     "GX014_GQ472538_2003-04-XX": {
       "predicted CR4098 escape": 0.601746
@@ -9704,7 +9704,7 @@
       "predicted CR4098 escape": 1.5544499999999999
     },
     "GXBS092010_MG201897_2010-11-16": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9412099999999999
     },
     "GXBS132010_MG201906_2010-11-16": {
       "predicted CR4098 escape": 0.601746
@@ -9713,7 +9713,7 @@
       "predicted CR4098 escape": 0.601746
     },
     "GXBS892010_MG201904_2010-11-16": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9412099999999999
     },
     "GXHCHJ_MG201903_2012-03-09": {
       "predicted CR4098 escape": 0.9132499999999999
@@ -9737,7 +9737,7 @@
       "predicted CR4098 escape": 0.601746
     },
     "GXLB2010_MG201902_2010-09-08": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9132499999999999
     },
     "GXLB_GQ472550_2007-08-XX": {
       "predicted CR4098 escape": 0.601746
@@ -9785,7 +9785,7 @@
       "predicted CR4098 escape": 0.601746
     },
     "GXRXD01_KT221130_2010-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.44079
     },
     "GXSL2018_MN186249_2018-XX-XX": {
       "predicted CR4098 escape": 1.5544499999999999
@@ -9806,7 +9806,7 @@
       "predicted CR4098 escape": 1.5544499999999999
     },
     "GXYZD_GQ472560_2007-04-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.06405
     },
     "G_117-1996_KU739036_1996-XX-XX": {
       "predicted CR4098 escape": 0.65064
@@ -9899,7 +9899,7 @@
       "predicted CR4098 escape": 0.504443
     },
     "Gra_03-09-7-F_LM645042_2009-03-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.729983
     },
     "Gra_03-10-2-F_LM645019_2010-06-XX": {
       "predicted CR4098 escape": 0.504443
@@ -10001,7 +10001,7 @@
       "predicted CR4098 escape": 0.75655
     },
     "Guangxi_Cx25_EU267743_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.31484
     },
     "Guangxi_Yl66_EU267744_2009-01-05": {
       "predicted CR4098 escape": 1.06683
@@ -10019,16 +10019,16 @@
       "predicted CR4098 escape": 0.610723
     },
     "Guizhou_Al03_EU267747_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9439559999999999
     },
     "Guizhou_Al0H_EU267745_2009-01-05": {
       "predicted CR4098 escape": 0.44309299999999996
     },
     "Guizhou_Al48_EU267748_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9144639999999999
     },
     "Guizhou_Qx1_EU267749_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9132499999999999
     },
     "Guizhou_Qx2_EU267750_2009-01-05": {
       "predicted CR4098 escape": 1.22449
@@ -10286,7 +10286,7 @@
       "predicted CR4098 escape": 0.98705
     },
     "Henan_Sq21_EU267757_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.85134
     },
     "Henan_Sq35_EU267758_2009-01-05": {
       "predicted CR4098 escape": 1.1279000000000001
@@ -10298,7 +10298,7 @@
       "predicted CR4098 escape": 1.13448
     },
     "Henan_Sq9_EU267755_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.75655
     },
     "Histiotus_KC792200_2006-01-01": {
       "predicted CR4098 escape": 1.23253
@@ -10313,7 +10313,7 @@
       "predicted CR4098 escape": 0.9132499999999999
     },
     "HuNDB02_GU186379_2005-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.601746
     },
     "HuNDB03_GU186380_2006-XX-XX": {
       "predicted CR4098 escape": 0.6103489999999999
@@ -10364,7 +10364,7 @@
       "predicted CR4098 escape": 1.0572599999999999
     },
     "Hunan_Wg430_EU267767_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.7540199999999999
     },
     "Hunan_Wg432_EU267768_2009-01-05": {
       "predicted CR4098 escape": 1.03925
@@ -10376,7 +10376,7 @@
       "predicted CR4098 escape": 0.9132499999999999
     },
     "Hunan_Xx35_EU267771_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.06984
     },
     "IGU-R201-Nilgai_KY775603_2014-XX-XX": {
       "predicted CR4098 escape": 0.53613
@@ -11054,13 +11054,13 @@
       "predicted CR4098 escape": 0.374003
     },
     "Jiangsu_Wx1_EU267773_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.6733099999999999
     },
     "Jiangsu_Wx32_EU267774_2009-01-05": {
       "predicted CR4098 escape": 1.14263
     },
     "Jiangsu_Yc37_EU267775_2009-01-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.33921
     },
     "Jiangsu_Yc58_EU267776_2009-01-05": {
       "predicted CR4098 escape": 1.06501
@@ -11069,7 +11069,7 @@
       "predicted CR4098 escape": 0.73103
     },
     "KRVB0903_GU937033_2009-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.14893
     },
     "KRVB0904_GU937032_2009-XX-XX": {
       "predicted CR4098 escape": 0.73103
@@ -11132,7 +11132,7 @@
       "predicted CR4098 escape": 0.91083
     },
     "KRVR0901_GU937025_2009-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.3356299999999999
     },
     "KRVR0906_GU937024_2009-XX-XX": {
       "predicted CR4098 escape": 0.73103
@@ -11639,7 +11639,7 @@
       "predicted CR4098 escape": 0.43025
     },
     "MK754400_2015-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.86562
     },
     "MK754401_2015-XX-XX": {
       "predicted CR4098 escape": 0.51254
@@ -11660,7 +11660,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "MK754408_2010-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.71073
     },
     "MK754409_2007-XX-XX": {
       "predicted CR4098 escape": 0.738139
@@ -15038,7 +15038,7 @@
       "predicted CR4098 escape": 0.362284
     },
     "Pk_19_HE801606_2008-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.43444
     },
     "Pk_20_HE801607_2009-XX-XX": {
       "predicted CR4098 escape": 0.5477399999999999
@@ -15164,7 +15164,7 @@
       "predicted CR4098 escape": 1.4451699999999998
     },
     "QC-2007-2892_MF143347_2007-06-13": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.6605699999999999
     },
     "QC-2007-2893_MF143348_2007-06-13": {
       "predicted CR4098 escape": 1.4451699999999998
@@ -16709,7 +16709,7 @@
       "predicted CR4098 escape": 1.00714
     },
     "RVD_AY237121_2003-04-02": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.48063999999999996
     },
     "RVHK_KC792243_1998-01-01": {
       "predicted CR4098 escape": 0.504443
@@ -16874,7 +16874,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "RV_R1-PHL_2010_TRa-286_AB733971_2010-01-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.43216
     },
     "RV_R1-PHL_2010_TRa-299_AB733972_2010-01-XX": {
       "predicted CR4098 escape": 0.0886
@@ -16940,7 +16940,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "RV_R10-PHL_2008_TRa-024_AB563852_2008-07-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.3459
     },
     "RV_R10-PHL_2008_TRa-025_AB563853_2008-07-XX": {
       "predicted CR4098 escape": 0.36539999999999995
@@ -17597,7 +17597,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "RV_R4B-PHL_2013_TRa-486_LC018584_2013-06-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.7478
     },
     "RV_R4B-PHL_2013_TRa-487_LC018585_2013-06-XX": {
       "predicted CR4098 escape": 0.7478
@@ -18128,13 +18128,13 @@
       "predicted CR4098 escape": 1.26233
     },
     "SA204014SEN_2010_MH514976_2010-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.11376
     },
     "SA206776SEN_2010_MH514971_2010-XX-XX": {
       "predicted CR4098 escape": 0.60843
     },
     "SA212203SEN_2011_MH514973_2011-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.24752
     },
     "SA217694SEN_2011_MH514970_2011-XX-XX": {
       "predicted CR4098 escape": 0.42439
@@ -18146,7 +18146,7 @@
       "predicted CR4098 escape": 0.60843
     },
     "SA252888SEN_2013_MH514981_2013-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.93769
     },
     "SA252913SEN_2013_MH514975_2013-XX-XX": {
       "predicted CR4098 escape": 0.60843
@@ -18161,7 +18161,7 @@
       "predicted CR4098 escape": 0.60843
     },
     "SA267115SEN_2014_MH514980_2014-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.37266
     },
     "SA272282SEN_2015_MH514985_2015-XX-XX": {
       "predicted CR4098 escape": 0.60843
@@ -18716,7 +18716,7 @@
       "predicted CR4098 escape": 0.7037899999999999
     },
     "SKRRD9902PJ_DQ076102_1999-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.7037899999999999
     },
     "SKRRD9903YG_DQ076099_1999-XX-XX": {
       "predicted CR4098 escape": 1.07409
@@ -18818,13 +18818,13 @@
       "predicted CR4098 escape": 1.6606999999999996
     },
     "SMK-TH-154_LC071979_2013-10-09": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.42172
     },
     "SMP-TH-19_LC071953_2014-03-02": {
       "predicted CR4098 escape": 0.6864199999999999
     },
     "SMP-TH-22_LC071974_2013-02-06": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.42172
     },
     "SMP-TH-31_LC071959_2013-02-22": {
       "predicted CR4098 escape": 0.6864199999999999
@@ -18851,7 +18851,7 @@
       "predicted CR4098 escape": 0.42610400000000004
     },
     "SR40_LC360793_2016-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.42172
     },
     "SR43_LC360796_2016-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995
@@ -18896,7 +18896,7 @@
       "predicted CR4098 escape": 1.58625
     },
     "SV131_16_KY824678_2016-04-20": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.81632
     },
     "SV13_16_KY824662_2016-02-02": {
       "predicted CR4098 escape": 1.58625
@@ -18923,7 +18923,7 @@
       "predicted CR4098 escape": 1.58625
     },
     "SV255_16_KY824684_2016-06-08": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.61649
     },
     "SV257_12_KY824685_2012-06-04": {
       "predicted CR4098 escape": 1.58625
@@ -18968,7 +18968,7 @@
       "predicted CR4098 escape": 1.58625
     },
     "SV34_15_KY824667_2015-02-02": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.92459
     },
     "SV350_16_KY824697_2016-07-08": {
       "predicted CR4098 escape": 1.58625
@@ -19154,7 +19154,7 @@
       "predicted CR4098 escape": 1.15009
     },
     "ShaanxiRab015_KF663541_2009-08-12": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.9132499999999999
     },
     "ShaanxiRab016_KF663542_2011-12-15": {
       "predicted CR4098 escape": 0.9132469999999999
@@ -19232,10 +19232,10 @@
       "predicted CR4098 escape": 0.46048999999999995
     },
     "TR-Rabies-G-Dog-2014-2K_MZ391128_2014-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.74695
     },
     "TR-Rabies-G-Donkey-2020-B1_MZ391127_2020-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.736432
     },
     "TR-Rabies-G-Fox-2013-6D_MZ391132_2013-XX-XX": {
       "predicted CR4098 escape": 0.37734999999999996
@@ -19415,19 +19415,19 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "UB03_LC360756_2016-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.49560000000000004
     },
     "UB05_LC360758_2016-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995
     },
     "UB06_LC360755_2016-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.36539999999999995
     },
     "UB23_LC360776_2016-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995
     },
     "UB24_LC360777_2016-XX-XX": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.46008000000000004
     },
     "UB25_LC360778_2016-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995
@@ -19469,7 +19469,7 @@
       "predicted CR4098 escape": 0.67379
     },
     "USA7-BT_AF298141_2002-08-05": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 3.68519
     },
     "USA8-BT_AF325494_2001-08-20": {
       "predicted CR4098 escape": 2.5089899999999994
@@ -19490,7 +19490,7 @@
       "predicted CR4098 escape": 0.6053179000000001
     },
     "VMC-5_MT862689_2012-03-01": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.62566
     },
     "VMC_1519_PP441993_2021-03-03": {
       "predicted CR4098 escape": 0.49778999999999995
@@ -20336,7 +20336,7 @@
       "predicted CR4098 escape": 0.9132499999999999
     },
     "Yunnan_Md06_EU253477_2007-12-13": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 1.11825
     },
     "Yunnan_Qj07_EU275240_2007-03-07": {
       "predicted CR4098 escape": 0.9132499999999999
@@ -20345,7 +20345,7 @@
       "predicted CR4098 escape": 0.36539999999999995
     },
     "Yunnan_Zt07_EU275241_2007-07-12": {
-      "predicted CR4098 escape": NaN
+      "predicted CR4098 escape": 0.7577639999999999
     },
     "Z-12-001_MN726845_2012-XX-XX": {
       "predicted CR4098 escape": 0.36539999999999995

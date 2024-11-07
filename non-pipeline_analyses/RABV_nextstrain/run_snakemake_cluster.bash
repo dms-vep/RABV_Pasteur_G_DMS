@@ -23,7 +23,7 @@ snakemake \
     --conda-frontend conda \
     --latency-wait 60 \
     --restart-times 2 \
-    --rerun-triggers mtime
+    --rerun-triggers mtime 
 
 # Signal that snakemake has complete
 echo "Run of snakemake complete."

@@ -20,7 +20,7 @@
       "predicted 17C7 escape": 2.69135
     },
     "01016VNM_EU086159_2001-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7183700000000002
     },
     "01016VNM_KX148254_2001-XX-XX": {
       "predicted 17C7 escape": 1.7183700000000002
@@ -50,7 +50,7 @@
       "predicted 17C7 escape": 6.93863
     },
     "02036CHI_EU086137_1997-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 7.47781
     },
     "02039CHI_EU086138_1992-XX-XX": {
       "predicted 17C7 escape": 2.2876899999999996
@@ -62,10 +62,10 @@
       "predicted 17C7 escape": 2.8875800000000003
     },
     "02043CHI_EU086141_1989-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2886699999999998
     },
     "02044CHI_EU086142_1989-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.33931
     },
     "02045CHI_EU086143_1989-XX-XX": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -158,7 +158,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "05009CHI_EU086150_2005-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.84227
     },
     "07128RCA_2003_016_KT119634_2003-01-06": {
       "predicted 17C7 escape": 1.5203699999999998
@@ -629,7 +629,7 @@
       "predicted 17C7 escape": 1.483077
     },
     "10509_05_Art_SP_JF682440_2005-11-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "1060_JQ685908_2009-XX-XX": {
       "predicted 17C7 escape": 5.09859
@@ -728,7 +728,7 @@
       "predicted 17C7 escape": 6.0614099999999995
     },
     "11206_05_Art_SP_JF682444_2005-12-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "113_91_FJ465390_1991-XX-XX": {
       "predicted 17C7 escape": 3.2298300000000006
@@ -740,7 +740,7 @@
       "predicted 17C7 escape": 3.15705
     },
     "11817_04_Bov_SP_JF682458_2004-12-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "11818_04_Bov_SP_JF682459_2004-12-XX": {
       "predicted 17C7 escape": 5.35272
@@ -932,7 +932,7 @@
       "predicted 17C7 escape": 1.2814299999999998
     },
     "13R18_KF437653_2013-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.2245
     },
     "13R19_KF437654_2013-XX-XX": {
       "predicted 17C7 escape": 1.4964300000000001
@@ -1085,7 +1085,7 @@
       "predicted 17C7 escape": 2.2886699999999998
     },
     "17HN27_MH141797_2017-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.81602
     },
     "17HN68_MH141798_2017-XX-XX": {
       "predicted 17C7 escape": 2.23033
@@ -1418,7 +1418,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "18HN157_MK622906_2018-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.2223299999999995
     },
     "18HN162_MK622907_2018-XX-XX": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -2639,7 +2639,7 @@
       "predicted 17C7 escape": 5.545319999999999
     },
     "2196_04_Bov_SP_JF682448_2004-09-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "219_2022_aqp14_PP965347_2022-XX-XX": {
       "predicted 17C7 escape": 2.190117
@@ -2816,7 +2816,7 @@
       "predicted 17C7 escape": 1.483077
     },
     "2579_05_Bov_SP_JF682452_2005-04-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "259-17_MN418178_2017-01-23": {
       "predicted 17C7 escape": 4.787997
@@ -2981,7 +2981,7 @@
       "predicted 17C7 escape": 5.35272
     },
     "3645DR_JQ685953_2009-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.544689999999999
     },
     "364_96_FJ465397_1996-XX-XX": {
       "predicted 17C7 escape": 2.9848999999999997
@@ -3053,7 +3053,7 @@
       "predicted 17C7 escape": 3.29211
     },
     "38_20_OR067379_2020-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.58174
     },
     "3944_KT006769_2013-10-29": {
       "predicted 17C7 escape": 1.46155
@@ -3146,7 +3146,7 @@
       "predicted 17C7 escape": 1.1684700000000001
     },
     "4698_04_Bov_SP_JF682455_2004-05-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "471_15_MT454634_2015-XX-XX": {
       "predicted 17C7 escape": 2.08477
@@ -3179,7 +3179,7 @@
       "predicted 17C7 escape": 5.90056
     },
     "4850_05_Art_SP_JF682431_2005-06-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.35272
     },
     "48551_OP007157_2019-XX-XX": {
       "predicted 17C7 escape": 5.35272
@@ -3191,7 +3191,7 @@
       "predicted 17C7 escape": 6.0614099999999995
     },
     "4932_05_Art_SP_JF682432_2005-06-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.53562
     },
     "4980-17_MN418183_2017-08-08": {
       "predicted 17C7 escape": 4.787997
@@ -3242,7 +3242,7 @@
       "predicted 17C7 escape": 5.091597
     },
     "5459_05_Art_SP_JF682433_2005-06-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 7.03262
     },
     "5559MxChisdog12_KX708502_2012-XX-XX": {
       "predicted 17C7 escape": 1.1814
@@ -3368,13 +3368,13 @@
       "predicted 17C7 escape": 1.483077
     },
     "6930_05_Bov_SP_JF682456_2004-07-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "6956_05_Art_SP_JF682435_2005-08-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.35272
     },
     "7045_05_Art_SP_JF682436_2005-08-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.35272
     },
     "718_98_FJ465403_1998-XX-XX": {
       "predicted 17C7 escape": 3.40381
@@ -3401,7 +3401,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "7436_04_Art_SP_JF682437_2005-08-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "743a_KC791794_1988-01-01": {
       "predicted 17C7 escape": 1.2652
@@ -3443,7 +3443,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "7848_05_Art_SP_JF682445_2005-09-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "7869-17_MN418153_2017-08-18": {
       "predicted 17C7 escape": 4.974997
@@ -3467,7 +3467,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "8456_05_Art_SP_JF682443_2005-09-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "846_2019_PA_cat_OP221413_2019-06-XX": {
       "predicted 17C7 escape": 4.787997
@@ -3548,7 +3548,7 @@
       "predicted 17C7 escape": 3.11271
     },
     "8639_05_Art_SP_JF682446_2005-10-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "8656_MK598348_2017-XX-XX": {
       "predicted 17C7 escape": 1.483077
@@ -3707,7 +3707,7 @@
       "predicted 17C7 escape": 1.31637
     },
     "8921_05_Art_SP_JF682439_2005-10-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.35272
     },
     "893_MK598346_2010-XX-XX": {
       "predicted 17C7 escape": 1.4771
@@ -3716,7 +3716,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "8967_04_Bov_SP_JF682450_2004-09-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.84972
     },
     "8994-17_MN418184_2017-12-15": {
       "predicted 17C7 escape": 4.787997
@@ -3869,7 +3869,7 @@
       "predicted 17C7 escape": 1.2652
     },
     "9107MAR_AF401287_2002-08-02": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.21706
     },
     "9141RUS_KU899138_1991-XX-XX": {
       "predicted 17C7 escape": 4.425699999999999
@@ -4451,7 +4451,7 @@
       "predicted 17C7 escape": 4.65114
     },
     "9811CHI_EU086135_1998-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.5347299999999997
     },
     "9811CHI_KU888643_1998-XX-XX": {
       "predicted 17C7 escape": 2.23033
@@ -4568,7 +4568,7 @@
       "predicted 17C7 escape": 5.35272
     },
     "A04002_1993-12-02": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 0.8814899999999999
     },
     "A08-0500_JQ685993_2008-XX-XX": {
       "predicted 17C7 escape": 3.8682070000000004
@@ -4721,7 +4721,7 @@
       "predicted 17C7 escape": 1.403017
     },
     "A10-0512_JQ685968_2009-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.163407
     },
     "A10-0514_JQ685938_2009-XX-XX": {
       "predicted 17C7 escape": 3.434157
@@ -4751,7 +4751,7 @@
       "predicted 17C7 escape": 1.06671
     },
     "A10-3023_JX871844_2010-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.8702499999999995
     },
     "A10-3633_JX871845_2010-XX-XX": {
       "predicted 17C7 escape": 5.2414499999999995
@@ -4823,7 +4823,7 @@
       "predicted 17C7 escape": 1.06671
     },
     "A10_6918_KC791856_2010-01-01": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.93322
     },
     "A10_6920_KC791857_2010-01-01": {
       "predicted 17C7 escape": 6.445996589999999
@@ -5471,7 +5471,7 @@
       "predicted 17C7 escape": 1.403017
     },
     "A11_6286_KC792034_2011-01-01": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.599197
     },
     "A11_6287_KC792035_2011-01-01": {
       "predicted 17C7 escape": 4.599197
@@ -5525,7 +5525,7 @@
       "predicted 17C7 escape": 4.40751
     },
     "A12-0293_KJ174633_2012-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.621486589999999
     },
     "A12-1003_KJ174635_2012-XX-XX": {
       "predicted 17C7 escape": 6.319886589999999
@@ -6677,7 +6677,7 @@
       "predicted 17C7 escape": 1.29596
     },
     "ARC1-PF_AF325486_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.79725
     },
     "ARDG090042_JX856072_2009-03-31": {
       "predicted 17C7 escape": 1.40236
@@ -6824,22 +6824,22 @@
       "predicted 17C7 escape": 2.26164
     },
     "BDR2_AB699208_2010-11-03": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.2533000000000003
     },
     "BDR3_AB699209_2010-11-30": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22994
     },
     "BDR4_AB699210_2010-12-01": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22994
     },
     "BDR5_AB699220_2010-12-12": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22994
     },
     "BDR6_AB699212_2010-12-03": {
       "predicted 17C7 escape": 1.1684700000000001
     },
     "BDR7_AB699213_2010-12-04": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22994
     },
     "BJ12-515_KM093868_2012-05-XX": {
       "predicted 17C7 escape": 1.5970299999999997
@@ -6857,7 +6857,7 @@
       "predicted 17C7 escape": 2.0276
     },
     "BKK-TH-104_LC071955_2013-06-29": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.9925700000000002
     },
     "BKK-TH-105_LC071960_2013-06-30": {
       "predicted 17C7 escape": 1.8081900000000002
@@ -7151,7 +7151,7 @@
       "predicted 17C7 escape": 1.99606
     },
     "BR11_LC360764_2016-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.50848
     },
     "BR12_LC360765_2016-XX-XX": {
       "predicted 17C7 escape": 1.8172700000000002
@@ -7169,7 +7169,7 @@
       "predicted 17C7 escape": 1.97687
     },
     "BRA1-BV_AF325491_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.518470000000001
     },
     "BRbv1359_AB905545_2014-01-28": {
       "predicted 17C7 escape": 5.35272
@@ -7187,7 +7187,7 @@
       "predicted 17C7 escape": 5.35272
     },
     "BRbv50_AB110669_2009-01-16": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.73592
     },
     "BRct112_AB276309_2006-10-06": {
       "predicted 17C7 escape": 1.36096
@@ -7235,7 +7235,7 @@
       "predicted 17C7 escape": 1.4131
     },
     "BRdg322_AB247414_2009-01-30": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.4654000000000003
     },
     "BRdg322_AB449214_2016-07-26": {
       "predicted 17C7 escape": 1.4654000000000003
@@ -7385,7 +7385,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "CAM1-UN_AF325481_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.5707440000000004
     },
     "CAN_1991_brain_LT993240_2018-06-15": {
       "predicted 17C7 escape": 0.8814899999999999
@@ -7940,10 +7940,10 @@
       "predicted 17C7 escape": 1.22287
     },
     "CQHy2014W_China_2014_KY952219_2014-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22287
     },
     "CQHy2014Y_China_2014_KY912036_2014-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.22287
     },
     "CQJJD17_MK124746_2017-05-04": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -8243,13 +8243,13 @@
       "predicted 17C7 escape": 4.78849
     },
     "CTN181_EF564174_1956-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.9991799999999995
     },
     "CTNCEC25_KJ466147_2014-05-26": {
       "predicted 17C7 escape": 2.55259
     },
     "CTN_AY009100_2000-12-03": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.32993
     },
     "CVS-11_12-10_KF733452_2013-XX-XX": {
       "predicted 17C7 escape": 4.29513
@@ -8327,7 +8327,7 @@
       "predicted 17C7 escape": 2.3169699999999995
     },
     "CYN0818D_JQ040572_2008-07-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2886699999999998
     },
     "CYN0919D_JQ040578_2009-06-XX": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -8537,7 +8537,7 @@
       "predicted 17C7 escape": 2.2886699999999998
     },
     "CYN14110D_KP202416_2014-08-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3582899999999998
     },
     "CYN14111D_KT861558_2014-08-XX": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -8957,7 +8957,7 @@
       "predicted 17C7 escape": 0.5029
     },
     "DQ103705_2005-07-30": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 7.64941
     },
     "DR1017_MW177595_2014-XX-XX": {
       "predicted 17C7 escape": 1.4918669999999998
@@ -9008,7 +9008,7 @@
       "predicted 17C7 escape": 1.475137
     },
     "DRV-AH08_HQ450385_2008-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.4750699999999997
     },
     "DRV-Mexico_HQ450386_2012-09-12": {
       "predicted 17C7 escape": 1.02786
@@ -9065,7 +9065,7 @@
       "predicted 17C7 escape": 4.13021
     },
     "EPHVAC_JQ944709_2008-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.9953900000000004
     },
     "ERA-KK_EU119869_2007-09-15": {
       "predicted 17C7 escape": 0.8814899999999999
@@ -9119,7 +9119,7 @@
       "predicted 17C7 escape": 0.8814899999999999
     },
     "ERA_strain_M38452_1993-08-03": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 0.8814899999999999
     },
     "EfV1_JQ824893_2000-XX-XX": {
       "predicted 17C7 escape": 5.473534000000001
@@ -9146,7 +9146,7 @@
       "predicted 17C7 escape": 2.2886699999999998
     },
     "FJ008_FJ866835_2008-11-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.23033
     },
     "FJ009_FJ866836_2008-11-XX": {
       "predicted 17C7 escape": 2.26164
@@ -9218,7 +9218,7 @@
       "predicted 17C7 escape": 2.3950699999999996
     },
     "FY16_DQ849058_2005-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2886699999999998
     },
     "FY1_DQ849044_2004-XX-XX": {
       "predicted 17C7 escape": 2.2886699999999998
@@ -9341,7 +9341,7 @@
       "predicted 17C7 escape": 1.1008900000000001
     },
     "GN07_EU828654_2007-05-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.7334999999999994
     },
     "GOA_A_01-01-2017_MW055012_2017-01-01": {
       "predicted 17C7 escape": 1.2587100000000002
@@ -9647,19 +9647,19 @@
       "predicted 17C7 escape": 1.8110299999999997
     },
     "GSQY-Dog-China-2013_MK567666_2013-03-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.95993
     },
     "GUI1-DG_AF325484_2001-08-20": {
       "predicted 17C7 escape": 1.45236
     },
     "GUY1-BV_AF325490_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.63242
     },
     "GX014_GQ472538_2003-04-XX": {
       "predicted 17C7 escape": 2.1556100000000002
     },
     "GX01_GQ472535_2004-03-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.5446099999999996
     },
     "GX074_GQ472539_2003-02-XX": {
       "predicted 17C7 escape": 2.23033
@@ -9677,7 +9677,7 @@
       "predicted 17C7 escape": 2.1556100000000002
     },
     "GX195_GQ472541_2004-10-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.1556100000000002
     },
     "GX219_GQ472542_2003-06-XX": {
       "predicted 17C7 escape": 2.5305299999999997
@@ -9704,7 +9704,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "GXBS092010_MG201897_2010-11-16": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3072799999999996
     },
     "GXBS132010_MG201906_2010-11-16": {
       "predicted 17C7 escape": 2.1556100000000002
@@ -9713,7 +9713,7 @@
       "predicted 17C7 escape": 2.1556100000000002
     },
     "GXBS892010_MG201904_2010-11-16": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3072799999999996
     },
     "GXHCHJ_MG201903_2012-03-09": {
       "predicted 17C7 escape": 2.23033
@@ -9737,7 +9737,7 @@
       "predicted 17C7 escape": 2.1556100000000002
     },
     "GXLB2010_MG201902_2010-09-08": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.4280299999999997
     },
     "GXLB_GQ472550_2007-08-XX": {
       "predicted 17C7 escape": 2.1556100000000002
@@ -9785,7 +9785,7 @@
       "predicted 17C7 escape": 2.1556100000000002
     },
     "GXRXD01_KT221130_2010-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.19468
     },
     "GXSL2018_MN186249_2018-XX-XX": {
       "predicted 17C7 escape": 2.23033
@@ -9806,7 +9806,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "GXYZD_GQ472560_2007-04-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.46493
     },
     "G_117-1996_KU739036_1996-XX-XX": {
       "predicted 17C7 escape": 1.1436600000000001
@@ -9899,7 +9899,7 @@
       "predicted 17C7 escape": 1.49994
     },
     "Gra_03-09-7-F_LM645042_2009-03-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7552400000000001
     },
     "Gra_03-10-2-F_LM645019_2010-06-XX": {
       "predicted 17C7 escape": 1.49994
@@ -10001,7 +10001,7 @@
       "predicted 17C7 escape": 2.2886699999999998
     },
     "Guangxi_Cx25_EU267743_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.83838
     },
     "Guangxi_Yl66_EU267744_2009-01-05": {
       "predicted 17C7 escape": 2.3834400000000002
@@ -10019,16 +10019,16 @@
       "predicted 17C7 escape": 2.1556100000000002
     },
     "Guizhou_Al03_EU267747_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2668739999999996
     },
     "Guizhou_Al0H_EU267745_2009-01-05": {
       "predicted 17C7 escape": 1.2039300000000002
     },
     "Guizhou_Al48_EU267748_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.0808299999999997
     },
     "Guizhou_Qx1_EU267749_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.24247
     },
     "Guizhou_Qx2_EU267750_2009-01-05": {
       "predicted 17C7 escape": 2.7744299999999997
@@ -10289,7 +10289,7 @@
       "predicted 17C7 escape": 2.2886699999999998
     },
     "Henan_Sq35_EU267758_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.80853
     },
     "Henan_Sq59_EU267759_2009-01-05": {
       "predicted 17C7 escape": 2.51037
@@ -10313,7 +10313,7 @@
       "predicted 17C7 escape": 2.25171
     },
     "HuNDB02_GU186379_2005-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3639099999999997
     },
     "HuNDB03_GU186380_2006-XX-XX": {
       "predicted 17C7 escape": 2.19491
@@ -10352,7 +10352,7 @@
       "predicted 17C7 escape": 2.23033
     },
     "Hunan_Wg12_EU267763_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.24246
     },
     "Hunan_Wg13_EU267764_2009-01-05": {
       "predicted 17C7 escape": 2.7505299999999995
@@ -10364,7 +10364,7 @@
       "predicted 17C7 escape": 2.38263
     },
     "Hunan_Wg430_EU267767_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2818499999999995
     },
     "Hunan_Wg432_EU267768_2009-01-05": {
       "predicted 17C7 escape": 3.8919699999999997
@@ -10373,10 +10373,10 @@
       "predicted 17C7 escape": 2.8340879999999995
     },
     "Hunan_Xx34_EU267770_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.31853
     },
     "Hunan_Xx35_EU267771_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.586327
     },
     "IGU-R201-Nilgai_KY775603_2014-XX-XX": {
       "predicted 17C7 escape": 1.2587100000000002
@@ -10721,7 +10721,7 @@
       "predicted 17C7 escape": 1.26027
     },
     "IRN1-HM_AF325472_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.366537
     },
     "IRV1-RD_KM492746_2001-XX-XX": {
       "predicted 17C7 escape": 1.1873900000000002
@@ -11051,10 +11051,10 @@
       "predicted 17C7 escape": 1.72996
     },
     "Jiangsu_Wx0H_EU267772_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 0.8814899999999999
     },
     "Jiangsu_Wx1_EU267773_2009-01-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.20935
     },
     "Jiangsu_Wx32_EU267774_2009-01-05": {
       "predicted 17C7 escape": 2.34173
@@ -11078,7 +11078,7 @@
       "predicted 17C7 escape": 1.3868900000000002
     },
     "KRVB0907_GU937030_2009-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.9762999999999997
     },
     "KRVB0910_KJ476819_2009-XX-XX": {
       "predicted 17C7 escape": 1.7604000000000002
@@ -11132,7 +11132,7 @@
       "predicted 17C7 escape": 1.2527
     },
     "KRVR0901_GU937025_2009-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.8729
     },
     "KRVR0906_GU937024_2009-XX-XX": {
       "predicted 17C7 escape": 1.2109999999999999
@@ -11366,7 +11366,7 @@
       "predicted 17C7 escape": 1.31637
     },
     "M512_LC717421_1965-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.8565300000000007
     },
     "MA-2003-5142_MG562518_2003-XX-XX": {
       "predicted 17C7 escape": 4.787997
@@ -11615,7 +11615,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "MEX1-DG_AF325477_2001-08-20": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.492207
     },
     "MEX2-VP_AF325492_2001-08-20": {
       "predicted 17C7 escape": 5.983219999999999
@@ -11639,7 +11639,7 @@
       "predicted 17C7 escape": 1.3751600000000002
     },
     "MK754400_2015-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.1436600000000001
     },
     "MK754401_2015-XX-XX": {
       "predicted 17C7 escape": 1.22566
@@ -15038,7 +15038,7 @@
       "predicted 17C7 escape": 4.01863
     },
     "Pk_19_HE801606_2008-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.1436600000000001
     },
     "Pk_20_HE801607_2009-XX-XX": {
       "predicted 17C7 escape": 1.52446
@@ -15047,7 +15047,7 @@
       "predicted 17C7 escape": 1.1436600000000001
     },
     "Pk_22_HE801609_2006-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.229881
     },
     "Pk_23_HE802675_2010-XX-XX": {
       "predicted 17C7 escape": 1.1873900000000002
@@ -15074,7 +15074,7 @@
       "predicted 17C7 escape": 1.17423
     },
     "Pk_58_HE801616_2007-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.3189600000000001
     },
     "Pk_59_HE801617_2008-XX-XX": {
       "predicted 17C7 escape": 1.1436600000000001
@@ -15164,7 +15164,7 @@
       "predicted 17C7 escape": 4.787997
     },
     "QC-2007-2892_MF143347_2007-06-13": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.986497
     },
     "QC-2007-2893_MF143348_2007-06-13": {
       "predicted 17C7 escape": 4.787997
@@ -16709,7 +16709,7 @@
       "predicted 17C7 escape": 1.93994
     },
     "RVD_AY237121_2003-04-02": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.72105
     },
     "RVHK_KC792243_1998-01-01": {
       "predicted 17C7 escape": 1.49994
@@ -16778,7 +16778,7 @@
       "predicted 17C7 escape": 1.6326399999999999
     },
     "RV_NCR-PHL_2005_Z-05-373_AB563812_2005-07-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7053699999999998
     },
     "RV_NCR-PHL_2005_Z-05-396_AB563813_2005-07-XX": {
       "predicted 17C7 escape": 1.6313399999999998
@@ -16874,7 +16874,7 @@
       "predicted 17C7 escape": 1.6326399999999999
     },
     "RV_R1-PHL_2010_TRa-286_AB733971_2010-01-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.28294
     },
     "RV_R1-PHL_2010_TRa-299_AB733972_2010-01-XX": {
       "predicted 17C7 escape": 1.6326399999999999
@@ -16940,7 +16940,7 @@
       "predicted 17C7 escape": 1.6326399999999999
     },
     "RV_R10-PHL_2008_TRa-024_AB563852_2008-07-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.6326399999999999
     },
     "RV_R10-PHL_2008_TRa-025_AB563853_2008-07-XX": {
       "predicted 17C7 escape": 1.6326399999999999
@@ -17597,7 +17597,7 @@
       "predicted 17C7 escape": 1.6326399999999999
     },
     "RV_R4B-PHL_2013_TRa-486_LC018584_2013-06-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.9703399999999998
     },
     "RV_R4B-PHL_2013_TRa-487_LC018585_2013-06-XX": {
       "predicted 17C7 escape": 1.8666399999999999
@@ -18125,16 +18125,16 @@
       "predicted 17C7 escape": 1.7431800000000002
     },
     "SA194858SEN_2008_MH514972_2008-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.1026499999999997
     },
     "SA204014SEN_2010_MH514976_2010-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.0646199999999997
     },
     "SA206776SEN_2010_MH514971_2010-XX-XX": {
       "predicted 17C7 escape": 2.80825
     },
     "SA212203SEN_2011_MH514973_2011-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.86349
     },
     "SA217694SEN_2011_MH514970_2011-XX-XX": {
       "predicted 17C7 escape": 1.6582
@@ -18146,7 +18146,7 @@
       "predicted 17C7 escape": 2.80825
     },
     "SA252888SEN_2013_MH514981_2013-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.572287999999999
     },
     "SA252913SEN_2013_MH514975_2013-XX-XX": {
       "predicted 17C7 escape": 2.84375
@@ -18161,7 +18161,7 @@
       "predicted 17C7 escape": 2.80825
     },
     "SA267115SEN_2014_MH514980_2014-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 3.7901000000000002
     },
     "SA272282SEN_2015_MH514985_2015-XX-XX": {
       "predicted 17C7 escape": 2.80825
@@ -18512,7 +18512,7 @@
       "predicted 17C7 escape": 2.80825
     },
     "SHBRV-18_AY705373_2004-11-16": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.174049999999999
     },
     "SHBRV_U52946_1996-04-25": {
       "predicted 17C7 escape": 5.36802
@@ -18716,7 +18716,7 @@
       "predicted 17C7 escape": 1.13185
     },
     "SKRRD9902PJ_DQ076102_1999-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.20147
     },
     "SKRRD9903YG_DQ076099_1999-XX-XX": {
       "predicted 17C7 escape": 1.13185
@@ -18818,7 +18818,7 @@
       "predicted 17C7 escape": 5.31259
     },
     "SMK-TH-154_LC071979_2013-10-09": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7965000000000002
     },
     "SMP-TH-19_LC071953_2014-03-02": {
       "predicted 17C7 escape": 1.8172700000000002
@@ -18851,7 +18851,7 @@
       "predicted 17C7 escape": 1.7341000000000002
     },
     "SR40_LC360793_2016-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7341000000000002
     },
     "SR43_LC360796_2016-XX-XX": {
       "predicted 17C7 escape": 1.7736800000000001
@@ -18902,7 +18902,7 @@
       "predicted 17C7 escape": 5.35272
     },
     "SV14_16_KY824663_2016-02-02": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.96802
     },
     "SV15_16_KY824664_2016-02-02": {
       "predicted 17C7 escape": 5.35272
@@ -18923,7 +18923,7 @@
       "predicted 17C7 escape": 5.35272
     },
     "SV255_16_KY824684_2016-06-08": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.59892
     },
     "SV257_12_KY824685_2012-06-04": {
       "predicted 17C7 escape": 5.35272
@@ -19133,7 +19133,7 @@
       "predicted 17C7 escape": 2.20333
     },
     "ShaanxiRab005_KF663534_2011-05-30": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3536299999999994
     },
     "ShaanxiRab007_KF663535_2011-04-28": {
       "predicted 17C7 escape": 1.8110299999999997
@@ -19148,13 +19148,13 @@
       "predicted 17C7 escape": 1.9939299999999998
     },
     "ShaanxiRab013_KF663539_2009-11-19": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.778834
     },
     "ShaanxiRab014_KF663540_2010-02-09": {
       "predicted 17C7 escape": 2.23033
     },
     "ShaanxiRab015_KF663541_2009-08-12": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.2861899999999995
     },
     "ShaanxiRab016_KF663542_2011-12-15": {
       "predicted 17C7 escape": 1.3747599999999998
@@ -19166,7 +19166,7 @@
       "predicted 17C7 escape": 1.8110299999999997
     },
     "ShaanxiRab020_KF663545_2012-04-08": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.3536299999999994
     },
     "ShaanxiRab023_KF663546_2011-09-16": {
       "predicted 17C7 escape": 1.8110299999999997
@@ -19226,22 +19226,22 @@
       "predicted 17C7 escape": 1.149637
     },
     "TR-Rabies-G-Cattle-2020-D3_MZ391119_2020-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 5.12403
     },
     "TR-Rabies-G-Cattle-2020-D4_MZ391120_2020-XX-XX": {
       "predicted 17C7 escape": 2.13886
     },
     "TR-Rabies-G-Dog-2014-2K_MZ391128_2014-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.004163
     },
     "TR-Rabies-G-Donkey-2020-B1_MZ391127_2020-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 4.677860000000001
     },
     "TR-Rabies-G-Fox-2013-6D_MZ391132_2013-XX-XX": {
       "predicted 17C7 escape": 1.46509
     },
     "TR-Rabies-G-Marten-2013-8B_MZ391126_2013-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.68785659
     },
     "TR-Rabies-G-PV_MZ391133_2020-XX-XX": {
       "predicted 17C7 escape": 0.04801
@@ -19415,19 +19415,19 @@
       "predicted 17C7 escape": 1.7183700000000002
     },
     "UB03_LC360756_2016-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.7501600000000002
     },
     "UB05_LC360758_2016-XX-XX": {
       "predicted 17C7 escape": 1.7183700000000002
     },
     "UB06_LC360755_2016-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.8556700000000002
     },
     "UB23_LC360776_2016-XX-XX": {
       "predicted 17C7 escape": 1.7183700000000002
     },
     "UB24_LC360777_2016-XX-XX": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.790128
     },
     "UB25_LC360778_2016-XX-XX": {
       "predicted 17C7 escape": 1.7183700000000002
@@ -19469,7 +19469,7 @@
       "predicted 17C7 escape": 4.45158
     },
     "USA7-BT_AF298141_2002-08-05": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 6.398746589999999
     },
     "USA8-BT_AF325494_2001-08-20": {
       "predicted 17C7 escape": 4.825767
@@ -19490,7 +19490,7 @@
       "predicted 17C7 escape": 1.475137
     },
     "VMC-5_MT862689_2012-03-01": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.678799
     },
     "VMC_1519_PP441993_2021-03-03": {
       "predicted 17C7 escape": 1.46197
@@ -19517,7 +19517,7 @@
       "predicted 17C7 escape": 1.2587100000000002
     },
     "VMC_1918_PP442001_2021-10-15": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.67351
     },
     "VMC_1919_PP442002_2021-09-25": {
       "predicted 17C7 escape": 1.2587100000000002
@@ -19901,7 +19901,7 @@
       "predicted 17C7 escape": 4.869387
     },
     "Vnukovo-32_X71879_1997-03-19": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 1.11406
     },
     "W106_OP515226_2012-05-08": {
       "predicted 17C7 escape": 1.7183700000000002
@@ -20336,7 +20336,7 @@
       "predicted 17C7 escape": 2.25171
     },
     "Yunnan_Md06_EU253477_2007-12-13": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.61403
     },
     "Yunnan_Qj07_EU275240_2007-03-07": {
       "predicted 17C7 escape": 2.32135
@@ -20345,7 +20345,7 @@
       "predicted 17C7 escape": 1.76097
     },
     "Yunnan_Zt07_EU275241_2007-07-12": {
-      "predicted 17C7 escape": NaN
+      "predicted 17C7 escape": 2.8825700000000003
     },
     "Z-12-001_MN726845_2012-XX-XX": {
       "predicted 17C7 escape": 1.6326399999999999

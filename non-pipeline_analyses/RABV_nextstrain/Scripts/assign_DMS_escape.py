@@ -82,7 +82,8 @@ def calculate_antibody_escape_and_write_json(
         escape_column, 
         antibody_name, 
         output_json,
-        output_log_file
+        output_log_file,
+        site_map_csv
     ):
     """
     Function that calculates predicted escape for each natural sequence
@@ -91,6 +92,33 @@ def calculate_antibody_escape_and_write_json(
 
     # Load escape data
     escape_df = pd.read_csv(escape_data)
+
+    # Load site map and merge with escape_df
+    site_map = (
+        pd.read_csv(site_map_csv)
+        .rename(columns={
+            "reference_site" : "site",
+            "reference_wt" : "wildtype",
+        })
+        .drop(columns=["sequential_site", "sequential_wt"])
+    )
+    escape_df = (
+        escape_df.merge(
+            site_map,
+            how="left",
+            on=["site", "wildtype"],
+            validate="many_to_one",
+        )
+    )
+
+    # Create natural sequence mutation col
+    escape_df["natural_sequence_mutation"] = (
+        escape_df["wildtype"] + escape_df["natural_sequence_site"].astype(str) + escape_df["mutant"]
+    )
+
+    # Floor escape and extract single antibody data
+    escape_df["floored_escape"] = escape_df["escape"].clip(lower=0)
+    escape_df = escape_df.query("antibody == @antibody_name")
 
     # Create escape mutation dictonary
     escape_dict = dict(zip(escape_df[site_column], escape_df[escape_column]))
@@ -155,6 +183,7 @@ metadata = str(snakemake.input.metadata)
 
 # Params
 antibody_name = str(snakemake.params.antibody_name)
+site_map = str(snakemake.params.site_map)
 filter_params = snakemake.params.filter_params
 reference_strain = str(snakemake.params.reference_strain)
 site_column = str(snakemake.params.site_column)
@@ -175,6 +204,7 @@ calculate_antibody_escape_and_write_json(
     antibody_name, 
     output_json,
     output_log_file,
+    site_map,
 )
 
 if __name__ == "__main__":
