@@ -124,3 +124,22 @@ ph_domain_RVC20_escape:
     Pseudovirus deep mutational scanning of how mutations to rabies G affect
     neutralization by antibody RVC20 shown on pH domain (6tou).
 
+
+domainIII_CR57_escape:
+  pdb_id: 8r40
+  escape_or_phenotype: escape
+  phenotypes: null
+  antibodies: [CR57]
+  included-chains: [C]
+  excluded-chains: []
+  alphabet: RKHDEQNSTYWFAILMVGPC
+  floor: true
+  summary-stat: sum
+  tooltip-cols: {cell entry: cell entry}
+  filter-cols: {cell entry: cell entry}
+  filter-limits: {cell entry: [-8, -5, 0]}
+  heatmap-limits: [0]
+  title: Effects of mutations to rabies G on escape from antibody CR57
+  description: |
+    Pseudovirus deep mutational scanning of how mutations to rabies G affect
+    neutralization by antibody CR57 shown on domain III (8r40)
