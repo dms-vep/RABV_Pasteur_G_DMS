@@ -40,42 +40,114 @@
     {
       "key": "predicted RVC20 escape",
       "title": "Predicted RVC20 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          5.62,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted RVA122 escape",
       "title": "Predicted RVA122 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          3.2,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted 17C7 escape",
       "title": "Predicted 17C7 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          10.2,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted RVC58 escape",
       "title": "Predicted RVC58 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          3.305,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted CR4098 escape",
       "title": "Predicted CR4098 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          5.71,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted CR57 escape",
       "title": "Predicted CR57 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          8.91,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted CTB012 escape",
       "title": "Predicted CTB012 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          15.63,
+          "#0072B2"
+        ]
+      ]
     },
     {
       "key": "predicted RVC68 escape",
       "title": "Predicted RVC68 escape",
-      "type": "continuous"
+      "scale": [
+        [
+          0.0,
+          "#DDDDDD"
+        ],
+        [
+          17.0,
+          "#0072B2"
+        ]
+      ]
     }
   ],
   "geo_resolutions": [
