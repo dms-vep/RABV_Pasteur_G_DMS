@@ -1,0 +1,1 @@
+Rabies G protein phylogeny with predicted antibody escape scores mapped onto tree. This build uses escape measurements from a deep mutational scan of the Rabies Pasteur G protein. See link ([https://dms-vep.org/RABV_Pasteur_G_DMS/](https://dms-vep.org/RABV_Pasteur_G_DMS/)) for more information.

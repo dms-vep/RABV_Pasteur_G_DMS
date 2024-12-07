@@ -170,7 +170,7 @@
   "display_defaults": {
     "map_triplicate": true,
     "distance_measure": "div",
-    "color_by" : "virus",
+    "color_by" : "predicted 17C7 escape",
     "transmission_lines": false
   },
   "filters": [
