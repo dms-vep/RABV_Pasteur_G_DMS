@@ -207,6 +207,7 @@ rule export_tree:
         dms_predictions = expand("Results/{gene}/Antibody_escape_predictions/{antibody}.json", gene=["G"], antibody=antibody_list),
     params:
         title = lambda wildcards: config["Auspice_tree_titles"][wildcards.gene],
+        description = lambda wildcards: config["Auspice_tree_descriptions"][wildcards.gene],
     output:
         auspice_tree = "auspice/{gene}.json",
     conda:
@@ -215,6 +216,7 @@ rule export_tree:
         "augur export v2 "
         "--tree {input.tree} "
         "--title {params.title} "
+        "--description {params.description} "
         "--metadata {input.metadata} "
         "--node-data {input.tree_nodes} {input.tree_traits} {input.tree_muts} {input.aa_muts} {input.dms_predictions} "
         "--include-root-sequence-inline "

@@ -92,7 +92,10 @@ Antibody_escape_prediction_params:
     phylogroup: "I"
 
 Auspice_tree_titles:
-  G: "'Natural diversity of the Rabies glycoprotein'"
+  G: "'Antibody escape among natural rabies G proteins as determined by deep mutational scanning'"
+
+Auspice_tree_descriptions:
+  G: Configure/Input_Data/G_description.md
 
 #################################################---END INPUT DATA---#########################################################
 
