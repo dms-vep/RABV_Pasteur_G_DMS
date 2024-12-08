@@ -10,8 +10,6 @@ import sys
 
 def new_reference(referencefile, outgenbank, new_name, gene):
     ref = SeqIO.read(referencefile, "genbank")
-    startofgene = None
-    endofgene = None
     gene_found = False
     for feature in ref.features:
         if feature.type == "source":
@@ -20,8 +18,6 @@ def new_reference(referencefile, outgenbank, new_name, gene):
             a = list(feature.qualifiers.items())[0][-1][0]
             if a == gene:
                 gene_found = True
-                startofgene = int(list(feature.location)[0])
-                endofgene =  int(list(feature.location)[-1])+1
                 break
 
 
@@ -47,6 +43,14 @@ def new_reference(referencefile, outgenbank, new_name, gene):
     # Rename gene features
     record.features[-1].qualifiers["gene"] = new_name
     record.features[-1].qualifiers["locus_tag"] = new_name
+
+    # Add ectodomain feature
+    CDS = SeqFeature(FeatureLocation(start=57, end=1350), type="CDS")
+    record.features.append(CDS)
+
+    # Rename gene features
+    record.features[-1].qualifiers["gene"] = "G_ectodomain"
+    record.features[-1].qualifiers["locus_tag"] = "G_ectodomain"
 
     # Write new genbank
     SeqIO.write(record, outgenbank, "genbank")
