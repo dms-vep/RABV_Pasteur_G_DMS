@@ -40,6 +40,9 @@ FEATURES             Location/Qualifiers
                      YVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGKIISSWESYK
                      SGGETGL"
                      /gene="G"
+     CDS             58..1350
+                     /gene="G_ectodomain"
+                     /locus_tag="G_ectodomain"
 ORIGIN
         1 atggttcctc aggctctcct gtttgtaccc cttctggttt ttccattgtg ttttgggaaa
        61 ttccctattt acacgatacc agacaagctt ggtccctgga gcccgattga catacatcac
