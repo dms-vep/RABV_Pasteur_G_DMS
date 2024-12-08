@@ -11,7 +11,7 @@ pipeline_path: dms-vep-pipeline-3  # typically will be `dms-vep-pipeline` for re
 docs: docs  # typically will be `docs` for real pipelines
 
 # ----------------------------------------------------------------------------
-# Details on repo, used ßfor docs. Change this to details for your project.
+# Details on repo, used for docs. Change this to details for your project.
 # ----------------------------------------------------------------------------
 
 # Name of your main GitHub repo, eg https://github.com/<my_organization>/<my_repo>
@@ -21,10 +21,9 @@ github_repo_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS
 # and should not be needed for other pipelines.
 github_blob_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main
 # Some descriptions and metadata about the analysis.
-description: Deep mutational scanning using Rabies glycoprotein (strain Pasteur). Analysis uses dms-vep-pipeline-3
+description: Deep mutational scanning of rabies G (Pasteur strain)
 year: 2024
-authors: Arjun Aditham and Jesse Bloom
-
+authors: Arjun Aditham, Caelan Radford, Caleb Carr, and Jesse Bloom
 
 # ----------------------------------------------------------------------------
 # Site numbering, mutation classification, and neut standards
