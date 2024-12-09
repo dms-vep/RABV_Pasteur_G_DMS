@@ -59,5 +59,5 @@ rule create_new_references:
         "python Scripts/newreference.py "
         "--reference {input} "
         "--output-genbank {output.new_reference} "
-        "--new-name {wildcards.gene} "
+        "--new-name G_full_length "
         "--gene {params.gene_name} &> {log}"

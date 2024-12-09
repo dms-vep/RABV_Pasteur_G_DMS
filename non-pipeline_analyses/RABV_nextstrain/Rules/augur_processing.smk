@@ -123,9 +123,9 @@ rule translate_tree_sequences:
         reference = "Results/{gene}/{gene}_reference.gb",
     output:
         aa_muts = "Results/{gene}/Trees/tree_aa_muts.json",
-        gene_alignments = expand("Results/{{gene}}/Augur_AA_Alignements/{domains}.fasta", domains=["G", "G_ectodomain"])
+        gene_alignments = expand("Results/{{gene}}/Augur_AA_Alignements/{domains}.fasta", domains=["G_full_length", "G_ectodomain"])
     params:
-        genes = ["G", "G_ectodomain"],
+        genes = ["G_full_length", "G_ectodomain"],
     conda:
         "../environment.yml",
     log:

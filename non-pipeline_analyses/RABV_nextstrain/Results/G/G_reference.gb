@@ -1,7 +1,7 @@
-LOCUS       G                       1575 bp    ss-RNA           UNK 01-JAN-1980
+LOCUS       G_full_length           1575 bp    ss-RNA           UNK 01-JAN-1980
 DEFINITION  .
-ACCESSION   G
-VERSION     G
+ACCESSION   G_full_length
+VERSION     G_full_length
 KEYWORDS    .
 SOURCE      .
   ORGANISM  .
@@ -24,7 +24,7 @@ FEATURES             Location/Qualifiers
                      YVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGKIISSWESYK
                      SGGETGL"
      CDS             1..1575
-                     /locus_tag="G"
+                     /locus_tag="G_full_length"
                      /codon_start=1
                      /product="transmembrane glycoprotein G"
                      /protein_id="NP_056796.1"
@@ -39,7 +39,7 @@ FEATURES             Location/Qualifiers
                      LQQHMELLVSSVIPLMHPLADPSTVFKNGDEAEDFVEVHLPDVHERISGVDLGLPNWGK
                      YVLLSAGALTALMLIIFLMTCWRRVNRSEPTQHNLRGTGREVSVTPQSGKIISSWESYK
                      SGGETGL"
-                     /gene="G"
+                     /gene="G_full_length"
      CDS             58..1350
                      /gene="G_ectodomain"
                      /locus_tag="G_ectodomain"
