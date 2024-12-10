@@ -28,4 +28,4 @@ In all the visualizations and data, protein sites are numbered in the standard s
 The experiments were performed using [pseudovirus deep mutational scanning](https://doi.org/10.1016/j.cell.2023.02.001), which enables the safe study of mutants of viral entry proteins using single-cycle replicative pseudoviruses that are **not** human pathogens.
 
 The GitHub repository with the full analysis and processed data is at [https://github.com/dms-vep/RABV_Pasteur_G_DMS](https://github.com/dms-vep/RABV_Pasteur_G_DMS).
-This analysis used [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3/), and the full output of the pipeline (which represents less user-friendly but more extensive documentation) is in the [Appendix](/appendix){target="_self"}.
+This analysis used [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3/), and the full output of the pipeline (which represents less user-friendly but more extensive documentation) is in the [Appendix](appendix.html){target="_self"}.
