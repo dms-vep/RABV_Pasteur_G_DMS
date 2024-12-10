@@ -11,6 +11,12 @@ pipeline_path: dms-vep-pipeline-3  # typically will be `dms-vep-pipeline` for re
 docs: docs  # typically will be `docs` for real pipelines
 
 # ----------------------------------------------------------------------------
+# Build VitePress homepage
+# ----------------------------------------------------------------------------
+homepage: homepage/public
+build_vitepress_homepage: true
+
+# ----------------------------------------------------------------------------
 # Details on repo, used for docs. Change this to details for your project.
 # ----------------------------------------------------------------------------
 

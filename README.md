@@ -6,7 +6,7 @@ This repo contains data and analyses from deep mutational scanning experiments o
 The deep mutational scan only consists of the ectodomain of Rabies G and few sites flanking the ectodomain.
 Consistent with the rabies literature, the sites are numbering using the scheme were 1 is assigned to the first site of the ectodomain, not the first site of the protein itself.
 
-For analysis and documentation of the study, navigate to [https://dms-vep.org/RABV_Pasteur_G_DMS/](https://dms-vep.org/RABV_Pasteur_G_DMS/). 
+For user-friendly links to interactive visualization of the data and key numerical results, see [https://dms-vep.org/RABV_Pasteur_G_DMS/](https://dms-vep.org/RABV_Pasteur_G_DMS/). 
 
 ## Organization of this repo
 
