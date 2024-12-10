@@ -89,3 +89,10 @@ results/dms-viz/*
 !results/escape_logos
 results/escape_logos/*
 !results/escape_logos/*.svg
+
+!.github
+node_modules/
+!homepage/.vitepress/
+homepage/.vitepress/cache/
+homepage/.vitepress/dist/
+!homepage/public/
