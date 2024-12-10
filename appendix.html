@@ -1,0 +1,431 @@
+<h1 id="deep-mutational-scanning-of-rabies-g-pasteur-strain">Deep mutational scanning of rabies G (Pasteur strain)</h1>
+<p>Analysis by Arjun Aditham, Caelan Radford, Caleb Carr, and Jesse Bloom (2024)</p>
+<p>See <a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS">https://github.com/dms-vep/RABV_Pasteur_G_DMS</a> for full code.</p>
+<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</a></li>
+<li><a href="#count-barcodes-for-variants">Count barcodes for variants</a></li>
+<li><a href="#functional-effects-of-mutations">Functional effects of mutations</a></li>
+<li><a href="#antibodyserum-escape">Antibody/serum escape</a></li>
+<li><a href="#integrated-summary-plots">Integrated summary plots</a></li>
+<li><a href="#visualizations-of-dms-data-on-protein-structure">Visualizations of DMS data on protein structure</a></li>
+<li><a href="#logo-plots-showing-antibody-escape">Logo plots showing antibody escape</a></li>
+<li><a href="#comparison-to-natural-sequence-variation">Comparison to natural sequence variation</a></li>
+</ul>
+</div>
+<h2 id="barcode-to-codon-variant-lookup-table">Barcode to codon-variant lookup table</h2>
+<h4 id="analysis-notebooks">Analysis notebooks</h4>
+<ul>
+<li><a href="notebooks/analyze_pacbio_ccs.html">Analysis of PacBio CCSs</a></li>
+<li><a href="notebooks/build_pacbio_consensus.html">Building barcoded variant consensus sequences</a></li>
+<li><a href="notebooks/build_codon_variants.html">Building of codon-variant table</a></li>
+</ul>
+<h4 id="data-files">Data files</h4>
+<ul>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/data/gene_sequence/codon.fasta">parental codon sequence</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/data/gene_sequence/protein.fasta">parental protein sequence</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/variants/codon_variants.csv">barcode to codon-variant lookup table</a></li>
+</ul>
+<h2 id="count-barcodes-for-variants">Count barcodes for variants</h2>
+<h4 id="analysis-notebooks_1">Analysis notebooks</h4>
+<h4 id="data-files_1">Data files</h4>
+<ul>
+<li><details><summary>Barcode count CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-no_antibody-1_counts.csv">A-240129-rescue_1-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-no_antibody-2_counts.csv">A-240129-rescue_1-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240129-rescue_1-VSVG-1_counts.csv">A-240129-rescue_1-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240222-rescue_2-no_antibody-1_counts.csv">A-240222-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240222-rescue_2-no_antibody-2_counts.csv">A-240222-rescue_2-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240222-rescue_2-no_antibody-3_counts.csv">A-240222-rescue_2-no_antibody-3</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240222-rescue_2-VSVG-1_counts.csv">A-240222-rescue_2-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVA122-150-1_counts.csv">A-240319-rescue_2-RVA122-150-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVA122-300-1_counts.csv">A-240319-rescue_2-RVA122-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVA122-600-1_counts.csv">A-240319-rescue_2-RVA122-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVA122-1500-1_counts.csv">A-240319-rescue_2-RVA122-1500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVA122-3000-1_counts.csv">A-240319-rescue_2-RVA122-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-no_antibody-1_counts.csv">A-240319-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVC20-300-1_counts.csv">A-240319-rescue_2-RVC20-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVC20-600-1_counts.csv">A-240319-rescue_2-RVC20-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVC20-1200-1_counts.csv">A-240319-rescue_2-RVC20-1200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVC20-3000-1_counts.csv">A-240319-rescue_2-RVC20-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-RVC20-6000-1_counts.csv">A-240319-rescue_2-RVC20-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-17C7-800-1_counts.csv">A-240319-rescue_2-17C7-800-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-17C7-2000-1_counts.csv">A-240319-rescue_2-17C7-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-17C7-4000-1_counts.csv">A-240319-rescue_2-17C7-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-17C7-10000-1_counts.csv">A-240319-rescue_2-17C7-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240319-rescue_2-17C7-25000-1_counts.csv">A-240319-rescue_2-17C7-25000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-no_antibody-1_counts.csv">A-240331-rescue_4-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-50-1_counts.csv">A-240331-rescue_4-RVC58-50-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-250-1_counts.csv">A-240331-rescue_4-RVC58-250-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-500-1_counts.csv">A-240331-rescue_4-RVC58-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-1000-1_counts.csv">A-240331-rescue_4-RVC58-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-2500-1_counts.csv">A-240331-rescue_4-RVC58-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-RVC58-5000-1_counts.csv">A-240331-rescue_4-RVC58-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-400-1_counts.csv">A-240331-rescue_4-CR4098-400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-2000-1_counts.csv">A-240331-rescue_4-CR4098-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-4000-1_counts.csv">A-240331-rescue_4-CR4098-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-8000-1_counts.csv">A-240331-rescue_4-CR4098-8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-20000-1_counts.csv">A-240331-rescue_4-CR4098-20000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR4098-40000-1_counts.csv">A-240331-rescue_4-CR4098-40000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-20-1_counts.csv">A-240331-rescue_4-CR57-20-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-100-1_counts.csv">A-240331-rescue_4-CR57-100-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-200-1_counts.csv">A-240331-rescue_4-CR57-200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-400-1_counts.csv">A-240331-rescue_4-CR57-400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-1000-1_counts.csv">A-240331-rescue_4-CR57-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240331-rescue_4-CR57-2000-1_counts.csv">A-240331-rescue_4-CR57-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-no_antibody-1_counts.csv">A-240406-rescue_4-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-RVC68-500-1_counts.csv">A-240406-rescue_4-RVC68-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-RVC68-2500-1_counts.csv">A-240406-rescue_4-RVC68-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-RVC68-10000-1_counts.csv">A-240406-rescue_4-RVC68-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-RVC68-25000-1_counts.csv">A-240406-rescue_4-RVC68-25000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-RVC68-100000-1_counts.csv">A-240406-rescue_4-RVC68-100000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-CTB012-600-1_counts.csv">A-240406-rescue_4-CTB012-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-CTB012-3000-1_counts.csv">A-240406-rescue_4-CTB012-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-CTB012-6000-1_counts.csv">A-240406-rescue_4-CTB012-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-CTB012-12000-1_counts.csv">A-240406-rescue_4-CTB012-12000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240406-rescue_4-CTB012-30000-1_counts.csv">A-240406-rescue_4-CTB012-30000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-no_antibody-1_counts.csv">B-240501-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-no_antibody-2_counts.csv">B-240501-rescue_2-no_antibody-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-no_antibody-3_counts.csv">B-240501-rescue_2-no_antibody-3</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-no_antibody-4_counts.csv">B-240501-rescue_2-no_antibody-4</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-VSVG-1_counts.csv">B-240501-rescue_2-VSVG-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-VSVG-2_counts.csv">B-240501-rescue_2-VSVG-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-RVA122-1500-1_counts.csv">B-240501-rescue_2-RVA122-1500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-RVA122-3000-1_counts.csv">B-240501-rescue_2-RVA122-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-RVA122-300-1_counts.csv">B-240501-rescue_2-RVA122-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-RVA122-600-1_counts.csv">B-240501-rescue_2-RVA122-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-17C7-10000-1_counts.csv">B-240501-rescue_2-17C7-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-17C7-2000-1_counts.csv">B-240501-rescue_2-17C7-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-17C7-4000-1_counts.csv">B-240501-rescue_2-17C7-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-17C7-800-1_counts.csv">B-240501-rescue_2-17C7-800-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-1000-1_counts.csv">B-240501-rescue_2-CR57-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-100-1_counts.csv">B-240501-rescue_2-CR57-100-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-20-1_counts.csv">B-240501-rescue_2-CR57-20-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-250-1_counts.csv">B-240501-rescue_2-CR57-250-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-5000-1_counts.csv">B-240501-rescue_2-CR57-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240501-rescue_2-CR57-500-1_counts.csv">B-240501-rescue_2-CR57-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-RVC68_500-1_counts.csv">B-240510-rescue_2-RVC68_500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-RVC68_1000-1_counts.csv">B-240510-rescue_2-RVC68_1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-RVC68_2500-1_counts.csv">B-240510-rescue_2-RVC68_2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-RVC68_10000-1_counts.csv">B-240510-rescue_2-RVC68_10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CTB012-200-1_counts.csv">B-240510-rescue_2-CTB012-200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CTB012-600-1_counts.csv">B-240510-rescue_2-CTB012-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CTB012-3000-1_counts.csv">B-240510-rescue_2-CTB012-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CTB012-6000-1_counts.csv">B-240510-rescue_2-CTB012-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CTB012-12000-1_counts.csv">B-240510-rescue_2-CTB012-12000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CR57-1000-1_counts.csv">B-240510-rescue_2-CR57-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CR57-2500-1_counts.csv">B-240510-rescue_2-CR57-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CR57-5000-1_counts.csv">B-240510-rescue_2-CR57-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CR57-10000-1_counts.csv">B-240510-rescue_2-CR57-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-CR57-20000-1_counts.csv">B-240510-rescue_2-CR57-20000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240510-rescue_2-no_antibody-1_counts.csv">B-240510-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-CR4098_400-1_counts.csv">B-240507-rescue_2-CR4098_400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-CR4098_2000-1_counts.csv">B-240507-rescue_2-CR4098_2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-CR4098_4000-1_counts.csv">B-240507-rescue_2-CR4098_4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-CR4098_8000-1_counts.csv">B-240507-rescue_2-CR4098_8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-CR4098-20000-1_counts.csv">B-240507-rescue_2-CR4098-20000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC20-600-1_counts.csv">B-240507-rescue_2-RVC20-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC20-1200-1_counts.csv">B-240507-rescue_2-RVC20-1200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC20-3000-1_counts.csv">B-240507-rescue_2-RVC20-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC20-6000-1_counts.csv">B-240507-rescue_2-RVC20-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC58-500-1_counts.csv">B-240507-rescue_2-RVC58-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC58-1000-1_counts.csv">B-240507-rescue_2-RVC58-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC58-2500-1_counts.csv">B-240507-rescue_2-RVC58-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-RVC58-5000-1_counts.csv">B-240507-rescue_2-RVC58-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/B-240507-rescue_2-no_antibody-1_counts.csv">B-240507-rescue_2-no_antibody-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-CR4098_400-1_counts.csv">A-240603-rescue_1-CR4098_400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-CR4098_1000-1_counts.csv">A-240603-rescue_1-CR4098_1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-CR4098_2000-1_counts.csv">A-240603-rescue_1-CR4098_2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-CR4098_4000-1_counts.csv">A-240603-rescue_1-CR4098_4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-CR4098_8000-1_counts.csv">A-240603-rescue_1-CR4098_8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-RVC58-500-1_counts.csv">A-240603-rescue_1-RVC58-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-RVC58-1000-1_counts.csv">A-240603-rescue_1-RVC58-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-RVC58-2500-1_counts.csv">A-240603-rescue_1-RVC58-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-RVC58-5000-1_counts.csv">A-240603-rescue_1-RVC58-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/barcode_counts/A-240603-rescue_1-no_antibody-1_counts.csv">A-240603-rescue_1-no_antibody-1</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="functional-effects-of-mutations">Functional effects of mutations</h2>
+<h4 id="final-summary-plots">Final summary plots</h4>
+<ul>
+<li><details><summary>Interactive plots of average mutation functional effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/HEK293T_entry_func_effects.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Interactive plots of average mutation latent-phenotype effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/HEK293T_entry_latent_effects.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="analysis-notebooks_2">Analysis notebooks</h4>
+<ul>
+<li><a href="notebooks/analyze_func_scores.html">Analysis of functional scores</a></li>
+<li><details><summary>Notebooks with per-selection global epistasis fitting (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/func_effects_global_epistasis_A-240129-func-1.html">A-240129-func-1</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_A-240129-func-2.html">A-240129-func-2</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_A-240222-func-1.html">A-240222-func-1</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_A-240222-func-2.html">A-240222-func-2</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_A-240222-func-3.html">A-240222-func-3</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_B-240501-func-1.html">B-240501-func-1</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_B-240501-func-2.html">B-240501-func-2</a></li>
+<li><a href="notebooks/func_effects_global_epistasis_B-240501-func-3.html">B-240501-func-3</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Notebooks averaging mutation functional effects (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/avg_func_effects_HEK293T_entry.html">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="data-files_2">Data files</h4>
+<ul>
+<li><details><summary>Per-variant functional score CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240129-func-1_func_scores.csv">A-240129-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240129-func-2_func_scores.csv">A-240129-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240222-func-1_func_scores.csv">A-240222-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240222-func-2_func_scores.csv">A-240222-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/A-240222-func-3_func_scores.csv">A-240222-func-3</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/B-240501-func-1_func_scores.csv">B-240501-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/B-240501-func-2_func_scores.csv">B-240501-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_scores/B-240501-func-3_func_scores.csv">B-240501-func-3</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Per-selection mutation functional effect CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240129-func-1_func_effects.csv">A-240129-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240129-func-2_func_effects.csv">A-240129-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240222-func-1_func_effects.csv">A-240222-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240222-func-2_func_effects.csv">A-240222-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/A-240222-func-3_func_effects.csv">A-240222-func-3</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/B-240501-func-1_func_effects.csv">B-240501-func-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/B-240501-func-2_func_effects.csv">B-240501-func-2</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/by_selection/B-240501-func-3_func_effects.csv">B-240501-func-3</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average mutation functional effects (CSV files) (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/averages/HEK293T_entry_func_effects.csv">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average mutation latent-phenotype effects (CSV files) (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/func_effects/averages/HEK293T_entry_func_effects.csv">HEK293T_entry</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="antibodyserum-escape">Antibody/serum escape</h2>
+<h4 id="final-summary-plots_1">Final summary plots</h4>
+<ul>
+<li><details><summary>antibody escape mutation effect plots (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="htmls/RVC20_mut_effect.html">RVC20</a></li>
+<li><a href="htmls/RVA122_mut_effect.html">RVA122</a></li>
+<li><a href="htmls/17C7_mut_effect.html">17C7</a></li>
+<li><a href="htmls/RVC58_mut_effect.html">RVC58</a></li>
+<li><a href="htmls/CR4098_mut_effect.html">CR4098</a></li>
+<li><a href="htmls/CR57_mut_effect.html">CR57</a></li>
+<li><a href="htmls/CTB012_mut_effect.html">CTB012</a></li>
+<li><a href="htmls/RVC68_mut_effect.html">RVC68</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="analysis-notebooks_3">Analysis notebooks</h4>
+<ul>
+<li><details><summary>Fits of polyclonal models to individual antibody escape selections (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240319-RVA122.html">LibA-240319-RVA122</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240501-RVA122.html">LibB-240501-RVA122</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240319-RVC20.html">LibA-240319-RVC20</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240507-RVC20.html">LibB-240507-RVC20</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240319-17C7.html">LibA-240319-17C7</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240501-17C7.html">LibB-240501-17C7</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240603-RVC58.html">LibA-240603-RVC58</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240507-RVC58.html">LibB-240507-RVC58</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240603-CR4098.html">LibA-240603-CR4098</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240507-CR4098.html">LibB-240507-CR4098</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240331-CR57.html">LibA-240331-CR57</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240406-RVC68.html">LibA-240406-RVC68</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240406-RVC68_duplicate.html">LibA-240406-RVC68_duplicate</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240510-RVC68.html">LibB-240510-RVC68</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240510-RVC68_duplicate.html">LibB-240510-RVC68_duplicate</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibA-240406-CTB012.html">LibA-240406-CTB012</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240510-CTB012.html">LibB-240510-CTB012</a></li>
+<li><a href="notebooks/fit_escape_antibody_escape_LibB-240510-CR57.html">LibB-240510-CR57</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Average selections for antibody escape (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/avg_escape_antibody_escape_RVC20.html">RVC20</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_RVA122.html">RVA122</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_17C7.html">17C7</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_RVC58.html">RVC58</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_CR4098.html">CR4098</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_CR57.html">CR57</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_CTB012.html">CTB012</a></li>
+<li><a href="notebooks/avg_escape_antibody_escape_RVC68.html">RVC68</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h4 id="data-files_3">Data files</h4>
+<ul>
+<li><details><summary>Probability (fraction) escape for each variant in each antibody escape selection (CSVs) (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVA122/A-240319-rescue_2-RVA122-150-1_prob_escape.csv">LibA-240319-RVA122 A-240319-rescue_2-RVA122-150-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVA122/A-240319-rescue_2-RVA122-300-1_prob_escape.csv">LibA-240319-RVA122 A-240319-rescue_2-RVA122-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVA122/A-240319-rescue_2-RVA122-600-1_prob_escape.csv">LibA-240319-RVA122 A-240319-rescue_2-RVA122-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVA122/A-240319-rescue_2-RVA122-1500-1_prob_escape.csv">LibA-240319-RVA122 A-240319-rescue_2-RVA122-1500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVA122/A-240319-rescue_2-RVA122-3000-1_prob_escape.csv">LibA-240319-RVA122 A-240319-rescue_2-RVA122-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-RVA122/B-240501-rescue_2-RVA122-300-1_prob_escape.csv">LibB-240501-RVA122 B-240501-rescue_2-RVA122-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-RVA122/B-240501-rescue_2-RVA122-600-1_prob_escape.csv">LibB-240501-RVA122 B-240501-rescue_2-RVA122-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-RVA122/B-240501-rescue_2-RVA122-1500-1_prob_escape.csv">LibB-240501-RVA122 B-240501-rescue_2-RVA122-1500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-RVA122/B-240501-rescue_2-RVA122-3000-1_prob_escape.csv">LibB-240501-RVA122 B-240501-rescue_2-RVA122-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVC20/A-240319-rescue_2-RVC20-300-1_prob_escape.csv">LibA-240319-RVC20 A-240319-rescue_2-RVC20-300-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVC20/A-240319-rescue_2-RVC20-600-1_prob_escape.csv">LibA-240319-RVC20 A-240319-rescue_2-RVC20-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVC20/A-240319-rescue_2-RVC20-1200-1_prob_escape.csv">LibA-240319-RVC20 A-240319-rescue_2-RVC20-1200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVC20/A-240319-rescue_2-RVC20-3000-1_prob_escape.csv">LibA-240319-RVC20 A-240319-rescue_2-RVC20-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-RVC20/A-240319-rescue_2-RVC20-6000-1_prob_escape.csv">LibA-240319-RVC20 A-240319-rescue_2-RVC20-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC20/B-240507-rescue_2-RVC20-600-1_prob_escape.csv">LibB-240507-RVC20 B-240507-rescue_2-RVC20-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC20/B-240507-rescue_2-RVC20-1200-1_prob_escape.csv">LibB-240507-RVC20 B-240507-rescue_2-RVC20-1200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC20/B-240507-rescue_2-RVC20-3000-1_prob_escape.csv">LibB-240507-RVC20 B-240507-rescue_2-RVC20-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC20/B-240507-rescue_2-RVC20-6000-1_prob_escape.csv">LibB-240507-RVC20 B-240507-rescue_2-RVC20-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-17C7/A-240319-rescue_2-17C7-800-1_prob_escape.csv">LibA-240319-17C7 A-240319-rescue_2-17C7-800-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-17C7/A-240319-rescue_2-17C7-2000-1_prob_escape.csv">LibA-240319-17C7 A-240319-rescue_2-17C7-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-17C7/A-240319-rescue_2-17C7-4000-1_prob_escape.csv">LibA-240319-17C7 A-240319-rescue_2-17C7-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-17C7/A-240319-rescue_2-17C7-10000-1_prob_escape.csv">LibA-240319-17C7 A-240319-rescue_2-17C7-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240319-17C7/A-240319-rescue_2-17C7-25000-1_prob_escape.csv">LibA-240319-17C7 A-240319-rescue_2-17C7-25000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-17C7/B-240501-rescue_2-17C7-800-1_prob_escape.csv">LibB-240501-17C7 B-240501-rescue_2-17C7-800-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-17C7/B-240501-rescue_2-17C7-2000-1_prob_escape.csv">LibB-240501-17C7 B-240501-rescue_2-17C7-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-17C7/B-240501-rescue_2-17C7-4000-1_prob_escape.csv">LibB-240501-17C7 B-240501-rescue_2-17C7-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240501-17C7/B-240501-rescue_2-17C7-10000-1_prob_escape.csv">LibB-240501-17C7 B-240501-rescue_2-17C7-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-RVC58/A-240603-rescue_1-RVC58-500-1_prob_escape.csv">LibA-240603-RVC58 A-240603-rescue_1-RVC58-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-RVC58/A-240603-rescue_1-RVC58-1000-1_prob_escape.csv">LibA-240603-RVC58 A-240603-rescue_1-RVC58-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-RVC58/A-240603-rescue_1-RVC58-2500-1_prob_escape.csv">LibA-240603-RVC58 A-240603-rescue_1-RVC58-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-RVC58/A-240603-rescue_1-RVC58-5000-1_prob_escape.csv">LibA-240603-RVC58 A-240603-rescue_1-RVC58-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC58/B-240507-rescue_2-RVC58-500-1_prob_escape.csv">LibB-240507-RVC58 B-240507-rescue_2-RVC58-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC58/B-240507-rescue_2-RVC58-1000-1_prob_escape.csv">LibB-240507-RVC58 B-240507-rescue_2-RVC58-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC58/B-240507-rescue_2-RVC58-2500-1_prob_escape.csv">LibB-240507-RVC58 B-240507-rescue_2-RVC58-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-RVC58/B-240507-rescue_2-RVC58-5000-1_prob_escape.csv">LibB-240507-RVC58 B-240507-rescue_2-RVC58-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-CR4098/A-240603-rescue_1-CR4098_400-1_prob_escape.csv">LibA-240603-CR4098 A-240603-rescue_1-CR4098_400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-CR4098/A-240603-rescue_1-CR4098_1000-1_prob_escape.csv">LibA-240603-CR4098 A-240603-rescue_1-CR4098_1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-CR4098/A-240603-rescue_1-CR4098_2000-1_prob_escape.csv">LibA-240603-CR4098 A-240603-rescue_1-CR4098_2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-CR4098/A-240603-rescue_1-CR4098_4000-1_prob_escape.csv">LibA-240603-CR4098 A-240603-rescue_1-CR4098_4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240603-CR4098/A-240603-rescue_1-CR4098_8000-1_prob_escape.csv">LibA-240603-CR4098 A-240603-rescue_1-CR4098_8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-CR4098/B-240507-rescue_2-CR4098_400-1_prob_escape.csv">LibB-240507-CR4098 B-240507-rescue_2-CR4098_400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-CR4098/B-240507-rescue_2-CR4098_2000-1_prob_escape.csv">LibB-240507-CR4098 B-240507-rescue_2-CR4098_2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-CR4098/B-240507-rescue_2-CR4098_4000-1_prob_escape.csv">LibB-240507-CR4098 B-240507-rescue_2-CR4098_4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-CR4098/B-240507-rescue_2-CR4098_8000-1_prob_escape.csv">LibB-240507-CR4098 B-240507-rescue_2-CR4098_8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240507-CR4098/B-240507-rescue_2-CR4098-20000-1_prob_escape.csv">LibB-240507-CR4098 B-240507-rescue_2-CR4098-20000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-400-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-400-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-2000-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-2000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-4000-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-4000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-8000-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-8000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-20000-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-20000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240331-CR57/A-240331-rescue_4-CR4098-40000-1_prob_escape.csv">LibA-240331-CR57 A-240331-rescue_4-CR4098-40000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68/A-240406-rescue_4-RVC68-500-1_prob_escape.csv">LibA-240406-RVC68 A-240406-rescue_4-RVC68-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68/A-240406-rescue_4-RVC68-2500-1_prob_escape.csv">LibA-240406-RVC68 A-240406-rescue_4-RVC68-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68/A-240406-rescue_4-RVC68-10000-1_prob_escape.csv">LibA-240406-RVC68 A-240406-rescue_4-RVC68-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68/A-240406-rescue_4-RVC68-25000-1_prob_escape.csv">LibA-240406-RVC68 A-240406-rescue_4-RVC68-25000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68/A-240406-rescue_4-RVC68-100000-1_prob_escape.csv">LibA-240406-RVC68 A-240406-rescue_4-RVC68-100000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68_duplicate/A-240406-rescue_4-RVC68-500-1_prob_escape.csv">LibA-240406-RVC68_duplicate A-240406-rescue_4-RVC68-500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68_duplicate/A-240406-rescue_4-RVC68-2500-1_prob_escape.csv">LibA-240406-RVC68_duplicate A-240406-rescue_4-RVC68-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68_duplicate/A-240406-rescue_4-RVC68-10000-1_prob_escape.csv">LibA-240406-RVC68_duplicate A-240406-rescue_4-RVC68-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68_duplicate/A-240406-rescue_4-RVC68-25000-1_prob_escape.csv">LibA-240406-RVC68_duplicate A-240406-rescue_4-RVC68-25000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-RVC68_duplicate/A-240406-rescue_4-RVC68-100000-1_prob_escape.csv">LibA-240406-RVC68_duplicate A-240406-rescue_4-RVC68-100000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68/B-240510-rescue_2-RVC68_500-1_prob_escape.csv">LibB-240510-RVC68 B-240510-rescue_2-RVC68_500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68/B-240510-rescue_2-RVC68_1000-1_prob_escape.csv">LibB-240510-RVC68 B-240510-rescue_2-RVC68_1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68/B-240510-rescue_2-RVC68_2500-1_prob_escape.csv">LibB-240510-RVC68 B-240510-rescue_2-RVC68_2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68/B-240510-rescue_2-RVC68_10000-1_prob_escape.csv">LibB-240510-RVC68 B-240510-rescue_2-RVC68_10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68_duplicate/B-240510-rescue_2-RVC68_500-1_prob_escape.csv">LibB-240510-RVC68_duplicate B-240510-rescue_2-RVC68_500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68_duplicate/B-240510-rescue_2-RVC68_1000-1_prob_escape.csv">LibB-240510-RVC68_duplicate B-240510-rescue_2-RVC68_1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68_duplicate/B-240510-rescue_2-RVC68_2500-1_prob_escape.csv">LibB-240510-RVC68_duplicate B-240510-rescue_2-RVC68_2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-RVC68_duplicate/B-240510-rescue_2-RVC68_10000-1_prob_escape.csv">LibB-240510-RVC68_duplicate B-240510-rescue_2-RVC68_10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-CTB012/A-240406-rescue_4-CTB012-600-1_prob_escape.csv">LibA-240406-CTB012 A-240406-rescue_4-CTB012-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-CTB012/A-240406-rescue_4-CTB012-3000-1_prob_escape.csv">LibA-240406-CTB012 A-240406-rescue_4-CTB012-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-CTB012/A-240406-rescue_4-CTB012-6000-1_prob_escape.csv">LibA-240406-CTB012 A-240406-rescue_4-CTB012-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-CTB012/A-240406-rescue_4-CTB012-12000-1_prob_escape.csv">LibA-240406-CTB012 A-240406-rescue_4-CTB012-12000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibA-240406-CTB012/A-240406-rescue_4-CTB012-30000-1_prob_escape.csv">LibA-240406-CTB012 A-240406-rescue_4-CTB012-30000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CTB012/B-240510-rescue_2-CTB012-200-1_prob_escape.csv">LibB-240510-CTB012 B-240510-rescue_2-CTB012-200-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CTB012/B-240510-rescue_2-CTB012-600-1_prob_escape.csv">LibB-240510-CTB012 B-240510-rescue_2-CTB012-600-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CTB012/B-240510-rescue_2-CTB012-3000-1_prob_escape.csv">LibB-240510-CTB012 B-240510-rescue_2-CTB012-3000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CTB012/B-240510-rescue_2-CTB012-6000-1_prob_escape.csv">LibB-240510-CTB012 B-240510-rescue_2-CTB012-6000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CTB012/B-240510-rescue_2-CTB012-12000-1_prob_escape.csv">LibB-240510-CTB012 B-240510-rescue_2-CTB012-12000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CR57/B-240510-rescue_2-CR57-1000-1_prob_escape.csv">LibB-240510-CR57 B-240510-rescue_2-CR57-1000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CR57/B-240510-rescue_2-CR57-2500-1_prob_escape.csv">LibB-240510-CR57 B-240510-rescue_2-CR57-2500-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CR57/B-240510-rescue_2-CR57-5000-1_prob_escape.csv">LibB-240510-CR57 B-240510-rescue_2-CR57-5000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CR57/B-240510-rescue_2-CR57-10000-1_prob_escape.csv">LibB-240510-CR57 B-240510-rescue_2-CR57-10000-1</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/by_selection/LibB-240510-CR57/B-240510-rescue_2-CR57-20000-1_prob_escape.csv">LibB-240510-CR57 B-240510-rescue_2-CR57-20000-1</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>antibody escape CSVs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/RVC20_mut_effect.csv">RVC20</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/RVA122_mut_effect.csv">RVA122</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/17C7_mut_effect.csv">17C7</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/RVC58_mut_effect.csv">RVC58</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/CR4098_mut_effect.csv">CR4098</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/CR57_mut_effect.csv">CR57</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/CTB012_mut_effect.csv">CTB012</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/antibody_escape/averages/RVC68_mut_effect.csv">RVC68</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="integrated-summary-plots">Integrated summary plots</h2>
+<h4 id="all-antibodies-and-cell-entry">all antibodies and cell entry</h4>
+<ul>
+<li><a href="htmls/all_antibodies_and_cell_entry_overlaid.html">Summary plot (escape overlaid)</a></li>
+<li><a href="htmls/all_antibodies_and_cell_entry_faceted.html">Summary plot (escape faceted)</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/summaries/all_antibodies_and_cell_entry.csv">CSV summarizing results</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/summaries/all_antibodies_and_cell_entry_per_antibody_escape.csv">CSV summarizing per-antibody results</a></li>
+</ul>
+<h2 id="visualizations-of-dms-data-on-protein-structure">Visualizations of DMS data on protein structure</h2>
+<h4 id="dms-viz-jsons">dms-viz JSONs</h4>
+<ul>
+<li><details><summary>JSON files for dms-viz (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/prefusion_cell_entry.json">prefusion_cell_entry</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/extended_intermediate_cell_entry.json">extended_intermediate_cell_entry</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/prefusion_ab_escape.json">prefusion_ab_escape</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/prefusion_RVA122_escape.json">prefusion_RVA122_escape</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/prefusion_17C7_escape.json">prefusion_17C7_escape</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/ph_domain_RVC20_escape.json">ph_domain_RVC20_escape</a></li>
+<li><a href="https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main/results/dms-viz/domainIII_CR57_escape.json">domainIII_CR57_escape</a></li>
+</ul></details>
+
+</li>
+<li><details><summary>Notebooks generating JSONs (click triangle to expand/collapse)</summary><ul>
+
+<li><a href="notebooks/configure_dms_viz_prefusion_cell_entry.html">prefusion_cell_entry</a></li>
+<li><a href="notebooks/configure_dms_viz_extended_intermediate_cell_entry.html">extended_intermediate_cell_entry</a></li>
+<li><a href="notebooks/configure_dms_viz_prefusion_ab_escape.html">prefusion_ab_escape</a></li>
+<li><a href="notebooks/configure_dms_viz_prefusion_RVA122_escape.html">prefusion_RVA122_escape</a></li>
+<li><a href="notebooks/configure_dms_viz_prefusion_17C7_escape.html">prefusion_17C7_escape</a></li>
+<li><a href="notebooks/configure_dms_viz_ph_domain_RVC20_escape.html">ph_domain_RVC20_escape</a></li>
+<li><a href="notebooks/configure_dms_viz_domainIII_CR57_escape.html">domainIII_CR57_escape</a></li>
+</ul></details>
+
+</li>
+</ul>
+<h2 id="logo-plots-showing-antibody-escape">Logo plots showing antibody escape</h2>
+<h4 id="notebook-making-logo-plots"><a href="notebooks/escape_logos.html">Notebook making logo plots</a></h4>
+<h2 id="comparison-to-natural-sequence-variation">Comparison to natural sequence variation</h2>
+<h4 id="functional-effects-vs-natural-diversity"><a href="htmls/func_effects_vs_natural_diversity.html">Functional effects vs natural diversity</a></h4>
+<h4 id="antibody-escape-vs-natural-diversity"><a href="htmls/antibody_escape_vs_natural_diversity.html">Antibody escape vs natural diversity</a></h4>
