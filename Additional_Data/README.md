@@ -2,3 +2,4 @@
 This subdirectory contains additional data and information relevant to the study. 
 
   - [AntibodySequences/RABV-G_DMS_AntibodySequences.fasta](AntibodySequences/RABV-G_DMS_AntibodySequences.fasta) contains the light and heavy chain sequences for all antibodies characterized in this study. The light and heavy chains of each antibody into separate entries in the fasta file.
+  - [PlamidSequences](PlasmidSequences/) contains the plasmid maps for those mentioned in this study. This includes the lentiviral backbones in this study, sequences of publicly available expression helper plasmids for lentivirus production, as well as expression vectors for the Pasteur strain glycoproteins. We also include maps for expressing the plasmids of the glycoproteins from sequenced strains and example maps of mutagenized plasmid used for validation studies.
