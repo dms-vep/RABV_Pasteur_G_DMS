@@ -12,3 +12,5 @@ The below structures were used to project functional effects onto structures for
 8a1e.pdb: Structure of 17C7 antibody bound to rabies glycoprotein, as published in [Ng, et al., *Cell Host Microbe*, 2022](https://doi.org/10.1016/j.chom.2022.07.014).
 
 6tou.pdb: Structure of pH domain of rabies glycoprotein (fragment) bound to RVC20, as published in [Hellert, et al., *Nat Comms*, 2020](https://doi.org/10.1038/s41467-020-14398-7).
+
+8r40.pdb: Structure of CR57 diabody in complex with fragment of rabies G, as published in [Kedari, et al., *Structure*, 2024](10.1016/j.str.2024.10.002).
