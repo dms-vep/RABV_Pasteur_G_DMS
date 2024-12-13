@@ -27,7 +27,7 @@ Some notebooks were used to generate figures for the manuscript. Below are the n
 
 '240825_CircStrain-AGN_Neuts.ipynb' -- Produces neutralization assay data for Figure 6D for the A12_2718 rabies G pseudovirus. Note that we use 'AGN' as a convenient shorthand notation for the strain.
 
-'AGN-mutants_Neuts.ipynb' -- Produces Figure S6B and analyzes neutralization assay data for mutations in the paper. Note that we use 'AGN' as a convenient shorthand for the A12_2718 full strain name. 
+'AGN-mutants_Neuts_FigS6B.ipynb' -- Produces Figure S6B and analyzes neutralization assay data for mutations in the paper. Note that we use 'AGN' as a convenient shorthand for the A12_2718 full strain name. 
 
 
 ## Notebooks
