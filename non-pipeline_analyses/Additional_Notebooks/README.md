@@ -11,6 +11,8 @@ Some notebooks were used to generate figures for the manuscript. Below are the n
 
 'AA_sub_distribution_plots_FigsS1CD.ipynb' -- produces the raw numbers for Fig S1C and the distribution plots for S1D. 
 
+'241007_Additional-Func-effect_Analysis' -- produces the plot and pyMOL residue numbers for Figure S3. Relies on average cell entry data file.
+
 '241126_GetContacts.ipynb' -- produces list of sites within 4 Angstroms of any atom in antibody for structures of complexes are available. These sites are used to generate heatmaps of escape at specific sites.
 
 '17C7_EscapeValidations.ipynb' -- This notebook produces Fig 3E and Fig S5A. Analyzes neutralization data for 17C7 validation assays. 
