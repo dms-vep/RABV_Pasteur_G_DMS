@@ -32,6 +32,9 @@ The [conda](https://docs.conda.io/) environment used by the pipeline is that spe
 ### Data
 Input data utilized by the pipeline are located in [./data/](data). 
 
+### Additional Data
+Plasmid, Primer, antibody sequences alongside library synthesis quality reports are contained in [./Additional_Data/](Additional_Data). A README file in that directory explains contents.
+
 ### Results and documentation
 The results of running the pipeline are placed in [./results/](results).
 Due to space, only some results are tracked. For those that are not, see the [.gitignore](.gitignore) document.
@@ -40,6 +43,8 @@ The pipeline builds HTML documentation for the pipeline in [./docs/](docs), and 
 
 ### Non-pipeline analyses
 Additional analyses run outside the core pipeline are in [./non-pipeline_analyses/](non-pipeline_analyses), and are described by README files within that subdirectory.
+
+[./Additional_Notebooks](https://github.com/dms-vep/RABV_Pasteur_G_DMS/tree/main/non-pipeline_analyses/Additional_Notebooks) contains notebooks and raw for most of the figures in the manuscript.  
 
 ## Running the pipeline
 To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `environment.yml` file of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), activate it, and run [snakemake](https://snakemake.readthedocs.io/), such as:
