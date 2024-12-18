@@ -18,10 +18,10 @@ features:
 ---
 
 ## Summary
-This website provides easy access to interactive visualizations of the results of deep mutational scanning of rabies G.
+This website provides easy access to interactive visualizations of the results of [deep mutational scanning of rabies G](https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1).
 The links in the boxes above take you to pages that access the data in different forms.
 
-The study that generated these data was led by Arjun Aditham in the [Bloom lab](https://jbloomlab.org), and detailed information is in **Aditham at al (add citation when available)**, which is the paper describing the study.
+The study that generated these data was in the [Bloom lab](https://jbloomlab.org); please see [Aditham et al (2024)](https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1) for full details.
 
 In all the visualizations and data, protein sites are numbered in the standard scheme starting with 1 assigned to the first residue of G's ectodomain (rather than the N-terminal methionine).
 

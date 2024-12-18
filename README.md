@@ -1,5 +1,6 @@
-# Deep mutational scanning of the Rabies glycoprotein (G) Pasteur Strain using a barcoded pseudotyped lentiviral platform
+# Pseudovirus deep mutational scanning of the rabies glycoprotein (G) from the Pasteur strain
 Study by Arjun Aditham, Caelan Radford, Caleb Carr, and Jesse Bloom.
+Please see [Aditham et al (2024)](https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1) for full details about the study.
 
 This repo contains data and analyses from deep mutational scanning experiments on the Rabies glycoprotein (G). All experiments were performed on the Pasteur strain of rabies [NC_001542.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_001542.1). 
 
@@ -42,9 +43,9 @@ Due to space, only some results are tracked. For those that are not, see the [.g
 The pipeline builds HTML documentation for the pipeline in [./docs/](docs), and a nicely formatted set is put in [./homepage/](homepage). These docs are rendered for viewing at [https://dms-vep.org/RABV_Pasteur_G_DMS/](https://dms-vep.org/RABV_Pasteur_G_DMS/) as stated above.
 
 ### Non-pipeline analyses
-Additional analyses run outside the core pipeline are in [./non-pipeline_analyses/](non-pipeline_analyses), and are described by README files within that subdirectory.
-
-[./Additional_Notebooks](https://github.com/dms-vep/RABV_Pasteur_G_DMS/tree/main/non-pipeline_analyses/Additional_Notebooks) contains notebooks and raw for most of the figures in the manuscript.  
+Additional analyses run outside the core pipeline are in [./non-pipeline_analyses/](non-pipeline_analyses), and are described by README files within that subdirectory:
+ - [./non-pipeline_analyses/Additional_Notebooks](non-pipeline_analyses/Additional_Notebooks) contains notebooks and raw for most of the figures in the manuscript.  
+ - [./non-pipeline_analyses/RABV_nextstrain](non-pipeline_analyses/RABV_nextstrain) contains notebooks and raw for most of the figures in the manuscript.  
 
 ## Running the pipeline
 To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `environment.yml` file of [dms-vep-pipeline-3](https://github.com/dms-vep/dms-vep-pipeline-3), activate it, and run [snakemake](https://snakemake.readthedocs.io/), such as:
@@ -55,3 +56,5 @@ To run the pipeline, build the conda environment `dms-vep-pipeline-3` in the `en
 To run on the Hutch cluster via [slurm](https://slurm.schedmd.com/), you can run the file [run_Hutch_cluster.bash](run_Hutch_cluster.bash):
 
     sbatch -c 32 run_Hutch_cluster.bash
+
+Note that if you are just cloning this repo and want to re-run it without having to obtain and re-parse all the FASTQ files, you can use the pre-existing barcode count files by setting the `use_precomputed_barcode_counts` key in [config.yaml](config.yaml) to `true`. If you are running the pipeline not on the Fred Hutch server with the FASTQs, this is the recommended approach (otherwise you will need to download the FASTQs and re-assign the paths in `barcode_runs`).
