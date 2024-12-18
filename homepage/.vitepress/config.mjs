@@ -16,7 +16,7 @@ export default defineConfig({
     ],
     socialLinks: [{ icon: "github", link: "https://github.com/dms-vep/RABV_Pasteur_G_DMS" }],
     footer: {
-      message: 'Study by Arjun Aditham, Caelan Radford, Caleb, Carr, & <a href="https://jbloomlab.org">Jesse Bloom</a>',
+      message: 'See <a href="https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1">Aditham et al (2024)</a> for study details',
     },
   },
 });
