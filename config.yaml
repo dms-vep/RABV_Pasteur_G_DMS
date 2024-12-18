@@ -29,7 +29,7 @@ github_blob_url: https://github.com/dms-vep/RABV_Pasteur_G_DMS/blob/main
 # Some descriptions and metadata about the analysis.
 description: Deep mutational scanning of rabies G (Pasteur strain)
 year: 2024
-authors: [Aditham et al](https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1)
+authors: "[Aditham et al](https://www.biorxiv.org/content/10.1101/2024.12.17.628970v1)"
 
 # ----------------------------------------------------------------------------
 # Set the `use_precomputed_barcode_counts` option to `true` if you want to
